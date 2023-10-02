@@ -1,0 +1,16 @@
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\bin\Debug\QLCHBX.exe.config
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\bin\Debug\QLCHBX.exe
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\bin\Debug\QLCHBX.pdb
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.Properties.Resources.resources
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.exe
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.pdb
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\bin\Debug\Guna.UI2.dll
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.csproj.CopyComplete
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.ALLControl.ForgotPassword.resources
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.ALLControl.Login.resources
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.ALLControl.Signup.resources
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.FormLogin.resources
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.DashBoard.resources
