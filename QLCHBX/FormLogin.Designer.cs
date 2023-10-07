@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.login1 = new QLCHBX.ALLControl.Login();
@@ -71,7 +72,7 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox1.Image = global::QLCHBX.Properties.Resources.Turquoise_Outline_Work_Instagram_Post;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -100,7 +101,7 @@
             // 
             // ptMinimize
             // 
-            this.ptMinimize.Image = global::QLCHBX.Properties.Resources.del1;
+            this.ptMinimize.Image = ((System.Drawing.Image)(resources.GetObject("ptMinimize.Image")));
             this.ptMinimize.ImageRotate = 0F;
             this.ptMinimize.Location = new System.Drawing.Point(307, 12);
             this.ptMinimize.Name = "ptMinimize";
@@ -112,7 +113,7 @@
             // 
             // ptThoat
             // 
-            this.ptThoat.Image = global::QLCHBX.Properties.Resources.close1;
+            this.ptThoat.Image = ((System.Drawing.Image)(resources.GetObject("ptThoat.Image")));
             this.ptThoat.ImageRotate = 0F;
             this.ptThoat.Location = new System.Drawing.Point(356, 12);
             this.ptThoat.Name = "ptThoat";

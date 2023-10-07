@@ -329,67 +329,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Beige Grey Minimalist Elegant Etsy Shop Cover.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\del.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Turquoise Outline Work Instagram Post.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\del1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\zoom.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ID.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Name.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Address.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Phone.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Name1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Name_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Edit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Delete.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Print.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Edit1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Name2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Close2.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
