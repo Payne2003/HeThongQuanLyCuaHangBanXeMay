@@ -83,18 +83,7 @@ namespace QLCHBX.ALLControl
             this.khachHangTableAdapter.Fill(this.motorcycle_shop_managerDataSet.KhachHang);
         }
 
-        private void btHuy_Click_1(object sender, EventArgs e)
-        {
-            // Đặt lại các giá trị của các TextBox về ""
-           
-            cbQuequan.Text = "";
-            cbChucaidau.Text = "";
-
-            // Tải lại dữ liệu trong viewKhachhang
-            LoadDataGridView();
-        }
-
-
+    
 
 
 
