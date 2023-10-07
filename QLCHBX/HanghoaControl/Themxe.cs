@@ -14,7 +14,7 @@ namespace QLCHBX.HanghoaControl
 {
     public partial class Themxe : UserControl
     {
-        string connectionString = @"Data Source=DuyLa;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        string connectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         public Themxe()
         {
             InitializeComponent();

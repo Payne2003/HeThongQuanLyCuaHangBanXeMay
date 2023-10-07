@@ -38,9 +38,10 @@
             this.btHangHoa = new Guna.UI2.WinForms.Guna2Button();
             this.btBaoCao = new Guna.UI2.WinForms.Guna2Button();
             this.pnControlDashBoard = new Guna.UI2.WinForms.Guna2Panel();
+            this.khachhang1 = new QLCHBX.ALLControl.Khachhang();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.khachhang1 = new QLCHBX.ALLControl.Khachhang();
+            this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
             this.pnhead.SuspendLayout();
             this.pnControlDashBoard.SuspendLayout();
             this.SuspendLayout();
@@ -201,16 +202,13 @@
             // 
             // pnControlDashBoard
             // 
+            this.pnControlDashBoard.Controls.Add(this.hangHoa1);
             this.pnControlDashBoard.Controls.Add(this.khachhang1);
             this.pnControlDashBoard.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnControlDashBoard.Location = new System.Drawing.Point(0, 63);
             this.pnControlDashBoard.Name = "pnControlDashBoard";
             this.pnControlDashBoard.Size = new System.Drawing.Size(1386, 725);
             this.pnControlDashBoard.TabIndex = 2;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
             // 
             // khachhang1
             // 
@@ -220,6 +218,18 @@
             this.khachhang1.Name = "khachhang1";
             this.khachhang1.Size = new System.Drawing.Size(1386, 725);
             this.khachhang1.TabIndex = 0;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // hangHoa1
+            // 
+            this.hangHoa1.Location = new System.Drawing.Point(0, 2);
+            this.hangHoa1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hangHoa1.Name = "hangHoa1";
+            this.hangHoa1.Size = new System.Drawing.Size(1386, 725);
+            this.hangHoa1.TabIndex = 1;
             // 
             // DashBoard
             // 
@@ -252,5 +262,6 @@
         private Guna.UI2.WinForms.Guna2Button btKhachhang;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private ALLControl.Khachhang khachhang1;
+        private ALLControl.HangHoa hangHoa1;
     }
 }

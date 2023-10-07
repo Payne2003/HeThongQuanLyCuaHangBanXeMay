@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLCHBX.FormKhachHang;
 
 namespace QLCHBX.ALLControl
 
@@ -90,7 +91,8 @@ namespace QLCHBX.ALLControl
         // Sự kiện khi nút "Thêm vào DS" được nhấn
         private void btThemvaoDs_Click(object sender, EventArgs e)
         { 
-            
+            AddKH addKH = new AddKH();
+            addKH.ShowDialog(); 
          
         }
 

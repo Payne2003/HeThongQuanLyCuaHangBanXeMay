@@ -15,7 +15,7 @@ namespace QLCHBX.ALLControl
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=DuyLa;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        string str = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void loaddata()

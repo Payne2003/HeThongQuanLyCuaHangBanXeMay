@@ -120,7 +120,6 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::QLCHBX.Properties.Resources.close1;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(502, 3);
             this.guna2PictureBox1.Name = "guna2PictureBox1";

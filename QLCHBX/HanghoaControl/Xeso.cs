@@ -14,7 +14,7 @@ namespace QLCHBX.HanghoaControl
     public partial class Xeso : UserControl
     {
         SqlConnection connection;
-        string connectionString = @"Data Source=DuyLa;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        string connectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         private void loaddata()

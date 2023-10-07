@@ -37,23 +37,27 @@ namespace QLCHBX
         {
             MovePanel(btBaoCao);
             khachhang1.Visible = false;
+            hangHoa1.Visible = false;
         }
 
         private void btHangHoa_Click(object sender, EventArgs e)
         {
             MovePanel(btHangHoa);
             khachhang1.Visible = false;
+            hangHoa1.Visible = true;
         }
 
         private void btGiaoDich_Click(object sender, EventArgs e)
         {
             MovePanel(btGiaoDich);
             khachhang1.Visible = false;
+            hangHoa1.Visible = false;
         }
 
         private void btDoitac_Click(object sender, EventArgs e)
         {
             MovePanel(btDoitac);
+            hangHoa1.Visible = false;
             khachhang1.Visible = false;
         }
 
@@ -61,12 +65,14 @@ namespace QLCHBX
         {
             MovePanel(btNhanvien);
             khachhang1.Visible = false;
+            hangHoa1.Visible = false;
         }
 
         private void btKhachhang_Click(object sender, EventArgs e)
         {
             MovePanel(btKhachhang);
             khachhang1.Visible = true;
+            hangHoa1.Visible=false;
         }
     }
 }
