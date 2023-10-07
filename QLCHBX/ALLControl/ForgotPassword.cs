@@ -13,6 +13,7 @@ namespace QLCHBX.ALLControl
 {
     public partial class ForgotPassword : UserControl
     {
+        private string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         public ForgotPassword()
         {
             InitializeComponent();
@@ -22,27 +23,22 @@ namespace QLCHBX.ALLControl
         {
             if (txtmanhanvien.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Please fill out all fields.", "Required field", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hãy nhập đủ dữ liệu ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 string Id = txtmanhanvien.Text.Trim();
-
-                // Chuỗi kết nối
-                string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
-
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    // Tạo câu truy vấn để lấy mật khẩu của tài khoản tương ứng với mã nhân viên
                     string query = "SELECT Password FROM TaiKhoan WHERE MaNV = @MaNV";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@MaNV", Id);
 
-                        // Thực hiện truy vấn và lấy mật khẩu
+                        
                         SqlDataReader reader = command.ExecuteReader();
 
                         if (reader.Read())
@@ -50,7 +46,7 @@ namespace QLCHBX.ALLControl
                             string password = reader["Password"].ToString();
 
                             txtpassword.Text = password;
-                            // Hiển thị mật khẩu hoặc thực hiện các tác vụ khác như gửi mật khẩu đến email của người dùng.
+                           
                             MessageBox.Show($"Mật khẩu của bạn là: {password}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else

@@ -30,32 +30,32 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.login1 = new QLCHBX.ALLControl.Login();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ptMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ptThoat = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnControl = new System.Windows.Forms.Panel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.ptMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ptThoat = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.linkLogin = new System.Windows.Forms.LinkLabel();
-            this.linkquenmk = new System.Windows.Forms.LinkLabel();
-            this.linkDangky = new System.Windows.Forms.LinkLabel();
             this.login = new QLCHBX.ALLControl.Login();
             this.signup = new QLCHBX.ALLControl.Signup();
             this.forgotPassword1 = new QLCHBX.ALLControl.ForgotPassword();
-            this.login1 = new QLCHBX.ALLControl.Login();
+            this.linkDangky = new System.Windows.Forms.LinkLabel();
+            this.linkquenmk = new System.Windows.Forms.LinkLabel();
+            this.linkLogin = new System.Windows.Forms.LinkLabel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.pnControl.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptThoat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.pnControl.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,6 +68,26 @@
             this.panel1.Size = new System.Drawing.Size(400, 400);
             this.panel1.TabIndex = 0;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox1.Image = global::QLCHBX.Properties.Resources.Turquoise_Outline_Work_Instagram_Post;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(400, 400);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // login1
+            // 
+            this.login1.BackColor = System.Drawing.Color.White;
+            this.login1.Location = new System.Drawing.Point(-59, 36);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(400, 241);
+            this.login1.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.ptMinimize);
@@ -77,6 +97,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 50);
             this.panel2.TabIndex = 1;
+            // 
+            // ptMinimize
+            // 
+            this.ptMinimize.Image = global::QLCHBX.Properties.Resources.del1;
+            this.ptMinimize.ImageRotate = 0F;
+            this.ptMinimize.Location = new System.Drawing.Point(307, 12);
+            this.ptMinimize.Name = "ptMinimize";
+            this.ptMinimize.Size = new System.Drawing.Size(30, 30);
+            this.ptMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptMinimize.TabIndex = 1;
+            this.ptMinimize.TabStop = false;
+            this.ptMinimize.Click += new System.EventHandler(this.ptMinimize_Click);
+            // 
+            // ptThoat
+            // 
+            this.ptThoat.Image = global::QLCHBX.Properties.Resources.close1;
+            this.ptThoat.ImageRotate = 0F;
+            this.ptThoat.Location = new System.Drawing.Point(356, 12);
+            this.ptThoat.Name = "ptThoat";
+            this.ptThoat.Size = new System.Drawing.Size(30, 30);
+            this.ptThoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptThoat.TabIndex = 0;
+            this.ptThoat.TabStop = false;
+            this.ptThoat.Click += new System.EventHandler(this.ptThoat_Click);
             // 
             // pnControl
             // 
@@ -143,83 +187,6 @@
             this.panel3.Size = new System.Drawing.Size(400, 300);
             this.panel3.TabIndex = 0;
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2ShadowForm1
-            // 
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.Gray;
-            // 
-            // ptMinimize
-            // 
-            this.ptMinimize.Image = global::QLCHBX.Properties.Resources.del1;
-            this.ptMinimize.ImageRotate = 0F;
-            this.ptMinimize.Location = new System.Drawing.Point(307, 12);
-            this.ptMinimize.Name = "ptMinimize";
-            this.ptMinimize.Size = new System.Drawing.Size(30, 30);
-            this.ptMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptMinimize.TabIndex = 1;
-            this.ptMinimize.TabStop = false;
-            this.ptMinimize.Click += new System.EventHandler(this.ptMinimize_Click);
-            // 
-            // ptThoat
-            // 
-            this.ptThoat.Image = global::QLCHBX.Properties.Resources.close1;
-            this.ptThoat.ImageRotate = 0F;
-            this.ptThoat.Location = new System.Drawing.Point(356, 12);
-            this.ptThoat.Name = "ptThoat";
-            this.ptThoat.Size = new System.Drawing.Size(30, 30);
-            this.ptThoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptThoat.TabIndex = 0;
-            this.ptThoat.TabStop = false;
-            this.ptThoat.Click += new System.EventHandler(this.ptThoat_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox1.Image = global::QLCHBX.Properties.Resources.Turquoise_Outline_Work_Instagram_Post;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(400, 400);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // linkLogin
-            // 
-            this.linkLogin.AutoSize = true;
-            this.linkLogin.Location = new System.Drawing.Point(61, 284);
-            this.linkLogin.Name = "linkLogin";
-            this.linkLogin.Size = new System.Drawing.Size(89, 13);
-            this.linkLogin.TabIndex = 1;
-            this.linkLogin.TabStop = true;
-            this.linkLogin.Text = "Đã có tài khoản?";
-            this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
-            // 
-            // linkquenmk
-            // 
-            this.linkquenmk.AutoSize = true;
-            this.linkquenmk.Location = new System.Drawing.Point(267, 264);
-            this.linkquenmk.Name = "linkquenmk";
-            this.linkquenmk.Size = new System.Drawing.Size(80, 13);
-            this.linkquenmk.TabIndex = 2;
-            this.linkquenmk.TabStop = true;
-            this.linkquenmk.Text = "Quên mật khẩu";
-            this.linkquenmk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkquenmk_LinkClicked);
-            // 
-            // linkDangky
-            // 
-            this.linkDangky.AutoSize = true;
-            this.linkDangky.Location = new System.Drawing.Point(61, 264);
-            this.linkDangky.Name = "linkDangky";
-            this.linkDangky.Size = new System.Drawing.Size(92, 13);
-            this.linkDangky.TabIndex = 3;
-            this.linkDangky.TabStop = true;
-            this.linkDangky.Text = "Tạo tài khoản mới";
-            this.linkDangky.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDangky_LinkClicked);
-            // 
             // login
             // 
             this.login.BackColor = System.Drawing.Color.White;
@@ -227,6 +194,7 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(400, 259);
             this.login.TabIndex = 1;
+            this.login.Load += new System.EventHandler(this.login_Load);
             // 
             // signup
             // 
@@ -244,13 +212,46 @@
             this.forgotPassword1.Size = new System.Drawing.Size(400, 256);
             this.forgotPassword1.TabIndex = 4;
             // 
-            // login1
+            // linkDangky
             // 
-            this.login1.BackColor = System.Drawing.Color.White;
-            this.login1.Location = new System.Drawing.Point(-59, 36);
-            this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(400, 241);
-            this.login1.TabIndex = 0;
+            this.linkDangky.AutoSize = true;
+            this.linkDangky.Location = new System.Drawing.Point(61, 264);
+            this.linkDangky.Name = "linkDangky";
+            this.linkDangky.Size = new System.Drawing.Size(92, 13);
+            this.linkDangky.TabIndex = 3;
+            this.linkDangky.TabStop = true;
+            this.linkDangky.Text = "Tạo tài khoản mới";
+            this.linkDangky.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDangky_LinkClicked);
+            // 
+            // linkquenmk
+            // 
+            this.linkquenmk.AutoSize = true;
+            this.linkquenmk.Location = new System.Drawing.Point(267, 264);
+            this.linkquenmk.Name = "linkquenmk";
+            this.linkquenmk.Size = new System.Drawing.Size(80, 13);
+            this.linkquenmk.TabIndex = 2;
+            this.linkquenmk.TabStop = true;
+            this.linkquenmk.Text = "Quên mật khẩu";
+            this.linkquenmk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkquenmk_LinkClicked);
+            // 
+            // linkLogin
+            // 
+            this.linkLogin.AutoSize = true;
+            this.linkLogin.Location = new System.Drawing.Point(61, 284);
+            this.linkLogin.Name = "linkLogin";
+            this.linkLogin.Size = new System.Drawing.Size(89, 13);
+            this.linkLogin.TabIndex = 1;
+            this.linkLogin.TabStop = true;
+            this.linkLogin.Text = "Đã có tài khoản?";
+            this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.Gray;
             // 
             // FormLogin
             // 
@@ -267,14 +268,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptThoat)).EndInit();
             this.pnControl.ResumeLayout(false);
             this.pnControl.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptThoat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

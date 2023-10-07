@@ -59,5 +59,9 @@ namespace QLCHBX
             forgotPassword1.Visible = true;
         }
 
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace QLCHBX.ALLControl
 {
     public partial class Login : UserControl
     {
+        string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         public Login()
         {
             InitializeComponent();
@@ -24,16 +25,12 @@ namespace QLCHBX.ALLControl
         {
             if (txtuser.Text.Trim() == string.Empty || txtpassword.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Please fill out all field.", "Required field", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hãy nhập đủ dữ liệu ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 string username = txtuser.Text.Trim();
                 string password = txtpassword.Text.Trim();
-
-                // Chuỗi kết nối
-                string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
-
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -51,12 +48,17 @@ namespace QLCHBX.ALLControl
 
                         if (count > 0)
                         {
+                            MessageBox.Show("Đăng nhập thành công!!!", "Thông báo", MessageBoxButtons.OK);
                             DashBoard dashBoard = new DashBoard();
                             dashBoard.ShowDialog();
+                         
                         }
                         else
                         {
-                            MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác. Nhập lại!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            
+                            txtuser.Text = "";
+                            txtpassword.Text = "";
                         }
                     }
                 }

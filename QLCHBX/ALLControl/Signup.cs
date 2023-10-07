@@ -12,7 +12,9 @@ using System.Windows.Forms;
 namespace QLCHBX.ALLControl
 {
     public partial class Signup : UserControl
+
     {
+        private  string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         public Signup()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace QLCHBX.ALLControl
         {
             if (txtuser.Text.Trim() == string.Empty || txtpassword.Text.Trim() == string.Empty || txtreconfirmpassword.Text.Trim() == string.Empty || txtmanhanvien.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Please fill out all fields.", "Required field", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hãy nhập đủ dữ liệu ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (txtpassword.Text.Trim() != txtreconfirmpassword.Text.Trim())
             {
@@ -36,7 +38,7 @@ namespace QLCHBX.ALLControl
                 string password = txtpassword.Text.Trim();
                 string Id = txtmanhanvien.Text.Trim();
                 // Chuỗi kết nối
-                string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+              
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
