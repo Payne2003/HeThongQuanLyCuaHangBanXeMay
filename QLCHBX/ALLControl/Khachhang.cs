@@ -26,6 +26,7 @@ namespace QLCHBX.ALLControl
         {
             InitializeComponent();
         }
+
         public void Connect()
         {
             SqlConnection = new SqlConnection();
@@ -43,6 +44,7 @@ namespace QLCHBX.ALLControl
                 SqlConnection.Dispose();
             }
         }
+
         public void LoadDataGridView()
         {
             string sql = "SELECT * from KhachHang";
@@ -78,17 +80,11 @@ namespace QLCHBX.ALLControl
             }
         }
 
-
         private void Khachhang_Load(object sender, EventArgs e)
         {
             this.khachHangTableAdapter.Fill(this.motorcycle_shop_managerDataSet.KhachHang);
         }
 
-    
-
-
-
-        // Sự kiện khi nút "Thêm vào DS" được nhấn
         private void btThemvaoDs_Click(object sender, EventArgs e)
         { 
             AddKH addKH = new AddKH();
@@ -96,16 +92,28 @@ namespace QLCHBX.ALLControl
          
         }
 
-        // Sự kiện khi nút "Xóa" được nhấn
         private void btXoa_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = viewKhachhang.SelectedRows[0];
 
             string makhachhang = selectedRow.Cells[0].Value.ToString();
 
+           
+
             if (!string.IsNullOrEmpty(makhachhang))
             {
-                XoaKhachHang(makhachhang);
+                DialogResult result = MessageBox.Show("Xóa Khách hàng có mã: " + makhachhang + " ?", "Yêu cầu xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    XoaKhachHang(makhachhang);
+                }
+                else
+                {
+                    return;
+                } 
+                    
+               
             }
             else
             {
@@ -113,36 +121,48 @@ namespace QLCHBX.ALLControl
             }
         }
 
-        // Sự kiện khi nút "Sửa" được nhấn
         private void btSua_Click(object sender, EventArgs e)
         {
-          
+            DataGridViewRow selectedRow = viewKhachhang.SelectedRows[0];
+
+            string makhachhang = selectedRow.Cells[0].Value.ToString();
+
+            string tenkhach = selectedRow.Cells[1].Value.ToString();
+
+            string diachi = selectedRow.Cells[2].Value.ToString();
+
+            string sodienthoai = selectedRow.Cells[3].Value.ToString();
+
+            EditKH editKH = new EditKH();
+            editKH.MaKhachHang = makhachhang;
+            editKH.TenKhachHang = tenkhach;
+            editKH.DiaChi = diachi;
+            editKH.SoDienThoai = sodienthoai;
+            
+            editKH.ShowDialog();    
+
+
+
         }
 
         private void btIn_Click(object sender, EventArgs e)
         {
-            // Tạo một tệp PDF mới
             Document doc = new Document();
             string filePath = @"D:\Thong_tin khach_hang\thong_tin_khach_hang.pdf";
             PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
 
-            // Mở tài liệu để viết
             doc.Open();
 
-            // Tạo một bảng PDF
             PdfPTable table = new PdfPTable(viewKhachhang.Columns.Count);
 
-            // Thêm tiêu đề của cột vào bảng
             for (int i = 0; i < viewKhachhang.Columns.Count; i++)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(viewKhachhang.Columns[i].HeaderText, new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.UNDEFINED, 12, iTextSharp.text.Font.BOLD)));
                 table.AddCell(cell);
             }
 
-            // Tạo font cho dữ liệu
             iTextSharp.text.Font font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 12);
 
-            // Thêm dữ liệu từ DataGridView vào bảng PDF
             for (int i = 0; i < viewKhachhang.Rows.Count; i++)
             {
                 for (int j = 0; j < viewKhachhang.Columns.Count; j++)
@@ -155,63 +175,13 @@ namespace QLCHBX.ALLControl
                 }
             }
 
-            // Thêm bảng vào tài liệu
             doc.Add(table);
 
-            // Đóng tài liệu
             doc.Close();
 
             MessageBox.Show("Đã tạo tệp PDF thành công!");
         }
 
-        private void btLuu_Click(object sender, EventArgs e)
-        {
-            Application.Exit(); 
-        }
-
-        public void ThemKhachHang( string tenKhach, string diaChi, string soDienThoai)
-        {
-            try
-            {
-                Connect();
-
-                // Tạo mã khách hàng ngẫu nhiên
-                string maKhachHangMoi = TaoMaKhachHangKhongTrung();
-                // Kiểm tra nếu số điện thoại đã tồn tại trong cơ sở dữ liệu
-                string checkExistSql = $"SELECT COUNT(*) FROM KhachHang WHERE DienThoai = '{soDienThoai}'";
-                using (SqlCommand checkExistCmd = new SqlCommand(checkExistSql, SqlConnection))
-                {
-                    int count = Convert.ToInt32(checkExistCmd.ExecuteScalar());
-                    if (count > 0)
-                    {
-                        MessageBox.Show("Số điện thoại đã tồn tại trong cơ sở dữ liệu.");
-                        return;
-                    }
-                }
-
-                // Tiếp tục thêm khách hàng
-                string sql = $"INSERT INTO KhachHang (MaKhach, TenKhach, DiaChi, DienThoai) VALUES ('{maKhachHangMoi}', N'{tenKhach}', N'{diaChi}', '{soDienThoai}')";
-
-                if (RunSQL(sql))
-                {
-                    MessageBox.Show("Thêm khách hàng thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Thêm khách hàng không thành công!");
-                }
-
-                LoadDataGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi thêm khách hàng: " + ex.Message);
-            }
-            finally
-            {
-                Disconnect();
-            }
-        }
         public void XoaKhachHang(string maKhachHang)
         {
             try
@@ -248,80 +218,6 @@ namespace QLCHBX.ALLControl
             }
         }
 
-        public void SuaKhachHang(string maKhachHang, string tenKhach, string diaChi, string soDienThoai)
-        {
-            try
-            {
-                Connect();
-
-                // Kiểm tra nếu số điện thoại đã tồn tại trong cơ sở dữ liệu ngoại trừ khách hàng đang sửa
-                string checkExistSql = $"SELECT COUNT(*) FROM KhachHang WHERE DienThoai = '{soDienThoai}' AND MaKhach != '{maKhachHang}'";
-                using (SqlCommand checkExistCmd = new SqlCommand(checkExistSql, SqlConnection))
-                {
-                    int count = Convert.ToInt32(checkExistCmd.ExecuteScalar());
-                    if (count > 0)
-                    {
-                        MessageBox.Show("Số điện thoại đã tồn tại trong cơ sở dữ liệu.");
-                        return;
-                    }
-                }
-
-                // Tiếp tục sửa khách hàng
-                string sql = $"UPDATE KhachHang SET TenKhach = N'{tenKhach}', DiaChi = N'{diaChi}', DienThoai = '{soDienThoai}' WHERE MaKhach = '{maKhachHang}'";
-
-                if (RunSQL(sql))
-                {
-                    MessageBox.Show("Sửa khách hàng thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Sửa khách hàng không thành công!");
-                }
-
-                LoadDataGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi sửa thông tin khách hàng: " + ex.Message);
-            }
-            finally
-            {
-                Disconnect();
-            }
-        }
-
-        // Hàm tạo mã khách hàng ngẫu nhiên không trùng
-        private string TaoMaKhachHangKhongTrung()
-        {
-            Random random = new Random();
-            string maKhachHangMoi;
-
-            // Thử tạo mã khách hàng ngẫu nhiên và kiểm tra xem có trùng không
-            do
-            {
-                int randomNumber = random.Next(1, 1000); // Thay đổi khoảng tùy ý
-                maKhachHangMoi = "KH" + randomNumber.ToString("D3"); // Định dạng mã theo mong muốn
-            } while (KiemTraTonTaiMaKhachHang(maKhachHangMoi)); // Kiểm tra xem mã đã tồn tại chưa
-
-            return maKhachHangMoi;
-        }
-
-        // Hàm kiểm tra xem mã khách hàng đã tồn tại trong cơ sở dữ liệu chưa
-        private bool KiemTraTonTaiMaKhachHang(string maKhachHang)
-        {
-            string sql = $"SELECT COUNT(*) FROM KhachHang WHERE MaKhach = '{maKhachHang}'";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                using (SqlCommand command = new SqlCommand(sql, connection))
-                {
-                    int rowCount = (int)command.ExecuteScalar();
-                    return rowCount > 0;
-                }
-            }
-        }
-
         public void TimKiemKhachHang(string soDienThoai)
         {
             try
@@ -349,17 +245,6 @@ namespace QLCHBX.ALLControl
             }
         }
 
-        private void cbQuequan_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            string selectedValue = cbQuequan.SelectedItem.ToString();
-            TimKiemTheoQueQuan(selectedValue);
-        }
-
-        private void cbChucaidau_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            string selectedValue = cbChucaidau.Text;
-            TimKiemTheoChuCaiDau(selectedValue);
-        }
         public void TimKiemTheoQueQuan(string queQuan)
         {
             try
@@ -386,6 +271,7 @@ namespace QLCHBX.ALLControl
                 Disconnect();
             }
         }
+
         public void TimKiemTheoChuCaiDau(string chucaidau)
         {
             try
@@ -413,7 +299,6 @@ namespace QLCHBX.ALLControl
             }
         }
 
-  
         private void pttimkiem_Click_1(object sender, EventArgs e)
         {
 
@@ -435,6 +320,23 @@ namespace QLCHBX.ALLControl
                 }
                 LoadDataGridView();
             }
+        }
+
+        private void cbChucaidau_TextChanged(object sender, EventArgs e)
+        {
+            string selectedValue = cbChucaidau.Text;
+            TimKiemTheoChuCaiDau(selectedValue);
+        }
+
+        private void ptreload_Click(object sender, EventArgs e)
+        {
+            LoadDataGridView();
+        }
+
+        private void txtquequan_TextChanged(object sender, EventArgs e)
+        {
+            string selectedValue = txtquequan.Text;
+            TimKiemTheoQueQuan(selectedValue);
         }
     }
 }

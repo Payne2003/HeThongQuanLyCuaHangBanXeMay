@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Khachhang));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pttimkiem = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtsodienthoai = new Guna.UI2.WinForms.Guna2TextBox();
             this.btThemvaoDs = new Guna.UI2.WinForms.Guna2Button();
-            this.btXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btSua = new Guna.UI2.WinForms.Guna2Button();
             this.btIn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.cbChucaidau = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cbQuequan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.motorcycle_shop_managerDataSet = new QLCHBX.Motorcycle_shop_managerDataSet();
             this.khachHangTableAdapter = new QLCHBX.Motorcycle_shop_managerDataSetTableAdapters.KhachHangTableAdapter();
@@ -57,17 +57,19 @@
             this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dienThoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pttimkiem = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.ptreload = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txtquequan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pttimkiem)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorcycle_shop_managerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewKhachhang)).BeginInit();
             this.guna2GroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pttimkiem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptreload)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -91,6 +93,7 @@
             this.guna2GroupBox2.BorderRadius = 20;
             this.guna2GroupBox2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GroupBox2.BorderThickness = 3;
+            this.guna2GroupBox2.Controls.Add(this.ptreload);
             this.guna2GroupBox2.Controls.Add(this.pttimkiem);
             this.guna2GroupBox2.Controls.Add(this.txtsodienthoai);
             this.guna2GroupBox2.Controls.Add(this.btThemvaoDs);
@@ -111,6 +114,21 @@
             this.guna2GroupBox2.Text = "Công cụ";
             this.guna2GroupBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pttimkiem
+            // 
+            this.pttimkiem.Image = ((System.Drawing.Image)(resources.GetObject("pttimkiem.Image")));
+            this.pttimkiem.ImageRotate = 0F;
+            this.pttimkiem.Location = new System.Drawing.Point(317, 73);
+            this.pttimkiem.Name = "pttimkiem";
+            this.pttimkiem.ShadowDecoration.BorderRadius = 10;
+            this.pttimkiem.ShadowDecoration.Color = System.Drawing.Color.DeepSkyBlue;
+            this.pttimkiem.ShadowDecoration.Enabled = true;
+            this.pttimkiem.Size = new System.Drawing.Size(35, 36);
+            this.pttimkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pttimkiem.TabIndex = 19;
+            this.pttimkiem.TabStop = false;
+            this.pttimkiem.Click += new System.EventHandler(this.pttimkiem_Click_1);
+            // 
             // txtsodienthoai
             // 
             this.txtsodienthoai.BackColor = System.Drawing.Color.Transparent;
@@ -124,7 +142,7 @@
             this.txtsodienthoai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtsodienthoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsodienthoai.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtsodienthoai.ForeColor = System.Drawing.Color.DimGray;
+            this.txtsodienthoai.ForeColor = System.Drawing.Color.Black;
             this.txtsodienthoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsodienthoai.Location = new System.Drawing.Point(46, 73);
             this.txtsodienthoai.Name = "txtsodienthoai";
@@ -132,6 +150,7 @@
             this.txtsodienthoai.PlaceholderForeColor = System.Drawing.Color.LightGray;
             this.txtsodienthoai.PlaceholderText = "Tìm theo số điện thoại";
             this.txtsodienthoai.SelectedText = "";
+            this.txtsodienthoai.ShadowDecoration.BorderRadius = 10;
             this.txtsodienthoai.ShadowDecoration.Color = System.Drawing.SystemColors.ActiveCaption;
             this.txtsodienthoai.ShadowDecoration.Enabled = true;
             this.txtsodienthoai.Size = new System.Drawing.Size(264, 36);
@@ -150,36 +169,15 @@
             this.btThemvaoDs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btThemvaoDs.ForeColor = System.Drawing.Color.White;
             this.btThemvaoDs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btThemvaoDs.Location = new System.Drawing.Point(778, 73);
+            this.btThemvaoDs.Location = new System.Drawing.Point(796, 73);
             this.btThemvaoDs.Name = "btThemvaoDs";
+            this.btThemvaoDs.ShadowDecoration.BorderRadius = 10;
             this.btThemvaoDs.ShadowDecoration.Color = System.Drawing.Color.Lime;
             this.btThemvaoDs.ShadowDecoration.Enabled = true;
-            this.btThemvaoDs.Size = new System.Drawing.Size(95, 36);
+            this.btThemvaoDs.Size = new System.Drawing.Size(77, 36);
             this.btThemvaoDs.TabIndex = 11;
             this.btThemvaoDs.Text = "Thêm";
             this.btThemvaoDs.Click += new System.EventHandler(this.btThemvaoDs_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.BackColor = System.Drawing.Color.Transparent;
-            this.btXoa.BorderRadius = 10;
-            this.btXoa.BorderThickness = 1;
-            this.btXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btXoa.FillColor = System.Drawing.Color.Red;
-            this.btXoa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btXoa.ForeColor = System.Drawing.Color.White;
-            this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btXoa.Location = new System.Drawing.Point(677, 73);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.ShadowDecoration.Color = System.Drawing.Color.Gold;
-            this.btXoa.ShadowDecoration.Enabled = true;
-            this.btXoa.Size = new System.Drawing.Size(95, 36);
-            this.btXoa.TabIndex = 18;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btSua
             // 
@@ -195,11 +193,12 @@
             this.btSua.ForeColor = System.Drawing.Color.White;
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btSua.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btSua.Location = new System.Drawing.Point(576, 73);
+            this.btSua.Location = new System.Drawing.Point(630, 73);
             this.btSua.Name = "btSua";
-            this.btSua.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btSua.ShadowDecoration.BorderRadius = 10;
+            this.btSua.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btSua.ShadowDecoration.Enabled = true;
-            this.btSua.Size = new System.Drawing.Size(95, 36);
+            this.btSua.Size = new System.Drawing.Size(77, 36);
             this.btSua.TabIndex = 13;
             this.btSua.Text = "Sửa";
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
@@ -217,11 +216,12 @@
             this.btIn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btIn.ForeColor = System.Drawing.Color.White;
             this.btIn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btIn.Location = new System.Drawing.Point(475, 73);
+            this.btIn.Location = new System.Drawing.Point(547, 73);
             this.btIn.Name = "btIn";
-            this.btIn.ShadowDecoration.Color = System.Drawing.Color.Crimson;
+            this.btIn.ShadowDecoration.BorderRadius = 10;
+            this.btIn.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btIn.ShadowDecoration.Enabled = true;
-            this.btIn.Size = new System.Drawing.Size(95, 36);
+            this.btIn.Size = new System.Drawing.Size(77, 36);
             this.btIn.TabIndex = 17;
             this.btIn.Text = "In";
             this.btIn.Click += new System.EventHandler(this.btIn_Click);
@@ -232,11 +232,11 @@
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2GroupBox1.BorderRadius = 20;
             this.guna2GroupBox1.BorderThickness = 3;
+            this.guna2GroupBox1.Controls.Add(this.txtquequan);
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GroupBox1.Controls.Add(this.cbChucaidau);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2GroupBox1.Controls.Add(this.cbQuequan);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -251,6 +251,18 @@
             this.guna2GroupBox1.Text = "Tìm kiếm Lọc";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(22, 38);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 25);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 19;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
             // cbChucaidau
             // 
             this.cbChucaidau.BackColor = System.Drawing.Color.Transparent;
@@ -264,17 +276,19 @@
             this.cbChucaidau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.cbChucaidau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbChucaidau.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cbChucaidau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbChucaidau.ForeColor = System.Drawing.Color.Black;
             this.cbChucaidau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbChucaidau.Location = new System.Drawing.Point(212, 73);
             this.cbChucaidau.Name = "cbChucaidau";
             this.cbChucaidau.PasswordChar = '\0';
-            this.cbChucaidau.PlaceholderText = "";
+            this.cbChucaidau.PlaceholderText = "Chữ cái đầu của tên";
             this.cbChucaidau.SelectedText = "";
+            this.cbChucaidau.ShadowDecoration.BorderRadius = 20;
             this.cbChucaidau.ShadowDecoration.Color = System.Drawing.SystemColors.ActiveCaption;
             this.cbChucaidau.ShadowDecoration.Enabled = true;
             this.cbChucaidau.Size = new System.Drawing.Size(140, 36);
             this.cbChucaidau.TabIndex = 18;
+            this.cbChucaidau.TextChanged += new System.EventHandler(this.cbChucaidau_TextChanged);
             // 
             // guna2HtmlLabel1
             // 
@@ -294,46 +308,6 @@
             this.guna2HtmlLabel2.TabIndex = 3;
             this.guna2HtmlLabel2.Text = "Quê quán";
             // 
-            // cbQuequan
-            // 
-            this.cbQuequan.BackColor = System.Drawing.Color.Transparent;
-            this.cbQuequan.BorderColor = System.Drawing.Color.Black;
-            this.cbQuequan.BorderRadius = 10;
-            this.cbQuequan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbQuequan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQuequan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbQuequan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbQuequan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.cbQuequan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbQuequan.ItemHeight = 30;
-            this.cbQuequan.Items.AddRange(new object[] {
-            "Nam Định",
-            "Hà Nội",
-            "Quảng Nam",
-            "Hoàng Sa",
-            "Trường Sa",
-            "Ninh Bình",
-            "Thái Bình",
-            "Thanh Hóa",
-            "Đã Nẵng",
-            "Bình Định",
-            "Cà Mau",
-            "Kiên Giang",
-            "Tiền Giang",
-            "TP Hồ Chí Minh",
-            "Cần Thơ",
-            "Sóc Trăng",
-            "Quảng Bình",
-            "Quảng Ngãi",
-            ""});
-            this.cbQuequan.Location = new System.Drawing.Point(22, 73);
-            this.cbQuequan.Name = "cbQuequan";
-            this.cbQuequan.ShadowDecoration.Color = System.Drawing.SystemColors.ActiveCaption;
-            this.cbQuequan.ShadowDecoration.Enabled = true;
-            this.cbQuequan.Size = new System.Drawing.Size(140, 36);
-            this.cbQuequan.TabIndex = 0;
-            this.cbQuequan.SelectionChangeCommitted += new System.EventHandler(this.cbQuequan_SelectionChangeCommitted);
-            // 
             // khachHangBindingSource
             // 
             this.khachHangBindingSource.DataMember = "KhachHang";
@@ -351,25 +325,25 @@
             // viewKhachhang
             // 
             this.viewKhachhang.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.viewKhachhang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.viewKhachhang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.viewKhachhang.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.viewKhachhang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Format = "d";
+            dataGridViewCellStyle7.NullValue = null;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.viewKhachhang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.viewKhachhang.ColumnHeadersHeight = 50;
             this.viewKhachhang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maKhachDataGridViewTextBoxColumn,
@@ -377,36 +351,36 @@
             this.diaChiDataGridViewTextBoxColumn,
             this.dienThoaiDataGridViewTextBoxColumn});
             this.viewKhachhang.DataSource = this.khachHangBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.viewKhachhang.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle8.NullValue = null;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.viewKhachhang.DefaultCellStyle = dataGridViewCellStyle8;
             this.viewKhachhang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.viewKhachhang.Location = new System.Drawing.Point(0, 62);
             this.viewKhachhang.Margin = new System.Windows.Forms.Padding(10);
             this.viewKhachhang.Name = "viewKhachhang";
             this.viewKhachhang.ReadOnly = true;
             this.viewKhachhang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.viewKhachhang.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.viewKhachhang.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.viewKhachhang.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.viewKhachhang.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.viewKhachhang.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.viewKhachhang.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.viewKhachhang.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.viewKhachhang.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -498,31 +472,71 @@
             this.guna2GroupBox3.Text = "Danh sách khách hàng ";
             this.guna2GroupBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // guna2CirclePictureBox1
+            // btXoa
             // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(22, 38);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 25);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 19;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.btXoa.BackColor = System.Drawing.Color.Transparent;
+            this.btXoa.BorderRadius = 10;
+            this.btXoa.BorderThickness = 1;
+            this.btXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btXoa.FillColor = System.Drawing.Color.Red;
+            this.btXoa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btXoa.ForeColor = System.Drawing.Color.White;
+            this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btXoa.Location = new System.Drawing.Point(713, 73);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.ShadowDecoration.BorderRadius = 10;
+            this.btXoa.ShadowDecoration.Color = System.Drawing.Color.Gold;
+            this.btXoa.ShadowDecoration.Enabled = true;
+            this.btXoa.Size = new System.Drawing.Size(77, 36);
+            this.btXoa.TabIndex = 18;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
-            // pttimkiem
+            // ptreload
             // 
-            this.pttimkiem.Image = ((System.Drawing.Image)(resources.GetObject("pttimkiem.Image")));
-            this.pttimkiem.ImageRotate = 0F;
-            this.pttimkiem.Location = new System.Drawing.Point(317, 73);
-            this.pttimkiem.Name = "pttimkiem";
-            this.pttimkiem.ShadowDecoration.Color = System.Drawing.Color.DeepSkyBlue;
-            this.pttimkiem.ShadowDecoration.Enabled = true;
-            this.pttimkiem.Size = new System.Drawing.Size(35, 36);
-            this.pttimkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pttimkiem.TabIndex = 19;
-            this.pttimkiem.TabStop = false;
-            this.pttimkiem.Click += new System.EventHandler(this.pttimkiem_Click_1);
+            this.ptreload.AutoRoundedCorners = true;
+            this.ptreload.BackColor = System.Drawing.Color.Transparent;
+            this.ptreload.BorderRadius = 15;
+            this.ptreload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptreload.Image = ((System.Drawing.Image)(resources.GetObject("ptreload.Image")));
+            this.ptreload.ImageRotate = 0F;
+            this.ptreload.Location = new System.Drawing.Point(358, 73);
+            this.ptreload.Name = "ptreload";
+            this.ptreload.Size = new System.Drawing.Size(33, 36);
+            this.ptreload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptreload.TabIndex = 22;
+            this.ptreload.TabStop = false;
+            this.ptreload.Click += new System.EventHandler(this.ptreload_Click);
+            // 
+            // txtquequan
+            // 
+            this.txtquequan.BackColor = System.Drawing.Color.Transparent;
+            this.txtquequan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtquequan.BorderRadius = 10;
+            this.txtquequan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtquequan.DefaultText = "";
+            this.txtquequan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtquequan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtquequan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtquequan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtquequan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtquequan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtquequan.ForeColor = System.Drawing.Color.Black;
+            this.txtquequan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtquequan.Location = new System.Drawing.Point(22, 73);
+            this.txtquequan.Name = "txtquequan";
+            this.txtquequan.PasswordChar = '\0';
+            this.txtquequan.PlaceholderText = "Địa chỉ";
+            this.txtquequan.SelectedText = "";
+            this.txtquequan.ShadowDecoration.BorderRadius = 20;
+            this.txtquequan.ShadowDecoration.Color = System.Drawing.SystemColors.ActiveCaption;
+            this.txtquequan.ShadowDecoration.Enabled = true;
+            this.txtquequan.Size = new System.Drawing.Size(140, 36);
+            this.txtquequan.TabIndex = 21;
+            this.txtquequan.TextChanged += new System.EventHandler(this.txtquequan_TextChanged);
             // 
             // Khachhang
             // 
@@ -536,14 +550,15 @@
             this.Load += new System.EventHandler(this.Khachhang_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pttimkiem)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorcycle_shop_managerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewKhachhang)).EndInit();
             this.guna2GroupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pttimkiem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptreload)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -562,16 +577,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dienThoaiDataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
-        private Guna.UI2.WinForms.Guna2ComboBox cbQuequan;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btSua;
         private Guna.UI2.WinForms.Guna2Button btThemvaoDs;
         private Guna.UI2.WinForms.Guna2Button btIn;
-        private Guna.UI2.WinForms.Guna2Button btXoa;
         private Guna.UI2.WinForms.Guna2TextBox cbChucaidau;
         private Guna.UI2.WinForms.Guna2TextBox txtsodienthoai;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox pttimkiem;
+        private Guna.UI2.WinForms.Guna2Button btXoa;
+        private Guna.UI2.WinForms.Guna2PictureBox ptreload;
+        private Guna.UI2.WinForms.Guna2TextBox txtquequan;
     }
 }
