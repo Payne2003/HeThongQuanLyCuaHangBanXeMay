@@ -269,6 +269,30 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GDControl\GDCuahang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GDControl\GDCuahang.Designer.cs">
+      <DependentUpon>GDCuahang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDControl\GoJek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GDControl\GoJek.Designer.cs">
+      <DependentUpon>GoJek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDControl\HoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GDControl\HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDControl\Shopee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GDControl\Shopee.Designer.cs">
+      <DependentUpon>Shopee.cs</DependentUpon>
+    </Compile>
     <Compile Include="HanghoaControl\Dongco.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -374,6 +398,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDControl\GDCuahang.resx">
+      <DependentUpon>GDCuahang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDControl\GoJek.resx">
+      <DependentUpon>GoJek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDControl\HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDControl\Shopee.resx">
+      <DependentUpon>Shopee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HanghoaControl\Dongco.resx">
       <DependentUpon>Dongco.cs</DependentUpon>

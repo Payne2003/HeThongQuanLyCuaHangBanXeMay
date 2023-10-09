@@ -1,0 +1,10 @@
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\bin\Debug\QLCHBX.exe.config
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\bin\Debug\QLCHBX.exe
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\bin\Debug\QLCHBX.pdb
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.Form1.resources
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.Properties.Resources.resources
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.exe
+C:\Users\Admin\source\repos\QLCHBX\QLCHBX\obj\Debug\QLCHBX.pdb

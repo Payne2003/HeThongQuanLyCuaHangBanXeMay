@@ -78,3 +78,7 @@ C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\bin\Debug\System
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.csproj.Fody.CopyLocal.cache
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormKhachHang.EditKH.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.Properties.Resources.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.GDControl.GDCuahang.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.GDControl.GoJek.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.GDControl.HoaDon.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.GDControl.Shopee.resources

@@ -16,5 +16,37 @@ namespace QLCHBX.ALLControl
         {
             InitializeComponent();
         }
+
+        private void btHoadon_Click(object sender, EventArgs e)
+        {
+            hoaDon1.Visible = true;
+            gdCuahang1.Visible = false;
+            shopee1.Visible = false;
+            goJek1.Visible = false;
+        }
+
+        private void btGDch_Click(object sender, EventArgs e)
+        {
+            hoaDon1.Visible = false;
+            gdCuahang1.Visible = true;
+            shopee1.Visible = false;
+            goJek1.Visible = false;
+        }
+
+        private void btGDgj_Click(object sender, EventArgs e)
+        {
+            hoaDon1.Visible = false;
+            gdCuahang1.Visible = false;
+            shopee1.Visible = false;
+            goJek1.Visible = true;
+        }
+
+        private void btGDSp_Click(object sender, EventArgs e)
+        {
+            hoaDon1.Visible = false;
+            gdCuahang1.Visible = false;
+            shopee1.Visible = true;
+            goJek1.Visible = false;
+        }
     }
 }

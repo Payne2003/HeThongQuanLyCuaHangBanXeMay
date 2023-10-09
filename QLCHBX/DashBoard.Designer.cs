@@ -38,10 +38,11 @@
             this.btHangHoa = new Guna.UI2.WinForms.Guna2Button();
             this.btBaoCao = new Guna.UI2.WinForms.Guna2Button();
             this.pnControlDashBoard = new Guna.UI2.WinForms.Guna2Panel();
+            this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
             this.khachhang1 = new QLCHBX.ALLControl.Khachhang();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
+            this.gIaoDich1 = new QLCHBX.ALLControl.GIaoDich();
             this.pnhead.SuspendLayout();
             this.pnControlDashBoard.SuspendLayout();
             this.SuspendLayout();
@@ -202,6 +203,7 @@
             // 
             // pnControlDashBoard
             // 
+            this.pnControlDashBoard.Controls.Add(this.gIaoDich1);
             this.pnControlDashBoard.Controls.Add(this.hangHoa1);
             this.pnControlDashBoard.Controls.Add(this.khachhang1);
             this.pnControlDashBoard.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -209,6 +211,14 @@
             this.pnControlDashBoard.Name = "pnControlDashBoard";
             this.pnControlDashBoard.Size = new System.Drawing.Size(1386, 725);
             this.pnControlDashBoard.TabIndex = 2;
+            // 
+            // hangHoa1
+            // 
+            this.hangHoa1.Location = new System.Drawing.Point(0, 2);
+            this.hangHoa1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hangHoa1.Name = "hangHoa1";
+            this.hangHoa1.Size = new System.Drawing.Size(1386, 725);
+            this.hangHoa1.TabIndex = 1;
             // 
             // khachhang1
             // 
@@ -223,13 +233,13 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // hangHoa1
+            // gIaoDich1
             // 
-            this.hangHoa1.Location = new System.Drawing.Point(0, 2);
-            this.hangHoa1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.hangHoa1.Name = "hangHoa1";
-            this.hangHoa1.Size = new System.Drawing.Size(1386, 725);
-            this.hangHoa1.TabIndex = 1;
+            this.gIaoDich1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gIaoDich1.Location = new System.Drawing.Point(0, 0);
+            this.gIaoDich1.Name = "gIaoDich1";
+            this.gIaoDich1.Size = new System.Drawing.Size(1386, 725);
+            this.gIaoDich1.TabIndex = 2;
             // 
             // DashBoard
             // 
@@ -263,5 +273,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private ALLControl.Khachhang khachhang1;
         private ALLControl.HangHoa hangHoa1;
+        private ALLControl.GIaoDich gIaoDich1;
     }
 }

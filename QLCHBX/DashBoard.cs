@@ -38,6 +38,7 @@ namespace QLCHBX
             MovePanel(btBaoCao);
             khachhang1.Visible = false;
             hangHoa1.Visible = false;
+            gIaoDich1.Visible = false;
         }
 
         private void btHangHoa_Click(object sender, EventArgs e)
@@ -45,6 +46,7 @@ namespace QLCHBX
             MovePanel(btHangHoa);
             khachhang1.Visible = false;
             hangHoa1.Visible = true;
+            gIaoDich1.Visible = false;
         }
 
         private void btGiaoDich_Click(object sender, EventArgs e)
@@ -52,6 +54,7 @@ namespace QLCHBX
             MovePanel(btGiaoDich);
             khachhang1.Visible = false;
             hangHoa1.Visible = false;
+            gIaoDich1.Visible = true;
         }
 
         private void btDoitac_Click(object sender, EventArgs e)
@@ -59,6 +62,7 @@ namespace QLCHBX
             MovePanel(btDoitac);
             hangHoa1.Visible = false;
             khachhang1.Visible = false;
+            gIaoDich1.Visible = false;
         }
 
         private void btNhanvien_Click(object sender, EventArgs e)
@@ -66,6 +70,7 @@ namespace QLCHBX
             MovePanel(btNhanvien);
             khachhang1.Visible = false;
             hangHoa1.Visible = false;
+            gIaoDich1.Visible = false;
         }
 
         private void btKhachhang_Click(object sender, EventArgs e)
@@ -73,6 +78,7 @@ namespace QLCHBX
             MovePanel(btKhachhang);
             khachhang1.Visible = true;
             hangHoa1.Visible=false;
+            gIaoDich1.Visible = false;
         }
     }
 }
