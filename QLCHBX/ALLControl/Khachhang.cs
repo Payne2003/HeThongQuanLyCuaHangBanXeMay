@@ -20,8 +20,10 @@ namespace QLCHBX.ALLControl
     public partial class Khachhang : UserControl
     {
         private string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
-        SqlConnection SqlConnection;
+        SqlConnection SqlConnection;    
         DataTable tblKhachhang;
+        
+
         public Khachhang()
         {
             InitializeComponent();
@@ -83,12 +85,14 @@ namespace QLCHBX.ALLControl
         private void Khachhang_Load(object sender, EventArgs e)
         {
             this.khachHangTableAdapter.Fill(this.motorcycle_shop_managerDataSet.KhachHang);
+            LoadDataGridView();
         }
 
         private void btThemvaoDs_Click(object sender, EventArgs e)
         { 
             AddKH addKH = new AddKH();
-            addKH.ShowDialog(); 
+            addKH.ShowDialog();
+            LoadDataGridView();
          
         }
 
@@ -106,7 +110,9 @@ namespace QLCHBX.ALLControl
 
                 if (result == DialogResult.Yes)
                 {
-                    XoaKhachHang(makhachhang);
+                    Khachhang khachhang = new Khachhang();
+                    khachhang.XoaKhachHang(makhachhang);
+                    LoadDataGridView();
                 }
                 else
                 {
@@ -139,9 +145,8 @@ namespace QLCHBX.ALLControl
             editKH.DiaChi = diachi;
             editKH.SoDienThoai = sodienthoai;
             
-            editKH.ShowDialog();    
-
-
+            editKH.ShowDialog();
+            LoadDataGridView();
 
         }
 
@@ -337,6 +342,33 @@ namespace QLCHBX.ALLControl
         {
             string selectedValue = txtquequan.Text;
             TimKiemTheoQueQuan(selectedValue);
+        }
+
+        private void viewKhachhang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                if (e.RowIndex >= 0 && e.ColumnIndex == 4)
+                {
+                DataGridViewRow selectedRow = viewKhachhang.SelectedRows[0];
+
+                string makhachhang = selectedRow.Cells[0].Value.ToString();
+
+                string tenkhach = selectedRow.Cells[1].Value.ToString();
+
+                string diachi = selectedRow.Cells[2].Value.ToString();
+
+                string sodienthoai = selectedRow.Cells[3].Value.ToString();
+
+                EditKH editKH = new EditKH();
+                editKH.MaKhachHang = makhachhang;
+                editKH.TenKhachHang = tenkhach;
+                editKH.DiaChi = diachi;
+                editKH.SoDienThoai = sodienthoai;
+
+                editKH.ShowDialog();
+                LoadDataGridView();
+            }
+
         }
     }
 }

@@ -131,6 +131,7 @@
             this.Controls.Add(this.txtuser);
             this.Name = "Login";
             this.Size = new System.Drawing.Size(400, 280);
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
 
         }

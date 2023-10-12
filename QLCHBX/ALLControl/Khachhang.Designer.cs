@@ -32,9 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Khachhang));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -59,6 +60,7 @@
             this.tenKhachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dienThoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btSua_KhachHang = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -415,38 +417,40 @@
             this.maKhachDataGridViewTextBoxColumn,
             this.tenKhachDataGridViewTextBoxColumn,
             this.diaChiDataGridViewTextBoxColumn,
-            this.dienThoaiDataGridViewTextBoxColumn});
+            this.dienThoaiDataGridViewTextBoxColumn,
+            this.btSua_KhachHang});
             this.viewKhachhang.DataSource = this.khachHangBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.viewKhachhang.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle4.NullValue = null;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.viewKhachhang.DefaultCellStyle = dataGridViewCellStyle4;
             this.viewKhachhang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.viewKhachhang.Location = new System.Drawing.Point(0, 62);
             this.viewKhachhang.Margin = new System.Windows.Forms.Padding(10);
             this.viewKhachhang.Name = "viewKhachhang";
             this.viewKhachhang.ReadOnly = true;
             this.viewKhachhang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.viewKhachhang.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.viewKhachhang.RowHeadersVisible = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.viewKhachhang.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.viewKhachhang.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.viewKhachhang.RowHeadersVisible = false;
+            this.viewKhachhang.RowHeadersWidth = 100;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.viewKhachhang.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.viewKhachhang.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.viewKhachhang.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.viewKhachhang.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -454,7 +458,10 @@
             this.viewKhachhang.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.viewKhachhang.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.viewKhachhang.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.viewKhachhang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.viewKhachhang.RowTemplate.ErrorText = "NULL";
+            this.viewKhachhang.RowTemplate.Height = 60;
+            this.viewKhachhang.RowTemplate.ReadOnly = true;
+            this.viewKhachhang.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.viewKhachhang.Size = new System.Drawing.Size(1313, 400);
             this.viewKhachhang.TabIndex = 0;
             this.viewKhachhang.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
@@ -476,9 +483,10 @@
             this.viewKhachhang.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.viewKhachhang.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewKhachhang.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.viewKhachhang.ThemeStyle.RowsStyle.Height = 22;
+            this.viewKhachhang.ThemeStyle.RowsStyle.Height = 60;
             this.viewKhachhang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.viewKhachhang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.viewKhachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewKhachhang_CellClick);
             // 
             // maKhachDataGridViewTextBoxColumn
             // 
@@ -493,6 +501,7 @@
             // 
             // tenKhachDataGridViewTextBoxColumn
             // 
+            this.tenKhachDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tenKhachDataGridViewTextBoxColumn.DataPropertyName = "TenKhach";
             this.tenKhachDataGridViewTextBoxColumn.FillWeight = 99.69136F;
             this.tenKhachDataGridViewTextBoxColumn.HeaderText = "Họ và tên";
@@ -502,6 +511,7 @@
             // 
             // diaChiDataGridViewTextBoxColumn
             // 
+            this.diaChiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
             this.diaChiDataGridViewTextBoxColumn.FillWeight = 100.3528F;
             this.diaChiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
@@ -511,6 +521,7 @@
             // 
             // dienThoaiDataGridViewTextBoxColumn
             // 
+            this.dienThoaiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dienThoaiDataGridViewTextBoxColumn.DataPropertyName = "DienThoai";
             this.dienThoaiDataGridViewTextBoxColumn.FillWeight = 99.9558F;
             this.dienThoaiDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
@@ -518,6 +529,25 @@
             this.dienThoaiDataGridViewTextBoxColumn.Name = "dienThoaiDataGridViewTextBoxColumn";
             this.dienThoaiDataGridViewTextBoxColumn.ReadOnly = true;
             this.dienThoaiDataGridViewTextBoxColumn.ToolTipText = "Số điện thoại";
+            // 
+            // btSua_KhachHang
+            // 
+            this.btSua_KhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.btSua_KhachHang.DefaultCellStyle = dataGridViewCellStyle3;
+            this.btSua_KhachHang.FillWeight = 20F;
+            this.btSua_KhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btSua_KhachHang.HeaderText = "Sửa";
+            this.btSua_KhachHang.Name = "btSua_KhachHang";
+            this.btSua_KhachHang.ReadOnly = true;
+            this.btSua_KhachHang.Text = "Sửa";
+            this.btSua_KhachHang.ToolTipText = "Sửa";
+            this.btSua_KhachHang.UseColumnTextForButtonValue = true;
             // 
             // guna2GroupBox3
             // 
@@ -571,11 +601,6 @@
         private System.Windows.Forms.BindingSource khachHangBindingSource;
         private Motorcycle_shop_managerDataSet motorcycle_shop_managerDataSet;
         private Motorcycle_shop_managerDataSetTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
-        private Guna.UI2.WinForms.Guna2DataGridView viewKhachhang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maKhachDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenKhachDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dienThoaiDataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
@@ -589,5 +614,11 @@
         private Guna.UI2.WinForms.Guna2Button btXoa;
         private Guna.UI2.WinForms.Guna2PictureBox ptreload;
         private Guna.UI2.WinForms.Guna2TextBox txtquequan;
+        private Guna.UI2.WinForms.Guna2DataGridView viewKhachhang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maKhachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenKhachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dienThoaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn btSua_KhachHang;
     }
 }

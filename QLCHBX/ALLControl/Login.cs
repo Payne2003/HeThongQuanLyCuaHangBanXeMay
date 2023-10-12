@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLCHBX.GDControl;
+using QLCHBX.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,19 +9,62 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace QLCHBX.ALLControl
 {
     public partial class Login : UserControl
     {
-        string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        private string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        SqlConnection SqlConnection;
+        public string manhanvien { get; set; }
         public Login()
         {
             InitializeComponent();
             txtpassword.UseSystemPasswordChar = true;
-
+            
         }
+
+        public void Connect()
+        {
+            SqlConnection = new SqlConnection();
+
+            SqlConnection.ConnectionString = connectionString;
+
+            SqlConnection.Open();
+        }
+
+        public void Disconnect()
+        {
+            if (SqlConnection.State == ConnectionState.Open)
+            {
+                SqlConnection.Close();
+                SqlConnection.Dispose();
+            }
+        }
+
+        public bool RunSQL(string sql)
+        {
+            Connect(); // Mở kết nối đến cơ sở dữ liệu
+
+            using (SqlCommand cmd = new SqlCommand(sql, SqlConnection))
+            {
+                try
+                {
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0; // Trả về true nếu có hàng bị ảnh hưởng
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                    return false; // Trả về false nếu có lỗi
+                }
+            }
+
+            Disconnect(); // Đóng kết nối đến cơ sở dữ liệu
+        }
+
 
         private void btlogin_Click(object sender, EventArgs e)
         {
@@ -31,53 +76,61 @@ namespace QLCHBX.ALLControl
             {
                 string username = txtuser.Text.Trim();
                 string password = txtpassword.Text.Trim();
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
+               
+                LoginModel login = new LoginModel();
+               
+                if (login.LoginControl(username,password))
                 {
-                    connection.Open();
+                    MessageBox.Show("Đăng nhập thành công!!!", "Thông báo", MessageBoxButtons.OK);
+                    GDCuahang gDCuahang = new GDCuahang();
+                    gDCuahang.idnhanvien = this.LayMaNhanVien(username,password);
+                    DashBoard dashBoard = new DashBoard();
+                    dashBoard.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác. Nhập lại!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    // Tạo câu truy vấn
-                    string query = "SELECT COUNT(*) FROM TaiKhoan WHERE Username = @Username AND Password = @Password";
+                    txtuser.Text = "";
+                    txtpassword.Text = "";
+                }
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+
+            }
+        }
+
+        public string LayMaNhanVien(string username, string password)
+        {
+            string maNhanVien = null;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string sql = "SELECT MaNV FROM TaiKhoan WHERE Username = @Username AND Password = @Password;";
+
+                using (SqlCommand cmd = new SqlCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@Password", password);
-
-                        int count = (int)command.ExecuteScalar();
-
-                        if (count > 0)
+                        if (reader.Read())
                         {
-                            MessageBox.Show("Đăng nhập thành công!!!", "Thông báo", MessageBoxButtons.OK);
-                            DashBoard dashBoard = new DashBoard();
-                            dashBoard.ShowDialog();
-                         
-                        }
-                        else
-                        {
-                            MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác. Nhập lại!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            
-                            txtuser.Text = "";
-                            txtpassword.Text = "";
+                            maNhanVien = reader["MaNV"].ToString();
                         }
                     }
                 }
             }
+
+            return maNhanVien;
         }
 
-        private void linkdangky_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void Login_Load(object sender, EventArgs e)
         {
-            Signup signup = new Signup();
-            signup.Visible = true;
-            this.Visible = false;
+            
         }
-
-        private void lkquenmk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ForgotPassword forgotPassword = new ForgotPassword();
-            forgotPassword.Visible = true;
-            this.Visible = false;
-        }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCHBX.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,58 +14,34 @@ namespace QLCHBX.ALLControl
 {
     public partial class ForgotPassword : UserControl
     {
-        private string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         public ForgotPassword()
         {
             InitializeComponent();
+            txtpassword.ReadOnly = true;
         }
 
         private void btForgot_Click(object sender, EventArgs e)
         {
             if (txtmanhanvien.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Hãy nhập đủ dữ liệu ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hãy nhập mã nhân vien của bạn!!! ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string Id = txtmanhanvien.Text.Trim();
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                string Id = txtmanhanvien.Text;
+                LoginModel model = new LoginModel();
+                string matkhau = model.LayMatKhau(Id);
+                if (matkhau != string.Empty)
                 {
-                    connection.Open();
-
-                    string query = "SELECT Password FROM TaiKhoan WHERE MaNV = @MaNV";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@MaNV", Id);
-
-                        
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        if (reader.Read())
-                        {
-                            string password = reader["Password"].ToString();
-
-                            txtpassword.Text = password;
-                           
-                            MessageBox.Show($"Mật khẩu của bạn là: {password}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Nhân viên không tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-
-                        reader.Close();
-                    }
+                    MessageBox.Show("Đã lấy lại mật khẩu thành công", "Access", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtpassword.Text = matkhau;
                 }
+                else
+                {
+                    MessageBox.Show("Không lấy được mật khẩu", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
             }
-        }
-
-        private void linkdangnhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Login login = new Login();
-            login.Visible = true;
-           
         }
     }
 }

@@ -30,16 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.bt28 = new Guna.UI2.WinForms.Guna2Button();
-            this.bt27 = new Guna.UI2.WinForms.Guna2Button();
-            this.bt26 = new Guna.UI2.WinForms.Guna2Button();
-            this.bt25 = new Guna.UI2.WinForms.Guna2Button();
-            this.bt21 = new Guna.UI2.WinForms.Guna2Button();
-            this.bt24 = new Guna.UI2.WinForms.Guna2Button();
             this.bt20 = new Guna.UI2.WinForms.Guna2Button();
-            this.bt23 = new Guna.UI2.WinForms.Guna2Button();
             this.bt19 = new Guna.UI2.WinForms.Guna2Button();
-            this.bt22 = new Guna.UI2.WinForms.Guna2Button();
             this.bt14 = new Guna.UI2.WinForms.Guna2Button();
             this.bt18 = new Guna.UI2.WinForms.Guna2Button();
             this.bt13 = new Guna.UI2.WinForms.Guna2Button();
@@ -64,120 +56,6 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // bt28
-            // 
-            this.bt28.BackColor = System.Drawing.Color.Transparent;
-            this.bt28.BorderRadius = 10;
-            this.bt28.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt28.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt28.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt28.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt28.FillColor = System.Drawing.Color.White;
-            this.bt28.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.bt28.ForeColor = System.Drawing.Color.DimGray;
-            this.bt28.Location = new System.Drawing.Point(725, 475);
-            this.bt28.Name = "bt28";
-            this.bt28.ShadowDecoration.BorderRadius = 10;
-            this.bt28.ShadowDecoration.Enabled = true;
-            this.bt28.Size = new System.Drawing.Size(153, 75);
-            this.bt28.TabIndex = 29;
-            this.bt28.Text = "28";
-            // 
-            // bt27
-            // 
-            this.bt27.BackColor = System.Drawing.Color.Transparent;
-            this.bt27.BorderRadius = 10;
-            this.bt27.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt27.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt27.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt27.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt27.FillColor = System.Drawing.Color.White;
-            this.bt27.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.bt27.ForeColor = System.Drawing.Color.DimGray;
-            this.bt27.Location = new System.Drawing.Point(495, 475);
-            this.bt27.Name = "bt27";
-            this.bt27.ShadowDecoration.BorderRadius = 10;
-            this.bt27.ShadowDecoration.Enabled = true;
-            this.bt27.Size = new System.Drawing.Size(153, 75);
-            this.bt27.TabIndex = 28;
-            this.bt27.Text = "27";
-            // 
-            // bt26
-            // 
-            this.bt26.BackColor = System.Drawing.Color.Transparent;
-            this.bt26.BorderRadius = 10;
-            this.bt26.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt26.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt26.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt26.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt26.FillColor = System.Drawing.Color.White;
-            this.bt26.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.bt26.ForeColor = System.Drawing.Color.DimGray;
-            this.bt26.Location = new System.Drawing.Point(265, 475);
-            this.bt26.Name = "bt26";
-            this.bt26.ShadowDecoration.BorderRadius = 10;
-            this.bt26.ShadowDecoration.Enabled = true;
-            this.bt26.Size = new System.Drawing.Size(153, 75);
-            this.bt26.TabIndex = 33;
-            this.bt26.Text = "26";
-            // 
-            // bt25
-            // 
-            this.bt25.BackColor = System.Drawing.Color.Transparent;
-            this.bt25.BorderRadius = 10;
-            this.bt25.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt25.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt25.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt25.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt25.FillColor = System.Drawing.Color.White;
-            this.bt25.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.bt25.ForeColor = System.Drawing.Color.DimGray;
-            this.bt25.Location = new System.Drawing.Point(35, 475);
-            this.bt25.Name = "bt25";
-            this.bt25.ShadowDecoration.BorderRadius = 10;
-            this.bt25.ShadowDecoration.Enabled = true;
-            this.bt25.Size = new System.Drawing.Size(153, 75);
-            this.bt25.TabIndex = 30;
-            this.bt25.Text = "25";
-            // 
-            // bt21
-            // 
-            this.bt21.BackColor = System.Drawing.Color.Transparent;
-            this.bt21.BorderRadius = 10;
-            this.bt21.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt21.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt21.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt21.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt21.FillColor = System.Drawing.Color.White;
-            this.bt21.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.bt21.ForeColor = System.Drawing.Color.DimGray;
-            this.bt21.Location = new System.Drawing.Point(495, 366);
-            this.bt21.Name = "bt21";
-            this.bt21.ShadowDecoration.BorderRadius = 10;
-            this.bt21.ShadowDecoration.Enabled = true;
-            this.bt21.Size = new System.Drawing.Size(153, 75);
-            this.bt21.TabIndex = 24;
-            this.bt21.Text = "21";
-            // 
-            // bt24
-            // 
-            this.bt24.BackColor = System.Drawing.Color.Transparent;
-            this.bt24.BorderRadius = 10;
-            this.bt24.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt24.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt24.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt24.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt24.FillColor = System.Drawing.Color.White;
-            this.bt24.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.bt24.ForeColor = System.Drawing.Color.DimGray;
-            this.bt24.Location = new System.Drawing.Point(1185, 366);
-            this.bt24.Name = "bt24";
-            this.bt24.ShadowDecoration.BorderRadius = 10;
-            this.bt24.ShadowDecoration.Enabled = true;
-            this.bt24.Size = new System.Drawing.Size(153, 75);
-            this.bt24.TabIndex = 31;
-            this.bt24.Text = "24";
-            // 
             // bt20
             // 
             this.bt20.BackColor = System.Drawing.Color.Transparent;
@@ -196,25 +74,7 @@
             this.bt20.Size = new System.Drawing.Size(153, 75);
             this.bt20.TabIndex = 25;
             this.bt20.Text = "20";
-            // 
-            // bt23
-            // 
-            this.bt23.BackColor = System.Drawing.Color.Transparent;
-            this.bt23.BorderRadius = 10;
-            this.bt23.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt23.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt23.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt23.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt23.FillColor = System.Drawing.Color.White;
-            this.bt23.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.bt23.ForeColor = System.Drawing.Color.DimGray;
-            this.bt23.Location = new System.Drawing.Point(955, 366);
-            this.bt23.Name = "bt23";
-            this.bt23.ShadowDecoration.BorderRadius = 10;
-            this.bt23.ShadowDecoration.Enabled = true;
-            this.bt23.Size = new System.Drawing.Size(153, 75);
-            this.bt23.TabIndex = 27;
-            this.bt23.Text = "23";
+            this.bt20.Click += new System.EventHandler(this.bt20_Click);
             // 
             // bt19
             // 
@@ -234,25 +94,7 @@
             this.bt19.Size = new System.Drawing.Size(153, 75);
             this.bt19.TabIndex = 20;
             this.bt19.Text = "19";
-            // 
-            // bt22
-            // 
-            this.bt22.BackColor = System.Drawing.Color.Transparent;
-            this.bt22.BorderRadius = 10;
-            this.bt22.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt22.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt22.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt22.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt22.FillColor = System.Drawing.Color.White;
-            this.bt22.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.bt22.ForeColor = System.Drawing.Color.DimGray;
-            this.bt22.Location = new System.Drawing.Point(725, 366);
-            this.bt22.Name = "bt22";
-            this.bt22.ShadowDecoration.BorderRadius = 10;
-            this.bt22.ShadowDecoration.Enabled = true;
-            this.bt22.Size = new System.Drawing.Size(153, 75);
-            this.bt22.TabIndex = 32;
-            this.bt22.Text = "22";
+            this.bt19.Click += new System.EventHandler(this.bt19_Click);
             // 
             // bt14
             // 
@@ -272,6 +114,7 @@
             this.bt14.Size = new System.Drawing.Size(153, 75);
             this.bt14.TabIndex = 19;
             this.bt14.Text = "14";
+            this.bt14.Click += new System.EventHandler(this.bt14_Click);
             // 
             // bt18
             // 
@@ -291,6 +134,7 @@
             this.bt18.Size = new System.Drawing.Size(153, 75);
             this.bt18.TabIndex = 23;
             this.bt18.Text = "18";
+            this.bt18.Click += new System.EventHandler(this.bt18_Click);
             // 
             // bt13
             // 
@@ -310,6 +154,7 @@
             this.bt13.Size = new System.Drawing.Size(153, 75);
             this.bt13.TabIndex = 18;
             this.bt13.Text = "13";
+            this.bt13.Click += new System.EventHandler(this.bt13_Click);
             // 
             // bt12
             // 
@@ -329,6 +174,7 @@
             this.bt12.Size = new System.Drawing.Size(153, 75);
             this.bt12.TabIndex = 17;
             this.bt12.Text = "12";
+            this.bt12.Click += new System.EventHandler(this.bt12_Click);
             // 
             // bt11
             // 
@@ -348,6 +194,7 @@
             this.bt11.Size = new System.Drawing.Size(153, 75);
             this.bt11.TabIndex = 16;
             this.bt11.Text = "11";
+            this.bt11.Click += new System.EventHandler(this.bt11_Click);
             // 
             // bt17
             // 
@@ -367,6 +214,7 @@
             this.bt17.Size = new System.Drawing.Size(153, 75);
             this.bt17.TabIndex = 26;
             this.bt17.Text = "17";
+            this.bt17.Click += new System.EventHandler(this.bt17_Click);
             // 
             // bt7
             // 
@@ -386,6 +234,7 @@
             this.bt7.Size = new System.Drawing.Size(153, 75);
             this.bt7.TabIndex = 11;
             this.bt7.Text = "7";
+            this.bt7.Click += new System.EventHandler(this.bt7_Click);
             // 
             // bt6
             // 
@@ -405,6 +254,7 @@
             this.bt6.Size = new System.Drawing.Size(153, 75);
             this.bt6.TabIndex = 10;
             this.bt6.Text = "6";
+            this.bt6.Click += new System.EventHandler(this.bt6_Click);
             // 
             // bt16
             // 
@@ -424,6 +274,7 @@
             this.bt16.Size = new System.Drawing.Size(153, 75);
             this.bt16.TabIndex = 22;
             this.bt16.Text = "16";
+            this.bt16.Click += new System.EventHandler(this.bt16_Click);
             // 
             // bt5
             // 
@@ -443,6 +294,7 @@
             this.bt5.Size = new System.Drawing.Size(153, 75);
             this.bt5.TabIndex = 9;
             this.bt5.Text = "5";
+            this.bt5.Click += new System.EventHandler(this.bt5_Click);
             // 
             // bt10
             // 
@@ -462,6 +314,7 @@
             this.bt10.Size = new System.Drawing.Size(153, 75);
             this.bt10.TabIndex = 15;
             this.bt10.Text = "10";
+            this.bt10.Click += new System.EventHandler(this.bt10_Click);
             // 
             // bt4
             // 
@@ -481,6 +334,7 @@
             this.bt4.Size = new System.Drawing.Size(153, 75);
             this.bt4.TabIndex = 8;
             this.bt4.Text = "4";
+            this.bt4.Click += new System.EventHandler(this.bt4_Click);
             // 
             // bt15
             // 
@@ -500,6 +354,7 @@
             this.bt15.Size = new System.Drawing.Size(153, 75);
             this.bt15.TabIndex = 21;
             this.bt15.Text = "15";
+            this.bt15.Click += new System.EventHandler(this.bt15_Click);
             // 
             // bt9
             // 
@@ -519,6 +374,7 @@
             this.bt9.Size = new System.Drawing.Size(153, 75);
             this.bt9.TabIndex = 14;
             this.bt9.Text = "9";
+            this.bt9.Click += new System.EventHandler(this.bt9_Click);
             // 
             // bt3
             // 
@@ -538,6 +394,7 @@
             this.bt3.Size = new System.Drawing.Size(153, 75);
             this.bt3.TabIndex = 7;
             this.bt3.Text = "3";
+            this.bt3.Click += new System.EventHandler(this.bt3_Click);
             // 
             // bt8
             // 
@@ -557,6 +414,7 @@
             this.bt8.Size = new System.Drawing.Size(153, 75);
             this.bt8.TabIndex = 13;
             this.bt8.Text = "8";
+            this.bt8.Click += new System.EventHandler(this.bt8_Click);
             // 
             // bt2
             // 
@@ -576,6 +434,7 @@
             this.bt2.Size = new System.Drawing.Size(153, 75);
             this.bt2.TabIndex = 12;
             this.bt2.Text = "2";
+            this.bt2.Click += new System.EventHandler(this.bt2_Click);
             // 
             // bt1
             // 
@@ -595,22 +454,15 @@
             this.bt1.Size = new System.Drawing.Size(153, 75);
             this.bt1.TabIndex = 6;
             this.bt1.Text = "1";
+            this.bt1.Click += new System.EventHandler(this.bt1_Click);
             // 
             // GoJek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.bt28);
-            this.Controls.Add(this.bt27);
-            this.Controls.Add(this.bt26);
-            this.Controls.Add(this.bt25);
-            this.Controls.Add(this.bt21);
-            this.Controls.Add(this.bt24);
             this.Controls.Add(this.bt20);
-            this.Controls.Add(this.bt23);
             this.Controls.Add(this.bt19);
-            this.Controls.Add(this.bt22);
             this.Controls.Add(this.bt14);
             this.Controls.Add(this.bt18);
             this.Controls.Add(this.bt13);
@@ -640,16 +492,8 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Button bt28;
-        private Guna.UI2.WinForms.Guna2Button bt27;
-        private Guna.UI2.WinForms.Guna2Button bt26;
-        private Guna.UI2.WinForms.Guna2Button bt25;
-        private Guna.UI2.WinForms.Guna2Button bt21;
-        private Guna.UI2.WinForms.Guna2Button bt24;
         private Guna.UI2.WinForms.Guna2Button bt20;
-        private Guna.UI2.WinForms.Guna2Button bt23;
         private Guna.UI2.WinForms.Guna2Button bt19;
-        private Guna.UI2.WinForms.Guna2Button bt22;
         private Guna.UI2.WinForms.Guna2Button bt14;
         private Guna.UI2.WinForms.Guna2Button bt18;
         private Guna.UI2.WinForms.Guna2Button bt13;

@@ -29,11 +29,9 @@ C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.exe
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.pdb
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.ALLControl.Khachhang.resources
-C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.ALLControl.GIaoDich.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\bin\Debug\itextsharp.xml
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormKhachHang.AddKH.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.HanghoaControl.Dongco.resources
-C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.ALLControl.HangHoa.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.HanghoaControl.Hangsanxuat.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.HanghoaControl.Mausac.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.HanghoaControl.Nuocsanxuat.resources
@@ -82,3 +80,6 @@ C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.GDControl.GoJek.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.GDControl.HoaDon.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.GDControl.Shopee.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.GiaoDich.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.ALLControl.GiaoDichCT.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.ThemChiTietHoaDon.resources

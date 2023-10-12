@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCHBX.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,6 @@ namespace QLCHBX.ALLControl
     public partial class Signup : UserControl
 
     {
-        private  string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         public Signup()
         {
             InitializeComponent();
@@ -37,34 +37,18 @@ namespace QLCHBX.ALLControl
                 string username = txtuser.Text.Trim();
                 string password = txtpassword.Text.Trim();
                 string Id = txtmanhanvien.Text.Trim();
+                LoginModel login = new LoginModel();
                 // Chuỗi kết nối
-              
+            if (login.ThemTaiKhoanNhanVien(Id,username,password))
+            {
+                MessageBox.Show("Đăng ký thành công.", "Access", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    // Tạo câu truy vấn
-                    string query = "INSERT INTO TaiKhoan (Username, Password, MaNV) VALUES (@Username, @Password, @ID);";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@Password", password);
-                        command.Parameters.AddWithValue("@ID", Id);
-
-                        int count = command.ExecuteNonQuery();
-
-                        if (count > 0)
-                        {
-                           
-                        }
-                        else
-                        {
-                            MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ hoặc mã nhân viên không có.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
+            }
+            else
+            {     
+                MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ hoặc mã nhân viên không có.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                
             }
         }
      }

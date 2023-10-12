@@ -10,15 +10,22 @@ using System.Windows.Forms;
 
 namespace QLCHBX.ALLControl
 {
-    public partial class GIaoDich : UserControl
+    public partial class GiaoDichCT : UserControl
     {
-        public GIaoDich()
+        public GiaoDichCT()
         {
             InitializeComponent();
+
+        }
+        private void MovePanel(Control control)
+        {
+            pnMoving.Top = control.Bottom + 10;
+            pnMoving.Left = control.Left;
         }
 
         private void btHoadon_Click(object sender, EventArgs e)
         {
+            MovePanel(btHoadon);
             hoaDon1.Visible = true;
             gdCuahang1.Visible = false;
             shopee1.Visible = false;
@@ -27,6 +34,7 @@ namespace QLCHBX.ALLControl
 
         private void btGDch_Click(object sender, EventArgs e)
         {
+            MovePanel(btGDch);
             hoaDon1.Visible = false;
             gdCuahang1.Visible = true;
             shopee1.Visible = false;
@@ -35,6 +43,7 @@ namespace QLCHBX.ALLControl
 
         private void btGDgj_Click(object sender, EventArgs e)
         {
+            MovePanel(btGDgj);
             hoaDon1.Visible = false;
             gdCuahang1.Visible = false;
             shopee1.Visible = false;
@@ -43,6 +52,7 @@ namespace QLCHBX.ALLControl
 
         private void btGDSp_Click(object sender, EventArgs e)
         {
+            MovePanel(btGDSp);
             hoaDon1.Visible = false;
             gdCuahang1.Visible = false;
             shopee1.Visible = true;

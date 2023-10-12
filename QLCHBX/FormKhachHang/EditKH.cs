@@ -1,4 +1,5 @@
 ﻿using QLCHBX.ALLControl;
+using QLCHBX.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,57 +14,17 @@ using System.Windows.Forms;
 namespace QLCHBX.FormKhachHang
 {
     public partial class EditKH : Form
-    {
-        private string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
-        SqlConnection SqlConnection;
+    {       
         public string MaKhachHang { get; set; }
         public string TenKhachHang { get; set; }
         public string DiaChi { get; set; }
         public string SoDienThoai { get; set; }
+       
         public EditKH()
         {
             InitializeComponent();
             txtma.ReadOnly = true;
         }
-        public void Connect()
-        {
-            SqlConnection = new SqlConnection();
-
-            SqlConnection.ConnectionString = connectionString;
-
-            SqlConnection.Open();
-        }
-
-        public void Disconnect()
-        {
-            if (SqlConnection.State == ConnectionState.Open)
-            {
-                SqlConnection.Close();
-                SqlConnection.Dispose();
-            }
-        }
-        public bool RunSQL(string sql)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                using (SqlCommand cmd = new SqlCommand(sql, connection))
-                {
-                    try
-                    {
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0; // Trả về true nếu có hàng bị ảnh hưởng
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error: " + ex.Message);
-                        return false; // Trả về false nếu có lỗi
-                    }
-                }
-            }
-        }
-
 
         private void ptminimize_Click(object sender, EventArgs e)
         {
@@ -96,6 +57,7 @@ namespace QLCHBX.FormKhachHang
             string tenkhachhang = txtten.Text;
             string diachi = txtdiachi.Text;
             string sodienthoai = txtsodienthoai.Text;
+
             if (string.IsNullOrWhiteSpace(tenkhachhang))
             {
                 MessageBox.Show("Vui lòng nhập tên khách hàng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -113,52 +75,24 @@ namespace QLCHBX.FormKhachHang
                 MessageBox.Show("Số điện thoại không hợp lệ. Vui lòng nhập 10 số.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            SuaKhachHang(makhach,tenkhachhang, diachi, sodienthoai);
+
+            KhachHang KhachHang = new KhachHang();
+            bool success = KhachHang.SuaKhachHang(makhach, tenkhachhang, diachi, sodienthoai);
+
+            if (success)
+            {
+                MessageBox.Show("Sửa thông tin khách hàng thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Sửa thông tin khách hàng thất bại. Số điện thoại đã tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         private bool IsValidPhoneNumber(string phoneNumber)
         {
             return phoneNumber.Length == 10 && phoneNumber.All(char.IsDigit);
         }
-        public void SuaKhachHang(string maKhachHang, string tenKhach, string diaChi, string soDienThoai)
-        {
-            try
-            {
-                Connect();
-
-                // Kiểm tra nếu số điện thoại đã tồn tại trong cơ sở dữ liệu ngoại trừ khách hàng đang sửa
-                string checkExistSql = $"SELECT COUNT(*) FROM KhachHang WHERE DienThoai = '{soDienThoai}' AND MaKhach != '{maKhachHang}'";
-                using (SqlCommand checkExistCmd = new SqlCommand(checkExistSql, SqlConnection))
-                {
-                    int count = Convert.ToInt32(checkExistCmd.ExecuteScalar());
-                    if (count > 0)
-                    {
-                        MessageBox.Show("Số điện thoại đã tồn tại trong cơ sở dữ liệu.");
-                        return;
-                    }
-                }
-
-                // Tiếp tục sửa khách hàng
-                string sql = $"UPDATE KhachHang SET TenKhach = N'{tenKhach}', DiaChi = N'{diaChi}', DienThoai = '{soDienThoai}' WHERE MaKhach = '{maKhachHang}'";
-
-                if (RunSQL(sql))
-                {
-                    MessageBox.Show("Sửa khách hàng thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Sửa khách hàng không thành công!");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi sửa thông tin khách hàng: " + ex.Message);
-            }
-            finally
-            {
-                Disconnect();
-            }
-        }
-
         private void txtten_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar))

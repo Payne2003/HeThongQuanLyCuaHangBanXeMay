@@ -221,11 +221,11 @@
     <Compile Include="ALLControl\ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="ALLControl\GIaoDich.cs">
+    <Compile Include="ALLControl\GiaoDichCT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ALLControl\GIaoDich.Designer.cs">
-      <DependentUpon>GIaoDich.cs</DependentUpon>
+    <Compile Include="ALLControl\GiaoDichCT.Designer.cs">
+      <DependentUpon>GiaoDichCT.cs</DependentUpon>
     </Compile>
     <Compile Include="ALLControl\Khachhang.cs">
       <SubType>UserControl</SubType>
@@ -245,11 +245,18 @@
     <Compile Include="ALLControl\Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashBoard.cs">
+    <Compile Include="Db\DbConnection.cs" />
+    <Compile Include="FormGiaoDich\FormLoaiXe\ThemChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashBoard.Designer.cs">
-      <DependentUpon>DashBoard.cs</DependentUpon>
+    <Compile Include="FormGiaoDich\FormLoaiXe\ThemChiTietHoaDon.Designer.cs">
+      <DependentUpon>ThemChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoDich\GiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\GiaoDich.Designer.cs">
+      <DependentUpon>GiaoDich.cs</DependentUpon>
     </Compile>
     <Compile Include="FormKhachHang\AddKH.cs">
       <SubType>Form</SubType>
@@ -263,6 +270,7 @@
     <Compile Include="FormKhachHang\EditKH.Designer.cs">
       <DependentUpon>EditKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\GiaoDichModel.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,12 +306,6 @@
     </Compile>
     <Compile Include="HanghoaControl\Dongco.Designer.cs">
       <DependentUpon>Dongco.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\HangHoa.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\HangHoa.Designer.cs">
-      <DependentUpon>HangHoa.cs</DependentUpon>
     </Compile>
     <Compile Include="HanghoaControl\Hangsanxuat.cs">
       <SubType>UserControl</SubType>
@@ -365,6 +367,9 @@
     <Compile Include="HanghoaControl\Xeso.Designer.cs">
       <DependentUpon>Xeso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\DashBoard.cs" />
+    <Compile Include="Model\KhachHang.cs" />
+    <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Motorcycle_shop_managerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -375,8 +380,8 @@
     <EmbeddedResource Include="ALLControl\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ALLControl\GIaoDich.resx">
-      <DependentUpon>GIaoDich.cs</DependentUpon>
+    <EmbeddedResource Include="ALLControl\GiaoDichCT.resx">
+      <DependentUpon>GiaoDichCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ALLControl\Khachhang.resx">
       <DependentUpon>Khachhang.cs</DependentUpon>
@@ -387,8 +392,11 @@
     <EmbeddedResource Include="ALLControl\Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashBoard.resx">
-      <DependentUpon>DashBoard.cs</DependentUpon>
+    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\ThemChiTietHoaDon.resx">
+      <DependentUpon>ThemChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\GiaoDich.resx">
+      <DependentUpon>GiaoDich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKhachHang\AddKH.resx">
       <DependentUpon>AddKH.cs</DependentUpon>
@@ -413,9 +421,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HanghoaControl\Dongco.resx">
       <DependentUpon>Dongco.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\HangHoa.resx">
-      <DependentUpon>HangHoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HanghoaControl\Hangsanxuat.resx">
       <DependentUpon>Hangsanxuat.cs</DependentUpon>
