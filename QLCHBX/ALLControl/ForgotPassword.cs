@@ -1,4 +1,5 @@
 ﻿using QLCHBX.Model;
+using QLCHBX.ThongBao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,7 @@ namespace QLCHBX.ALLControl
         {
             if (txtmanhanvien.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Hãy nhập mã nhân vien của bạn!!! ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ShowCustomMessageBox("Hãy nhập mã nhân vien của bạn!!! ");
             }
             else
             {
@@ -33,15 +34,21 @@ namespace QLCHBX.ALLControl
                 string matkhau = model.LayMatKhau(Id);
                 if (matkhau != string.Empty)
                 {
-                    MessageBox.Show("Đã lấy lại mật khẩu thành công", "Access", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowCustomMessageBox("Đã lấy lại mật khẩu thành công");
                     txtpassword.Text = matkhau;
                 }
                 else
                 {
-                    MessageBox.Show("Không lấy được mật khẩu", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                   ShowCustomMessageBox("Không lấy được mật khẩu");
                 }
                 
             }
+        }
+        private void ShowCustomMessageBox(string message)
+        {
+            MessageBoxForm messageForm = new MessageBoxForm(message);
+            messageForm.StartPosition = FormStartPosition.CenterParent;
+            messageForm.ShowDialog();
         }
     }
 }

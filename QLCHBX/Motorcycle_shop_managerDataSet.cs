@@ -4,3 +4,10 @@
     {
     }
 }
+
+namespace QLCHBX.Motorcycle_shop_managerDataSetTableAdapters {
+    
+    
+    public partial class dsmathangTableAdapter {
+    }
+}

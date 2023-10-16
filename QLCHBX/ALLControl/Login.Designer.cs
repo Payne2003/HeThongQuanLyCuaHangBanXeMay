@@ -34,6 +34,7 @@
             this.txtuser = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.toolTip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.SuspendLayout();
             // 
             // btlogin
@@ -120,6 +121,11 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // toolTip
+            // 
+            this.toolTip.AllowLinksHandling = true;
+            this.toolTip.MaximumSize = new System.Drawing.Size(0, 0);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,5 +148,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtuser;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip;
     }
 }

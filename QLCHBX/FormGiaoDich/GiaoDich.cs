@@ -13,79 +13,74 @@ namespace QLCHBX.FormGiaoDich
 {
     public partial class GiaoDich : Form
     {
-        public int idhoadon { get; set; }
+        private bool mouseDown;
+        private Point lastLocation;
+        public string idban { get; set; }
         public GiaoDich()
         {
             InitializeComponent();
+            guna2ShadowForm1.SetShadowForm(this);
+
+        }
+        private void GiaoDich_Load(object sender, EventArgs e)
+        {
+            soban.Text = idban;
+            // TODO: This line of code loads data into the 'motorcycle_shop_managerDataSet5.Dmh' table. You can move, or remove it, as needed.
+            time_1.Text = DateTime.Now.ToString("HH:mm");
+
+        }
+
+        private void btchietkhau_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btthemdondathang_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void header_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void header_MouseDown(object sender, MouseEventArgs e)
+        {
            
         }
 
-        private void ptThoat_Click(object sender, EventArgs e)
+        private void header_MouseUp(object sender, MouseEventArgs e)
         {
-            GiaoDichModel giaoDich = new GiaoDichModel();
-            giaoDich.XoaDonDatHang(idhoadon);
-            this.Close();
+         
         }
 
-        private void ptminimze_Click(object sender, EventArgs e)
+        private void header_MouseMove(object sender, MouseEventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;  
+           
         }
 
-        private void GiaoDich_Load(object sender, EventArgs e)
+        private void soban_MouseMove(object sender, MouseEventArgs e)
         {
-            // TODO: This line of code loads data into the 'motorcycle_shop_managerDataSet.dsmathang' table. You can move, or remove it, as needed.
-            this.dsmathangTableAdapter.Fill(this.motorcycle_shop_managerDataSet.dsmathang);
-            lbmahoadon.Text = idhoadon.ToString();
-            lbmahoadon1.Text = idhoadon.ToString();
-            // TODO: This line of code loads data into the 'motorcycle_shop_managerDataSet5.Dmh' table. You can move, or remove it, as needed.
-            time.Text = DateTime.Now.ToString("HH:mm");
-
+            if (mouseDown)
+            {
+                Point currentScreenPos = PointToScreen(e.Location);
+                Location = new Point(currentScreenPos.X - lastLocation.X, currentScreenPos.Y - lastLocation.Y);
+            }
         }
 
-        private void ptmenu_Click(object sender, EventArgs e)
+        private void soban_MouseUp(object sender, MouseEventArgs e)
         {
-
+            mouseDown = false;
         }
 
-        private void pnHonda_Click(object sender, EventArgs e)
+        private void soban_MouseDown(object sender, MouseEventArgs e)
         {
-
-        }
-
-        private void pnYamaha_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnSym_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnSuzuki_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnPiaggio_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnKTM_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnducati_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnKawasaki_Click(object sender, EventArgs e)
-        {
-
+            if (e.Button == MouseButtons.Left)
+            {
+                mouseDown = true;
+                lastLocation = e.Location;
+            }
         }
     }
 }

@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLCHBX.FormKhachHang;
+using QLCHBX.Model;
 
 namespace QLCHBX.ALLControl
 
@@ -59,29 +60,7 @@ namespace QLCHBX.ALLControl
                 viewKhachhang.DataSource = tblKhachhang;
             }
         }
-
-        public bool RunSQL(string sql)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                using (SqlCommand cmd = new SqlCommand(sql, connection))
-                {
-                    try
-                    {
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0; // Trả về true nếu có hàng bị ảnh hưởng
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error: " + ex.Message);
-                        return false; // Trả về false nếu có lỗi
-                    }
-                }
-            }
-        }
-
+ 
         private void Khachhang_Load(object sender, EventArgs e)
         {
             this.khachHangTableAdapter.Fill(this.motorcycle_shop_managerDataSet.KhachHang);
@@ -96,59 +75,8 @@ namespace QLCHBX.ALLControl
          
         }
 
-        private void btXoa_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow selectedRow = viewKhachhang.SelectedRows[0];
 
-            string makhachhang = selectedRow.Cells[0].Value.ToString();
-
-           
-
-            if (!string.IsNullOrEmpty(makhachhang))
-            {
-                DialogResult result = MessageBox.Show("Xóa Khách hàng có mã: " + makhachhang + " ?", "Yêu cầu xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    Khachhang khachhang = new Khachhang();
-                    khachhang.XoaKhachHang(makhachhang);
-                    LoadDataGridView();
-                }
-                else
-                {
-                    return;
-                } 
-                    
-               
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn khách hàng để xóa.");
-            }
-        }
-
-        private void btSua_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow selectedRow = viewKhachhang.SelectedRows[0];
-
-            string makhachhang = selectedRow.Cells[0].Value.ToString();
-
-            string tenkhach = selectedRow.Cells[1].Value.ToString();
-
-            string diachi = selectedRow.Cells[2].Value.ToString();
-
-            string sodienthoai = selectedRow.Cells[3].Value.ToString();
-
-            EditKH editKH = new EditKH();
-            editKH.MaKhachHang = makhachhang;
-            editKH.TenKhachHang = tenkhach;
-            editKH.DiaChi = diachi;
-            editKH.SoDienThoai = sodienthoai;
-            
-            editKH.ShowDialog();
-            LoadDataGridView();
-
-        }
+        
 
         private void btIn_Click(object sender, EventArgs e)
         {
@@ -187,41 +115,6 @@ namespace QLCHBX.ALLControl
             MessageBox.Show("Đã tạo tệp PDF thành công!");
         }
 
-        public void XoaKhachHang(string maKhachHang)
-        {
-            try
-            {
-                Connect(); // Mở kết nối
-
-                // Tạo câu lệnh SQL để xóa khách hàng theo mã
-                string sql = $"DELETE FROM KhachHang WHERE MaKhach = '{maKhachHang}'";
-
-               
-
-                if (RunSQL(sql))
-                {
-                    MessageBox.Show("Xóa khách hàng thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Xóa khách hàng không thành công!");
-
-                }
-
-
-
-                // Tải lại dữ liệu trong DataGridView sau khi xóa
-                LoadDataGridView();
-            }
-            catch (Exception ex)
-            {
-               
-            }
-            finally
-            {
-                Disconnect(); // Ngắt kết nối sau khi hoàn tất thao tác
-            }
-        }
 
         public void TimKiemKhachHang(string soDienThoai)
         {
@@ -346,18 +239,15 @@ namespace QLCHBX.ALLControl
 
         private void viewKhachhang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-                if (e.RowIndex >= 0 && e.ColumnIndex == 4)
-                {
-                DataGridViewRow selectedRow = viewKhachhang.SelectedRows[0];
 
-                string makhachhang = selectedRow.Cells[0].Value.ToString();
+            if (e.RowIndex >= 0 && e.ColumnIndex == 4)
+            {
+                DataGridViewRow row = viewKhachhang.Rows[e.RowIndex]; // Thay thế dataGridView1 bằng tên của DataGridView thực tế của bạn
 
-                string tenkhach = selectedRow.Cells[1].Value.ToString();
-
-                string diachi = selectedRow.Cells[2].Value.ToString();
-
-                string sodienthoai = selectedRow.Cells[3].Value.ToString();
+                string makhachhang = row.Cells[0].Value.ToString();
+                string tenkhach = row.Cells[1].Value.ToString();
+                string diachi = row.Cells[2].Value.ToString(); // Đổi chỉ mục (index) của cột nếu cần
+                string sodienthoai = row.Cells[3].Value.ToString(); // Đổi chỉ mục (index) của cột nếu cần
 
                 EditKH editKH = new EditKH();
                 editKH.MaKhachHang = makhachhang;
@@ -369,6 +259,37 @@ namespace QLCHBX.ALLControl
                 LoadDataGridView();
             }
 
+
+            if (e.RowIndex >= 0 && e.ColumnIndex == 5)
+            {
+                DataGridViewRow row = viewKhachhang.Rows[e.RowIndex];
+
+                string makhachhang = row.Cells[0].Value.ToString();
+
+
+
+                if (!string.IsNullOrEmpty(makhachhang))
+                {
+                    DialogResult result = MessageBox.Show("Xóa Khách hàng có mã: " + makhachhang + " ?", "Yêu cầu xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        KhachHangModel khachHang = new KhachHangModel();
+                        khachHang.XoaKhachHang(makhachhang);
+                        LoadDataGridView();
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn khách hàng để xóa.");
+                }
+            }
         }
     }
 }

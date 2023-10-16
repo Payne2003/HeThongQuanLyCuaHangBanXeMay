@@ -34,16 +34,18 @@
             // 
             // guna2Elipse1
             // 
+            this.guna2Elipse1.BorderRadius = 0;
             this.guna2Elipse1.TargetControl = this;
             // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HoaDon";
-            this.Size = new System.Drawing.Size(1386, 600);
+            this.Size = new System.Drawing.Size(554, 437);
             this.ResumeLayout(false);
 
         }

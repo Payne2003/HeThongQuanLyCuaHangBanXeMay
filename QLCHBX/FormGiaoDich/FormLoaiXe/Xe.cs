@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace QLCHBX.FormGiaoDich.FormLoaiXe
 {
-    public partial class ThemChiTietHoaDon : Form
+    public partial class Xe : UserControl
     {
-        public ThemChiTietHoaDon()
+        public Xe()
         {
             InitializeComponent();
+        }
+
+        private void pthonda_Click(object sender, EventArgs e)
+        {
+            ThemDMhang themDMhang = new ThemDMhang();
+            
+            themDMhang.ShowDialog();
         }
     }
 }

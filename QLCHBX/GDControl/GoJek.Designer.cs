@@ -1,6 +1,6 @@
 ﻿namespace QLCHBX.GDControl
 {
-    partial class GoJek
+    partial class Gojek
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.bt20 = new Guna.UI2.WinForms.Guna2Button();
             this.bt19 = new Guna.UI2.WinForms.Guna2Button();
             this.bt14 = new Guna.UI2.WinForms.Guna2Button();
@@ -50,11 +49,8 @@
             this.bt8 = new Guna.UI2.WinForms.Guna2Button();
             this.bt2 = new Guna.UI2.WinForms.Guna2Button();
             this.bt1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.SuspendLayout();
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
             // 
             // bt20
             // 
@@ -67,12 +63,12 @@
             this.bt20.FillColor = System.Drawing.Color.White;
             this.bt20.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt20.ForeColor = System.Drawing.Color.DimGray;
-            this.bt20.Location = new System.Drawing.Point(265, 366);
+            this.bt20.Location = new System.Drawing.Point(370, 265);
             this.bt20.Name = "bt20";
             this.bt20.ShadowDecoration.BorderRadius = 10;
             this.bt20.ShadowDecoration.Enabled = true;
-            this.bt20.Size = new System.Drawing.Size(153, 75);
-            this.bt20.TabIndex = 25;
+            this.bt20.Size = new System.Drawing.Size(77, 34);
+            this.bt20.TabIndex = 73;
             this.bt20.Text = "20";
             this.bt20.Click += new System.EventHandler(this.bt20_Click);
             // 
@@ -87,12 +83,12 @@
             this.bt19.FillColor = System.Drawing.Color.White;
             this.bt19.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt19.ForeColor = System.Drawing.Color.DimGray;
-            this.bt19.Location = new System.Drawing.Point(35, 366);
+            this.bt19.Location = new System.Drawing.Point(261, 265);
             this.bt19.Name = "bt19";
             this.bt19.ShadowDecoration.BorderRadius = 10;
             this.bt19.ShadowDecoration.Enabled = true;
-            this.bt19.Size = new System.Drawing.Size(153, 75);
-            this.bt19.TabIndex = 20;
+            this.bt19.Size = new System.Drawing.Size(77, 34);
+            this.bt19.TabIndex = 69;
             this.bt19.Text = "19";
             this.bt19.Click += new System.EventHandler(this.bt19_Click);
             // 
@@ -107,12 +103,12 @@
             this.bt14.FillColor = System.Drawing.Color.White;
             this.bt14.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt14.ForeColor = System.Drawing.Color.DimGray;
-            this.bt14.Location = new System.Drawing.Point(265, 255);
+            this.bt14.Location = new System.Drawing.Point(149, 206);
             this.bt14.Name = "bt14";
             this.bt14.ShadowDecoration.BorderRadius = 10;
             this.bt14.ShadowDecoration.Enabled = true;
-            this.bt14.Size = new System.Drawing.Size(153, 75);
-            this.bt14.TabIndex = 19;
+            this.bt14.Size = new System.Drawing.Size(77, 34);
+            this.bt14.TabIndex = 68;
             this.bt14.Text = "14";
             this.bt14.Click += new System.EventHandler(this.bt14_Click);
             // 
@@ -127,12 +123,12 @@
             this.bt18.FillColor = System.Drawing.Color.White;
             this.bt18.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt18.ForeColor = System.Drawing.Color.DimGray;
-            this.bt18.Location = new System.Drawing.Point(1185, 255);
+            this.bt18.Location = new System.Drawing.Point(149, 265);
             this.bt18.Name = "bt18";
             this.bt18.ShadowDecoration.BorderRadius = 10;
             this.bt18.ShadowDecoration.Enabled = true;
-            this.bt18.Size = new System.Drawing.Size(153, 75);
-            this.bt18.TabIndex = 23;
+            this.bt18.Size = new System.Drawing.Size(77, 34);
+            this.bt18.TabIndex = 72;
             this.bt18.Text = "18";
             this.bt18.Click += new System.EventHandler(this.bt18_Click);
             // 
@@ -147,12 +143,12 @@
             this.bt13.FillColor = System.Drawing.Color.White;
             this.bt13.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt13.ForeColor = System.Drawing.Color.DimGray;
-            this.bt13.Location = new System.Drawing.Point(35, 255);
+            this.bt13.Location = new System.Drawing.Point(44, 206);
             this.bt13.Name = "bt13";
             this.bt13.ShadowDecoration.BorderRadius = 10;
             this.bt13.ShadowDecoration.Enabled = true;
-            this.bt13.Size = new System.Drawing.Size(153, 75);
-            this.bt13.TabIndex = 18;
+            this.bt13.Size = new System.Drawing.Size(77, 34);
+            this.bt13.TabIndex = 67;
             this.bt13.Text = "13";
             this.bt13.Click += new System.EventHandler(this.bt13_Click);
             // 
@@ -167,12 +163,12 @@
             this.bt12.FillColor = System.Drawing.Color.White;
             this.bt12.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt12.ForeColor = System.Drawing.Color.DimGray;
-            this.bt12.Location = new System.Drawing.Point(1185, 142);
+            this.bt12.Location = new System.Drawing.Point(370, 147);
             this.bt12.Name = "bt12";
             this.bt12.ShadowDecoration.BorderRadius = 10;
             this.bt12.ShadowDecoration.Enabled = true;
-            this.bt12.Size = new System.Drawing.Size(153, 75);
-            this.bt12.TabIndex = 17;
+            this.bt12.Size = new System.Drawing.Size(77, 34);
+            this.bt12.TabIndex = 66;
             this.bt12.Text = "12";
             this.bt12.Click += new System.EventHandler(this.bt12_Click);
             // 
@@ -187,12 +183,12 @@
             this.bt11.FillColor = System.Drawing.Color.White;
             this.bt11.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt11.ForeColor = System.Drawing.Color.DimGray;
-            this.bt11.Location = new System.Drawing.Point(955, 142);
+            this.bt11.Location = new System.Drawing.Point(261, 147);
             this.bt11.Name = "bt11";
             this.bt11.ShadowDecoration.BorderRadius = 10;
             this.bt11.ShadowDecoration.Enabled = true;
-            this.bt11.Size = new System.Drawing.Size(153, 75);
-            this.bt11.TabIndex = 16;
+            this.bt11.Size = new System.Drawing.Size(77, 34);
+            this.bt11.TabIndex = 65;
             this.bt11.Text = "11";
             this.bt11.Click += new System.EventHandler(this.bt11_Click);
             // 
@@ -207,12 +203,12 @@
             this.bt17.FillColor = System.Drawing.Color.White;
             this.bt17.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt17.ForeColor = System.Drawing.Color.DimGray;
-            this.bt17.Location = new System.Drawing.Point(955, 255);
+            this.bt17.Location = new System.Drawing.Point(44, 265);
             this.bt17.Name = "bt17";
             this.bt17.ShadowDecoration.BorderRadius = 10;
             this.bt17.ShadowDecoration.Enabled = true;
-            this.bt17.Size = new System.Drawing.Size(153, 75);
-            this.bt17.TabIndex = 26;
+            this.bt17.Size = new System.Drawing.Size(77, 34);
+            this.bt17.TabIndex = 74;
             this.bt17.Text = "17";
             this.bt17.Click += new System.EventHandler(this.bt17_Click);
             // 
@@ -227,12 +223,12 @@
             this.bt7.FillColor = System.Drawing.Color.White;
             this.bt7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt7.ForeColor = System.Drawing.Color.DimGray;
-            this.bt7.Location = new System.Drawing.Point(35, 142);
+            this.bt7.Location = new System.Drawing.Point(261, 88);
             this.bt7.Name = "bt7";
             this.bt7.ShadowDecoration.BorderRadius = 10;
             this.bt7.ShadowDecoration.Enabled = true;
-            this.bt7.Size = new System.Drawing.Size(153, 75);
-            this.bt7.TabIndex = 11;
+            this.bt7.Size = new System.Drawing.Size(77, 34);
+            this.bt7.TabIndex = 60;
             this.bt7.Text = "7";
             this.bt7.Click += new System.EventHandler(this.bt7_Click);
             // 
@@ -247,12 +243,12 @@
             this.bt6.FillColor = System.Drawing.Color.White;
             this.bt6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt6.ForeColor = System.Drawing.Color.DimGray;
-            this.bt6.Location = new System.Drawing.Point(1185, 31);
+            this.bt6.Location = new System.Drawing.Point(149, 88);
             this.bt6.Name = "bt6";
             this.bt6.ShadowDecoration.BorderRadius = 10;
             this.bt6.ShadowDecoration.Enabled = true;
-            this.bt6.Size = new System.Drawing.Size(153, 75);
-            this.bt6.TabIndex = 10;
+            this.bt6.Size = new System.Drawing.Size(77, 34);
+            this.bt6.TabIndex = 59;
             this.bt6.Text = "6";
             this.bt6.Click += new System.EventHandler(this.bt6_Click);
             // 
@@ -267,12 +263,12 @@
             this.bt16.FillColor = System.Drawing.Color.White;
             this.bt16.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt16.ForeColor = System.Drawing.Color.DimGray;
-            this.bt16.Location = new System.Drawing.Point(725, 255);
+            this.bt16.Location = new System.Drawing.Point(370, 206);
             this.bt16.Name = "bt16";
             this.bt16.ShadowDecoration.BorderRadius = 10;
             this.bt16.ShadowDecoration.Enabled = true;
-            this.bt16.Size = new System.Drawing.Size(153, 75);
-            this.bt16.TabIndex = 22;
+            this.bt16.Size = new System.Drawing.Size(77, 34);
+            this.bt16.TabIndex = 71;
             this.bt16.Text = "16";
             this.bt16.Click += new System.EventHandler(this.bt16_Click);
             // 
@@ -287,12 +283,12 @@
             this.bt5.FillColor = System.Drawing.Color.White;
             this.bt5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt5.ForeColor = System.Drawing.Color.DimGray;
-            this.bt5.Location = new System.Drawing.Point(955, 31);
+            this.bt5.Location = new System.Drawing.Point(44, 88);
             this.bt5.Name = "bt5";
             this.bt5.ShadowDecoration.BorderRadius = 10;
             this.bt5.ShadowDecoration.Enabled = true;
-            this.bt5.Size = new System.Drawing.Size(153, 75);
-            this.bt5.TabIndex = 9;
+            this.bt5.Size = new System.Drawing.Size(77, 34);
+            this.bt5.TabIndex = 58;
             this.bt5.Text = "5";
             this.bt5.Click += new System.EventHandler(this.bt5_Click);
             // 
@@ -307,12 +303,12 @@
             this.bt10.FillColor = System.Drawing.Color.White;
             this.bt10.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt10.ForeColor = System.Drawing.Color.DimGray;
-            this.bt10.Location = new System.Drawing.Point(725, 142);
+            this.bt10.Location = new System.Drawing.Point(149, 147);
             this.bt10.Name = "bt10";
             this.bt10.ShadowDecoration.BorderRadius = 10;
             this.bt10.ShadowDecoration.Enabled = true;
-            this.bt10.Size = new System.Drawing.Size(153, 75);
-            this.bt10.TabIndex = 15;
+            this.bt10.Size = new System.Drawing.Size(77, 34);
+            this.bt10.TabIndex = 64;
             this.bt10.Text = "10";
             this.bt10.Click += new System.EventHandler(this.bt10_Click);
             // 
@@ -327,12 +323,12 @@
             this.bt4.FillColor = System.Drawing.Color.White;
             this.bt4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt4.ForeColor = System.Drawing.Color.DimGray;
-            this.bt4.Location = new System.Drawing.Point(725, 31);
+            this.bt4.Location = new System.Drawing.Point(370, 29);
             this.bt4.Name = "bt4";
             this.bt4.ShadowDecoration.BorderRadius = 10;
             this.bt4.ShadowDecoration.Enabled = true;
-            this.bt4.Size = new System.Drawing.Size(153, 75);
-            this.bt4.TabIndex = 8;
+            this.bt4.Size = new System.Drawing.Size(77, 34);
+            this.bt4.TabIndex = 57;
             this.bt4.Text = "4";
             this.bt4.Click += new System.EventHandler(this.bt4_Click);
             // 
@@ -347,12 +343,12 @@
             this.bt15.FillColor = System.Drawing.Color.White;
             this.bt15.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt15.ForeColor = System.Drawing.Color.DimGray;
-            this.bt15.Location = new System.Drawing.Point(495, 255);
+            this.bt15.Location = new System.Drawing.Point(261, 206);
             this.bt15.Name = "bt15";
             this.bt15.ShadowDecoration.BorderRadius = 10;
             this.bt15.ShadowDecoration.Enabled = true;
-            this.bt15.Size = new System.Drawing.Size(153, 75);
-            this.bt15.TabIndex = 21;
+            this.bt15.Size = new System.Drawing.Size(77, 34);
+            this.bt15.TabIndex = 70;
             this.bt15.Text = "15";
             this.bt15.Click += new System.EventHandler(this.bt15_Click);
             // 
@@ -367,12 +363,12 @@
             this.bt9.FillColor = System.Drawing.Color.White;
             this.bt9.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt9.ForeColor = System.Drawing.Color.DimGray;
-            this.bt9.Location = new System.Drawing.Point(495, 142);
+            this.bt9.Location = new System.Drawing.Point(44, 147);
             this.bt9.Name = "bt9";
             this.bt9.ShadowDecoration.BorderRadius = 10;
             this.bt9.ShadowDecoration.Enabled = true;
-            this.bt9.Size = new System.Drawing.Size(153, 75);
-            this.bt9.TabIndex = 14;
+            this.bt9.Size = new System.Drawing.Size(77, 34);
+            this.bt9.TabIndex = 63;
             this.bt9.Text = "9";
             this.bt9.Click += new System.EventHandler(this.bt9_Click);
             // 
@@ -387,12 +383,12 @@
             this.bt3.FillColor = System.Drawing.Color.White;
             this.bt3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt3.ForeColor = System.Drawing.Color.DimGray;
-            this.bt3.Location = new System.Drawing.Point(495, 31);
+            this.bt3.Location = new System.Drawing.Point(261, 29);
             this.bt3.Name = "bt3";
             this.bt3.ShadowDecoration.BorderRadius = 10;
             this.bt3.ShadowDecoration.Enabled = true;
-            this.bt3.Size = new System.Drawing.Size(153, 75);
-            this.bt3.TabIndex = 7;
+            this.bt3.Size = new System.Drawing.Size(77, 34);
+            this.bt3.TabIndex = 56;
             this.bt3.Text = "3";
             this.bt3.Click += new System.EventHandler(this.bt3_Click);
             // 
@@ -407,12 +403,12 @@
             this.bt8.FillColor = System.Drawing.Color.White;
             this.bt8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt8.ForeColor = System.Drawing.Color.DimGray;
-            this.bt8.Location = new System.Drawing.Point(265, 142);
+            this.bt8.Location = new System.Drawing.Point(370, 88);
             this.bt8.Name = "bt8";
             this.bt8.ShadowDecoration.BorderRadius = 10;
             this.bt8.ShadowDecoration.Enabled = true;
-            this.bt8.Size = new System.Drawing.Size(153, 75);
-            this.bt8.TabIndex = 13;
+            this.bt8.Size = new System.Drawing.Size(77, 34);
+            this.bt8.TabIndex = 62;
             this.bt8.Text = "8";
             this.bt8.Click += new System.EventHandler(this.bt8_Click);
             // 
@@ -427,12 +423,12 @@
             this.bt2.FillColor = System.Drawing.Color.White;
             this.bt2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.bt2.ForeColor = System.Drawing.Color.DimGray;
-            this.bt2.Location = new System.Drawing.Point(265, 31);
+            this.bt2.Location = new System.Drawing.Point(149, 29);
             this.bt2.Name = "bt2";
             this.bt2.ShadowDecoration.BorderRadius = 10;
             this.bt2.ShadowDecoration.Enabled = true;
-            this.bt2.Size = new System.Drawing.Size(153, 75);
-            this.bt2.TabIndex = 12;
+            this.bt2.Size = new System.Drawing.Size(77, 34);
+            this.bt2.TabIndex = 61;
             this.bt2.Text = "2";
             this.bt2.Click += new System.EventHandler(this.bt2_Click);
             // 
@@ -447,20 +443,25 @@
             this.bt1.FillColor = System.Drawing.Color.White;
             this.bt1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt1.ForeColor = System.Drawing.Color.DimGray;
-            this.bt1.Location = new System.Drawing.Point(35, 31);
+            this.bt1.Location = new System.Drawing.Point(44, 29);
             this.bt1.Name = "bt1";
             this.bt1.ShadowDecoration.BorderRadius = 10;
             this.bt1.ShadowDecoration.Enabled = true;
-            this.bt1.Size = new System.Drawing.Size(153, 75);
-            this.bt1.TabIndex = 6;
+            this.bt1.Size = new System.Drawing.Size(77, 34);
+            this.bt1.TabIndex = 55;
             this.bt1.Text = "1";
             this.bt1.Click += new System.EventHandler(this.bt1_Click);
             // 
-            // GoJek
+            // guna2Elipse1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.guna2Elipse1.BorderRadius = 0;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // Gojek
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.bt20);
             this.Controls.Add(this.bt19);
             this.Controls.Add(this.bt14);
@@ -481,17 +482,14 @@
             this.Controls.Add(this.bt8);
             this.Controls.Add(this.bt2);
             this.Controls.Add(this.bt1);
-            this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "GoJek";
-            this.Size = new System.Drawing.Size(1386, 600);
+            this.Name = "Gojek";
+            this.Size = new System.Drawing.Size(554, 437);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button bt20;
         private Guna.UI2.WinForms.Guna2Button bt19;
         private Guna.UI2.WinForms.Guna2Button bt14;
@@ -512,5 +510,6 @@
         private Guna.UI2.WinForms.Guna2Button bt8;
         private Guna.UI2.WinForms.Guna2Button bt2;
         private Guna.UI2.WinForms.Guna2Button bt1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

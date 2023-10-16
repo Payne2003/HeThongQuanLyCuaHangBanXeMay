@@ -16,50 +16,41 @@ namespace QLCHBX
         {
             InitializeComponent();
             guna2ShadowForm1.SetShadowForm(this);
-            guna2ShadowForm1.ShadowColor = Color.Gray; // Màu của đổ bóng
-            signup.Visible = false;
-            login.Visible = true;
-            forgotPassword1.Visible = false;
-
         }
 
-        private void ptThoat_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?","Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes) 
-            {
-                Application.Exit();
-            }
-        }
-
-        private void ptMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+    
 
         private void linkDangky_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            signup.Visible = true;
-            login.Visible = false;
-            forgotPassword1.Visible=false;
+           signup.BringToFront();
         }
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            signup.Visible = false;
-            login.Visible = true;
-            forgotPassword1.Visible = false;
+            login.BringToFront();
         }
 
         private void linkquenmk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            signup.Visible = false;
-            login.Visible = false;
-            forgotPassword1.Visible = true;
+            forgotPassword1.BringToFront();
         }
 
         private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ctThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void ctminimize_Click(object sender, EventArgs e)
         {
 
         }

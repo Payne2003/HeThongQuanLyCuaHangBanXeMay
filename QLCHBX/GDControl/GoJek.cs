@@ -12,9 +12,10 @@ using System.Windows.Forms;
 
 namespace QLCHBX.GDControl
 {
-    public partial class GoJek : UserControl
+    public partial class Gojek : UserControl
     {
-        public GoJek()
+        private string tenkhuvuc = "Gojek";        
+        public Gojek()
         {
             InitializeComponent();
         }
@@ -22,12 +23,11 @@ namespace QLCHBX.GDControl
         private void bt1_Click(object sender, EventArgs e)
         {
 
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "1 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
 
         }
@@ -37,9 +37,9 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "2 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
 
         }
@@ -50,9 +50,9 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "3 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
@@ -61,33 +61,30 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "4 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
         private void bt5_Click(object sender, EventArgs e)
         {
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "5 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
         private void bt6_Click(object sender, EventArgs e)
         {
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "6 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
-
         }
 
         private void bt7_Click(object sender, EventArgs e)
@@ -95,9 +92,9 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "7 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
@@ -106,9 +103,9 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "8 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
@@ -117,9 +114,9 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "9 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
@@ -128,9 +125,9 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "10 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
@@ -139,20 +136,19 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "11 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
         private void bt12_Click(object sender, EventArgs e)
         {
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "12 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
@@ -161,20 +157,19 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "13 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
         private void bt14_Click(object sender, EventArgs e)
         {
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "14 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
@@ -183,68 +178,62 @@ namespace QLCHBX.GDControl
 
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "15 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
         private void bt16_Click(object sender, EventArgs e)
         {
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "16 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
         private void bt17_Click(object sender, EventArgs e)
         {
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "17 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
         private void bt18_Click(object sender, EventArgs e)
         {
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "18 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
         private void bt19_Click(object sender, EventArgs e)
         {
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "19 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
         }
 
         private void bt20_Click(object sender, EventArgs e)
         {
-
             DateTime date = DateTime.Now;
             GiaoDichModel giao = new GiaoDichModel();
-            int sddh = giao.ThemDonDatHang(date);
             GiaoDich giaoDich = new GiaoDich();
-            giaoDich.idhoadon = sddh;
+            string s1 = "20 - " + tenkhuvuc;
+            giaoDich.idban = s1;
             giaoDich.ShowDialog();
 
         }
-
 
     }
 }

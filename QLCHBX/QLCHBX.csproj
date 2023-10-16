@@ -245,12 +245,42 @@
     <Compile Include="ALLControl\Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Db\DbConnection.cs" />
-    <Compile Include="FormGiaoDich\FormLoaiXe\ThemChiTietHoaDon.cs">
+    <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGiaoDich\FormLoaiXe\ThemChiTietHoaDon.Designer.cs">
-      <DependentUpon>ThemChiTietHoaDon.cs</DependentUpon>
+    <Compile Include="DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Db\DbConnection.cs" />
+    <Compile Include="FormGiaoDich\FormLoaiXe\NhaSanXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\NhaSanXuat.Designer.cs">
+      <DependentUpon>NhaSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\NuocSanXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\NuocSanXuat.Designer.cs">
+      <DependentUpon>NuocSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\TheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\TheLoai.Designer.cs">
+      <DependentUpon>TheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\ThemDMhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\ThemDMhang.Designer.cs">
+      <DependentUpon>ThemDMhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\Xe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\Xe.Designer.cs">
+      <DependentUpon>Xe.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGiaoDich\GiaoDich.cs">
       <SubType>Form</SubType>
@@ -270,7 +300,14 @@
     <Compile Include="FormKhachHang\EditKH.Designer.cs">
       <DependentUpon>EditKH.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\GiaoDichModel.cs" />
+    <Compile Include="GDControl\Gojek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GDControl\Gojek.Designer.cs">
+      <DependentUpon>Gojek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ThemDmhModel.cs" />
+    <Compile Include="Model\Themmathang.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,12 +319,6 @@
     </Compile>
     <Compile Include="GDControl\GDCuahang.Designer.cs">
       <DependentUpon>GDCuahang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GDControl\GoJek.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GDControl\GoJek.Designer.cs">
-      <DependentUpon>GoJek.cs</DependentUpon>
     </Compile>
     <Compile Include="GDControl\HoaDon.cs">
       <SubType>UserControl</SubType>
@@ -368,8 +399,11 @@
       <DependentUpon>Xeso.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DashBoard.cs" />
-    <Compile Include="Model\KhachHang.cs" />
+    <Compile Include="Model\KhachHangModel.cs" />
     <Compile Include="Model\LoginModel.cs" />
+    <Compile Include="Motorcycle_shop_managerDataSet.cs">
+      <DependentUpon>Motorcycle_shop_managerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Motorcycle_shop_managerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -377,6 +411,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThongBao\MessageBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongBao\MessageBoxForm.Designer.cs">
+      <DependentUpon>MessageBoxForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ALLControl\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,8 +432,23 @@
     <EmbeddedResource Include="ALLControl\Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\ThemChiTietHoaDon.resx">
-      <DependentUpon>ThemChiTietHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\NhaSanXuat.resx">
+      <DependentUpon>NhaSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\NuocSanXuat.resx">
+      <DependentUpon>NuocSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\TheLoai.resx">
+      <DependentUpon>TheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\ThemDMhang.resx">
+      <DependentUpon>ThemDMhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\Xe.resx">
+      <DependentUpon>Xe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\GiaoDich.resx">
       <DependentUpon>GiaoDich.cs</DependentUpon>
@@ -410,8 +465,8 @@
     <EmbeddedResource Include="GDControl\GDCuahang.resx">
       <DependentUpon>GDCuahang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GDControl\GoJek.resx">
-      <DependentUpon>GoJek.cs</DependentUpon>
+    <EmbeddedResource Include="GDControl\Gojek.resx">
+      <DependentUpon>Gojek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GDControl\HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
@@ -455,6 +510,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongBao\MessageBoxForm.resx">
+      <DependentUpon>MessageBoxForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Motorcycle_shop_managerDataSet.xsc">
       <DependentUpon>Motorcycle_shop_managerDataSet.xsd</DependentUpon>

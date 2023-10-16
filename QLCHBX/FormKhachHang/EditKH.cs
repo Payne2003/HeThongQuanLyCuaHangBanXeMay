@@ -76,7 +76,7 @@ namespace QLCHBX.FormKhachHang
                 return;
             }
 
-            KhachHang KhachHang = new KhachHang();
+            KhachHangModel KhachHang = new KhachHangModel();
             bool success = KhachHang.SuaKhachHang(makhach, tenkhachhang, diachi, sodienthoai);
 
             if (success)

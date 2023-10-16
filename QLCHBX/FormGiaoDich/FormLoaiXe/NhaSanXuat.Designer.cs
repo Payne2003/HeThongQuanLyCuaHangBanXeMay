@@ -1,13 +1,13 @@
 ﻿namespace QLCHBX.FormGiaoDich.FormLoaiXe
 {
-    partial class ThemChiTietHoaDon
+    partial class NhaSanXuat
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,24 +20,23 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
-            // ThemChiTietHoaDon
+            // NhaSanXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 504);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ThemChiTietHoaDon";
-            this.Text = "ThemChiTietHoaDon";
+            this.BackColor = System.Drawing.Color.White;
+            this.Name = "NhaSanXuat";
+            this.Size = new System.Drawing.Size(624, 560);
             this.ResumeLayout(false);
 
         }

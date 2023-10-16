@@ -11,16 +11,21 @@ using DbConnection = QLCHBX.Db.DbConnection;
 
 namespace QLCHBX.Model
 {
-    public class KhachHang : DbConnection
+    class KhachHang
     {
-        private string ID { get; set; }
-        private string name { get; set; }
-        private string diachi { get; set; }
-        private string sodienthoai { get; set; }
-
-
-
         public KhachHang()
+        {
+        }
+
+        public string ID { get; set; }
+        public string name { get; set; }
+        public string diachi { get; set; }
+        public string sodienthoai { get; set; }
+
+    }
+    public class KhachHangModel : DbConnection
+    {
+         public KhachHangModel()
         {
 
         }

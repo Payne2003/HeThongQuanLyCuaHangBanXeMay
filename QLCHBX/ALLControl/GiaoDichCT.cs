@@ -17,46 +17,31 @@ namespace QLCHBX.ALLControl
             InitializeComponent();
 
         }
-        private void MovePanel(Control control)
-        {
-            pnMoving.Top = control.Bottom + 10;
-            pnMoving.Left = control.Left;
-        }
-
+    
         private void btHoadon_Click(object sender, EventArgs e)
         {
-            MovePanel(btHoadon);
-            hoaDon1.Visible = true;
-            gdCuahang1.Visible = false;
-            shopee1.Visible = false;
-            goJek1.Visible = false;
+          hoaDon1.BringToFront();
         }
 
         private void btGDch_Click(object sender, EventArgs e)
         {
-            MovePanel(btGDch);
-            hoaDon1.Visible = false;
-            gdCuahang1.Visible = true;
-            shopee1.Visible = false;
-            goJek1.Visible = false;
-        }
+            gdCuahang1.BringToFront();
+        }   
+         
 
         private void btGDgj_Click(object sender, EventArgs e)
         {
-            MovePanel(btGDgj);
-            hoaDon1.Visible = false;
-            gdCuahang1.Visible = false;
-            shopee1.Visible = false;
-            goJek1.Visible = true;
+          gojek1.BringToFront();
         }
 
         private void btGDSp_Click(object sender, EventArgs e)
         {
-            MovePanel(btGDSp);
-            hoaDon1.Visible = false;
-            gdCuahang1.Visible = false;
-            shopee1.Visible = true;
-            goJek1.Visible = false;
+            shopee1.BringToFront();
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
