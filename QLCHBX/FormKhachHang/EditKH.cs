@@ -71,8 +71,8 @@ namespace QLCHBX.FormKhachHang
                 return;
             }
 
-            KhachHangModel KhachHang = new KhachHangModel();
-            bool success = KhachHang.SuaKhachHang(makhach, tenkhachhang, diachi, sodienthoai);
+            KhachHangModel KhachHang = new KhachHangModel(int.Parse(makhach), tenkhachhang, diachi, sodienthoai);
+            bool success = KhachHang.CapNhatKhachHang();
 
             if (success)
             {
@@ -94,14 +94,6 @@ namespace QLCHBX.FormKhachHang
             {
                 e.Handled = true; // Không cho phép nhập chữ số
             }
-        }
-
-        private void EditKH_Load(object sender, EventArgs e)
-        {
-            txtMaKhach.Text = MaKhachHang;
-            txtTenKhach.Text = TenKhachHang;
-            txtDiaChi.Text = DiaChi;
-            txtDienThoai.Text = SoDienThoai;
         }
     }
 }

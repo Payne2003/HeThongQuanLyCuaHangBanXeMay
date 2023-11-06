@@ -52,7 +52,7 @@
             this.txtmanhanvien.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
             this.txtmanhanvien.ForeColor = System.Drawing.Color.Black;
             this.txtmanhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtmanhanvien.Location = new System.Drawing.Point(66, 187);
+            this.txtmanhanvien.Location = new System.Drawing.Point(111, 179);
             this.txtmanhanvien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtmanhanvien.Name = "txtmanhanvien";
             this.txtmanhanvien.PasswordChar = '\0';
@@ -76,7 +76,7 @@
             this.txtreconfirmpassword.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtreconfirmpassword.ForeColor = System.Drawing.Color.Black;
             this.txtreconfirmpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtreconfirmpassword.Location = new System.Drawing.Point(66, 140);
+            this.txtreconfirmpassword.Location = new System.Drawing.Point(111, 132);
             this.txtreconfirmpassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtreconfirmpassword.Name = "txtreconfirmpassword";
             this.txtreconfirmpassword.PasswordChar = '\0';
@@ -99,8 +99,8 @@
             this.btsignup.FillColor = System.Drawing.Color.White;
             this.btsignup.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btsignup.ForeColor = System.Drawing.Color.Black;
-            this.btsignup.Location = new System.Drawing.Point(66, 234);
-            this.btsignup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btsignup.Location = new System.Drawing.Point(111, 226);
+            this.btsignup.Margin = new System.Windows.Forms.Padding(4);
             this.btsignup.Name = "btsignup";
             this.btsignup.Size = new System.Drawing.Size(188, 39);
             this.btsignup.TabIndex = 46;
@@ -121,7 +121,7 @@
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.ForeColor = System.Drawing.Color.Black;
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(66, 93);
+            this.txtpassword.Location = new System.Drawing.Point(111, 85);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '\0';
@@ -145,7 +145,7 @@
             this.txtuser.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.ForeColor = System.Drawing.Color.Black;
             this.txtuser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtuser.Location = new System.Drawing.Point(66, 46);
+            this.txtuser.Location = new System.Drawing.Point(111, 38);
             this.txtuser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtuser.Name = "txtuser";
             this.txtuser.PasswordChar = '\0';
@@ -158,7 +158,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 12);
+            this.label1.Location = new System.Drawing.Point(74, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -184,9 +184,9 @@
             this.Controls.Add(this.txtuser);
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Signup";
-            this.Size = new System.Drawing.Size(318, 298);
+            this.Size = new System.Drawing.Size(400, 281);
             this.ResumeLayout(false);
 
         }

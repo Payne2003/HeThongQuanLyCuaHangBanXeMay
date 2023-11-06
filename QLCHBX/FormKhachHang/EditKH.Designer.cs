@@ -330,7 +330,6 @@
             this.Name = "EditKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditKH";
-            this.Load += new System.EventHandler(this.EditKH_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptmenu)).EndInit();

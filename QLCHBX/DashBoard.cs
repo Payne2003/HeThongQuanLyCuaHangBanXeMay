@@ -15,9 +15,10 @@ namespace QLCHBX
         private bool mouseDown;
         private Point lastLocation;
 
-        public DashBoard()
+        public DashBoard(int MaNV)
         { 
             InitializeComponent();
+            lbMaNV.Text = MaNV.ToString();
             guna2ShadowForm1.SetShadowForm(this);
         }
 
@@ -50,8 +51,6 @@ namespace QLCHBX
 
         private void btGiaoDich_Click(object sender, EventArgs e)
         {
-            //khachhang1.Visible = false;
-            giaoDichCT1.BringToFront();
 
         }
 
@@ -67,36 +66,16 @@ namespace QLCHBX
 
         private void btKhachHang_Click(object sender, EventArgs e)
         {
-           khachhang1.BringToFront();
         }
 
-        private void header_MouseDown(object sender, MouseEventArgs e)
+        private void DashBoard_Load(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                mouseDown = true;
-                lastLocation = e.Location;
-            }
+            giaoDichCT1.txtMaNV.Text = lbMaNV.Text;
         }
 
-        private void header_MouseUp(object sender, MouseEventArgs e)
+        private void giaoDichCT1_Load(object sender, EventArgs e)
         {
-            mouseDown = false;
+
         }
-
-        private void header_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mouseDown)
-            {
-                Point currentScreenPos = PointToScreen(e.Location);
-                Location = new Point(currentScreenPos.X - lastLocation.X, currentScreenPos.Y - lastLocation.Y);
-            }
-        }
-
-
-
-
-
-
     }
 }

@@ -80,6 +80,8 @@
             this.txtMaHang = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSoDDH = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewDmh)).BeginInit();
@@ -296,13 +298,13 @@
             // gaToolStripMenuItem4
             // 
             this.gaToolStripMenuItem4.Name = "gaToolStripMenuItem4";
-            this.gaToolStripMenuItem4.Size = new System.Drawing.Size(180, 30);
+            this.gaToolStripMenuItem4.Size = new System.Drawing.Size(107, 30);
             this.gaToolStripMenuItem4.Text = "Ga";
             // 
             // sốToolStripMenuItem4
             // 
             this.sốToolStripMenuItem4.Name = "sốToolStripMenuItem4";
-            this.sốToolStripMenuItem4.Size = new System.Drawing.Size(180, 30);
+            this.sốToolStripMenuItem4.Size = new System.Drawing.Size(107, 30);
             this.sốToolStripMenuItem4.Text = "Số";
             // 
             // ducatiToolStripMenuItem
@@ -522,6 +524,7 @@
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.PasswordChar = '\0';
             this.txtThanhTien.PlaceholderText = "";
+            this.txtThanhTien.ReadOnly = true;
             this.txtThanhTien.SelectedText = "";
             this.txtThanhTien.Size = new System.Drawing.Size(97, 27);
             this.txtThanhTien.TabIndex = 0;
@@ -582,6 +585,7 @@
             this.txtDonGiaBan.Name = "txtDonGiaBan";
             this.txtDonGiaBan.PasswordChar = '\0';
             this.txtDonGiaBan.PlaceholderText = "";
+            this.txtDonGiaBan.ReadOnly = true;
             this.txtDonGiaBan.SelectedText = "";
             this.txtDonGiaBan.Size = new System.Drawing.Size(97, 27);
             this.txtDonGiaBan.TabIndex = 0;
@@ -602,6 +606,7 @@
             this.txtMaHang.Name = "txtMaHang";
             this.txtMaHang.PasswordChar = '\0';
             this.txtMaHang.PlaceholderText = "";
+            this.txtMaHang.ReadOnly = true;
             this.txtMaHang.SelectedText = "";
             this.txtMaHang.Size = new System.Drawing.Size(79, 27);
             this.txtMaHang.TabIndex = 0;
@@ -630,6 +635,17 @@
             // 
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 5;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.lbTenHangSX;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // ThemDMhang
             // 
@@ -710,5 +726,7 @@
         public Guna.UI2.WinForms.Guna2TextBox txtSoDDH;
         public Guna.UI2.WinForms.Guna2TextBox txtMaHang;
         public Guna.UI2.WinForms.Guna2HtmlLabel lbTenHangSX;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

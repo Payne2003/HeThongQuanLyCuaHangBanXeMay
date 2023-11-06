@@ -13,18 +13,19 @@ namespace QLCHBX.FormGiaoDich
 {
     public partial class GiaoDich : Form
     {
-        public GiaoDich()
+        public GiaoDich(int MaNV)
         {
             InitializeComponent();
+            txtMaNV.Text = MaNV.ToString();
             guna2ShadowForm1.SetShadowForm(this);
 
         }
-        public GiaoDich(int SoDDH)
+        public GiaoDich(int SoDDH,int MaNV)
         {
             InitializeComponent();
             this.txtSoDDH.Text = SoDDH.ToString();
+            this.txtMaNV.Text= MaNV.ToString(); 
             guna2ShadowForm1.SetShadowForm(this);
-
         }
         public bool KiemTraTextsRong(params string[] texts)
         {
@@ -42,21 +43,26 @@ namespace QLCHBX.FormGiaoDich
             {
                 DonDatHangModel donDatHang_new = new DonDatHangModel();
                 DateTime NgayMua = DateTime.Now;
+                NgayMua = NgayMua.Date;
                 int SoDDH = donDatHang_new.ThemDonDatHang(int.Parse(txtMaNV.Text),NgayMua);
                 txtSoDDH.Text = SoDDH.ToString();
-                xe1.txtSoDDH.Text = SoDDH.ToString();
-
             }
+            xe2.txtSoDDH.Text = txtSoDDH.Text;
         }
 
-        private void btchietkhau_Click(object sender, EventArgs e)
+        private void btThoatRa_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btthemdondathang_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+            DonDatHangModel donDatHangModel = new DonDatHangModel(int.Parse(txtSoDDH.Text));
+            if (donDatHangModel.KiemTraCoTonTaiHangNaoTrongDonHangKhong())
+            {
+                this.Close();
+                return;
+            }
+            else
+            {
+                donDatHangModel.XoaDonHang();
+                this.Close();
+            }
         }
     }
 }

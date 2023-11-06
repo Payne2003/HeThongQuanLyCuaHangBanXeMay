@@ -31,6 +31,13 @@ namespace QLCHBX.Model
         {
         }
 
+        public KhachHangModel(int maKhach, string tenKhach, string diaChi, string dienThoai) : this(maKhach)
+        {
+            TenKhach = tenKhach;
+            DiaChi = diaChi;
+            DienThoai = dienThoai;
+        }
+
         public DataTable LayDuLieuKhachHang()
         {
             DataTable dt = new DataTable(); 

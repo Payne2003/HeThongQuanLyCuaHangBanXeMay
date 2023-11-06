@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 28);
+            this.label1.Location = new System.Drawing.Point(33, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -63,7 +63,7 @@
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
             this.txtpassword.ForeColor = System.Drawing.Color.Black;
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(109, 165);
+            this.txtpassword.Location = new System.Drawing.Point(114, 168);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '\0';
@@ -87,7 +87,7 @@
             this.txtmanhanvien.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
             this.txtmanhanvien.ForeColor = System.Drawing.Color.Black;
             this.txtmanhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtmanhanvien.Location = new System.Drawing.Point(109, 65);
+            this.txtmanhanvien.Location = new System.Drawing.Point(114, 68);
             this.txtmanhanvien.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtmanhanvien.Name = "txtmanhanvien";
             this.txtmanhanvien.PasswordChar = '\0';
@@ -114,7 +114,7 @@
             this.btForgot.FillColor = System.Drawing.Color.Cyan;
             this.btForgot.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btForgot.ForeColor = System.Drawing.Color.Black;
-            this.btForgot.Location = new System.Drawing.Point(109, 212);
+            this.btForgot.Location = new System.Drawing.Point(114, 215);
             this.btForgot.Margin = new System.Windows.Forms.Padding(4);
             this.btForgot.Name = "btForgot";
             this.btForgot.Size = new System.Drawing.Size(179, 36);
@@ -136,7 +136,7 @@
             this.txtusername.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
             this.txtusername.ForeColor = System.Drawing.Color.Black;
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtusername.Location = new System.Drawing.Point(109, 115);
+            this.txtusername.Location = new System.Drawing.Point(114, 118);
             this.txtusername.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
@@ -159,7 +159,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ForgotPassword";
-            this.Size = new System.Drawing.Size(399, 254);
+            this.Size = new System.Drawing.Size(400, 281);
             this.ResumeLayout(false);
 
         }

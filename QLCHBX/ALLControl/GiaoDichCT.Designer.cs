@@ -67,6 +67,11 @@
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btTim = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.dtNgayKT = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtNgayBD = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.viewLichSuDonDatHang = new System.Windows.Forms.DataGridView();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.viewDonDatHang = new System.Windows.Forms.DataGridView();
@@ -213,6 +218,8 @@
             this.txtDatCoc.SelectedText = "";
             this.txtDatCoc.Size = new System.Drawing.Size(168, 25);
             this.txtDatCoc.TabIndex = 1;
+            this.txtDatCoc.TextChanged += new System.EventHandler(this.txtDatCoc_TextChanged);
+            this.txtDatCoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDatCoc_KeyPress);
             // 
             // guna2HtmlLabel14
             // 
@@ -298,6 +305,8 @@
             this.txtThue.SelectedText = "";
             this.txtThue.Size = new System.Drawing.Size(106, 25);
             this.txtThue.TabIndex = 1;
+            this.txtThue.TextChanged += new System.EventHandler(this.txtThue_TextChanged);
+            this.txtThue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtThue_KeyPress);
             // 
             // guna2HtmlLabel4
             // 
@@ -648,6 +657,11 @@
             // 
             // guna2GroupBox5
             // 
+            this.guna2GroupBox5.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2GroupBox5.Controls.Add(this.btTim);
+            this.guna2GroupBox5.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2GroupBox5.Controls.Add(this.dtNgayKT);
+            this.guna2GroupBox5.Controls.Add(this.dtNgayBD);
             this.guna2GroupBox5.Controls.Add(this.viewLichSuDonDatHang);
             this.guna2GroupBox5.CustomBorderColor = System.Drawing.Color.MintCream;
             this.guna2GroupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -658,6 +672,73 @@
             this.guna2GroupBox5.Size = new System.Drawing.Size(537, 333);
             this.guna2GroupBox5.TabIndex = 0;
             this.guna2GroupBox5.Text = "Lịch sử đơn hàng";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(313, 12);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(47, 19);
+            this.guna2HtmlLabel2.TabIndex = 3;
+            this.guna2HtmlLabel2.Text = "Ngày KT";
+            // 
+            // btTim
+            // 
+            this.btTim.BorderColor = System.Drawing.Color.Gray;
+            this.btTim.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btTim.BorderThickness = 1;
+            this.btTim.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btTim.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btTim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btTim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btTim.FillColor = System.Drawing.Color.MintCream;
+            this.btTim.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
+            this.btTim.ForeColor = System.Drawing.Color.Black;
+            this.btTim.Location = new System.Drawing.Point(486, 8);
+            this.btTim.Name = "btTim";
+            this.btTim.Size = new System.Drawing.Size(48, 25);
+            this.btTim.TabIndex = 4;
+            this.btTim.Text = "Tìm";
+            this.btTim.Click += new System.EventHandler(this.btTim_Click);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(137, 12);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(49, 19);
+            this.guna2HtmlLabel1.TabIndex = 3;
+            this.guna2HtmlLabel1.Text = "Ngày BĐ";
+            // 
+            // dtNgayKT
+            // 
+            this.dtNgayKT.Checked = true;
+            this.dtNgayKT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtNgayKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgayKT.Location = new System.Drawing.Point(364, 8);
+            this.dtNgayKT.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtNgayKT.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtNgayKT.Name = "dtNgayKT";
+            this.dtNgayKT.Size = new System.Drawing.Size(119, 23);
+            this.dtNgayKT.TabIndex = 2;
+            this.dtNgayKT.Value = new System.DateTime(2023, 11, 5, 0, 0, 0, 0);
+            // 
+            // dtNgayBD
+            // 
+            this.dtNgayBD.Checked = true;
+            this.dtNgayBD.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtNgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgayBD.Location = new System.Drawing.Point(188, 8);
+            this.dtNgayBD.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtNgayBD.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtNgayBD.Name = "dtNgayBD";
+            this.dtNgayBD.Size = new System.Drawing.Size(119, 23);
+            this.dtNgayBD.TabIndex = 2;
+            this.dtNgayBD.Value = new System.DateTime(2023, 11, 5, 0, 0, 0, 0);
             // 
             // viewLichSuDonDatHang
             // 
@@ -723,7 +804,7 @@
             this.btThanhToan.FillColor = System.Drawing.Color.MintCream;
             this.btThanhToan.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F);
             this.btThanhToan.ForeColor = System.Drawing.Color.Black;
-            this.btThanhToan.Location = new System.Drawing.Point(543, 530);
+            this.btThanhToan.Location = new System.Drawing.Point(543, 539);
             this.btThanhToan.Name = "btThanhToan";
             this.btThanhToan.Size = new System.Drawing.Size(123, 68);
             this.btThanhToan.TabIndex = 4;
@@ -741,7 +822,7 @@
             this.btCapNhat.FillColor = System.Drawing.Color.MintCream;
             this.btCapNhat.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F);
             this.btCapNhat.ForeColor = System.Drawing.Color.Black;
-            this.btCapNhat.Location = new System.Drawing.Point(695, 530);
+            this.btCapNhat.Location = new System.Drawing.Point(695, 539);
             this.btCapNhat.Name = "btCapNhat";
             this.btCapNhat.Size = new System.Drawing.Size(123, 68);
             this.btCapNhat.TabIndex = 4;
@@ -765,7 +846,7 @@
             this.btTaoHoaDon.Size = new System.Drawing.Size(287, 68);
             this.btTaoHoaDon.TabIndex = 4;
             this.btTaoHoaDon.Text = "Tạo hóa đơn";
-            this.btTaoHoaDon.Click += new System.EventHandler(this.btToaHoaDon_Click);
+            this.btTaoHoaDon.Click += new System.EventHandler(this.btTaoHoaDon_Click);
             // 
             // GiaoDichCT
             // 
@@ -793,6 +874,7 @@
             this.guna2GroupBox3.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2GroupBox5.ResumeLayout(false);
+            this.guna2GroupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewLichSuDonDatHang)).EndInit();
             this.guna2GroupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.viewDonDatHang)).EndInit();
@@ -847,5 +929,10 @@
         private System.Windows.Forms.DataGridView viewDonDatHang;
         public Guna.UI2.WinForms.Guna2TextBox txtMaNV;
         public Guna.UI2.WinForms.Guna2TextBox txtSoDDH;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtNgayKT;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtNgayBD;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button btTim;
     }
 }

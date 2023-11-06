@@ -49,11 +49,6 @@ namespace QLCHBX.Model
         // Method to add a new account
         public bool ThemTaiKhoanMoi()
         {
-            if (KiemTraTaiKhoanTonTai())
-            {
-                return false; // Account already exists
-            }
-
             string sql = "INSERT INTO TaiKhoan (Username, Password, MaNV) VALUES (@Username, @Password, @MaNV)";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
@@ -65,7 +60,7 @@ namespace QLCHBX.Model
         }
 
         // Method to check if an account already exists
-        public bool KiemTraTaiKhoanTonTai()
+        public bool KiemTraTaiKhoanTonTai(string Username)
         {
             string sql = "SELECT COUNT(*) FROM TaiKhoan WHERE Username = @Username";
             SqlParameter[] sqlParameters = new SqlParameter[]
@@ -82,6 +77,17 @@ namespace QLCHBX.Model
             {
                 new SqlParameter("@Username", Username),
                 new SqlParameter("@MaNV", MaNV)
+            };
+            object result = ExecuteScalar(sql, sqlParameters);
+            return result != null ? result.ToString() : null;
+        }
+        public string LayMaNhanVien()
+        {
+            string sql = "SELECT MaNV FROM TaiKhoan WHERE Username = @Username AND Password= @Password";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@Username", Username),
+                new SqlParameter("@Password", Password)
             };
             object result = ExecuteScalar(sql, sqlParameters);
             return result != null ? result.ToString() : null;

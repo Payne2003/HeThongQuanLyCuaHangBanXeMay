@@ -33,7 +33,7 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbMaNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btKhachHang = new Guna.UI2.WinForms.Guna2Button();
             this.btNhanVien = new Guna.UI2.WinForms.Guna2Button();
             this.btDoiTac = new Guna.UI2.WinForms.Guna2Button();
@@ -49,11 +49,13 @@
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnControl = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.giaoDichCT1 = new QLCHBX.ALLControl.GiaoDichCT();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.header.SuspendLayout();
+            this.pnControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -81,26 +83,26 @@
             // 
             // guna2Panel5
             // 
-            this.guna2Panel5.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel5.Controls.Add(this.lbMaNV);
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel5.Location = new System.Drawing.Point(0, 200);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(200, 78);
             this.guna2Panel5.TabIndex = 2;
             // 
-            // guna2HtmlLabel1
+            // lbMaNV
             // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(200, 78);
-            this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.Text = "Tài Khoản";
-            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbMaNV.AutoSize = false;
+            this.lbMaNV.BackColor = System.Drawing.Color.Transparent;
+            this.lbMaNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbMaNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaNV.ForeColor = System.Drawing.Color.Black;
+            this.lbMaNV.Location = new System.Drawing.Point(0, 0);
+            this.lbMaNV.Name = "lbMaNV";
+            this.lbMaNV.Size = new System.Drawing.Size(200, 78);
+            this.lbMaNV.TabIndex = 1;
+            this.lbMaNV.Text = "Tài Khoản";
+            this.lbMaNV.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btKhachHang
             // 
@@ -345,9 +347,6 @@
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(1024, 40);
             this.header.TabIndex = 1;
-            this.header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.header_MouseDown);
-            this.header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.header_MouseMove);
-            this.header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.header_MouseUp);
             // 
             // guna2ControlBox2
             // 
@@ -398,6 +397,7 @@
             // 
             // pnControl
             // 
+            this.pnControl.Controls.Add(this.giaoDichCT1);
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnControl.Location = new System.Drawing.Point(200, 40);
             this.pnControl.Name = "pnControl";
@@ -409,6 +409,17 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.header;
             this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // giaoDichCT1
+            // 
+            this.giaoDichCT1.BackColor = System.Drawing.Color.White;
+            this.giaoDichCT1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.giaoDichCT1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.giaoDichCT1.Location = new System.Drawing.Point(0, 0);
+            this.giaoDichCT1.Margin = new System.Windows.Forms.Padding(4);
+            this.giaoDichCT1.Name = "giaoDichCT1";
+            this.giaoDichCT1.Size = new System.Drawing.Size(824, 708);
+            this.giaoDichCT1.TabIndex = 0;
             // 
             // DashBoard
             // 
@@ -425,12 +436,14 @@
             this.Name = "DashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoard";
+            this.Load += new System.EventHandler(this.DashBoard_Load);
             this.Resize += new System.EventHandler(this.DashBoard_Resize);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.header.ResumeLayout(false);
+            this.pnControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -453,8 +466,9 @@
         private Guna.UI2.WinForms.Guna2Button btHangHoa;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbMaNV;
         private Guna.UI2.WinForms.Guna2Panel pnControl;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private ALLControl.GiaoDichCT giaoDichCT1;
     }
 }

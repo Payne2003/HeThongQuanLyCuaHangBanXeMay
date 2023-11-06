@@ -50,8 +50,8 @@
             this.btlogin.FillColor = System.Drawing.Color.DarkGray;
             this.btlogin.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btlogin.ForeColor = System.Drawing.Color.Black;
-            this.btlogin.Location = new System.Drawing.Point(45, 183);
-            this.btlogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btlogin.Location = new System.Drawing.Point(81, 194);
+            this.btlogin.Margin = new System.Windows.Forms.Padding(4);
             this.btlogin.Name = "btlogin";
             this.btlogin.Size = new System.Drawing.Size(244, 45);
             this.btlogin.TabIndex = 35;
@@ -72,7 +72,7 @@
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.ForeColor = System.Drawing.Color.Black;
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(45, 121);
+            this.txtpassword.Location = new System.Drawing.Point(81, 132);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '\0';
@@ -96,7 +96,7 @@
             this.txtuser.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.ForeColor = System.Drawing.Color.Black;
             this.txtuser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtuser.Location = new System.Drawing.Point(45, 55);
+            this.txtuser.Location = new System.Drawing.Point(81, 66);
             this.txtuser.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtuser.Name = "txtuser";
             this.txtuser.PasswordChar = '\0';
@@ -110,7 +110,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(52, 18);
+            this.label1.Location = new System.Drawing.Point(88, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -138,9 +138,9 @@
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtuser);
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
-            this.Size = new System.Drawing.Size(338, 249);
+            this.Size = new System.Drawing.Size(400, 281);
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
 

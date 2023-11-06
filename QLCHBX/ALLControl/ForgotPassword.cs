@@ -31,9 +31,9 @@ namespace QLCHBX.ALLControl
             {
                 string Id = txtmanhanvien.Text;
                 string username = txtusername.Text;
-                TaiKhoanModel model = new TaiKhoanModel(Id,username);
+                TaiKhoanModel model = new TaiKhoanModel(int.Parse(Id));
 
-                bool success = model.KiemTraTaiKhoanTonTai();
+                bool success = model.KiemTraTaiKhoanTonTai(username);
                 if (success)
                 {
                     string matkhau = model.LayMatKhau();

@@ -40,16 +40,16 @@ namespace QLCHBX.ALLControl
             {
                 string username = txtuser.Text.Trim();
                 string password = txtpassword.Text.Trim();
+                TaiKhoanModel taiKhoanModel = new TaiKhoanModel(username, password);
 
-
-                if (login.LoginControl(username, password))
+                if (taiKhoanModel.KiemTraDangNhap())
                 {
                     // Đăng nhập thành công
-                    string maNhanVien = login.LayMaNhanVien(username, password);
+                    string maNhanVien = taiKhoanModel.LayMaNhanVien();
                     if (!string.IsNullOrEmpty(maNhanVien))
                     {
                         ShowCustomMessageBox("Đăng nhập thành công");
-                        DashBoard dashBoard = new DashBoard();
+                        DashBoard dashBoard = new DashBoard(int.Parse(maNhanVien));
                         dashBoard.ShowDialog();
                     }
                     else

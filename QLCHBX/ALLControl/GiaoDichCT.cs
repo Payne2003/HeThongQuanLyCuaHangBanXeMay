@@ -1,4 +1,5 @@
 ﻿using QLCHBX.FormGiaoDich;
+using QLCHBX.FormGiaoDich.OderHangHoa;
 using QLCHBX.Model;
 using System;
 using System.Collections.Generic;
@@ -14,21 +15,29 @@ namespace QLCHBX.ALLControl
 {
     public partial class GiaoDichCT : UserControl
     {
+        DateTime dt = DateTime.Now;
         public GiaoDichCT()
         {
             InitializeComponent();
         }
-
         public void LoadDataGridView()
         {
-            grthongtindonhang.Visible = false;
             btThanhToan.Visible = false;
             btCapNhat.Visible = false;
             btTaoHoaDon.Visible = true;
+            DonDatHangModel donDatHangModelLoad = new DonDatHangModel();
+            viewDonDatHang.DataSource =  donDatHangModelLoad.LayDonDatHangChuaThanhToan();
+            viewLichSuDonDatHang.DataSource = donDatHangModelLoad.LayDonDatHangDaThanhToan();
+            txtSoDDH.Text = "";
+            txtTenKhach.Text = "";
+            txtThue.Text = "";
+            txtDatCoc.Text = "";
+            txtTongTien.Text = "";
+            dtNgayNhap.Value = dt.Date;
         }
-        public bool KiemTraTextRong()
+        public bool KiemTraTextsRong(params string[] texts)
         {
-            return false;
+            return texts.Any(string.IsNullOrWhiteSpace);
         }
         public void SaveDataGridView() 
         {
@@ -40,7 +49,7 @@ namespace QLCHBX.ALLControl
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow rowDonDatHang = viewDonDatHang.Rows[e.RowIndex];
-                if (rowDonDatHang.Cells[0].Value != null || rowDonDatHang.Cells[0].Value.ToString() == "")
+                if (rowDonDatHang.Cells[0].Value != null && rowDonDatHang.Cells[0].Value.ToString() != "")
                 {
                     btCapNhat.Visible = true;
                     btThanhToan.Visible = true;
@@ -48,14 +57,16 @@ namespace QLCHBX.ALLControl
                     txtSoDDH.Text = rowDonDatHang.Cells[0].Value.ToString();
                     txtMaNV.Text = rowDonDatHang.Cells[1].Value.ToString();
                     txtTenNV.Text = rowDonDatHang.Cells[2].Value.ToString();
-                    txtThue.Text = rowDonDatHang.Cells[3].Value.ToString();
-                    txtDatCoc.Text = rowDonDatHang.Cells[4].Value.ToString();
-                    dtNgayNhap.Text = rowDonDatHang.Cells[5].Value.ToString();
-                    txtTongTien.Text = rowDonDatHang.Cells[6].Value.ToString();
+                    txtTenKhach.Text = rowDonDatHang.Cells[3].Value.ToString();
+                    txtThue.Text = rowDonDatHang.Cells[4].Value.ToString();
+                    txtDatCoc.Text = rowDonDatHang.Cells[5].Value.ToString();
+                    dtNgayNhap.Text = rowDonDatHang.Cells[6].Value.ToString();
+                    txtTongTien.Text = rowDonDatHang.Cells[7].Value.ToString();
                 }
                 else
                 {
                     MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
            
@@ -63,7 +74,8 @@ namespace QLCHBX.ALLControl
 
         private void btOderHangHoa_Click(object sender, EventArgs e)
         {
-
+            OrderHangHoaForm orderHangHoaForm = new OrderHangHoaForm();
+            orderHangHoaForm.ShowDialog();
         }
 
         private void viewDonDatHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -71,12 +83,15 @@ namespace QLCHBX.ALLControl
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow rowDonDatHang = viewDonDatHang.Rows[e.RowIndex];
-                if (rowDonDatHang.Cells[0].Value != null || rowDonDatHang.Cells[0].Value.ToString() == "")
+                if (rowDonDatHang.Cells[0].Value != null && rowDonDatHang.Cells[0].Value.ToString() != "")
                 {
                     DialogResult result = MessageBox.Show("Bạn có muốn xóa đơn hàng " + rowDonDatHang.Cells[0].Value.ToString() + " ?", "Xác Nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        
+                        DonDatHangModel donDatHang_Xoa = new DonDatHangModel(int.Parse(txtSoDDH.Text));
+                        donDatHang_Xoa.XoaChiTietDonDatHang();
+                        donDatHang_Xoa.XoaDonHang();
+                        LoadDataGridView();
                     }
                     else
                     {
@@ -86,6 +101,7 @@ namespace QLCHBX.ALLControl
                 else
                 {
                     MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
         }
@@ -97,17 +113,111 @@ namespace QLCHBX.ALLControl
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            GiaoDich giaoDich = new GiaoDich();
+            GiaoDich giaoDich = new GiaoDich(int.Parse(txtSoDDH.Text),int.Parse(txtMaNV.Text));
+            giaoDich.ShowDialog();
         }
 
-        private void btToaHoaDon_Click(object sender, EventArgs e)
+        private void btTaoHoaDon_Click(object sender, EventArgs e)
         {
-
+            GiaoDich giaoDich = new GiaoDich(int.Parse(txtMaNV.Text));
+            giaoDich.ShowDialog();
         }
 
         private void btCapNhat_Click(object sender, EventArgs e)
         {
+            if (KiemTraTextsRong(txtThue.Text, txtDatCoc.Text))
+            {
+                LoadDataGridView();
+                return;
+            }
+            else
+            {
+                SaveDataGridView();
+                LoadDataGridView();
+            }
 
         }
+
+        private void txtThue_TextChanged(object sender, EventArgs e)
+        {
+            if (KiemTraTextsRong(txtDatCoc.Text,txtThue.Text))
+            {
+                return;
+            }
+            else 
+            {
+                if (decimal.Parse(txtThue.Text) > 100)
+                {
+                    MessageBox.Show("Thuế chỉ từ 0 - 100% thôi bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    SaveDataGridView();
+                }
+            }
+        }
+
+        private void txtDatCoc_TextChanged(object sender, EventArgs e)
+        {
+            if (KiemTraTextsRong(txtDatCoc.Text, txtThue.Text))
+            {
+                return;
+            }
+            else
+            {
+                if(decimal.Parse(txtThue.Text) > 100)
+                {
+                    MessageBox.Show("Thuế chỉ từ 0 - 100% thôi bạn ơi!!!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    SaveDataGridView();
+                }
+            }
+        }
+
+        private void txtDatCoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
+        }
+
+        private void txtThue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
+        }
+
+        private void btTim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime ngayBD = DateTime.Parse(dtNgayBD.Text);
+                DateTime ngayKT = DateTime.Parse(dtNgayKT.Text);
+                if (ngayBD <= ngayKT)
+                {
+                    DonDatHangModel donDatHangModel = new DonDatHangModel();
+                    DataTable dataTable = donDatHangModel.LayDonHangDaThanhToanTheoNgay(ngayBD, ngayKT);
+                    viewLichSuDonDatHang.DataSource = dataTable;
+                }
+                else
+                {
+                    MessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày kết thúc.", "Lỗi Khoảng Thời Gian", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Ngày nhập không hợp lệ. Vui lòng nhập ngày theo định dạng MM/dd/yyyy.", "Lỗi Định Dạng Ngày", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã có lỗi xảy ra: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

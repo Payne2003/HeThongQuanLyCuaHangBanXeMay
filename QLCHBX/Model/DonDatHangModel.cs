@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace QLCHBX.Model
 {
@@ -30,6 +31,11 @@ namespace QLCHBX.Model
         {
         }
 
+        public DonDatHangModel(int soDDH)
+        {
+            SoDDH = soDDH;
+        }
+
         public int SoDDH { get; set; }
         public int MaNV { get; set; }
         public int MaKhach { get; set; }
@@ -53,7 +59,7 @@ namespace QLCHBX.Model
                        ddh.TongTien
                 FROM DonDatHang ddh
                 INNER JOIN NhanVien nv ON ddh.MaNV = nv.MaNV
-                LEFT JOIN KhachHang kh ON ddh.MaKhachHang = kh.MaKhachHang WHERE ddh.TrangThai = 0";
+                LEFT JOIN KhachHang kh ON ddh.MaKhach = kh.MaKhach WHERE ddh.TrangThai = 0";
 
             DataTable dt = DocBang(query);
             return dt;
@@ -71,7 +77,7 @@ namespace QLCHBX.Model
                        ddh.TongTien
                 FROM DonDatHang ddh
                 INNER JOIN NhanVien nv ON ddh.MaNV = nv.MaNV
-                LEFT JOIN KhachHang kh ON ddh.MaKhachHang = kh.MaKhachHang WHERE ddh.TrangThai = 1";
+                LEFT JOIN KhachHang kh ON ddh.MaKhach = kh.MaKhach WHERE ddh.TrangThai = 1";
 
             DataTable dt = DocBang(query);
             return dt;
@@ -119,6 +125,64 @@ namespace QLCHBX.Model
             {
                 throw new InvalidOperationException("Could not retrieve the order number after insertion.");
             }
+        }
+        public bool XoaChiTietDonDatHang() 
+        { 
+            string sql = @"
+                    DELETE FROM ChiTietDonDatHang
+                    WHERE SoDDH = @SoDDH";
+
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                  new SqlParameter("@SoDDH", SoDDH)
+            };
+
+            return ExecuteNonQuery(sql, sqlParameters);
+        }
+
+        public bool XoaDonHang()
+        {
+            string sql = @"
+                    DELETE FROM DonDatHang
+                    WHERE SoDDH = @SoDDH";
+            SqlParameter[] sqlParameter = new SqlParameter[]
+             {
+                new SqlParameter("@SoDDH", SoDDH)
+             };
+            return ExecuteNonQuery(sql,sqlParameter);
+        }
+        public DataTable LayDonHangDaThanhToanTheoNgay(DateTime ngayBatDau, DateTime ngayKetThuc)
+        {
+            ngayBatDau = ngayBatDau.Date;
+            ngayKetThuc = ngayKetThuc.Date;
+
+            string sql = @"
+                 SELECT * FROM LayDonDatHangTheoThoiGian(@NgayBatDau, @NgayKetThuc)";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@NgayBatDau", ngayBatDau),
+                new SqlParameter("@NgayKetThuc", ngayKetThuc)
+            };
+
+            // Use the inherited DocBang method to execute the command and get the results.
+            DataTable dt = DocBang(sql, sqlParameters);
+            return dt;
+        }
+
+        public bool KiemTraCoTonTaiHangNaoTrongDonHangKhong()
+        {
+            string sql = @"SELECT COUNT(*) FROM ChiTietDonDatHang WHERE SoDDH = @SoDDH)";
+
+            SqlParameter[] sqlParameter = new SqlParameter[]{
+                new SqlParameter("@SoDDH", SoDDH)
+            };
+
+            // Execute the scalar query to return true if there's at least one item in the order.
+            object result = ExecuteScalar(sql, sqlParameter);
+
+            // If result is not null, cast it to an integer and check if it's greater than 0.
+            // This converts the SQL result (1 or 0) to a C# boolean (true or false).
+            return result != null && (int)result > 0;
         }
 
 

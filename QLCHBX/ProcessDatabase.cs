@@ -47,7 +47,7 @@ namespace QLCHBX
             return dtBang;
         }
 
-        public DataTable DocBang(string sql, SqlParameter sqlParameter)
+        public DataTable DocBang(string sql, SqlParameter[] sqlParameter)
         {
             DataTable dt = new DataTable();
             KetNoi(); // Assuming KetNoi opens the connection

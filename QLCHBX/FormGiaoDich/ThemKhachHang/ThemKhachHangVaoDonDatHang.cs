@@ -16,10 +16,5 @@ namespace QLCHBX.FormGiaoDich.ThemKhachHang
         {
             InitializeComponent();
         }
-
-        private void guna2TextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -52,12 +52,16 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.login1 = new QLCHBX.ALLControl.Login();
+            this.forgotPassword1 = new QLCHBX.ALLControl.ForgotPassword();
+            this.signup1 = new QLCHBX.ALLControl.Signup();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnmoving.SuspendLayout();
             this.pnControl.SuspendLayout();
             this.panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -266,6 +270,9 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.login1);
+            this.guna2Panel1.Controls.Add(this.signup1);
+            this.guna2Panel1.Controls.Add(this.forgotPassword1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(400, 40);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -277,6 +284,41 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.pnmoving;
             this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // login1
+            // 
+            this.login1.BackColor = System.Drawing.Color.White;
+            this.login1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.login1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login1.Location = new System.Drawing.Point(0, 0);
+            this.login1.manhanvien = null;
+            this.login1.Margin = new System.Windows.Forms.Padding(4);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(400, 281);
+            this.login1.TabIndex = 0;
+            // 
+            // forgotPassword1
+            // 
+            this.forgotPassword1.BackColor = System.Drawing.Color.White;
+            this.forgotPassword1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.forgotPassword1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotPassword1.Location = new System.Drawing.Point(0, 0);
+            this.forgotPassword1.Margin = new System.Windows.Forms.Padding(4);
+            this.forgotPassword1.Name = "forgotPassword1";
+            this.forgotPassword1.Size = new System.Drawing.Size(400, 281);
+            this.forgotPassword1.TabIndex = 1;
+            // 
+            // signup1
+            // 
+            this.signup1.BackColor = System.Drawing.Color.White;
+            this.signup1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.signup1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signup1.ForeColor = System.Drawing.Color.Black;
+            this.signup1.Location = new System.Drawing.Point(0, 0);
+            this.signup1.Margin = new System.Windows.Forms.Padding(4);
+            this.signup1.Name = "signup1";
+            this.signup1.Size = new System.Drawing.Size(400, 281);
+            this.signup1.TabIndex = 2;
             // 
             // FormLogin
             // 
@@ -301,6 +343,7 @@
             this.panel3.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -329,5 +372,8 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private ALLControl.Login login1;
+        private ALLControl.Signup signup1;
+        private ALLControl.ForgotPassword forgotPassword1;
     }
 }
