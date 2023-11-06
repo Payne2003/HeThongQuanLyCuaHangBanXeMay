@@ -43,5 +43,10 @@ namespace QLCHBX.ALLControl
         {
 
         }
+
+        private void guna2HtmlLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

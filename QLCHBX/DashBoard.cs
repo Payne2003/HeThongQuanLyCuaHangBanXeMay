@@ -39,7 +39,7 @@ namespace QLCHBX
             else if (this.WindowState == FormWindowState.Normal)
             {
                 // Nếu không ở trạng thái cực tiểu nhỏ, đặt lại BorderRadius thành 0
-                guna2Elipse1.BorderRadius = 50;
+                guna2Elipse1.BorderRadius = 5;
             }
         }
 

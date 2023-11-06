@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLCHBX.FormGiaoDich.FormLoaiXe
+namespace QLCHBX.FormGiaoDich.OderHangHoa
 {
-    public partial class NuocSanXuat : UserControl
+    public partial class OrderHangHoaForm : Form
     {
-        public NuocSanXuat()
+        public OrderHangHoaForm()
         {
             InitializeComponent();
         }

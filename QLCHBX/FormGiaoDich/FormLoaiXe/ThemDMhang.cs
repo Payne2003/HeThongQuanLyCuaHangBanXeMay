@@ -47,5 +47,10 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             UpdateColor();
 
         }
+
+        private void symToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

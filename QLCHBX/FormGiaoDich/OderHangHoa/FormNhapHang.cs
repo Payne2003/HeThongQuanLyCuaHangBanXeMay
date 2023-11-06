@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLCHBX.FormGiaoDich.FormLoaiXe
+namespace QLCHBX.FormGiaoDich.OderHangHoa
 {
-    public partial class TheLoai : UserControl
+    public partial class FormNhapHang : Form
     {
-        public TheLoai()
+        public FormNhapHang()
         {
             InitializeComponent();
         }

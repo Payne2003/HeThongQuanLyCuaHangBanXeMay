@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLCHBX.GDControl
+namespace QLCHBX.FormGiaoDich.ThemKhachHang
 {
-    public partial class HoaDon : UserControl
+    public partial class ThemKhachHangVaoDonDatHang : UserControl
     {
-        public HoaDon()
+        public ThemKhachHangVaoDonDatHang()
         {
             InitializeComponent();
+        }
+
+        private void guna2TextBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
