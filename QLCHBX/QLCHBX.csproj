@@ -311,12 +311,6 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GDControl\GDCuahang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GDControl\GDCuahang.Designer.cs">
-      <DependentUpon>GDCuahang.cs</DependentUpon>
-    </Compile>
     <Compile Include="HanghoaControl\Dongco.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -447,9 +441,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GDControl\GDCuahang.resx">
-      <DependentUpon>GDCuahang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HanghoaControl\Dongco.resx">
       <DependentUpon>Dongco.cs</DependentUpon>

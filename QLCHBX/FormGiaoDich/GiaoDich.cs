@@ -13,21 +13,40 @@ namespace QLCHBX.FormGiaoDich
 {
     public partial class GiaoDich : Form
     {
-        private bool mouseDown;
-        private Point lastLocation;
-        public string idban { get; set; }
         public GiaoDich()
         {
             InitializeComponent();
             guna2ShadowForm1.SetShadowForm(this);
 
         }
+        public GiaoDich(int SoDDH)
+        {
+            InitializeComponent();
+            this.txtSoDDH.Text = SoDDH.ToString();
+            guna2ShadowForm1.SetShadowForm(this);
+
+        }
+        public bool KiemTraTextsRong(params string[] texts)
+        {
+            return texts.Any(string.IsNullOrWhiteSpace);
+        }
+
         private void GiaoDich_Load(object sender, EventArgs e)
         {
-            soban.Text = idban;
-            // TODO: This line of code loads data into the 'motorcycle_shop_managerDataSet5.Dmh' table. You can move, or remove it, as needed.
             time_1.Text = DateTime.Now.ToString("HH:mm");
+            if (!KiemTraTextsRong(txtSoDDH.Text,txtMaNV.Text))
+            {
+                return;
+            }
+            else
+            {
+                DonDatHangModel donDatHang_new = new DonDatHangModel();
+                DateTime NgayMua = DateTime.Now;
+                int SoDDH = donDatHang_new.ThemDonDatHang(int.Parse(txtMaNV.Text),NgayMua);
+                txtSoDDH.Text = SoDDH.ToString();
+                xe1.txtSoDDH.Text = SoDDH.ToString();
 
+            }
         }
 
         private void btchietkhau_Click(object sender, EventArgs e)
@@ -38,49 +57,6 @@ namespace QLCHBX.FormGiaoDich
         private void btthemdondathang_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void header_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void header_MouseDown(object sender, MouseEventArgs e)
-        {
-           
-        }
-
-        private void header_MouseUp(object sender, MouseEventArgs e)
-        {
-         
-        }
-
-        private void header_MouseMove(object sender, MouseEventArgs e)
-        {
-           
-        }
-
-        private void soban_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mouseDown)
-            {
-                Point currentScreenPos = PointToScreen(e.Location);
-                Location = new Point(currentScreenPos.X - lastLocation.X, currentScreenPos.Y - lastLocation.Y);
-            }
-        }
-
-        private void soban_MouseUp(object sender, MouseEventArgs e)
-        {
-            mouseDown = false;
-        }
-
-        private void soban_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                mouseDown = true;
-                lastLocation = e.Location;
-            }
         }
     }
 }

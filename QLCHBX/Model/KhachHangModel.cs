@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace QLCHBX.Model
 {
@@ -24,6 +25,19 @@ namespace QLCHBX.Model
             TenKhach = tenKhach;
             DiaChi = diaChi;
             DienThoai = dienThoai;
+        }
+
+        public KhachHangModel()
+        {
+        }
+
+        public DataTable LayDuLieuKhachHang()
+        {
+            DataTable dt = new DataTable(); 
+            string sql = "SELECT * FROM KhachHang;";
+
+            dt = DocBang(sql);
+            return dt;
         }
 
         public bool ThemKhachHang()

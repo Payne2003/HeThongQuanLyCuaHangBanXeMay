@@ -88,3 +88,7 @@ C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.NhaSanXuat.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.NuocSanXuat.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.TheLoai.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.OderHangHoa.FormNhapHang.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.OderHangHoa.LichSuNhapHangForm.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.OderHangHoa.OrderHangHoaForm.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.ThemKhachHang.ThemKhachHangVaoDonDatHang.resources

@@ -1,5 +1,4 @@
-﻿using QLCHBX.GDControl;
-using QLCHBX.Model;
+﻿using QLCHBX.Model;
 using QLCHBX.ThongBao;
 using System;
 using System.Collections.Generic;
@@ -42,7 +41,6 @@ namespace QLCHBX.ALLControl
                 string username = txtuser.Text.Trim();
                 string password = txtpassword.Text.Trim();
 
-                LoginModel login = new LoginModel();
 
                 if (login.LoginControl(username, password))
                 {
@@ -51,9 +49,6 @@ namespace QLCHBX.ALLControl
                     if (!string.IsNullOrEmpty(maNhanVien))
                     {
                         ShowCustomMessageBox("Đăng nhập thành công");
-
-                        GDCuahang gDCuahang = new GDCuahang();
-                        gDCuahang.idnhanvien = maNhanVien;
                         DashBoard dashBoard = new DashBoard();
                         dashBoard.ShowDialog();
                     }

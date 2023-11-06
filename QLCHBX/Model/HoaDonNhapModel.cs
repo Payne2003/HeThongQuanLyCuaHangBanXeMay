@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLCHBX.Model
 {
-    publics class HoaDonNhapModel
+    public class HoaDonNhapModel
     {
     }
 }

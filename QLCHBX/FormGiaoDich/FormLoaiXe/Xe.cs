@@ -20,7 +20,6 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
         private void pthonda_Click(object sender, EventArgs e)
         {
             ThemDMhang themDMhang = new ThemDMhang();
-            
             themDMhang.ShowDialog();
         }
     }

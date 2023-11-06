@@ -42,6 +42,7 @@
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSoDDH = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -123,6 +124,7 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.txtSoDDH);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
@@ -257,6 +259,26 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(315, 34);
             this.guna2TextBox1.TabIndex = 0;
             // 
+            // txtSoDDH
+            // 
+            this.txtSoDDH.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSoDDH.DefaultText = "";
+            this.txtSoDDH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSoDDH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSoDDH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoDDH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoDDH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoDDH.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoDDH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoDDH.Location = new System.Drawing.Point(563, 0);
+            this.txtSoDDH.Name = "txtSoDDH";
+            this.txtSoDDH.PasswordChar = '\0';
+            this.txtSoDDH.PlaceholderText = "";
+            this.txtSoDDH.SelectedText = "";
+            this.txtSoDDH.Size = new System.Drawing.Size(47, 36);
+            this.txtSoDDH.TabIndex = 2;
+            this.txtSoDDH.Visible = false;
+            // 
             // ThemKhachHangVaoDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -291,5 +313,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txtSoDDH;
     }
 }

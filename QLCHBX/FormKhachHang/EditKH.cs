@@ -14,16 +14,11 @@ using System.Windows.Forms;
 namespace QLCHBX.FormKhachHang
 {
     public partial class EditKH : Form
-    {       
-        public string MaKhachHang { get; set; }
-        public string TenKhachHang { get; set; }
-        public string DiaChi { get; set; }
-        public string SoDienThoai { get; set; }
-       
+    {  
         public EditKH()
         {
             InitializeComponent();
-            txtma.ReadOnly = true;
+            txtMaKhach.ReadOnly = true;
         }
 
         private void ptminimize_Click(object sender, EventArgs e)
@@ -53,10 +48,10 @@ namespace QLCHBX.FormKhachHang
 
         private void btSua_Click(object sender, EventArgs e)
         {
-            string makhach = txtma.Text;
-            string tenkhachhang = txtten.Text;
-            string diachi = txtdiachi.Text;
-            string sodienthoai = txtsodienthoai.Text;
+            string makhach = txtMaKhach.Text;
+            string tenkhachhang = txtTenKhach.Text;
+            string diachi = txtDiaChi.Text;
+            string sodienthoai = txtDienThoai.Text;
 
             if (string.IsNullOrWhiteSpace(tenkhachhang))
             {
@@ -103,10 +98,10 @@ namespace QLCHBX.FormKhachHang
 
         private void EditKH_Load(object sender, EventArgs e)
         {
-            txtma.Text = MaKhachHang;
-            txtten.Text = TenKhachHang;
-            txtdiachi.Text = DiaChi;
-            txtsodienthoai.Text = SoDienThoai;
+            txtMaKhach.Text = MaKhachHang;
+            txtTenKhach.Text = TenKhachHang;
+            txtDiaChi.Text = DiaChi;
+            txtDienThoai.Text = SoDienThoai;
         }
     }
 }

@@ -59,7 +59,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Color = System.Drawing.SystemColors.Desktop;
             this.guna2Panel1.ShadowDecoration.Enabled = true;
@@ -72,7 +72,7 @@
             this.pnmoving.Controls.Add(this.lbmoving);
             this.pnmoving.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnmoving.Location = new System.Drawing.Point(41, 0);
-            this.pnmoving.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnmoving.Margin = new System.Windows.Forms.Padding(4);
             this.pnmoving.Name = "pnmoving";
             this.pnmoving.Size = new System.Drawing.Size(433, 43);
             this.pnmoving.TabIndex = 14;
@@ -84,7 +84,7 @@
             this.lbmoving.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbmoving.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbmoving.Location = new System.Drawing.Point(0, 0);
-            this.lbmoving.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbmoving.Margin = new System.Windows.Forms.Padding(4);
             this.lbmoving.Name = "lbmoving";
             this.lbmoving.Size = new System.Drawing.Size(433, 43);
             this.lbmoving.TabIndex = 0;
@@ -98,7 +98,7 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(41, 43);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -125,7 +125,7 @@
             this.txtten.ForeColor = System.Drawing.Color.Black;
             this.txtten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtten.Location = new System.Drawing.Point(163, 66);
-            this.txtten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtten.Margin = new System.Windows.Forms.Padding(4);
             this.txtten.Name = "txtten";
             this.txtten.PasswordChar = '\0';
             this.txtten.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -150,7 +150,7 @@
             this.txtdiachi.ForeColor = System.Drawing.Color.Black;
             this.txtdiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiachi.Location = new System.Drawing.Point(163, 115);
-            this.txtdiachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdiachi.Margin = new System.Windows.Forms.Padding(4);
             this.txtdiachi.Name = "txtdiachi";
             this.txtdiachi.PasswordChar = '\0';
             this.txtdiachi.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -174,7 +174,7 @@
             this.txtsodienthoai.ForeColor = System.Drawing.Color.Black;
             this.txtsodienthoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsodienthoai.Location = new System.Drawing.Point(163, 164);
-            this.txtsodienthoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsodienthoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtsodienthoai.Name = "txtsodienthoai";
             this.txtsodienthoai.PasswordChar = '\0';
             this.txtsodienthoai.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -189,7 +189,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(37, 66);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(122, 27);
             this.guna2HtmlLabel6.TabIndex = 4;
@@ -201,7 +201,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(37, 115);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(63, 25);
             this.guna2HtmlLabel7.TabIndex = 5;
@@ -213,7 +213,7 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(37, 178);
-            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(105, 27);
             this.guna2HtmlLabel8.TabIndex = 11;
@@ -231,9 +231,9 @@
             this.btthem.ForeColor = System.Drawing.Color.Black;
             this.btthem.Image = ((System.Drawing.Image)(resources.GetObject("btthem.Image")));
             this.btthem.Location = new System.Drawing.Point(343, 213);
-            this.btthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btthem.Margin = new System.Windows.Forms.Padding(4);
             this.btthem.Name = "btthem";
-            this.btthem.Size = new System.Drawing.Size(109, 41);
+            this.btthem.Size = new System.Drawing.Size(100, 41);
             this.btthem.TabIndex = 12;
             this.btthem.Text = "LƯU";
             this.btthem.Click += new System.EventHandler(this.btthem_Click);
@@ -251,7 +251,7 @@
             this.bthuy.Image = ((System.Drawing.Image)(resources.GetObject("bthuy.Image")));
             this.bthuy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bthuy.Location = new System.Drawing.Point(222, 213);
-            this.bthuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bthuy.Margin = new System.Windows.Forms.Padding(4);
             this.bthuy.Name = "bthuy";
             this.bthuy.Size = new System.Drawing.Size(100, 41);
             this.bthuy.TabIndex = 13;
@@ -273,7 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(474, 287);
+            this.ClientSize = new System.Drawing.Size(474, 274);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.bthuy);
             this.Controls.Add(this.btthem);
@@ -285,7 +285,7 @@
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddKH";
