@@ -30,17 +30,28 @@ namespace QLCHBX.ALLControl
             else
             {
                 string Id = txtmanhanvien.Text;
-                LoginModel model = new LoginModel();
-                string matkhau = model.LayMatKhau(Id);
-                if (matkhau != string.Empty)
+                string username = txtusername.Text;
+                TaiKhoanModel model = new TaiKhoanModel(Id,username);
+
+                bool success = model.KiemTraTaiKhoanTonTai();
+                if (success)
                 {
-                    ShowCustomMessageBox("Đã lấy lại mật khẩu thành công");
-                    txtpassword.Text = matkhau;
+                    string matkhau = model.LayMatKhau();
+                    if (matkhau != string.Empty)
+                    {
+                        ShowCustomMessageBox("Đã lấy lại mật khẩu thành công");
+                        txtpassword.Text = matkhau;
+                    }
+                    else
+                    {
+                        ShowCustomMessageBox("Không lấy được mật khẩu");
+                    }
                 }
                 else
                 {
-                   ShowCustomMessageBox("Không lấy được mật khẩu");
+
                 }
+               
                 
             }
         }

@@ -383,6 +383,15 @@
     <Compile Include="HanghoaControl\Xeso.Designer.cs">
       <DependentUpon>Xeso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ChiTietDonDatHangModel.cs" />
+    <Compile Include="Model\ChiTietHoaDonNhapModel.cs" />
+    <Compile Include="Model\DmhModel.cs" />
+    <Compile Include="Model\DonDatHangModel.cs" />
+    <Compile Include="Model\HoaDonNhapModel.cs" />
+    <Compile Include="Model\KhachHangModel.cs" />
+    <Compile Include="Model\NhaCungCapModel.cs" />
+    <Compile Include="Model\TaiKhoanModel.cs" />
+    <Compile Include="ProcessDatabase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThongBao\MessageBoxForm.cs">
@@ -502,7 +511,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

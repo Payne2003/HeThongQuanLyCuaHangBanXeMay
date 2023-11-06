@@ -275,7 +275,6 @@ namespace QLCHBX.ALLControl
                     if (result == DialogResult.Yes)
                     {
                         KhachHangModel khachHang = new KhachHangModel();
-                        khachHang.XoaKhachHang(makhachhang);
                         LoadDataGridView();
                     }
                     else

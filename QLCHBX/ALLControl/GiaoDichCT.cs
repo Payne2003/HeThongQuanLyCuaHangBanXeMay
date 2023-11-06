@@ -17,36 +17,32 @@ namespace QLCHBX.ALLControl
             InitializeComponent();
 
         }
-    
-        private void btHoadon_Click(object sender, EventArgs e)
-        {
-          hoaDon1.BringToFront();
-        }
 
-        private void btGDch_Click(object sender, EventArgs e)
-        {
-            gdCuahang1.BringToFront();
-        }   
-         
-
-        private void btGDgj_Click(object sender, EventArgs e)
-        {
-          gojek1.BringToFront();
-        }
-
-        private void btGDSp_Click(object sender, EventArgs e)
-        {
-            shopee1.BringToFront();
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        public void LoadDataGridView()
         {
 
         }
 
-        private void guna2HtmlLabel13_Click(object sender, EventArgs e)
+
+
+        private void viewDonDatHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btOderHangHoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewDonDatHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GiaoDichCT_Load(object sender, EventArgs e)
+        {
+            LoadDataGridView();
         }
     }
 }
