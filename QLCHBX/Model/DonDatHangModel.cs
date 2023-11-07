@@ -42,9 +42,18 @@ namespace QLCHBX.Model
         public DateTime NgayMua { get ; set; }
         public decimal DatCoc { get ; set; }
         public decimal Thue { get; set; }
-        public decimal TongTien { get; set; }    
+        public decimal TongTien { get; set; }
 
+        public bool IsMaKhachNull()
+        {
+            string sql = "SELECT MaKhach FROM DonDatHang WHERE SoDDH = @SoDDH";
 
+            SqlParameter[] parameters = new SqlParameter[] {
+                    new SqlParameter("@SoDDH", SoDDH)
+             };
+            object result = ExecuteScalar(sql, parameters);
+            return result == null;
+        }
 
         public DataTable LayDonDatHangChuaThanhToan()
         {

@@ -47,21 +47,17 @@ namespace QLCHBX
             return dtBang;
         }
 
-        public DataTable DocBang(string sql, SqlParameter[] sqlParameter)
+        public DataTable DocBang(string sql, SqlParameter[] sqlParameters)
         {
             DataTable dt = new DataTable();
-            KetNoi(); // Assuming KetNoi opens the connection
-            using (SqlCommand cmd = new SqlCommand(sql, con))
-            {
-                cmd.Parameters.Add(sqlParameter);
-                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                {
-                    da.Fill(dt);
-                }
-            }
-            DongKetNoi(); // Assuming DongKetNoi closes the connection
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddRange(sqlParameters);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            DongKetNoi(); 
             return dt;
         }
+
         public void CapNhatDuLieu(string sql)
         {
             KetNoi();
