@@ -61,11 +61,13 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.grbThongTinDonHangTrongChiTiet = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dtNgayNhap = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSoLuongHangTrongKho = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -87,8 +89,6 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dtNgayNhap = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.header.SuspendLayout();
             this.pnmoving.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbacham)).BeginInit();
@@ -561,6 +561,19 @@
             this.grbThongTinDonHangTrongChiTiet.Text = "Thông tin đơn hàng";
             this.grbThongTinDonHangTrongChiTiet.Visible = false;
             // 
+            // dtNgayNhap
+            // 
+            this.dtNgayNhap.Checked = true;
+            this.dtNgayNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgayNhap.Location = new System.Drawing.Point(126, 191);
+            this.dtNgayNhap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtNgayNhap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtNgayNhap.Name = "dtNgayNhap";
+            this.dtNgayNhap.Size = new System.Drawing.Size(110, 18);
+            this.dtNgayNhap.TabIndex = 3;
+            this.dtNgayNhap.Value = new System.DateTime(2023, 11, 7, 0, 0, 0, 0);
+            // 
             // btCapNhat
             // 
             this.btCapNhat.BorderColor = System.Drawing.Color.Gray;
@@ -621,6 +634,16 @@
             this.txtSoLuongHangTrongKho.Size = new System.Drawing.Size(8, 15);
             this.txtSoLuongHangTrongKho.TabIndex = 1;
             this.txtSoLuongHangTrongKho.Text = "?";
+            // 
+            // guna2HtmlLabel12
+            // 
+            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(126, 170);
+            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(52, 15);
+            this.guna2HtmlLabel12.TabIndex = 1;
+            this.guna2HtmlLabel12.Text = "Ngày mua";
             // 
             // guna2HtmlLabel7
             // 
@@ -945,29 +968,6 @@
             this.guna2DragControl1.TargetControl = this.lbmoving;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // guna2HtmlLabel12
-            // 
-            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(126, 170);
-            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(52, 15);
-            this.guna2HtmlLabel12.TabIndex = 1;
-            this.guna2HtmlLabel12.Text = "Ngày mua";
-            // 
-            // dtNgayNhap
-            // 
-            this.dtNgayNhap.Checked = true;
-            this.dtNgayNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNgayNhap.Location = new System.Drawing.Point(126, 191);
-            this.dtNgayNhap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtNgayNhap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtNgayNhap.Name = "dtNgayNhap";
-            this.dtNgayNhap.Size = new System.Drawing.Size(110, 18);
-            this.dtNgayNhap.TabIndex = 3;
-            this.dtNgayNhap.Value = new System.DateTime(2023, 11, 7, 0, 0, 0, 0);
-            // 
             // GiaoDich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -981,6 +981,7 @@
             this.Name = "GiaoDich";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GiaoDich";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GiaoDich_FormClosed);
             this.Load += new System.EventHandler(this.GiaoDich_Load);
             this.header.ResumeLayout(false);
             this.pnmoving.ResumeLayout(false);

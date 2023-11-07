@@ -209,5 +209,14 @@ namespace QLCHBX.FormGiaoDich
         {
             xe2.BringToFront();
         }
+
+        private void GiaoDich_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DashBoard dashBoard = Application.OpenForms["DashBoard"] as DashBoard;
+            if (dashBoard != null)
+            {
+                dashBoard.giaoDichCT1.LoadDataGridView();
+            }
+        }
     }
 }

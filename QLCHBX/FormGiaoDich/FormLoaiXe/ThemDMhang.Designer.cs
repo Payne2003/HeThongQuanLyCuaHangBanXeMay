@@ -93,6 +93,7 @@
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.BackColor = System.Drawing.Color.MintCream;
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox1.BorderThickness = 1;
             this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
@@ -105,7 +106,7 @@
             // 
             // btThemHangMua
             // 
-            this.btThemHangMua.BorderColor = System.Drawing.Color.Gray;
+            this.btThemHangMua.BorderColor = System.Drawing.Color.LightGray;
             this.btThemHangMua.BorderThickness = 1;
             this.btThemHangMua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btThemHangMua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -140,6 +141,7 @@
             // 
             this.lbTenHangSX.AutoSize = false;
             this.lbTenHangSX.BackColor = System.Drawing.Color.MintCream;
+            this.lbTenHangSX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbTenHangSX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTenHangSX.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenHangSX.Location = new System.Drawing.Point(76, 0);
@@ -181,6 +183,7 @@
             this.viewDmh.Name = "viewDmh";
             this.viewDmh.Size = new System.Drawing.Size(800, 401);
             this.viewDmh.TabIndex = 1;
+            this.viewDmh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewDmh_CellClick);
             // 
             // menuStrip1
             // 
@@ -557,6 +560,8 @@
             this.txtSoLuongHangMua.Size = new System.Drawing.Size(47, 48);
             this.txtSoLuongHangMua.TabIndex = 0;
             this.txtSoLuongHangMua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSoLuongHangMua.TextChanged += new System.EventHandler(this.txtSoLuongHangMua_TextChanged);
+            this.txtSoLuongHangMua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuongHangMua_KeyPress);
             // 
             // txtGiamGia
             // 
@@ -577,6 +582,8 @@
             this.txtGiamGia.SelectedText = "";
             this.txtGiamGia.Size = new System.Drawing.Size(97, 27);
             this.txtGiamGia.TabIndex = 0;
+            this.txtGiamGia.TextChanged += new System.EventHandler(this.txtGiamGia_TextChanged);
+            this.txtGiamGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiamGia_KeyPress);
             // 
             // txtDonGiaBan
             // 
@@ -669,6 +676,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ThemDMhang";
             this.Text = "ThemChiTietHoaDon";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ThemDMhang_FormClosed);
             this.Load += new System.EventHandler(this.ThemDMhang_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);

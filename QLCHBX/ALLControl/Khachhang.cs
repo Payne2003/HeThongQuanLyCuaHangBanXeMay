@@ -65,16 +65,18 @@ namespace QLCHBX.ALLControl
 
         private void viewKhachhang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == 4)
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = viewKhachhang.Rows[e.RowIndex];
-                if (row.Cells[1].Value != null || row.Cells[1].Value.ToString() != "")
+                if (row.Cells[1].Value != null && row.Cells[1].Value.ToString() != "")
                 {
                     grThongtinKhachHang.Visible = true;
                    
                 }
                 else
                 {
+                    MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     return;
 
                 }
@@ -85,7 +87,7 @@ namespace QLCHBX.ALLControl
             if (e.RowIndex >= 0 && e.ColumnIndex == 0)
             {
                 DataGridViewRow row = viewKhachhang.Rows[e.RowIndex]; 
-                if (row.Cells[1].Value != null || row.Cells[1].Value.ToString() != "")
+                if (row.Cells[1].Value != null && row.Cells[1].Value.ToString() != "")
                 {
 
                     EditKH editKH = new EditKH();

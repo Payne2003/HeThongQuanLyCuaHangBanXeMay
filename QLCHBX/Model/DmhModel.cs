@@ -31,7 +31,7 @@ namespace QLCHBX.Model
         {
             DataTable dt = new DataTable();
             string sql = @"
-                        SELECT Dmh.TenHang, Dmh.NamSX, Dmh.DungTichBinhXang, Dmh.SoLuong, Dmh.DonGiaNhap, Dmh.DonGiaBan, Dmh.ThoiGianBaoHanh,
+                        SELECT Dmh.MaHang, Dmh.TenHang, Dmh.NamSX, Dmh.DungTichBinhXang, Dmh.SoLuong, Dmh.DonGiaNhap, Dmh.DonGiaBan, Dmh.ThoiGianBaoHanh,
                                Theloai.TenTheLoai, Dongco.TenDongCo, Mausac.TenMau, Nuocsanxuat.TenNuocSX, Tinhtrang.TenTinhTrang, Phanhxe.TenPhanh
                         FROM Dmh
                         INNER JOIN Hangsanxuat ON Dmh.MaHangSX = Hangsanxuat.MaHangSX
