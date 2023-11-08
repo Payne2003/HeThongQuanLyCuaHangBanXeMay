@@ -16,6 +16,7 @@ namespace QLCHBX.ALLControl
     public partial class GiaoDichCT : UserControl
     {
         DateTime dt = DateTime.Now;
+        private decimal tongTienBanDau = 0;
         public GiaoDichCT()
         {
             InitializeComponent();
@@ -39,10 +40,11 @@ namespace QLCHBX.ALLControl
         {
             return texts.Any(string.IsNullOrWhiteSpace);
         }
-        public void SaveDataGridView() 
+        public void SaveDataGridView()
         {
-            DonDatHangModel donDatHangCapNhat = new DonDatHangModel();
-            donDatHangCapNhat.CapNhatDonDatHang(int.Parse(txtSoDDH.Text), DateTime.Parse(dtNgayNhap.Text), decimal.Parse(txtDatCoc.Text), decimal.Parse(txtThue.Text), decimal.Parse(txtTongTien.Text));
+            int SoDDH = int.Parse(txtSoDDH.Text);
+            DonDatHangModel donDatHangCapNhat = new DonDatHangModel(SoDDH);
+            donDatHangCapNhat.CapNhatDonDatHang(DateTime.Parse(dtNgayNhap.Text), decimal.Parse(txtThue.Text), decimal.Parse(txtDatCoc.Text), decimal.Parse(txtTongTien.Text));
         }
         private void viewDonDatHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -54,6 +56,9 @@ namespace QLCHBX.ALLControl
                     btCapNhat.Visible = true;
                     btThanhToan.Visible = true;
                     btTaoHoaDon.Visible = false;
+                    int SoDDH = int.Parse(rowDonDatHang.Cells[0].Value.ToString());
+                    ChiTietDonDatHangModel ch = new ChiTietDonDatHangModel(SoDDH);
+                    tongTienBanDau = ch.LayTongTienChuaThue();
                     txtSoDDH.Text = rowDonDatHang.Cells[0].Value.ToString();
                     txtMaNV.Text = rowDonDatHang.Cells[1].Value.ToString();
                     txtTenNV.Text = rowDonDatHang.Cells[2].Value.ToString();
@@ -114,6 +119,8 @@ namespace QLCHBX.ALLControl
         private void btThanhToan_Click(object sender, EventArgs e)
         {
             GiaoDich giaoDich = new GiaoDich(int.Parse(txtSoDDH.Text),int.Parse(txtMaNV.Text));
+            giaoDich.txtThue.Text = txtThue.Text;
+            giaoDich.txtDatCoc.Text = txtDatCoc.Text;
             giaoDich.ShowDialog();
         }
 
@@ -149,10 +156,11 @@ namespace QLCHBX.ALLControl
                 if (decimal.Parse(txtThue.Text) > 100)
                 {
                     MessageBox.Show("Thuế chỉ từ 0 - 100% thôi bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataGridView();
                 }
                 else
                 {
-                    SaveDataGridView();
+                    txtTongTien.Text = (tongTienBanDau + tongTienBanDau * decimal.Parse(txtThue.Text) / 100).ToString();
                 }
             }
         }
@@ -165,13 +173,15 @@ namespace QLCHBX.ALLControl
             }
             else
             {
-                if(decimal.Parse(txtThue.Text) > 100)
+                if (decimal.Parse(txtDatCoc.Text) < 0)
                 {
-                    MessageBox.Show("Thuế chỉ từ 0 - 100% thôi bạn ơi!!!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Nhập chuẩn vào bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataGridView();
                 }
+
                 else
                 {
-                    SaveDataGridView();
+                    txtTongTien.Text = (tongTienBanDau + tongTienBanDau * decimal.Parse(txtThue.Text) / 100).ToString();
                 }
             }
         }

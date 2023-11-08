@@ -22,6 +22,11 @@ namespace QLCHBX.Model
         {
         }
 
+        public ChiTietDonDatHangModel(int soDDH)
+        {
+            SoDDH = soDDH;
+        }
+
         public int SoDDH { get; set; }
         public int MaHang { get; set; }
         public int SoLuong { get; set; }
@@ -48,7 +53,7 @@ namespace QLCHBX.Model
         {
             DataTable dt = new DataTable();
             string sql = @"SELECT c.MaHang, d.TenHang, c.SoLuong, d.DonGiaBan, c.GiamGia, c.ThanhTien
-                   FROM chitietdondathang AS c
+                   FROM ChiTietDonDatHang AS c
                    INNER JOIN Dmh AS d ON c.MaHang = d.MaHang
                    WHERE c.SoDDH = @SoDDH";
 
@@ -73,5 +78,25 @@ namespace QLCHBX.Model
             object result = ExecuteScalar(sql, parameters);
             return (result != null) && (Convert.ToInt32(result) > 0);
         }
+
+        public decimal LayTongTienChuaThue()
+        {
+            string sql = "SELECT SUM(ThanhTien) AS TongTien FROM ChiTietDonDatHang WHERE SoDDH = @SoDDH;";
+
+            SqlParameter[] parameters = new SqlParameter[] { 
+                new SqlParameter("@SoDDH",SoDDH)
+            };
+
+            object tongTien = ExecuteScalar(sql, parameters);
+            if (tongTien!=null)
+            {
+                return Convert.ToDecimal(tongTien);
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        
     }
 }

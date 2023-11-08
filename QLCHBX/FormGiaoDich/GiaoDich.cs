@@ -29,22 +29,20 @@ namespace QLCHBX.FormGiaoDich
         }
         public void LoadDataGridView()
         {
-            ChiTietDonDatHangModel chiTietDonDatHangLoad = new ChiTietDonDatHangModel();
+            ChiTietDonDatHangModel chiTietDonDatHangLoad = new ChiTietDonDatHangModel(int.Parse(txtSoDDH.Text));
             viewChiTietDonHang.DataSource = chiTietDonDatHangLoad.LayDuLieuCuaHoaDon();
-            int k = viewChiTietDonHang.RowCount - 1;
-            if (k == 0)
+            tongtien_ChuaThue = chiTietDonDatHangLoad.LayTongTienChuaThue();
+            if (KiemTraTextsRong(txtThue.Text))
             {
+                lbTongtien.Text = tongtien_ChuaThue.ToString();
                 return;
             }
             else
             {
-                for (int i = 0; i < viewChiTietDonHang.RowCount - 1; i++)
-                {
-                    DataGridViewRow row = viewChiTietDonHang.Rows[i];
-                    tongtien_ChuaThue += decimal.Parse(row.Cells[5].Value.ToString());
-                }
+                decimal TongTien = tongtien_ChuaThue + (decimal.Parse(txtThue.Text) / 100) * tongtien_ChuaThue;
+                lbTongtien.Text = TongTien.ToString();
             }
-
+            CapNhatMau();
         }
         public bool KiemTraTextsRong(params string[] texts)
         {
@@ -73,7 +71,7 @@ namespace QLCHBX.FormGiaoDich
             time_1.Text = DateTime.Now.ToString("HH:mm");
             if (!KiemTraTextsRong(txtSoDDH.Text,txtMaNV.Text))
             {
-                return;
+                
             }
             else
             {
@@ -84,6 +82,7 @@ namespace QLCHBX.FormGiaoDich
                 txtSoDDH.Text = SoDDH.ToString();
             }
             xe2.txtSoDDH.Text = txtSoDDH.Text;
+            themKhachHangVaoDonDatHang1.txtSoDDH.Text = txtSoDDH.Text;
         }
 
         private void btThoatRa_Click(object sender, EventArgs e)
@@ -102,8 +101,30 @@ namespace QLCHBX.FormGiaoDich
         }
         public void SaveDataDonDatHang()
         {
-            DonDatHangModel donDatHang_CapNhat = new DonDatHangModel();
-            donDatHang_CapNhat.CapNhatDonDatHang(int.Parse(txtSoDDH.Text), DateTime.Parse(dtNgayNhap.Text), decimal.Parse(txtThue.Text), decimal.Parse(txtDatCoc.Text),decimal.Parse(lbTongtien.Text));
+            int SoDDH = int.Parse(txtSoDDH.Text);
+            DateTime NgayNhap = DateTime.Parse(dtNgayNhap.Text);
+            DonDatHangModel donDatHang_CapNhat = new DonDatHangModel(SoDDH);
+            ChiTietDonDatHangModel chiTietDon = new ChiTietDonDatHangModel(int.Parse(txtSoDDH.Text));
+            if (KiemTraTextsRong(txtThue.Text) || KiemTraTextsRong(txtDatCoc.Text))
+            {
+               
+                if (KiemTraTextsRong(txtThue.Text))
+                {
+                    txtThue.Text = "0";
+                }
+                if(KiemTraTextsRong(txtDatCoc.Text))
+                {
+                    txtDatCoc.Text = "0";
+                }
+                tongtien_ChuaThue = chiTietDon.LayTongTienChuaThue();
+                donDatHang_CapNhat.CapNhatDonDatHang(NgayNhap.Date, decimal.Parse(txtThue.Text), decimal.Parse(txtDatCoc.Text), tongtien_ChuaThue);
+            }
+            else
+            {
+                decimal TongTien = tongtien_ChuaThue + (decimal.Parse(txtThue.Text) / 100) * tongtien_ChuaThue;
+                donDatHang_CapNhat.CapNhatDonDatHang(NgayNhap.Date, decimal.Parse(txtThue.Text), decimal.Parse(txtDatCoc.Text), TongTien);
+
+            }
         }
 
         private void viewChiTietDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -134,7 +155,7 @@ namespace QLCHBX.FormGiaoDich
 
         private void txtThue_TextChanged(object sender, EventArgs e)
         {
-            if(KiemTraTextsRong(txtThue.Text,txtDatCoc.Text))
+            if(KiemTraTextsRong(txtThue.Text))
             {
                 LoadDataGridView();
                 return;
@@ -158,7 +179,7 @@ namespace QLCHBX.FormGiaoDich
 
         private void txtDatCoc_TextChanged(object sender, EventArgs e)
         {
-            if (KiemTraTextsRong(txtThue.Text, txtDatCoc.Text))
+            if (KiemTraTextsRong(txtDatCoc.Text))
             {
                 LoadDataGridView();
                 return;
@@ -172,9 +193,6 @@ namespace QLCHBX.FormGiaoDich
                 }
                 else
                 {
-                    LoadDataGridView();
-                    decimal TongTien = tongtien_ChuaThue + (decimal.Parse(txtThue.Text) / 100) * tongtien_ChuaThue;
-                    lbTongtien.Text = TongTien.ToString();
                     SaveDataDonDatHang();   
                 }
             }
@@ -217,6 +235,21 @@ namespace QLCHBX.FormGiaoDich
             {
                 dashBoard.giaoDichCT1.LoadDataGridView();
             }
+        }
+
+        private void txtGiamGia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoLuongMua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btCapNhat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

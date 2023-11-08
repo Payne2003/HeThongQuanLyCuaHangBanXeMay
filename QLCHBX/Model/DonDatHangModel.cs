@@ -92,7 +92,7 @@ namespace QLCHBX.Model
             return dt;
         }
 
-        public bool CapNhatDonDatHang(int soDDH,DateTime ngayNhap, decimal datCoc, decimal thue, decimal tongTien)
+        public bool CapNhatDonDatHang(DateTime date,decimal thueCapNhat,decimal datCocCapNhat,decimal tongTien)
         {
             string sql = @"
                             UPDATE DonDatHang
@@ -105,11 +105,11 @@ namespace QLCHBX.Model
 
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
-                new SqlParameter ("@NgayNhap",ngayNhap),
-                new SqlParameter("@DatCoc", datCoc),
-                new SqlParameter("@Thue", thue),
+                new SqlParameter ("@NgayNhap",date),
+                new SqlParameter("@DatCoc", datCocCapNhat),
+                new SqlParameter("@Thue", thueCapNhat),
                 new SqlParameter("@TongTien", tongTien),
-                new SqlParameter("@SoDDH", soDDH)
+                new SqlParameter("@SoDDH", SoDDH)
             };
 
             return ExecuteNonQuery(sql, sqlParameters);
