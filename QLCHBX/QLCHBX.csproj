@@ -370,6 +370,9 @@
     <EmbeddedResource Include="FormGiaoDich\OderHangHoa\OrderHangHoaForm.resx">
       <DependentUpon>OrderHangHoaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\ThanhToan\XacNhanThanhToan.resx">
+      <DependentUpon>XacNhanThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\ThemKhachHang\ThemKhachHangVaoDonDatHang.resx">
       <DependentUpon>ThemKhachHangVaoDonDatHang.cs</DependentUpon>
     </EmbeddedResource>

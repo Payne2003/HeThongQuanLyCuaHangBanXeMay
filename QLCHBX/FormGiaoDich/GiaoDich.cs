@@ -1,4 +1,5 @@
-﻿using QLCHBX.Model;
+﻿using QLCHBX.FormGiaoDich.ThanhToan;
+using QLCHBX.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -250,6 +251,14 @@ namespace QLCHBX.FormGiaoDich
         private void btCapNhat_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btThanhToan_Click(object sender, EventArgs e)
+        {
+            XacNhanThanhToan xacNhanThanhToan = new XacNhanThanhToan();
+            xacNhanThanhToan.lbSoDDH.Text = txtSoDDH.Text;
+            xacNhanThanhToan.lbTongTien.Text = lbTongtien.Text;
+            xacNhanThanhToan.ShowDialog();
         }
     }
 }

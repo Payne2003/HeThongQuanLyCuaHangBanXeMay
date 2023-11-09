@@ -502,6 +502,7 @@
             this.btThanhToan.Size = new System.Drawing.Size(267, 76);
             this.btThanhToan.TabIndex = 0;
             this.btThanhToan.Text = "Thanh toán";
+            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
             // 
             // guna2Panel3
             // 

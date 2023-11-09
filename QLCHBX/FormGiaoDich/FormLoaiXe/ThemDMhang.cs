@@ -164,8 +164,6 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
         {
             return texts.Any(string.IsNullOrWhiteSpace);
         }
-
-
         private void txtGiamGia_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -173,7 +171,6 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 e.Handled = true;
             }
         }
-
         private void txtGiamGia_TextChanged(object sender, EventArgs e)
         {
             if (KiemTraTextsRong(txtGiamGia.Text, txtSoLuongHangMua.Text))
@@ -194,7 +191,6 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 }
             }
         }
-
         private void txtSoLuongHangMua_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -202,7 +198,6 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 e.Handled = true;
             }
         }
-
         private void txtSoLuongHangMua_TextChanged(object sender, EventArgs e)
         {
             if (KiemTraTextsRong(txtGiamGia.Text, txtSoLuongHangMua.Text))
@@ -215,7 +210,6 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 txtThanhTien.Text = thanhTien.ToString();
             }
         }
-
         private void ThemDMhang_FormClosed(object sender, FormClosedEventArgs e)
         {
 
