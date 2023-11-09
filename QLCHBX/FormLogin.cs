@@ -22,22 +22,17 @@ namespace QLCHBX
 
         private void linkDangky_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           signup.BringToFront();
+            signup1.BringToFront();
         }
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            login.BringToFront();
+            login1.BringToFront();
         }
 
         private void linkquenmk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             forgotPassword1.BringToFront();
-        }
-
-        private void login_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void ctThoat_Click(object sender, EventArgs e)

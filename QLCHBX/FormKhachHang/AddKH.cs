@@ -22,9 +22,9 @@ namespace QLCHBX.FormKhachHang
 
         private void btthem_Click(object sender, EventArgs e)
         {
-            string tenkhachhang = txtten.Text;
-            string diachi = txtdiachi.Text;
-            string sodienthoai = txtsodienthoai.Text;
+            string tenkhachhang = txtTenKhach.Text;
+            string diachi = txtDiaChi.Text;
+            string sodienthoai = txtDienThoai.Text;
 
             if (string.IsNullOrWhiteSpace(tenkhachhang))
             {
@@ -44,8 +44,8 @@ namespace QLCHBX.FormKhachHang
                 return;
             }
 
-            KhachHangModel khachHang = new KhachHangModel();
-            bool success = khachHang.ThemKhachHang(tenkhachhang, diachi, sodienthoai);
+            KhachHangModel khachHang = new KhachHangModel(txtTenKhach.Text,txtDiaChi.Text,txtDienThoai.Text);
+            bool success = khachHang.ThemKhachHang();
 
             if (success)
             {
@@ -61,16 +61,6 @@ namespace QLCHBX.FormKhachHang
         private bool IsValidPhoneNumber(string phoneNumber)
         {
             return phoneNumber.Length == 10 && phoneNumber.All(char.IsDigit);
-        }
-
-        private void ptminimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void ptthoat_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         private void bthuy_Click(object sender, EventArgs e)

@@ -35,6 +35,7 @@
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtSoDDH = new Guna.UI2.WinForms.Guna2TextBox();
             this.ptPiaggio = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             this.ptducati = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -101,6 +102,7 @@
             this.ptSYM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptSYM.TabIndex = 0;
             this.ptSYM.TabStop = false;
+            this.ptSYM.Click += new System.EventHandler(this.ptSYM_Click);
             // 
             // guna2Panel8
             // 
@@ -124,11 +126,32 @@
             // guna2Panel7
             // 
             this.guna2Panel7.Controls.Add(this.pthonda);
+            this.guna2Panel7.Controls.Add(this.txtSoDDH);
             this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel7.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(312, 140);
             this.guna2Panel7.TabIndex = 0;
+            // 
+            // txtSoDDH
+            // 
+            this.txtSoDDH.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSoDDH.DefaultText = "";
+            this.txtSoDDH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSoDDH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSoDDH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoDDH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoDDH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoDDH.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoDDH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoDDH.Location = new System.Drawing.Point(0, 0);
+            this.txtSoDDH.Name = "txtSoDDH";
+            this.txtSoDDH.PasswordChar = '\0';
+            this.txtSoDDH.PlaceholderText = "";
+            this.txtSoDDH.SelectedText = "";
+            this.txtSoDDH.Size = new System.Drawing.Size(51, 44);
+            this.txtSoDDH.TabIndex = 1;
+            this.txtSoDDH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ptPiaggio
             // 
@@ -141,6 +164,7 @@
             this.ptPiaggio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptPiaggio.TabIndex = 0;
             this.ptPiaggio.TabStop = false;
+            this.ptPiaggio.Click += new System.EventHandler(this.ptPiaggio_Click);
             // 
             // guna2Panel11
             // 
@@ -162,6 +186,7 @@
             this.ptducati.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptducati.TabIndex = 0;
             this.ptducati.TabStop = false;
+            this.ptducati.Click += new System.EventHandler(this.ptducati_Click);
             // 
             // guna2Panel12
             // 
@@ -203,6 +228,7 @@
             this.ptSuzuki.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptSuzuki.TabIndex = 0;
             this.ptSuzuki.TabStop = false;
+            this.ptSuzuki.Click += new System.EventHandler(this.ptSuzuki_Click);
             // 
             // guna2Panel9
             // 
@@ -224,6 +250,7 @@
             this.ptYamaha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptYamaha.TabIndex = 0;
             this.ptYamaha.TabStop = false;
+            this.ptYamaha.Click += new System.EventHandler(this.ptYamaha_Click);
             // 
             // guna2Panel10
             // 
@@ -264,6 +291,7 @@
             this.ptktm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptktm.TabIndex = 0;
             this.ptktm.TabStop = false;
+            this.ptktm.Click += new System.EventHandler(this.ptktm_Click);
             // 
             // ptKawasaki
             // 
@@ -276,6 +304,7 @@
             this.ptKawasaki.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptKawasaki.TabIndex = 0;
             this.ptKawasaki.TabStop = false;
+            this.ptKawasaki.Click += new System.EventHandler(this.ptKawasaki_Click);
             // 
             // guna2Panel14
             // 
@@ -369,5 +398,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        public Guna.UI2.WinForms.Guna2TextBox txtSoDDH;
     }
 }

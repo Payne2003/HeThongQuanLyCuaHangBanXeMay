@@ -38,16 +38,15 @@ namespace QLCHBX.ALLControl
                 string username = txtuser.Text.Trim();
                 string password = txtpassword.Text.Trim();
                 string Id = txtmanhanvien.Text.Trim();
-                LoginModel login = new LoginModel();
-                // Chuỗi kết nối
-            if (login.ThemTaiKhoanNhanVien(Id,username,password))
+                TaiKhoanModel taiKhoanModel = new TaiKhoanModel(username,password, int.Parse(Id));
+            if (taiKhoanModel.KiemTraTaiKhoanTonTai(username))
             {
-                ShowCustomMessageBox("Đăng ký thành công.");
+                ShowCustomMessageBox("Tài khoản đã có!!!.");
 
             }
             else
             {
-                    ShowCustomMessageBox("Tài khoản hoặc mật khẩu không hợp lệ hoặc mã nhân viên không có.");
+                    taiKhoanModel.ThemTaiKhoanMoi();
             }
                 
             }

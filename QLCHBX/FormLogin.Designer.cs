@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnmoving = new System.Windows.Forms.Panel();
             this.ctminimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctThoat = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnControl = new System.Windows.Forms.Panel();
@@ -51,12 +51,13 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.login = new QLCHBX.ALLControl.Login();
-            this.signup = new QLCHBX.ALLControl.Signup();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.login1 = new QLCHBX.ALLControl.Login();
             this.forgotPassword1 = new QLCHBX.ALLControl.ForgotPassword();
+            this.signup1 = new QLCHBX.ALLControl.Signup();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnmoving.SuspendLayout();
             this.pnControl.SuspendLayout();
             this.panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -67,9 +68,9 @@
             // 
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 400);
+            this.panel1.Size = new System.Drawing.Size(400, 360);
             this.panel1.TabIndex = 0;
             // 
             // guna2PictureBox1
@@ -79,31 +80,31 @@
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(400, 400);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(400, 360);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // panel2
+            // pnmoving
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.ctminimize);
-            this.panel2.Controls.Add(this.ctThoat);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(400, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(400, 40);
-            this.panel2.TabIndex = 1;
+            this.pnmoving.BackColor = System.Drawing.Color.MintCream;
+            this.pnmoving.Controls.Add(this.ctminimize);
+            this.pnmoving.Controls.Add(this.ctThoat);
+            this.pnmoving.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnmoving.Location = new System.Drawing.Point(0, 0);
+            this.pnmoving.Name = "pnmoving";
+            this.pnmoving.Size = new System.Drawing.Size(800, 40);
+            this.pnmoving.TabIndex = 1;
             // 
             // ctminimize
             // 
             this.ctminimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.ctminimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ctminimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ctminimize.FillColor = System.Drawing.Color.Transparent;
             this.ctminimize.HoverState.FillColor = System.Drawing.Color.White;
             this.ctminimize.HoverState.IconColor = System.Drawing.Color.Blue;
-            this.ctminimize.IconColor = System.Drawing.Color.White;
-            this.ctminimize.Location = new System.Drawing.Point(320, 0);
+            this.ctminimize.IconColor = System.Drawing.Color.Black;
+            this.ctminimize.Location = new System.Drawing.Point(720, 0);
             this.ctminimize.Name = "ctminimize";
             this.ctminimize.Size = new System.Drawing.Size(40, 40);
             this.ctminimize.TabIndex = 2;
@@ -112,11 +113,11 @@
             // ctThoat
             // 
             this.ctThoat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ctThoat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ctThoat.FillColor = System.Drawing.Color.Transparent;
             this.ctThoat.HoverState.FillColor = System.Drawing.Color.Red;
             this.ctThoat.HoverState.IconColor = System.Drawing.Color.Blue;
-            this.ctThoat.IconColor = System.Drawing.Color.White;
-            this.ctThoat.Location = new System.Drawing.Point(360, 0);
+            this.ctThoat.IconColor = System.Drawing.Color.Black;
+            this.ctThoat.Location = new System.Drawing.Point(760, 0);
             this.ctThoat.Name = "ctThoat";
             this.ctThoat.Size = new System.Drawing.Size(40, 40);
             this.ctThoat.TabIndex = 0;
@@ -185,12 +186,13 @@
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.BorderRadius = 5;
             this.guna2Elipse1.TargetControl = this;
             // 
             // guna2ShadowForm1
             // 
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.Gray;
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
+            this.guna2ShadowForm1.TargetForm = this;
             // 
             // linkLogin
             // 
@@ -268,8 +270,8 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.login);
-            this.guna2Panel1.Controls.Add(this.signup);
+            this.guna2Panel1.Controls.Add(this.login1);
+            this.guna2Panel1.Controls.Add(this.signup1);
             this.guna2Panel1.Controls.Add(this.forgotPassword1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(400, 40);
@@ -277,34 +279,46 @@
             this.guna2Panel1.Size = new System.Drawing.Size(400, 281);
             this.guna2Panel1.TabIndex = 3;
             // 
-            // login
+            // guna2DragControl1
             // 
-            this.login.BackColor = System.Drawing.Color.White;
-            this.login.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.login.Location = new System.Drawing.Point(0, 0);
-            this.login.manhanvien = null;
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(400, 281);
-            this.login.TabIndex = 1;
-            this.login.Load += new System.EventHandler(this.login_Load);
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.pnmoving;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // signup
+            // login1
             // 
-            this.signup.BackColor = System.Drawing.Color.White;
-            this.signup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.signup.Location = new System.Drawing.Point(0, 0);
-            this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(400, 281);
-            this.signup.TabIndex = 2;
+            this.login1.BackColor = System.Drawing.Color.White;
+            this.login1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.login1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login1.Location = new System.Drawing.Point(0, 0);
+            this.login1.manhanvien = null;
+            this.login1.Margin = new System.Windows.Forms.Padding(4);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(400, 281);
+            this.login1.TabIndex = 0;
             // 
             // forgotPassword1
             // 
             this.forgotPassword1.BackColor = System.Drawing.Color.White;
             this.forgotPassword1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.forgotPassword1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forgotPassword1.Location = new System.Drawing.Point(0, 0);
+            this.forgotPassword1.Margin = new System.Windows.Forms.Padding(4);
             this.forgotPassword1.Name = "forgotPassword1";
             this.forgotPassword1.Size = new System.Drawing.Size(400, 281);
-            this.forgotPassword1.TabIndex = 4;
+            this.forgotPassword1.TabIndex = 1;
+            // 
+            // signup1
+            // 
+            this.signup1.BackColor = System.Drawing.Color.White;
+            this.signup1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.signup1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signup1.ForeColor = System.Drawing.Color.Black;
+            this.signup1.Location = new System.Drawing.Point(0, 0);
+            this.signup1.Margin = new System.Windows.Forms.Padding(4);
+            this.signup1.Name = "signup1";
+            this.signup1.Size = new System.Drawing.Size(400, 281);
+            this.signup1.TabIndex = 2;
             // 
             // FormLogin
             // 
@@ -314,16 +328,16 @@
             this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnControl);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnmoving);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.pnmoving.ResumeLayout(false);
             this.pnControl.ResumeLayout(false);
             this.pnControl.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -338,7 +352,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnmoving;
         private System.Windows.Forms.Panel pnControl;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
@@ -346,11 +360,8 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private ALLControl.Login login;
-        private ALLControl.Signup signup;
         private Guna.UI2.WinForms.Guna2ControlBox ctminimize;
         private Guna.UI2.WinForms.Guna2ControlBox ctThoat;
-        private ALLControl.ForgotPassword forgotPassword1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.LinkLabel linkDangky;
         private System.Windows.Forms.LinkLabel linkquenmk;
@@ -360,5 +371,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private ALLControl.Login login1;
+        private ALLControl.Signup signup1;
+        private ALLControl.ForgotPassword forgotPassword1;
     }
 }

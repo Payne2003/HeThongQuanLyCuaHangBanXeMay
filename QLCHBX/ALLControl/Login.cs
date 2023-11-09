@@ -1,5 +1,4 @@
-﻿using QLCHBX.GDControl;
-using QLCHBX.Model;
+﻿using QLCHBX.Model;
 using QLCHBX.ThongBao;
 using System;
 using System.Collections.Generic;
@@ -41,20 +40,16 @@ namespace QLCHBX.ALLControl
             {
                 string username = txtuser.Text.Trim();
                 string password = txtpassword.Text.Trim();
+                TaiKhoanModel taiKhoanModel = new TaiKhoanModel(username, password);
 
-                LoginModel login = new LoginModel();
-
-                if (login.LoginControl(username, password))
+                if (taiKhoanModel.KiemTraDangNhap())
                 {
                     // Đăng nhập thành công
-                    string maNhanVien = login.LayMaNhanVien(username, password);
+                    string maNhanVien = taiKhoanModel.LayMaNhanVien();
                     if (!string.IsNullOrEmpty(maNhanVien))
                     {
                         ShowCustomMessageBox("Đăng nhập thành công");
-
-                        GDCuahang gDCuahang = new GDCuahang();
-                        gDCuahang.idnhanvien = maNhanVien;
-                        DashBoard dashBoard = new DashBoard();
+                        DashBoard dashBoard = new DashBoard(int.Parse(maNhanVien));
                         dashBoard.ShowDialog();
                     }
                     else

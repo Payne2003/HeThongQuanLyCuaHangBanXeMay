@@ -1,109 +1,85 @@
-﻿using QLCHBX.Db;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DbConnection = QLCHBX.Db.DbConnection;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace QLCHBX.Model
 {
-    class KhachHang
+    public class KhachHangModel : ProcessDatabase
     {
-        public KhachHang()
+        public int MaKhach { get; set; }
+        public string TenKhach { get; set; }
+        public string DiaChi { get; set; }
+        public string DienThoai { get; set; }
+
+        public KhachHangModel(int maKhach)
+        {
+            MaKhach = maKhach;
+        }
+
+        public KhachHangModel(string tenKhach, string diaChi, string dienThoai)
+        {
+            TenKhach = tenKhach;
+            DiaChi = diaChi;
+            DienThoai = dienThoai;
+        }
+
+        public KhachHangModel()
         {
         }
 
-        public string ID { get; set; }
-        public string name { get; set; }
-        public string diachi { get; set; }
-        public string sodienthoai { get; set; }
-
-    }
-    public class KhachHangModel : DbConnection
-    {
-         public KhachHangModel()
+        public KhachHangModel(int maKhach, string tenKhach, string diaChi, string dienThoai) : this(maKhach)
         {
-
+            TenKhach = tenKhach;
+            DiaChi = diaChi;
+            DienThoai = dienThoai;
         }
 
-        public bool SuaKhachHang(string id, string ten, string diaChi, string soDienThoai)
+        public DataTable LayDuLieuKhachHang()
         {
-            using (SqlConnection connection = GetConnection())
+            DataTable dt = new DataTable(); 
+            string sql = "SELECT * FROM KhachHang;";
+
+            dt = DocBang(sql);
+            return dt;
+        }
+
+        public bool ThemKhachHang()
+        {
+            string sql = "INSERT INTO KhachHang (TenKhach, DiaChi, DienThoai) VALUES (@TenKhach, @DiaChi, @DienThoai)";
+            SqlParameter[] sqlParameters = new SqlParameter[]
             {
-                connection.Open();
-
-                // Trước khi cập nhật, kiểm tra số điện thoại trùng lặp
-                string checkQuery = "SELECT COUNT(*) FROM KhachHang WHERE MaKhach <> @ID AND DienThoai = @SoDienThoai";
-                SqlCommand checkCommand = new SqlCommand(checkQuery, connection);
-                checkCommand.Parameters.AddWithValue("@ID", id);
-                checkCommand.Parameters.AddWithValue("@SoDienThoai", soDienThoai);
-                int duplicateCount = (int)checkCommand.ExecuteScalar();
-
-                if (duplicateCount > 0)
-                {
-                    // Số điện thoại trùng lặp, không thể cập nhật
-                    return false;
-                }
-
-                // Số điện thoại không trùng lặp, tiến hành cập nhật
-                string query = "UPDATE KhachHang SET TenKhach = @Ten, DiaChi = @DiaChi, DienThoai = @SoDienThoai WHERE MaKhach = @ID";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ID", id);
-                command.Parameters.AddWithValue("@Ten", ten);
-                command.Parameters.AddWithValue("@DiaChi", diaChi);
-                command.Parameters.AddWithValue("@SoDienThoai", soDienThoai);
-                command.ExecuteNonQuery();
-
-                return true;
-            }
+                new SqlParameter("@TenKhach", TenKhach),
+                new SqlParameter("@DiaChi", DiaChi),
+                new SqlParameter("@DienThoai", DienThoai)
+            };
+            return ExecuteNonQuery(sql, sqlParameters);
         }
 
-        public void XoaKhachHang(string id)
+        public bool XoaKhachHang()
         {
-            using (SqlConnection connection = GetConnection())
+            string sql = "DELETE FROM KhachHang WHERE MaKhach = @MaKhach";
+            SqlParameter[] sqlParameters = new SqlParameter[]
             {
-                connection.Open();
-                string query = "DELETE FROM KhachHang WHERE MaKhach = @ID";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ID", id);
-                command.ExecuteNonQuery();
-            }
+                new SqlParameter("@MaKhach", MaKhach)
+            };
+            return ExecuteNonQuery(sql, sqlParameters);
         }
-        public bool ThemKhachHang(string ten, string diaChi, string soDienThoai)
+
+        public bool CapNhatKhachHang()
         {
-            using (SqlConnection connection = GetConnection())
+            string sql = "UPDATE KhachHang SET TenKhach = @TenKhach, DiaChi = @DiaChi, DienThoai = @DienThoai WHERE MaKhach = @MaKhach";
+            SqlParameter[] sqlParameters = new SqlParameter[]
             {
-                connection.Open();
-
-                // Kiểm tra xem số điện thoại đã tồn tại trong cơ sở dữ liệu chưa
-                string checkQuery = "SELECT COUNT(*) FROM KhachHang WHERE DienThoai = @SoDienThoai";
-                SqlCommand checkCommand = new SqlCommand(checkQuery, connection);
-                checkCommand.Parameters.AddWithValue("@SoDienThoai", soDienThoai);
-                int duplicateCount = (int)checkCommand.ExecuteScalar();
-
-                if (duplicateCount > 0)
-                {
-                    // Số điện thoại đã tồn tại, không thể thêm mới
-                    return false;
-                }
-
-                // Số điện thoại không trùng lặp, tiến hành thêm mới
-                string query = "INSERT INTO KhachHang (TenKhach, DiaChi, DienThoai) VALUES (@Ten, @DiaChi, @SoDienThoai)";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Ten", ten);
-                command.Parameters.AddWithValue("@DiaChi", diaChi);
-                command.Parameters.AddWithValue("@SoDienThoai", soDienThoai);
-                command.ExecuteNonQuery();
-
-                return true;
-            }
+                new SqlParameter("@MaKhach", MaKhach),
+                new SqlParameter("@TenKhach", TenKhach),
+                new SqlParameter("@DiaChi", DiaChi),
+                new SqlParameter("@DienThoai", DienThoai)
+            };
+            return ExecuteNonQuery(sql, sqlParameters);
         }
-
-
-
     }
 }
