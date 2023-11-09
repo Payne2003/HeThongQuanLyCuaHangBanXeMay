@@ -46,11 +46,12 @@ namespace QLCHBX
 
         private void btHangHoa_Click(object sender, EventArgs e)
         {
-            //khachhang1.Visible = false;
+            hangHoa1.BringToFront();
         }
 
         private void btGiaoDich_Click(object sender, EventArgs e)
         {
+            giaoDichCT1.BringToFront();
 
         }
 

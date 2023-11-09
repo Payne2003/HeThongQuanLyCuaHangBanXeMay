@@ -299,6 +299,30 @@
     <Compile Include="FormGiaoDich\ThemKhachHang\ThemKhachHangVaoDonDatHang.Designer.cs">
       <DependentUpon>ThemKhachHangVaoDonDatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHangHoa\AddPhutung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHangHoa\AddPhutung.Designer.cs">
+      <DependentUpon>AddPhutung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHangHoa\AddXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHangHoa\AddXe.Designer.cs">
+      <DependentUpon>AddXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHangHoa\ChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHangHoa\ChiTiet.Designer.cs">
+      <DependentUpon>ChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHangHoa\EditXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHangHoa\EditXe.Designer.cs">
+      <DependentUpon>EditXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKhachHang\AddKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +340,24 @@
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HanghoaControl\Dongco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HanghoaControl\Dongco.Designer.cs">
+      <DependentUpon>Dongco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HanghoaControl\HangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HanghoaControl\HangHoa.Designer.cs">
+      <DependentUpon>HangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HanghoaControl\Xeso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HanghoaControl\Xeso.Designer.cs">
+      <DependentUpon>Xeso.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ChiTietDonDatHangModel.cs" />
     <Compile Include="Model\ChiTietHoaDonNhapModel.cs" />
@@ -376,6 +418,18 @@
     <EmbeddedResource Include="FormGiaoDich\ThemKhachHang\ThemKhachHangVaoDonDatHang.resx">
       <DependentUpon>ThemKhachHangVaoDonDatHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHangHoa\AddPhutung.resx">
+      <DependentUpon>AddPhutung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHangHoa\AddXe.resx">
+      <DependentUpon>AddXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHangHoa\ChiTiet.resx">
+      <DependentUpon>ChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHangHoa\EditXe.resx">
+      <DependentUpon>EditXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKhachHang\AddKH.resx">
       <DependentUpon>AddKH.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +439,15 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HanghoaControl\Dongco.resx">
+      <DependentUpon>Dongco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HanghoaControl\HangHoa.resx">
+      <DependentUpon>HangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HanghoaControl\Xeso.resx">
+      <DependentUpon>Xeso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -392,6 +455,8 @@
     <EmbeddedResource Include="ThongBao\MessageBoxForm.resx">
       <DependentUpon>MessageBoxForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\QLCHBX.exe.config" />
+    <None Include="bin\Debug\thong_tin_khach_hang.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -412,8 +477,44 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="HangHoa\" />
+    <Folder Include="bin\Release\" />
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\itextsharp.xml" />
+    <Content Include="bin\Debug\Microsoft.Win32.Registry.AccessControl.xml" />
+    <Content Include="bin\Debug\Microsoft.Win32.Registry.xml" />
+    <Content Include="bin\Debug\Microsoft.Win32.SystemEvents.xml" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\QLCHBX.exe" />
+    <Content Include="bin\Debug\QLCHBX.pdb" />
+    <Content Include="bin\Debug\RestSharp.xml" />
+    <Content Include="bin\Debug\System.Buffers.xml" />
+    <Content Include="bin\Debug\System.CodeDom.xml" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="bin\Debug\System.Data.Odbc.xml" />
+    <Content Include="bin\Debug\System.Data.OleDb.xml" />
+    <Content Include="bin\Debug\System.Data.SqlClient.xml" />
+    <Content Include="bin\Debug\System.Diagnostics.EventLog.xml" />
+    <Content Include="bin\Debug\System.Diagnostics.PerformanceCounter.xml" />
+    <Content Include="bin\Debug\System.Drawing.Common.xml" />
+    <Content Include="bin\Debug\System.IO.FileSystem.AccessControl.xml" />
+    <Content Include="bin\Debug\System.IO.Packaging.xml" />
+    <Content Include="bin\Debug\System.IO.Ports.xml" />
+    <Content Include="bin\Debug\System.Memory.xml" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Debug\System.Security.AccessControl.xml" />
+    <Content Include="bin\Debug\System.Security.Cryptography.Cng.xml" />
+    <Content Include="bin\Debug\System.Security.Cryptography.Pkcs.xml" />
+    <Content Include="bin\Debug\System.Security.Cryptography.ProtectedData.xml" />
+    <Content Include="bin\Debug\System.Security.Cryptography.Xml.xml" />
+    <Content Include="bin\Debug\System.Security.Permissions.xml" />
+    <Content Include="bin\Debug\System.Security.Principal.Windows.xml" />
+    <Content Include="bin\Debug\System.ServiceModel.Syndication.xml" />
+    <Content Include="bin\Debug\System.ServiceProcess.ServiceController.xml" />
+    <Content Include="bin\Debug\System.Text.Encoding.CodePages.xml" />
+    <Content Include="bin\Debug\System.Threading.AccessControl.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
