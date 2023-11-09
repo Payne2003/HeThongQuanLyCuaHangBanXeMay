@@ -81,5 +81,27 @@ namespace QLCHBX.Model
             };
             return ExecuteNonQuery(sql, sqlParameters);
         }
+
+        public KhachHangModel LayKhachHangTheoMaKhach(int maKhach)
+        {
+            KhachHangModel khachHang = new KhachHangModel();
+            string sql = "SELECT * FROM KhachHang WHERE MaKhach = @MaKhach";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaKhach", maKhach)
+            };
+            DataTable dt = DocBang(sql, sqlParameters);
+
+            if (dt.Rows.Count > 0)
+            {
+                khachHang.MaKhach = maKhach;
+                khachHang.TenKhach = dt.Rows[0]["TenKhach"].ToString();
+                khachHang.DiaChi = dt.Rows[0]["DiaChi"].ToString();
+                khachHang.DienThoai = dt.Rows[0]["DienThoai"].ToString();
+            }
+
+            return khachHang;
+        }
+
     }
 }

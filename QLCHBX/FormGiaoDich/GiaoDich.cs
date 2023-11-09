@@ -15,6 +15,7 @@ namespace QLCHBX.FormGiaoDich
     public partial class GiaoDich : Form
     {
         private decimal tongtien_ChuaThue = 0;
+        private int soluongHangMua = 0;
         public GiaoDich(int MaNV)
         {
             InitializeComponent();
@@ -43,6 +44,8 @@ namespace QLCHBX.FormGiaoDich
                 decimal TongTien = tongtien_ChuaThue + (decimal.Parse(txtThue.Text) / 100) * tongtien_ChuaThue;
                 lbTongtien.Text = TongTien.ToString();
             }
+            soluongHangMua = viewChiTietDonHang.RowCount - 1;
+            lbGioHang.Text = "Giỏ hàng (" + soluongHangMua + ")";
             CapNhatMau();
         }
         public bool KiemTraTextsRong(params string[] texts)
@@ -63,6 +66,7 @@ namespace QLCHBX.FormGiaoDich
             if (KiemTraThemKhachHang())
             {
                 btThemKhachHangVaoHoaDon.FillColor = Color.Aquamarine;
+                btThemKhachHangVaoHoaDon.ForeColor = Color.Black;
             }
         }
 
@@ -135,6 +139,8 @@ namespace QLCHBX.FormGiaoDich
                 DataGridViewRow row = viewChiTietDonHang.Rows[e.RowIndex];
                 if (row.Cells[0].Value != null || row.Cells[0].Value.ToString() != "")
                 {
+                    DmhModel dmhModel = new DmhModel(int.Parse(row.Cells[0].Value.ToString()));
+                    txtSoLuongHangTrongKho.Text = (dmhModel.LaySoLuongKho()).ToString();
                     grbThongTinDonHangTrongChiTiet.Visible = true;
                     txtMaHang.Text = row.Cells[0].Value.ToString();
                     txtTenHang.Text = row.Cells[1].Value.ToString();
@@ -145,11 +151,10 @@ namespace QLCHBX.FormGiaoDich
                 }
                 else
                 {
+                    MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
 
                 }
-
-
             }
 
         }
@@ -240,25 +245,120 @@ namespace QLCHBX.FormGiaoDich
 
         private void txtGiamGia_TextChanged(object sender, EventArgs e)
         {
+            if (KiemTraTextsRong(txtGiamGia.Text,txtSoLuongMua.Text))
+            {
+                return;
+            }
+            else
+            {
+                if (decimal.Parse(txtGiamGia.Text) > 100 || decimal.Parse(txtGiamGia.Text) < 0 )
+                {
+                    MessageBox.Show("Giảm giá chỉ từ 0 - 100% thôi bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtGiamGia.Text = "";
+                    return;
+                }
+                else
+                {
+                    int soluongMua = int.Parse(txtSoLuongMua.Text);
+                    decimal donGiaBan = decimal.Parse(txtDonGia.Text);
+                    decimal GiamGia = decimal.Parse(txtGiamGia.Text) / 100;
+                    if (soluongMua > int.Parse(txtSoLuongHangTrongKho.Text))
+                    {
+                        MessageBox.Show("Hàng trong kho không đủ!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtSoLuongMua.Text = "0";
+                    }
+                    else
+                    {
+                        txtThanhTien.Text = (donGiaBan * soluongMua * (1 - GiamGia)).ToString();
+                    }
 
+                }
+            }
         }
-
         private void txtSoLuongMua_TextChanged(object sender, EventArgs e)
         {
 
+            if (KiemTraTextsRong(txtGiamGia.Text,txtSoLuongMua.Text) || KiemTraTextsRong(txtSoLuongMua.Text))
+            {
+                return;
+            }
+            else
+            {
+                if (decimal.Parse(txtGiamGia.Text) > 100 || decimal.Parse(txtGiamGia.Text) < 0)
+                {
+                    MessageBox.Show("Giảm giá chỉ từ 0 - 100% thôi bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtGiamGia.Text = "";
+                    return;
+                }
+                else
+                {
+                    int soluongMua = int.Parse(txtSoLuongMua.Text);
+                    decimal donGiaBan = decimal.Parse(txtDonGia.Text);
+                    decimal GiamGia = decimal.Parse(txtGiamGia.Text) / 100;
+                    if (soluongMua > int.Parse(txtSoLuongHangTrongKho.Text))
+                    {
+                        MessageBox.Show("Hàng trong kho không đủ!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtSoLuongMua.Text = "0";
+                    }
+                    else
+                    {
+                        txtThanhTien.Text = (donGiaBan * soluongMua * (1 - GiamGia)).ToString();
+                    }
+                }
+            }
         }
 
         private void btCapNhat_Click(object sender, EventArgs e)
         {
-
+            SaveHang();
         }
-
+        public void SaveHang()
+        {
+            if (KiemTraTextsRong(txtSoLuongMua.Text,txtGiamGia.Text))
+            {
+                return;
+            }
+            else
+            {
+                int SoDDH = int.Parse(txtSoDDH.Text);
+                int MaHang = int.Parse(txtMaHang.Text);
+                int SoLuongMua = int.Parse(txtSoLuongMua.Text);
+                decimal GiamGia = decimal.Parse(txtGiamGia.Text);
+                ChiTietDonDatHangModel chiTietDonDatHang_CapNhat = new ChiTietDonDatHangModel(SoDDH,MaHang,SoLuongMua,GiamGia);
+                chiTietDonDatHang_CapNhat.CapNhatChiTietDonDatHang();
+                LoadDataGridView();
+                MessageBox.Show("Cập nhật thành công!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
         private void btThanhToan_Click(object sender, EventArgs e)
         {
             XacNhanThanhToan xacNhanThanhToan = new XacNhanThanhToan();
             xacNhanThanhToan.lbSoDDH.Text = txtSoDDH.Text;
             xacNhanThanhToan.lbTongTien.Text = lbTongtien.Text;
             xacNhanThanhToan.ShowDialog();
+        }
+
+        private void viewChiTietDonHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = viewChiTietDonHang.Rows[e.RowIndex];
+                if (row.Cells[0].Value != null || row.Cells[0].Value.ToString() != "")
+                {
+                    int SoDDH = int.Parse(txtSoDDH.Text);
+                    int MaHang = int.Parse(txtMaHang.Text);
+                    ChiTietDonDatHangModel chiTietDonDatHang_Xoa = new ChiTietDonDatHangModel(SoDDH,MaHang);
+                    chiTietDonDatHang_Xoa.XoaHang();
+                    MessageBox.Show("Xóa thành công!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+            }
         }
     }
 }

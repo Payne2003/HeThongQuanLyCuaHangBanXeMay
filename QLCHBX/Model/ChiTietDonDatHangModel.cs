@@ -27,6 +27,11 @@ namespace QLCHBX.Model
             SoDDH = soDDH;
         }
 
+        public ChiTietDonDatHangModel(int soDDH, int maHang) : this(soDDH)
+        {
+            MaHang = maHang;
+        }
+
         public int SoDDH { get; set; }
         public int MaHang { get; set; }
         public int SoLuong { get; set; }
@@ -47,6 +52,37 @@ namespace QLCHBX.Model
                     };
             return ExecuteNonQuery(sql, parameters);
         }
+        public void CapNhatChiTietDonDatHang()
+        {
+            // Define your SQL statement to update the ChiTietDonDatHang record.
+            string sql = @"UPDATE ChiTietDonDatHang 
+                  SET SoLuong = @SoLuong, GiamGia = @GiamGia
+                  WHERE SoDDH = @SoDDH AND MaHang = @MaHang";
+
+            // Create an array of SQL parameters for the update.
+            SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter("@SoDDH", SoDDH),
+                new SqlParameter("@MaHang", MaHang),
+                new SqlParameter("@SoLuong", SoLuong),
+                new SqlParameter("@GiamGia", GiamGia)
+            };
+
+            // Execute the SQL update statement.
+            ExecuteNonQuery(sql, parameters);
+        }
+        public void XoaHang()
+        {
+            string sql = @"DELETE FROM ChiTietDonDatHang WHERE SoDDH = @SoDDH AND MaHang = @MaHang";
+
+            // Create an array of SQL parameters for the update.
+            SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter("@SoDDH", SoDDH),
+                new SqlParameter("@MaHang", MaHang)
+            };
+
+            // Execute the SQL update statement.
+            ExecuteNonQuery(sql, parameters);
+        }   
         public DataTable LayDuLieuCuaHoaDon()
         {
             DataTable dt = new DataTable();

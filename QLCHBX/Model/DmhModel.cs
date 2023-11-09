@@ -10,6 +10,15 @@ namespace QLCHBX.Model
 {
     public class DmhModel : ProcessDatabase
     {
+        public DmhModel()
+        {
+        }
+
+        public DmhModel(int maHang)
+        {
+            MaHang = maHang;
+        }
+
         public int MaHang { get; set; }
         public string TenHang { get; set;}
         public int MaTheLoai { get; set; }
@@ -66,6 +75,27 @@ namespace QLCHBX.Model
             dt = DocBang(sql);
             return dt;
         }
+        public int LaySoLuongKho()
+        {
+            string sql = "SELECT SoLuong FROM Dmh WHERE MaHang = @MaHang;";
+            SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter("@MaHang", MaHang)
+            };
+
+            DataTable result = DocBang(sql, parameters);
+
+            if (result.Rows.Count > 0)
+            {
+                // Assuming that MaHang is unique, you can return the SoLuong of the first row
+                return Convert.ToInt32(result.Rows[0]["SoLuong"]);
+            }
+            else
+            {
+                // Handle the case where the item with MaHang doesn't exist
+                return -1; // You can use any meaningful value or throw an exception
+            }
+        }
+
 
     }
 }

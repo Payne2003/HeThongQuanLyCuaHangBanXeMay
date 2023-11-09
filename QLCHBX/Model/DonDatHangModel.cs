@@ -46,14 +46,18 @@ namespace QLCHBX.Model
 
         public bool IsMaKhachNull()
         {
-            string sql = "SELECT MaKhach FROM DonDatHang WHERE SoDDH = @SoDDH";
+            string sql = @"SELECT MaKhach FROM DonDatHang WHERE SoDDH = @SoDDH";
 
             SqlParameter[] parameters = new SqlParameter[] {
-                    new SqlParameter("@SoDDH", SoDDH)
-             };
+                new SqlParameter("@SoDDH", SoDDH)
+            };
             object result = ExecuteScalar(sql, parameters);
-            return result == null;
+
+            // Kiểm tra nếu result không phải là null và MaKhach không phải là null
+            return result != null && result != DBNull.Value;
         }
+
+
 
         public DataTable LayDonDatHangChuaThanhToan()
         {
@@ -114,11 +118,27 @@ namespace QLCHBX.Model
 
             return ExecuteNonQuery(sql, sqlParameters);
         }
+        public bool CapNhatKhachHang(int MaKhach)
+        {
+            string sql = @"
+                            UPDATE DonDatHang
+                            SET MaKhach = @MaKhach
+                            WHERE SoDDH = @SoDDH";
+
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaKhach", MaKhach),
+                new SqlParameter("@SoDDH", SoDDH)
+            };
+
+            return ExecuteNonQuery(sql, sqlParameters);
+        }
+
         public int ThemDonDatHang(int maNV, DateTime ngayNhap)
         {
             string sql = @"
                             INSERT INTO DonDatHang (MaNV, NgayMua)
-                            VALUES (@MaNV, @NgayMua) SELECT SCOPE_IDENTITY();"; // This retrieves the last inserted identity value
+                            VALUES (@MaNV, @NgayMua) SELECT SCOPE_IDENTITY();"; 
 
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
@@ -185,17 +205,31 @@ namespace QLCHBX.Model
             SqlParameter[] sqlParameter = new SqlParameter[]{
                 new SqlParameter("@SoDDH", SoDDH)
             };
-
-            // Execute the scalar query to return true if there's at least one item in the order.
             object result = ExecuteScalar(sql, sqlParameter);
 
-            // If result is not null, cast it to an integer and check if it's greater than 0.
-            // This converts the SQL result (1 or 0) to a C# boolean (true or false).
             return result != null && (int)result > 0;
         }
 
+        public KhachHangModel TimKiemKhachHang(string maKhachOrDienThoai)
+        {
+            KhachHangModel ketQua = new KhachHangModel();
+            string sql = "SELECT * FROM KhachHang WHERE MaKhach = @MaKhach OR DienThoai = @DienThoai";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaKhach", maKhachOrDienThoai),
+                new SqlParameter("@DienThoai", maKhachOrDienThoai)
+            };
+            DataTable dt = DocBang(sql, sqlParameters);
+            foreach (DataRow row in dt.Rows)
+            {
+                ketQua.MaKhach = Convert.ToInt32(row["MaKhach"]);
+                ketQua.TenKhach = row["TenKhach"].ToString();
+                ketQua.DiaChi = row["DiaChi"].ToString();
+                ketQua.DienThoai = row["DienThoai"].ToString();
+            }
 
-
+            return ketQua;
+        }
     }
 
 }

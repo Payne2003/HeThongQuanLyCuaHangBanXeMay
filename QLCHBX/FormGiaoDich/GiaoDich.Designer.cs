@@ -390,6 +390,7 @@
             this.viewChiTietDonHang.Size = new System.Drawing.Size(267, 277);
             this.viewChiTietDonHang.TabIndex = 0;
             this.viewChiTietDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewChiTietDonHang_CellClick);
+            this.viewChiTietDonHang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewChiTietDonHang_CellDoubleClick);
             // 
             // guna2Panel5
             // 
@@ -635,9 +636,9 @@
             this.txtSoLuongHangTrongKho.ForeColor = System.Drawing.Color.Red;
             this.txtSoLuongHangTrongKho.Location = new System.Drawing.Point(173, 149);
             this.txtSoLuongHangTrongKho.Name = "txtSoLuongHangTrongKho";
-            this.txtSoLuongHangTrongKho.Size = new System.Drawing.Size(8, 15);
+            this.txtSoLuongHangTrongKho.Size = new System.Drawing.Size(9, 15);
             this.txtSoLuongHangTrongKho.TabIndex = 1;
-            this.txtSoLuongHangTrongKho.Text = "?";
+            this.txtSoLuongHangTrongKho.Text = "0";
             // 
             // guna2HtmlLabel12
             // 
