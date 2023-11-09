@@ -16,5 +16,10 @@ namespace QLCHBX.FormGiaoDich.ThemKhachHang
         {
             InitializeComponent();
         }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -95,6 +95,7 @@
             this.btTimKiem.Size = new System.Drawing.Size(101, 39);
             this.btTimKiem.TabIndex = 1;
             this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // txtSearch
             // 
