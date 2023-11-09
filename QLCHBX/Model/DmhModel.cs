@@ -49,6 +49,23 @@ namespace QLCHBX.Model
             dt = DocBang(sql, parameters);
             return dt;
         }
+        public DataTable LayDuLieuDmhTheoTenHangSX()
+        {
+            DataTable dt = new DataTable();
+            string sql = @"
+                        SELECT Dmh.MaHang, Dmh.TenHang, Dmh.NamSX, Dmh.DungTichBinhXang, Dmh.SoLuong, Dmh.DonGiaNhap, Dmh.DonGiaBan, Dmh.ThoiGianBaoHanh,
+                               Theloai.TenTheLoai, Dongco.TenDongCo, Mausac.TenMau, Nuocsanxuat.TenNuocSX, Tinhtrang.TenTinhTrang, Phanhxe.TenPhanh
+                        FROM Dmh
+                        INNER JOIN Hangsanxuat ON Dmh.MaHangSX = Hangsanxuat.MaHangSX
+                        LEFT JOIN Theloai ON Dmh.MaTheLoai = Theloai.MaTheLoai
+                        LEFT JOIN Dongco ON Dmh.MaDongCo = Dongco.MaDongCo
+                        LEFT JOIN Mausac ON Dmh.MaMau = Mausac.MaMau
+                        LEFT JOIN Nuocsanxuat ON Dmh.MaNuocSX = Nuocsanxuat.MaNuocSX
+                        LEFT JOIN Tinhtrang ON Dmh.MaTinhTrang = Tinhtrang.MaTinhTrang
+                        LEFT JOIN Phanhxe ON Dmh.MaPhanh = Phanhxe.MaPhanh;";
+            dt = DocBang(sql);
+            return dt;
+        }
 
     }
 }

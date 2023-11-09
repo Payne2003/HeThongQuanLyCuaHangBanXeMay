@@ -47,8 +47,6 @@ namespace QLCHBX.Model
                     };
             return ExecuteNonQuery(sql, parameters);
         }
-
-
         public DataTable LayDuLieuCuaHoaDon()
         {
             DataTable dt = new DataTable();

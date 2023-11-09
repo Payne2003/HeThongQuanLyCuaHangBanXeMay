@@ -24,8 +24,23 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             DmhModel dmhModel = new DmhModel(); 
             viewDmh.DataSource = dmhModel.LayDuLieuDmhTheoTenHangSX(TenHangSX);
         }
+        public void LoadDataGridView()
+        {
+            btThemHangMua.Visible = false;
+            txtGiamGia.Text = "";
+            txtMaHang.Text = "";
+            txtDonGiaBan.Text = "";
+            txtSoLuongHangMua.Text = "1";
+            DmhModel dmhModel = new DmhModel();
+            viewDmh.DataSource = dmhModel.LayDuLieuDmhTheoTenHangSX();
+        }
         private void btthem_Click(object sender, EventArgs e)
         {
+            if (KiemTraTextsRong(txtGiamGia.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin hàng!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
             ChiTietDonDatHangModel chiTietDonDatHang_new = new ChiTietDonDatHangModel(int.Parse(txtSoDDH.Text),int.Parse(txtMaHang.Text),int.Parse(txtSoLuongHangMua.Text),decimal.Parse(txtGiamGia.Text));
             if (chiTietDonDatHang_new.KiemTraHangDaNhap())
             {
@@ -43,11 +58,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 {
                     MessageBox.Show("Không thành công");
                 }
-                
-                
             }
-
-
         }
         private void ttHonDa_Click(object sender, EventArgs e)
         {
@@ -56,7 +67,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
 
         private void ThemDMhang_Load(object sender, EventArgs e)
         {
-            LoadDataGridView(lbTenHangSX.Text);
+            LoadDataGridView();
         }
 
         private void ttSYM_Click(object sender, EventArgs e)

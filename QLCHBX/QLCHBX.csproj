@@ -317,72 +317,6 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="HanghoaControl\Dongco.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Dongco.Designer.cs">
-      <DependentUpon>Dongco.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Hangsanxuat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Hangsanxuat.Designer.cs">
-      <DependentUpon>Hangsanxuat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Mausac.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Mausac.Designer.cs">
-      <DependentUpon>Mausac.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Nuocsanxuat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Nuocsanxuat.Designer.cs">
-      <DependentUpon>Nuocsanxuat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Phanh.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Phanh.Designer.cs">
-      <DependentUpon>Phanh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Theloai.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Theloai.Designer.cs">
-      <DependentUpon>Theloai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Themdongco.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Themdongco.Designer.cs">
-      <DependentUpon>Themdongco.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Themphanhxe.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Themphanhxe.Designer.cs">
-      <DependentUpon>Themphanhxe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Themxe.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Themxe.Designer.cs">
-      <DependentUpon>Themxe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Tinhtrang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Tinhtrang.Designer.cs">
-      <DependentUpon>Tinhtrang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HanghoaControl\Xeso.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HanghoaControl\Xeso.Designer.cs">
-      <DependentUpon>Xeso.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\ChiTietDonDatHangModel.cs" />
     <Compile Include="Model\ChiTietHoaDonNhapModel.cs" />
     <Compile Include="Model\DmhModel.cs" />
@@ -448,39 +382,6 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Dongco.resx">
-      <DependentUpon>Dongco.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Hangsanxuat.resx">
-      <DependentUpon>Hangsanxuat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Mausac.resx">
-      <DependentUpon>Mausac.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Nuocsanxuat.resx">
-      <DependentUpon>Nuocsanxuat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Phanh.resx">
-      <DependentUpon>Phanh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Theloai.resx">
-      <DependentUpon>Theloai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Themdongco.resx">
-      <DependentUpon>Themdongco.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Themphanhxe.resx">
-      <DependentUpon>Themphanhxe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Themxe.resx">
-      <DependentUpon>Themxe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Tinhtrang.resx">
-      <DependentUpon>Tinhtrang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HanghoaControl\Xeso.resx">
-      <DependentUpon>Xeso.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -508,6 +409,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="HangHoa\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
