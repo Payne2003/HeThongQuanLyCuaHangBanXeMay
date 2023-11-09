@@ -350,7 +350,7 @@ namespace QLCHBX.FormGiaoDich
                     ChiTietDonDatHangModel chiTietDonDatHang_Xoa = new ChiTietDonDatHangModel(SoDDH,MaHang);
                     chiTietDonDatHang_Xoa.XoaHang();
                     MessageBox.Show("Xóa thành công!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    LoadDataGridView();
                 }
                 else
                 {

@@ -86,13 +86,12 @@ namespace QLCHBX.Model
 
             if (result.Rows.Count > 0)
             {
-                // Assuming that MaHang is unique, you can return the SoLuong of the first row
+              
                 return Convert.ToInt32(result.Rows[0]["SoLuong"]);
             }
             else
             {
-                // Handle the case where the item with MaHang doesn't exist
-                return -1; // You can use any meaningful value or throw an exception
+                return -1;
             }
         }
 
