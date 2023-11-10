@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace QLCHBX
 {
     public partial class DashBoard : Form
-    {S
+    {
         public DashBoard(int MaNV)
         { 
             InitializeComponent();

@@ -19,6 +19,11 @@ namespace QLCHBX.Model
             string sql = "SELECT * FROM NhaCungCap"; 
             return DocBang(sql);
         }
+        public DataTable LayDanhSachNhaCungCap()
+        {
+            string sql = "SELECT MaNCC, TenNCC FROM NhaCungCap";
+            return DocBang(sql);
+        }
 
     }
 }

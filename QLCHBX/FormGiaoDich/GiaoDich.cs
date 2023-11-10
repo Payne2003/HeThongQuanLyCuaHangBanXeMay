@@ -137,7 +137,7 @@ namespace QLCHBX.FormGiaoDich
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = viewChiTietDonHang.Rows[e.RowIndex];
-                if (row.Cells[0].Value != null || row.Cells[0].Value.ToString() != "")
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != "")
                 {
                     DmhModel dmhModel = new DmhModel(int.Parse(row.Cells[0].Value.ToString()));
                     txtSoLuongHangTrongKho.Text = (dmhModel.LaySoLuongKho()).ToString();
@@ -343,7 +343,7 @@ namespace QLCHBX.FormGiaoDich
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = viewChiTietDonHang.Rows[e.RowIndex];
-                if (row.Cells[0].Value != null || row.Cells[0].Value.ToString() != "")
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != "")
                 {
                     int SoDDH = int.Parse(txtSoDDH.Text);
                     int MaHang = int.Parse(txtMaHang.Text);
