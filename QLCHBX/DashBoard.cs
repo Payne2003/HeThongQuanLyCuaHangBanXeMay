@@ -11,10 +11,7 @@ using System.Windows.Forms;
 namespace QLCHBX
 {
     public partial class DashBoard : Form
-    {
-        private bool mouseDown;
-        private Point lastLocation;
-
+    {S
         public DashBoard(int MaNV)
         { 
             InitializeComponent();

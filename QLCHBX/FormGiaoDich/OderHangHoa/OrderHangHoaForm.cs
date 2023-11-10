@@ -16,5 +16,9 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
         {
             InitializeComponent();
         }
+        public void LoadDataGridView()
+        {
+
+        }
     }
 }
