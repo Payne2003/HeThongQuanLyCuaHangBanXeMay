@@ -10,6 +10,8 @@ namespace QLCHBX.Model
 {
     public class HoaDonNhapModel : ProcessDatabase
     {
+        private SqlDbType tongTien;
+
         public int SoHDN { get; set; }
         public int MaNV { get; set; }
         public DateTime NgayNhap { get; set; }
@@ -22,12 +24,24 @@ namespace QLCHBX.Model
 
         }
 
-
-        public bool ThemHoaDonNhap()
+        public HoaDonNhapModel(int maNV, DateTime ngayNhap, int maNCC)
         {
+            MaNV = maNV;
+            NgayNhap = ngayNhap;
+            MaNCC = maNCC;
+        }
+
+        public HoaDonNhapModel(int soHDN)
+        {
+            SoHDN = soHDN;
+        }
+
+        public int ThemHoaDonNhap()
+        {
+            int SoHDN = 0;
             string sql = @"
                 INSERT INTO HoaDonNhap (MaNV, NgayNhap, MaNCC)
-                VALUES (@MaNV, @NgayNhap, @MaNCC);
+                VALUES (@MaNV, @NgayNhap, @MaNCC) SELECT SCOPE_IDENTITY();;
             ";
 
             SqlParameter[] sqlParameters = new SqlParameter[]
@@ -37,7 +51,34 @@ namespace QLCHBX.Model
                 new SqlParameter("@MaNCC", MaNCC)
             };
 
-            return ExecuteNonQuery(sql, sqlParameters);
+            object result = ExecuteScalar(sql, sqlParameters);
+            if (result != null && result is decimal)
+            {
+                return Convert.ToInt32(result);
+            }
+            else
+            {
+                throw new InvalidOperationException("Could not retrieve the order number after insertion.");
+            }
+        }
+        public void CapNhatHoaDonNhap()
+        {
+            string sql = @"
+                UPDATE HoaDonNhap
+                SET MaNV = @MaNV, NgayNhap = @NgayNhap, MaNCC = @MaNCC, TongTien = @TongTien, TrangThai = @TrangThai
+                WHERE SoHDN = @SoHDN;
+            ";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SoHDN", SoHDN),
+                new SqlParameter("@MaNV", MaNV),
+                new SqlParameter("@NgayNhap", NgayNhap),
+                new SqlParameter("@MaNCC", MaNCC),
+                new SqlParameter("@TongTien", tongTien)
+            };
+
+            ExecuteNonQuery(sql, parameters);
         }
 
         public DataTable LayDuLieuHoaDonNhapChuaNhap()

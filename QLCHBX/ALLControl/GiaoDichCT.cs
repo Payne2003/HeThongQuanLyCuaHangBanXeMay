@@ -80,6 +80,7 @@ namespace QLCHBX.ALLControl
         private void btOderHangHoa_Click(object sender, EventArgs e)
         {
             OrderHangHoaForm orderHangHoaForm = new OrderHangHoaForm();
+            orderHangHoaForm.txtMaNV.Text = txtMaNV.Text;
             orderHangHoaForm.ShowDialog();
         }
 
