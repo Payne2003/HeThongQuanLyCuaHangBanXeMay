@@ -83,7 +83,6 @@
             this.txtSoLuongNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.grbThongTinDonHangNhap = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.txtThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMaNCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
@@ -97,6 +96,8 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSoHDN = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
+            this.errThongTin = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2Panel1.SuspendLayout();
             this.grbDanhSachMatHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewDmh)).BeginInit();
@@ -111,11 +112,13 @@
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.grbThongTinDonHangNhap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errThongTin)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.lbSoHDN;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // guna2Panel1
@@ -133,7 +136,7 @@
             this.grbDanhSachMatHang.Controls.Add(this.menuStrip1);
             this.grbDanhSachMatHang.CustomBorderColor = System.Drawing.Color.MintCream;
             this.grbDanhSachMatHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbDanhSachMatHang.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDanhSachMatHang.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDanhSachMatHang.ForeColor = System.Drawing.Color.Black;
             this.grbDanhSachMatHang.Location = new System.Drawing.Point(0, 0);
             this.grbDanhSachMatHang.Name = "grbDanhSachMatHang";
@@ -184,13 +187,13 @@
             // sốToolStripMenuItem
             // 
             this.sốToolStripMenuItem.Name = "sốToolStripMenuItem";
-            this.sốToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.sốToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sốToolStripMenuItem.Text = "Số";
             // 
             // gaToolStripMenuItem
             // 
             this.gaToolStripMenuItem.Name = "gaToolStripMenuItem";
-            this.gaToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.gaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gaToolStripMenuItem.Text = "Ga";
             // 
             // ttSYM
@@ -206,13 +209,13 @@
             // gaToolStripMenuItem1
             // 
             this.gaToolStripMenuItem1.Name = "gaToolStripMenuItem1";
-            this.gaToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
+            this.gaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.gaToolStripMenuItem1.Text = "Ga";
             // 
             // sốToolStripMenuItem1
             // 
             this.sốToolStripMenuItem1.Name = "sốToolStripMenuItem1";
-            this.sốToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
+            this.sốToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.sốToolStripMenuItem1.Text = "Số";
             // 
             // ttSuzuki
@@ -228,13 +231,13 @@
             // gaToolStripMenuItem2
             // 
             this.gaToolStripMenuItem2.Name = "gaToolStripMenuItem2";
-            this.gaToolStripMenuItem2.Size = new System.Drawing.Size(92, 22);
+            this.gaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.gaToolStripMenuItem2.Text = "Ga";
             // 
             // sốToolStripMenuItem2
             // 
             this.sốToolStripMenuItem2.Name = "sốToolStripMenuItem2";
-            this.sốToolStripMenuItem2.Size = new System.Drawing.Size(92, 22);
+            this.sốToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.sốToolStripMenuItem2.Text = "Số";
             // 
             // ttYamaha
@@ -250,13 +253,13 @@
             // gaToolStripMenuItem3
             // 
             this.gaToolStripMenuItem3.Name = "gaToolStripMenuItem3";
-            this.gaToolStripMenuItem3.Size = new System.Drawing.Size(92, 22);
+            this.gaToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.gaToolStripMenuItem3.Text = "Ga";
             // 
             // sốToolStripMenuItem3
             // 
             this.sốToolStripMenuItem3.Name = "sốToolStripMenuItem3";
-            this.sốToolStripMenuItem3.Size = new System.Drawing.Size(92, 22);
+            this.sốToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.sốToolStripMenuItem3.Text = "Số";
             // 
             // ttPiaggio
@@ -272,13 +275,13 @@
             // gaToolStripMenuItem4
             // 
             this.gaToolStripMenuItem4.Name = "gaToolStripMenuItem4";
-            this.gaToolStripMenuItem4.Size = new System.Drawing.Size(92, 22);
+            this.gaToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.gaToolStripMenuItem4.Text = "Ga";
             // 
             // sốToolStripMenuItem4
             // 
             this.sốToolStripMenuItem4.Name = "sốToolStripMenuItem4";
-            this.sốToolStripMenuItem4.Size = new System.Drawing.Size(92, 22);
+            this.sốToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.sốToolStripMenuItem4.Text = "Số";
             // 
             // ttDucati
@@ -294,13 +297,13 @@
             // gaToolStripMenuItem5
             // 
             this.gaToolStripMenuItem5.Name = "gaToolStripMenuItem5";
-            this.gaToolStripMenuItem5.Size = new System.Drawing.Size(92, 22);
+            this.gaToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
             this.gaToolStripMenuItem5.Text = "Ga";
             // 
             // sốToolStripMenuItem5
             // 
             this.sốToolStripMenuItem5.Name = "sốToolStripMenuItem5";
-            this.sốToolStripMenuItem5.Size = new System.Drawing.Size(92, 22);
+            this.sốToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
             this.sốToolStripMenuItem5.Text = "Số";
             // 
             // ttKTM
@@ -316,13 +319,13 @@
             // gaToolStripMenuItem6
             // 
             this.gaToolStripMenuItem6.Name = "gaToolStripMenuItem6";
-            this.gaToolStripMenuItem6.Size = new System.Drawing.Size(92, 22);
+            this.gaToolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
             this.gaToolStripMenuItem6.Text = "Ga";
             // 
             // sốToolStripMenuItem6
             // 
             this.sốToolStripMenuItem6.Name = "sốToolStripMenuItem6";
-            this.sốToolStripMenuItem6.Size = new System.Drawing.Size(92, 22);
+            this.sốToolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
             this.sốToolStripMenuItem6.Text = "Số";
             // 
             // ttKawasaki
@@ -338,13 +341,13 @@
             // gaToolStripMenuItem7
             // 
             this.gaToolStripMenuItem7.Name = "gaToolStripMenuItem7";
-            this.gaToolStripMenuItem7.Size = new System.Drawing.Size(92, 22);
+            this.gaToolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
             this.gaToolStripMenuItem7.Text = "Ga";
             // 
             // sốToolStripMenuItem7
             // 
             this.sốToolStripMenuItem7.Name = "sốToolStripMenuItem7";
-            this.sốToolStripMenuItem7.Size = new System.Drawing.Size(92, 22);
+            this.sốToolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
             this.sốToolStripMenuItem7.Text = "Số";
             // 
             // khácToolStripMenuItem
@@ -359,13 +362,13 @@
             // độngCơToolStripMenuItem
             // 
             this.độngCơToolStripMenuItem.Name = "độngCơToolStripMenuItem";
-            this.độngCơToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.độngCơToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.độngCơToolStripMenuItem.Text = "Động cơ";
             // 
             // phanhToolStripMenuItem
             // 
             this.phanhToolStripMenuItem.Name = "phanhToolStripMenuItem";
-            this.phanhToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.phanhToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.phanhToolStripMenuItem.Text = "Phanh";
             // 
             // guna2Panel2
@@ -382,6 +385,7 @@
             // 
             // ptbThoatRa
             // 
+            this.ptbThoatRa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ptbThoatRa.Dock = System.Windows.Forms.DockStyle.Left;
             this.ptbThoatRa.FillColor = System.Drawing.Color.Transparent;
             this.ptbThoatRa.Image = ((System.Drawing.Image)(resources.GetObject("ptbThoatRa.Image")));
@@ -392,6 +396,7 @@
             this.ptbThoatRa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbThoatRa.TabIndex = 3;
             this.ptbThoatRa.TabStop = false;
+            this.ptbThoatRa.Click += new System.EventHandler(this.ptbThoatRa_Click);
             // 
             // lbSoHDN
             // 
@@ -424,6 +429,7 @@
             this.btThemHangNhap.Size = new System.Drawing.Size(162, 50);
             this.btThemHangNhap.TabIndex = 1;
             this.btThemHangNhap.Text = "Thêm";
+            this.btThemHangNhap.Click += new System.EventHandler(this.btThemHangNhap_Click);
             // 
             // guna2Panel3
             // 
@@ -509,13 +515,14 @@
             this.btCapNhat.Size = new System.Drawing.Size(346, 65);
             this.btCapNhat.TabIndex = 0;
             this.btCapNhat.Text = "Cập nhật";
+            this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click);
             // 
             // grChiTietHoaDonNhap
             // 
             this.grChiTietHoaDonNhap.Controls.Add(this.viewChiTietHoaDonNhap);
             this.grChiTietHoaDonNhap.CustomBorderColor = System.Drawing.Color.MintCream;
             this.grChiTietHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grChiTietHoaDonNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grChiTietHoaDonNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grChiTietHoaDonNhap.ForeColor = System.Drawing.Color.Black;
             this.grChiTietHoaDonNhap.Location = new System.Drawing.Point(0, 0);
             this.grChiTietHoaDonNhap.Name = "grChiTietHoaDonNhap";
@@ -600,10 +607,12 @@
             this.txtSoLuongNhap.Name = "txtSoLuongNhap";
             this.txtSoLuongNhap.PasswordChar = '\0';
             this.txtSoLuongNhap.PlaceholderText = "";
+            this.txtSoLuongNhap.ReadOnly = true;
             this.txtSoLuongNhap.SelectedText = "";
             this.txtSoLuongNhap.Size = new System.Drawing.Size(40, 40);
             this.txtSoLuongNhap.TabIndex = 1;
             this.txtSoLuongNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSoLuongNhap.TextChanged += new System.EventHandler(this.txtSoLuongNhap_TextChanged);
             // 
             // guna2Panel4
             // 
@@ -639,27 +648,6 @@
             this.grbThongTinDonHangNhap.Size = new System.Drawing.Size(678, 188);
             this.grbThongTinDonHangNhap.TabIndex = 0;
             this.grbThongTinDonHangNhap.Text = "Thông tin đơn hàng nhập";
-            // 
-            // txtThanhTien
-            // 
-            this.txtThanhTien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThanhTien.DefaultText = "";
-            this.txtThanhTien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtThanhTien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtThanhTien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThanhTien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThanhTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThanhTien.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhTien.ForeColor = System.Drawing.Color.Black;
-            this.txtThanhTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThanhTien.Location = new System.Drawing.Point(304, 75);
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.PasswordChar = '\0';
-            this.txtThanhTien.PlaceholderText = "";
-            this.txtThanhTien.ReadOnly = true;
-            this.txtThanhTien.SelectedText = "";
-            this.txtThanhTien.Size = new System.Drawing.Size(181, 21);
-            this.txtThanhTien.TabIndex = 1;
             // 
             // guna2HtmlLabel8
             // 
@@ -736,22 +724,25 @@
             // txtGiamGia
             // 
             this.txtGiamGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGiamGia.DefaultText = "";
+            this.txtGiamGia.DefaultText = "0";
             this.txtGiamGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtGiamGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtGiamGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtGiamGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtGiamGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGiamGia.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiamGia.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
             this.txtGiamGia.ForeColor = System.Drawing.Color.Black;
             this.txtGiamGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiamGia.Location = new System.Drawing.Point(153, 123);
             this.txtGiamGia.Name = "txtGiamGia";
             this.txtGiamGia.PasswordChar = '\0';
             this.txtGiamGia.PlaceholderText = "";
+            this.txtGiamGia.ReadOnly = true;
             this.txtGiamGia.SelectedText = "";
             this.txtGiamGia.Size = new System.Drawing.Size(132, 21);
             this.txtGiamGia.TabIndex = 1;
+            this.txtGiamGia.TextChanged += new System.EventHandler(this.txtGiamGia_TextChanged);
+            this.txtGiamGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiamGia_KeyPress);
             // 
             // guna2HtmlLabel7
             // 
@@ -779,9 +770,12 @@
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.PasswordChar = '\0';
             this.txtDonGia.PlaceholderText = "";
+            this.txtDonGia.ReadOnly = true;
             this.txtDonGia.SelectedText = "";
             this.txtDonGia.Size = new System.Drawing.Size(132, 21);
             this.txtDonGia.TabIndex = 1;
+            this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
+            this.txtDonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDonGia_KeyPress);
             // 
             // guna2HtmlLabel6
             // 
@@ -855,6 +849,31 @@
             this.guna2HtmlLabel4.TabIndex = 0;
             this.guna2HtmlLabel4.Text = "Số HDN";
             // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThanhTien.DefaultText = "";
+            this.txtThanhTien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtThanhTien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtThanhTien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThanhTien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThanhTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThanhTien.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
+            this.txtThanhTien.ForeColor = System.Drawing.Color.Black;
+            this.txtThanhTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThanhTien.Location = new System.Drawing.Point(304, 75);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.PasswordChar = '\0';
+            this.txtThanhTien.PlaceholderText = "";
+            this.txtThanhTien.ReadOnly = true;
+            this.txtThanhTien.SelectedText = "";
+            this.txtThanhTien.Size = new System.Drawing.Size(181, 21);
+            this.txtThanhTien.TabIndex = 1;
+            // 
+            // errThongTin
+            // 
+            this.errThongTin.ContainerControl = this;
+            // 
             // FormNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -889,6 +908,7 @@
             this.guna2Panel4.ResumeLayout(false);
             this.grbThongTinDonHangNhap.ResumeLayout(false);
             this.grbThongTinDonHangNhap.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errThongTin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -948,7 +968,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox txtThanhTien;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private System.Windows.Forms.DataGridView viewDmh;
         private System.Windows.Forms.DataGridView viewChiTietHoaDonNhap;
@@ -962,5 +981,7 @@
         public Guna.UI2.WinForms.Guna2TextBox txtMaNV;
         public Guna.UI2.WinForms.Guna2TextBox txtMaNCC;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbMaNCC;
+        private Guna.UI2.WinForms.Guna2TextBox txtThanhTien;
+        private System.Windows.Forms.ErrorProvider errThongTin;
     }
 }

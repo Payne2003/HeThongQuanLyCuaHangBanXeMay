@@ -28,10 +28,12 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             cbbMaNCC.DataSource = dtNhaCungCap;
             cbbMaNCC.DisplayMember = "TenNCC";
             cbbMaNCC.ValueMember = "MaNCC";
-
+            
             cbbbNCCNew.DataSource = dtNhaCungCap;
             cbbbNCCNew.DisplayMember = "TenNCC";
             cbbbNCCNew.ValueMember = "MaNCC";
+            lbMaNCC_New.Visible = true;
+            //lbMaNCC_New.Text = ((DataRowView)cbbMaNCC.SelectedItem)["MaNCC"].ToString();
 
             LoadGiaoDien();
         }
@@ -69,6 +71,8 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             DateTime dt = DateTime.Parse(dtNgayNhap.Text);
             int MaNCC = int.Parse(lbMaNCC_CapNhat.Text);
             decimal TongTien = decimal.Parse(txtTongTien.Text);
+            lbMaNCC_New.Visible = true;
+            lbMaNCC_New.Text = ((DataRowView)cbbMaNCC.SelectedItem)["MaNCC"].ToString();
             HoaDonNhapModel hoaDonNhap_CapNhat = new HoaDonNhapModel(SoHDN, MaNV, dt.Date, MaNCC, TongTien);
             hoaDonNhap_CapNhat.CapNhatHoaDonNhap();
             LoadDataGridView();
@@ -179,7 +183,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             }
         }
 
-        private void cbbbNCCNew_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void cbbbNCCNew_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbbNCCNew.SelectedItem != null)
             {

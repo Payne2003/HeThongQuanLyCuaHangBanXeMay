@@ -182,6 +182,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 if (decimal.Parse(txtGiamGia.Text) < 0 || decimal.Parse(txtGiamGia.Text) > 100)
                 {
                     MessageBox.Show("0 - 100% thôi nhé bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtGiamGia.Text = "0";
                     return;
                 }
                 else
@@ -205,9 +206,18 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 return;
             }
             else
-            {               
-                decimal thanhTien = decimal.Parse(txtDonGiaBan.Text) * int.Parse(txtSoLuongHangMua.Text) * (1 - decimal.Parse(txtGiamGia.Text)/100);
-                txtThanhTien.Text = thanhTien.ToString();
+            {
+                if (decimal.Parse(txtGiamGia.Text) < 0 || decimal.Parse(txtGiamGia.Text) > 100)
+                {
+                    MessageBox.Show("0 - 100% thôi nhé bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtGiamGia.Text = "0";
+                    return;
+                }
+                else
+                {
+                    decimal thanhTien = decimal.Parse(txtDonGiaBan.Text) * int.Parse(txtSoLuongHangMua.Text) * (1 - decimal.Parse(txtGiamGia.Text) / 100);
+                    txtThanhTien.Text = thanhTien.ToString();
+                }
             }
         }
         private void ThemDMhang_FormClosed(object sender, FormClosedEventArgs e)

@@ -44,6 +44,11 @@ namespace QLCHBX.Model
             TongTien = tongTien;
         }
 
+        public HoaDonNhapModel(int soHDN, decimal tongTien) : this(soHDN)
+        {
+            TongTien = tongTien;
+        }
+
         public int ThemHoaDonNhap()
         {
             int SoHDN = 0;
@@ -68,6 +73,22 @@ namespace QLCHBX.Model
             {
                 throw new InvalidOperationException("Could not retrieve the order number after insertion.");
             }
+        }
+        public void CapNhatTongTien()
+        {
+            string sql = @"
+                UPDATE HoaDonNhap
+                SET TongTien = @TongTien
+                WHERE SoHDN = @SoHDN;
+            ";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SoHDN", SoHDN),
+                new SqlParameter("@TongTien", TongTien)
+            };
+
+            ExecuteNonQuery(sql, parameters);
         }
         public void CapNhatHoaDonNhap()
         {

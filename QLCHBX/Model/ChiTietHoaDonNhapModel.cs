@@ -20,11 +20,38 @@ namespace QLCHBX.Model
             MaHang = maHang;
         }
 
+        public ChiTietHoaDonNhapModel(int soHDN, int maHang, int soLuong, decimal donGia, decimal giamGia) : this(soHDN, maHang)
+        {
+            SoLuong = soLuong;
+            DonGia = donGia;
+            GiamGia = giamGia;
+        }
+
         public int SoHDN { get; set; }
         public int MaHang { get; set; }
         public int SoLuong { get; set; }
         public decimal DonGia { get; set; }
         public decimal GiamGia { get; set; }
+
+        public void ThemHang()
+        {
+            string sql = @"
+            INSERT INTO ChiTietHoaDonNhap (SoHDN, MaHang, SoLuong, DonGia, GiamGia)
+            VALUES (@SoHDN, @MaHang, @SoLuong, @DonGia, @GiamGia);
+        ";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+            new SqlParameter("@SoHDN", SoHDN),
+            new SqlParameter("@MaHang", MaHang),
+            new SqlParameter("@SoLuong", SoLuong),
+            new SqlParameter("@DonGia", DonGia),
+            new SqlParameter("@GiamGia", GiamGia)
+            };
+
+            ExecuteNonQuery(sql, parameters);
+        }
+
         public DataTable LayChiTietHoaDonNhap()
         {
             DataTable dt = new DataTable();

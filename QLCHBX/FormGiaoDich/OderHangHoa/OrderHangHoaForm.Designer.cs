@@ -68,6 +68,7 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.btLichSu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -183,7 +184,7 @@
             this.cbbbNCCNew.Name = "cbbbNCCNew";
             this.cbbbNCCNew.Size = new System.Drawing.Size(250, 36);
             this.cbbbNCCNew.TabIndex = 8;
-            this.cbbbNCCNew.SelectedIndexChanged += new System.EventHandler(this.cbbbNCCNew_SelectedIndexChanged_1);
+            this.cbbbNCCNew.SelectedIndexChanged += new System.EventHandler(this.cbbbNCCNew_SelectedIndexChanged);
             // 
             // guna2HtmlLabel1
             // 
@@ -553,6 +554,7 @@
             // 
             // grbDanhSachHoaDonNhap
             // 
+            this.grbDanhSachHoaDonNhap.Controls.Add(this.btLichSu);
             this.grbDanhSachHoaDonNhap.Controls.Add(this.viewHoaDonNhap);
             this.grbDanhSachHoaDonNhap.CustomBorderColor = System.Drawing.Color.MintCream;
             this.grbDanhSachHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -591,6 +593,25 @@
             // 
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
+            // 
+            // btLichSu
+            // 
+            this.btLichSu.BackColor = System.Drawing.Color.Transparent;
+            this.btLichSu.BorderRadius = 2;
+            this.btLichSu.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btLichSu.BorderThickness = 1;
+            this.btLichSu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btLichSu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btLichSu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btLichSu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btLichSu.FillColor = System.Drawing.Color.Transparent;
+            this.btLichSu.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.btLichSu.ForeColor = System.Drawing.Color.Black;
+            this.btLichSu.Location = new System.Drawing.Point(595, 3);
+            this.btLichSu.Name = "btLichSu";
+            this.btLichSu.Size = new System.Drawing.Size(94, 34);
+            this.btLichSu.TabIndex = 1;
+            this.btLichSu.Text = "Lịch sử";
             // 
             // OrderHangHoaForm
             // 
@@ -666,5 +687,6 @@
         public Guna.UI2.WinForms.Guna2TextBox txtMaNV;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbMaNCC_CapNhat;
+        private Guna.UI2.WinForms.Guna2Button btLichSu;
     }
 }
