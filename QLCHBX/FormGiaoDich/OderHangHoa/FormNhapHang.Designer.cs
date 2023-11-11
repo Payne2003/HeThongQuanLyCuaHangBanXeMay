@@ -35,30 +35,30 @@
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.grbDanhSachMatHang = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.viewDmh = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.honDaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttHonDa = new System.Windows.Forms.ToolStripMenuItem();
             this.sốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.symToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttSYM = new System.Windows.Forms.ToolStripMenuItem();
             this.gaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sốToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.suzukiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttSuzuki = new System.Windows.Forms.ToolStripMenuItem();
             this.gaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sốToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.yamahaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttYamaha = new System.Windows.Forms.ToolStripMenuItem();
             this.gaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.sốToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.piaggioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttPiaggio = new System.Windows.Forms.ToolStripMenuItem();
             this.gaToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.sốToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ducatiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttDucati = new System.Windows.Forms.ToolStripMenuItem();
             this.gaToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.sốToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.kTMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttKTM = new System.Windows.Forms.ToolStripMenuItem();
             this.gaToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.sốToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.kawasakiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttKawasaki = new System.Windows.Forms.ToolStripMenuItem();
             this.gaToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.sốToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.khácToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,16 +67,16 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.ptbThoatRa = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbSoHDN = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btThemHangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbTongTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.grChiTietHoaDonNhap = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.viewChiTietHoaDonNhap = new System.Windows.Forms.DataGridView();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.btCong = new Guna.UI2.WinForms.Guna2Button();
             this.btTru = new Guna.UI2.WinForms.Guna2Button();
@@ -87,7 +87,7 @@
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMaNCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbMaNCC = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbMaNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtGiamGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -99,7 +99,7 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.grbDanhSachMatHang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDmh)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbThoatRa)).BeginInit();
@@ -107,7 +107,7 @@
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             this.grChiTietHoaDonNhap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewChiTietHoaDonNhap)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.grbThongTinDonHangNhap.SuspendLayout();
@@ -129,7 +129,7 @@
             // 
             // grbDanhSachMatHang
             // 
-            this.grbDanhSachMatHang.Controls.Add(this.dataGridView2);
+            this.grbDanhSachMatHang.Controls.Add(this.viewDmh);
             this.grbDanhSachMatHang.Controls.Add(this.menuStrip1);
             this.grbDanhSachMatHang.CustomBorderColor = System.Drawing.Color.MintCream;
             this.grbDanhSachMatHang.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -141,27 +141,29 @@
             this.grbDanhSachMatHang.TabIndex = 0;
             this.grbDanhSachMatHang.Text = "Danh sách mặt hàng";
             // 
-            // dataGridView2
+            // viewDmh
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 65);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(678, 297);
-            this.dataGridView2.TabIndex = 0;
+            this.viewDmh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewDmh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewDmh.Location = new System.Drawing.Point(0, 65);
+            this.viewDmh.Name = "viewDmh";
+            this.viewDmh.ReadOnly = true;
+            this.viewDmh.Size = new System.Drawing.Size(678, 297);
+            this.viewDmh.TabIndex = 0;
+            this.viewDmh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewDmh_CellClick);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.honDaToolStripMenuItem,
-            this.symToolStripMenuItem,
-            this.suzukiToolStripMenuItem,
-            this.yamahaToolStripMenuItem,
-            this.piaggioToolStripMenuItem,
-            this.ducatiToolStripMenuItem,
-            this.kTMToolStripMenuItem,
-            this.kawasakiToolStripMenuItem,
+            this.ttHonDa,
+            this.ttSYM,
+            this.ttSuzuki,
+            this.ttYamaha,
+            this.ttPiaggio,
+            this.ttDucati,
+            this.ttKTM,
+            this.ttKawasaki,
             this.khácToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 40);
             this.menuStrip1.Name = "menuStrip1";
@@ -169,15 +171,15 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // honDaToolStripMenuItem
+            // ttHonDa
             // 
-            this.honDaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttHonDa.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sốToolStripMenuItem,
             this.gaToolStripMenuItem});
-            this.honDaToolStripMenuItem.Name = "honDaToolStripMenuItem";
-            this.honDaToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
-            this.honDaToolStripMenuItem.Text = "HonDa";
-            this.honDaToolStripMenuItem.Click += new System.EventHandler(this.honDaToolStripMenuItem_Click);
+            this.ttHonDa.Name = "ttHonDa";
+            this.ttHonDa.Size = new System.Drawing.Size(59, 21);
+            this.ttHonDa.Text = "HonDa";
+            this.ttHonDa.Click += new System.EventHandler(this.ttHonDa_Click);
             // 
             // sốToolStripMenuItem
             // 
@@ -191,14 +193,15 @@
             this.gaToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.gaToolStripMenuItem.Text = "Ga";
             // 
-            // symToolStripMenuItem
+            // ttSYM
             // 
-            this.symToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttSYM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gaToolStripMenuItem1,
             this.sốToolStripMenuItem1});
-            this.symToolStripMenuItem.Name = "symToolStripMenuItem";
-            this.symToolStripMenuItem.Size = new System.Drawing.Size(45, 21);
-            this.symToolStripMenuItem.Text = "SYM";
+            this.ttSYM.Name = "ttSYM";
+            this.ttSYM.Size = new System.Drawing.Size(45, 21);
+            this.ttSYM.Text = "SYM";
+            this.ttSYM.Click += new System.EventHandler(this.ttSYM_Click);
             // 
             // gaToolStripMenuItem1
             // 
@@ -212,14 +215,15 @@
             this.sốToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem1.Text = "Số";
             // 
-            // suzukiToolStripMenuItem
+            // ttSuzuki
             // 
-            this.suzukiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttSuzuki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gaToolStripMenuItem2,
             this.sốToolStripMenuItem2});
-            this.suzukiToolStripMenuItem.Name = "suzukiToolStripMenuItem";
-            this.suzukiToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
-            this.suzukiToolStripMenuItem.Text = "Suzuki";
+            this.ttSuzuki.Name = "ttSuzuki";
+            this.ttSuzuki.Size = new System.Drawing.Size(56, 21);
+            this.ttSuzuki.Text = "Suzuki";
+            this.ttSuzuki.Click += new System.EventHandler(this.ttSuzuki_Click);
             // 
             // gaToolStripMenuItem2
             // 
@@ -233,14 +237,15 @@
             this.sốToolStripMenuItem2.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem2.Text = "Số";
             // 
-            // yamahaToolStripMenuItem
+            // ttYamaha
             // 
-            this.yamahaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttYamaha.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gaToolStripMenuItem3,
             this.sốToolStripMenuItem3});
-            this.yamahaToolStripMenuItem.Name = "yamahaToolStripMenuItem";
-            this.yamahaToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
-            this.yamahaToolStripMenuItem.Text = "Yamaha";
+            this.ttYamaha.Name = "ttYamaha";
+            this.ttYamaha.Size = new System.Drawing.Size(65, 21);
+            this.ttYamaha.Text = "Yamaha";
+            this.ttYamaha.Click += new System.EventHandler(this.ttYamaha_Click);
             // 
             // gaToolStripMenuItem3
             // 
@@ -254,14 +259,15 @@
             this.sốToolStripMenuItem3.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem3.Text = "Số";
             // 
-            // piaggioToolStripMenuItem
+            // ttPiaggio
             // 
-            this.piaggioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttPiaggio.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gaToolStripMenuItem4,
             this.sốToolStripMenuItem4});
-            this.piaggioToolStripMenuItem.Name = "piaggioToolStripMenuItem";
-            this.piaggioToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
-            this.piaggioToolStripMenuItem.Text = "Piaggio";
+            this.ttPiaggio.Name = "ttPiaggio";
+            this.ttPiaggio.Size = new System.Drawing.Size(61, 21);
+            this.ttPiaggio.Text = "Piaggio";
+            this.ttPiaggio.Click += new System.EventHandler(this.ttPiaggio_Click);
             // 
             // gaToolStripMenuItem4
             // 
@@ -275,14 +281,15 @@
             this.sốToolStripMenuItem4.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem4.Text = "Số";
             // 
-            // ducatiToolStripMenuItem
+            // ttDucati
             // 
-            this.ducatiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttDucati.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gaToolStripMenuItem5,
             this.sốToolStripMenuItem5});
-            this.ducatiToolStripMenuItem.Name = "ducatiToolStripMenuItem";
-            this.ducatiToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
-            this.ducatiToolStripMenuItem.Text = "Ducati";
+            this.ttDucati.Name = "ttDucati";
+            this.ttDucati.Size = new System.Drawing.Size(56, 21);
+            this.ttDucati.Text = "Ducati";
+            this.ttDucati.Click += new System.EventHandler(this.ttDucati_Click);
             // 
             // gaToolStripMenuItem5
             // 
@@ -296,14 +303,15 @@
             this.sốToolStripMenuItem5.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem5.Text = "Số";
             // 
-            // kTMToolStripMenuItem
+            // ttKTM
             // 
-            this.kTMToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttKTM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gaToolStripMenuItem6,
             this.sốToolStripMenuItem6});
-            this.kTMToolStripMenuItem.Name = "kTMToolStripMenuItem";
-            this.kTMToolStripMenuItem.Size = new System.Drawing.Size(45, 21);
-            this.kTMToolStripMenuItem.Text = "KTM";
+            this.ttKTM.Name = "ttKTM";
+            this.ttKTM.Size = new System.Drawing.Size(45, 21);
+            this.ttKTM.Text = "KTM";
+            this.ttKTM.Click += new System.EventHandler(this.ttKTM_Click);
             // 
             // gaToolStripMenuItem6
             // 
@@ -317,14 +325,15 @@
             this.sốToolStripMenuItem6.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem6.Text = "Số";
             // 
-            // kawasakiToolStripMenuItem
+            // ttKawasaki
             // 
-            this.kawasakiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttKawasaki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gaToolStripMenuItem7,
             this.sốToolStripMenuItem7});
-            this.kawasakiToolStripMenuItem.Name = "kawasakiToolStripMenuItem";
-            this.kawasakiToolStripMenuItem.Size = new System.Drawing.Size(71, 21);
-            this.kawasakiToolStripMenuItem.Text = "Kawasaki";
+            this.ttKawasaki.Name = "ttKawasaki";
+            this.ttKawasaki.Size = new System.Drawing.Size(71, 21);
+            this.ttKawasaki.Text = "Kawasaki";
+            this.ttKawasaki.Click += new System.EventHandler(this.ttKawasaki_Click);
             // 
             // gaToolStripMenuItem7
             // 
@@ -364,7 +373,7 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.MintCream;
             this.guna2Panel2.Controls.Add(this.ptbThoatRa);
             this.guna2Panel2.Controls.Add(this.lbSoHDN);
-            this.guna2Panel2.Controls.Add(this.guna2Button1);
+            this.guna2Panel2.Controls.Add(this.btThemHangNhap);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -398,23 +407,23 @@
             this.lbSoHDN.Text = "?";
             this.lbSoHDN.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Button1
+            // btThemHangNhap
             // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(862, 0);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(162, 50);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Thêm";
+            this.btThemHangNhap.BorderColor = System.Drawing.Color.Silver;
+            this.btThemHangNhap.BorderThickness = 1;
+            this.btThemHangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btThemHangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btThemHangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btThemHangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btThemHangNhap.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btThemHangNhap.FillColor = System.Drawing.Color.Transparent;
+            this.btThemHangNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemHangNhap.ForeColor = System.Drawing.Color.Black;
+            this.btThemHangNhap.Location = new System.Drawing.Point(862, 0);
+            this.btThemHangNhap.Name = "btThemHangNhap";
+            this.btThemHangNhap.Size = new System.Drawing.Size(162, 50);
+            this.btThemHangNhap.TabIndex = 1;
+            this.btThemHangNhap.Text = "Thêm";
             // 
             // guna2Panel3
             // 
@@ -445,7 +454,7 @@
             this.guna2Panel7.Controls.Add(this.lbTongTien);
             this.guna2Panel7.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel7.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel7.Controls.Add(this.guna2Button2);
+            this.guna2Panel7.Controls.Add(this.btCapNhat);
             this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel7.ForeColor = System.Drawing.Color.Transparent;
             this.guna2Panel7.Location = new System.Drawing.Point(0, 241);
@@ -483,27 +492,27 @@
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Nhấp đúp để xóa";
             // 
-            // guna2Button2
+            // btCapNhat
             // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Button2.FillColor = System.Drawing.Color.MintCream;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 148);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(346, 65);
-            this.guna2Button2.TabIndex = 0;
-            this.guna2Button2.Text = "Cập nhật";
+            this.btCapNhat.BorderColor = System.Drawing.Color.DarkGray;
+            this.btCapNhat.BorderThickness = 1;
+            this.btCapNhat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btCapNhat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btCapNhat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btCapNhat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btCapNhat.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btCapNhat.FillColor = System.Drawing.Color.MintCream;
+            this.btCapNhat.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCapNhat.ForeColor = System.Drawing.Color.Black;
+            this.btCapNhat.Location = new System.Drawing.Point(0, 148);
+            this.btCapNhat.Name = "btCapNhat";
+            this.btCapNhat.Size = new System.Drawing.Size(346, 65);
+            this.btCapNhat.TabIndex = 0;
+            this.btCapNhat.Text = "Cập nhật";
             // 
             // grChiTietHoaDonNhap
             // 
-            this.grChiTietHoaDonNhap.Controls.Add(this.dataGridView1);
+            this.grChiTietHoaDonNhap.Controls.Add(this.viewChiTietHoaDonNhap);
             this.grChiTietHoaDonNhap.CustomBorderColor = System.Drawing.Color.MintCream;
             this.grChiTietHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Top;
             this.grChiTietHoaDonNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -514,14 +523,16 @@
             this.grChiTietHoaDonNhap.TabIndex = 0;
             this.grChiTietHoaDonNhap.Text = "Chi tiết đơn nhập";
             // 
-            // dataGridView1
+            // viewChiTietHoaDonNhap
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(346, 201);
-            this.dataGridView1.TabIndex = 0;
+            this.viewChiTietHoaDonNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewChiTietHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewChiTietHoaDonNhap.Location = new System.Drawing.Point(0, 40);
+            this.viewChiTietHoaDonNhap.Name = "viewChiTietHoaDonNhap";
+            this.viewChiTietHoaDonNhap.Size = new System.Drawing.Size(346, 201);
+            this.viewChiTietHoaDonNhap.TabIndex = 0;
+            this.viewChiTietHoaDonNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewChiTietHoaDonNhap_CellClick);
+            this.viewChiTietHoaDonNhap.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewChiTietHoaDonNhap_CellDoubleClick);
             // 
             // guna2Panel5
             // 
@@ -552,6 +563,7 @@
             this.btCong.Size = new System.Drawing.Size(40, 40);
             this.btCong.TabIndex = 2;
             this.btCong.Text = "+";
+            this.btCong.Click += new System.EventHandler(this.btCong_Click);
             // 
             // btTru
             // 
@@ -570,6 +582,7 @@
             this.btTru.Size = new System.Drawing.Size(40, 40);
             this.btTru.TabIndex = 2;
             this.btTru.Text = "-";
+            this.btTru.Click += new System.EventHandler(this.btTru_Click);
             // 
             // txtSoLuongNhap
             // 
@@ -607,7 +620,7 @@
             this.grbThongTinDonHangNhap.Controls.Add(this.guna2HtmlLabel8);
             this.grbThongTinDonHangNhap.Controls.Add(this.txtMaNCC);
             this.grbThongTinDonHangNhap.Controls.Add(this.txtMaNV);
-            this.grbThongTinDonHangNhap.Controls.Add(this.guna2HtmlLabel3);
+            this.grbThongTinDonHangNhap.Controls.Add(this.lbMaNCC);
             this.grbThongTinDonHangNhap.Controls.Add(this.lbMaNV);
             this.grbThongTinDonHangNhap.Controls.Add(this.txtGiamGia);
             this.grbThongTinDonHangNhap.Controls.Add(this.guna2HtmlLabel7);
@@ -643,6 +656,7 @@
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.PasswordChar = '\0';
             this.txtThanhTien.PlaceholderText = "";
+            this.txtThanhTien.ReadOnly = true;
             this.txtThanhTien.SelectedText = "";
             this.txtThanhTien.Size = new System.Drawing.Size(181, 21);
             this.txtThanhTien.TabIndex = 1;
@@ -673,6 +687,7 @@
             this.txtMaNCC.Name = "txtMaNCC";
             this.txtMaNCC.PasswordChar = '\0';
             this.txtMaNCC.PlaceholderText = "";
+            this.txtMaNCC.ReadOnly = true;
             this.txtMaNCC.SelectedText = "";
             this.txtMaNCC.Size = new System.Drawing.Size(164, 21);
             this.txtMaNCC.TabIndex = 1;
@@ -693,19 +708,20 @@
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.PasswordChar = '\0';
             this.txtMaNV.PlaceholderText = "";
+            this.txtMaNV.ReadOnly = true;
             this.txtMaNV.SelectedText = "";
             this.txtMaNV.Size = new System.Drawing.Size(132, 21);
             this.txtMaNV.TabIndex = 1;
             // 
-            // guna2HtmlLabel3
+            // lbMaNCC
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(452, 102);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(69, 15);
-            this.guna2HtmlLabel3.TabIndex = 0;
-            this.guna2HtmlLabel3.Text = "Nhà cung cấp";
+            this.lbMaNCC.BackColor = System.Drawing.Color.Transparent;
+            this.lbMaNCC.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaNCC.Location = new System.Drawing.Point(452, 102);
+            this.lbMaNCC.Name = "lbMaNCC";
+            this.lbMaNCC.Size = new System.Drawing.Size(69, 15);
+            this.lbMaNCC.TabIndex = 0;
+            this.lbMaNCC.Text = "Nhà cung cấp";
             // 
             // lbMaNV
             // 
@@ -793,6 +809,7 @@
             this.txtMaHang.Name = "txtMaHang";
             this.txtMaHang.PasswordChar = '\0';
             this.txtMaHang.PlaceholderText = "";
+            this.txtMaHang.ReadOnly = true;
             this.txtMaHang.SelectedText = "";
             this.txtMaHang.Size = new System.Drawing.Size(132, 21);
             this.txtMaHang.TabIndex = 1;
@@ -823,6 +840,7 @@
             this.txtSoHDN.Name = "txtSoHDN";
             this.txtSoHDN.PasswordChar = '\0';
             this.txtSoHDN.PlaceholderText = "";
+            this.txtSoHDN.ReadOnly = true;
             this.txtSoHDN.SelectedText = "";
             this.txtSoHDN.Size = new System.Drawing.Size(132, 21);
             this.txtSoHDN.TabIndex = 1;
@@ -856,7 +874,7 @@
             this.guna2Panel1.ResumeLayout(false);
             this.grbDanhSachMatHang.ResumeLayout(false);
             this.grbDanhSachMatHang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDmh)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
@@ -866,7 +884,7 @@
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
             this.grChiTietHoaDonNhap.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewChiTietHoaDonNhap)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.grbThongTinDonHangNhap.ResumeLayout(false);
@@ -883,34 +901,34 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btThemHangNhap;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2GroupBox grbDanhSachMatHang;
         private Guna.UI2.WinForms.Guna2GroupBox grbThongTinDonHangNhap;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem honDaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttHonDa;
         private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem symToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttSYM;
         private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem suzukiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttSuzuki;
         private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem yamahaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttYamaha;
         private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem piaggioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttPiaggio;
         private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem ducatiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttDucati;
         private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem kTMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttKTM;
         private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem kawasakiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttKawasaki;
         private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem khácToolStripMenuItem;
@@ -919,7 +937,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2GroupBox grChiTietHoaDonNhap;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btCapNhat;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbTongTien;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
@@ -932,8 +950,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txtThanhTien;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView viewDmh;
+        private System.Windows.Forms.DataGridView viewChiTietHoaDonNhap;
         private Guna.UI2.WinForms.Guna2Button btCong;
         private Guna.UI2.WinForms.Guna2Button btTru;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbSoHDN;
@@ -943,6 +961,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbMaNV;
         public Guna.UI2.WinForms.Guna2TextBox txtMaNV;
         public Guna.UI2.WinForms.Guna2TextBox txtMaNCC;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbMaNCC;
     }
 }

@@ -58,7 +58,7 @@ namespace QLCHBX.Model
             dt = DocBang(sql, parameters);
             return dt;
         }
-        public DataTable LayDuLieuDmhTheoTenHangSX()
+        public DataTable LayDuLieuDmh()
         {
             DataTable dt = new DataTable();
             string sql = @"

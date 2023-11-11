@@ -347,10 +347,19 @@ namespace QLCHBX.FormGiaoDich
                 {
                     int SoDDH = int.Parse(txtSoDDH.Text);
                     int MaHang = int.Parse(txtMaHang.Text);
-                    ChiTietDonDatHangModel chiTietDonDatHang_Xoa = new ChiTietDonDatHangModel(SoDDH,MaHang);
-                    chiTietDonDatHang_Xoa.XoaHang();
-                    MessageBox.Show("Xóa thành công!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadDataGridView();
+                    DialogResult result = MessageBox.Show("Bạn có muốn xóa hàng " + row.Cells[0].Value.ToString() + " ?", "Xác Nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        ChiTietDonDatHangModel chiTietDonDatHang_Xoa = new ChiTietDonDatHangModel(SoDDH,MaHang);
+                        chiTietDonDatHang_Xoa.XoaHang();
+                        MessageBox.Show("Xóa thành công!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadDataGridView();
+                    }
+                    else
+                    {
+                        LoadDataGridView();
+                        return;
+                    }   
                 }
                 else
                 {

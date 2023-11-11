@@ -33,12 +33,19 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             cbbbNCCNew.DisplayMember = "TenNCC";
             cbbbNCCNew.ValueMember = "MaNCC";
 
+            LoadGiaoDien();
+        }
+        
+        public void LoadGiaoDien()
+        {
             btNhapHang.Visible = false;
             btSua.Visible = false;
             btCapNhat.Visible = false;
             grbThongTinHoaDonNhap.Visible = false;
+            grbThongTinDonMoi.Visible = true;
+            btTaoHoaDonNhap.Visible = true;
+            txtTongTien.Text = "";
         }
-
         private void OrderHangHoaForm_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
@@ -62,7 +69,9 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             DateTime dt = DateTime.Parse(dtNgayNhap.Text);
             int MaNCC = int.Parse(lbMaNCC_CapNhat.Text);
             decimal TongTien = decimal.Parse(txtTongTien.Text);
-            HoaDonNhapModel hoaDonNhap_CapNhat = new HoaDonNhapModel();
+            HoaDonNhapModel hoaDonNhap_CapNhat = new HoaDonNhapModel(SoHDN, MaNV, dt.Date, MaNCC, TongTien);
+            hoaDonNhap_CapNhat.CapNhatHoaDonNhap();
+            LoadDataGridView();
         }
         private void viewHoaDonNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -72,7 +81,6 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                 if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != "")
                 {
                     LoadClickDataGridView();
-
                     txtSoHDN.Text = row.Cells[0].Value.ToString();
                     txtMaNV.Text = row.Cells[1].Value.ToString();
                     txtTenNhanVien.Text = row.Cells[2].Value.ToString();
@@ -80,7 +88,8 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                     dtNgayNhap.Text = row.Cells[5].Value.ToString();
                     txtTongTien.Text = row.Cells[6].Value.ToString();
                     ChiTietHoaDonNhapModel chiTietHoaDonNhapLoad = new ChiTietHoaDonNhapModel(int.Parse(row.Cells[0].Value.ToString()));
-                    viewChiTietHoaDonNhap.DataSource = chiTietHoaDonNhapLoad.LayChiTietHoaDonNhap();  
+                    viewChiTietHoaDonNhap.DataSource = chiTietHoaDonNhapLoad.LayChiTietHoaDonNhap();
+                    viewChiTietHoaDonNhap.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
                 else
                 {
@@ -105,7 +114,8 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                         if (result == DialogResult.Yes)
                         {
                             ChiTietHoaDonNhapModel chiTietHoaDon_Xoa = new ChiTietHoaDonNhapModel(int.Parse(SoHDN));
-                            chiTietHoaDon_Xoa.XoaDonNhap();
+                            chiTietHoaDon_Xoa.XoaChiTietHoaDonNhap();
+                            chiTietHoaDon_Xoa.XoaHoaDonNhap();
                             LoadDataGridView();
                         }
                         else
@@ -136,8 +146,6 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
         private void btSua_Click(object sender, EventArgs e)
         {
             FormNhapHang formNhapHang = new FormNhapHang(int.Parse(txtSoHDN.Text));
-            string maNCC = ((DataRowView)cbbMaNCC.SelectedItem)["MaNCC"].ToString();
-            formNhapHang.txtMaNCC.Text = maNCC;
             formNhapHang.ShowDialog();
         }
 
@@ -149,26 +157,6 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
         private void btNhapHang_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void cbbbNCCNew_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbbbNCCNew.SelectedItem != null)
-            {
-                if (cbbbNCCNew.SelectedItem is DataRowView)
-                {
-                    string maNCC = ((DataRowView)cbbbNCCNew.SelectedItem)["MaNCC"].ToString();
-                    lbMaNCC_New.Text = maNCC;
-                }
-                else
-                {
-                    lbMaNCC_New.Text = "";
-                }
-            }
-            else
-            {
-                lbMaNCC_New.Text = "";
-            }
         }
 
         private void cbbMaNCC_SelectedIndexChanged(object sender, EventArgs e)
@@ -188,6 +176,26 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             else
             {
                 lbMaNCC_CapNhat.Text = "";
+            }
+        }
+
+        private void cbbbNCCNew_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbbbNCCNew.SelectedItem != null)
+            {
+                if (cbbbNCCNew.SelectedItem is DataRowView)
+                {
+                    string maNCC = ((DataRowView)cbbbNCCNew.SelectedItem)["MaNCC"].ToString();
+                    lbMaNCC_New.Text = maNCC;
+                }
+                else
+                {
+                    lbMaNCC_New.Text = "";
+                }
+            }
+            else
+            {
+                lbMaNCC_New.Text = "";
             }
         }
     }

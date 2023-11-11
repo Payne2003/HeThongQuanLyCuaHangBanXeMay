@@ -10,7 +10,7 @@ namespace QLCHBX.Model
 {
     public class HoaDonNhapModel : ProcessDatabase
     {
-        private SqlDbType tongTien;
+        
 
         public int SoHDN { get; set; }
         public int MaNV { get; set; }
@@ -34,6 +34,14 @@ namespace QLCHBX.Model
         public HoaDonNhapModel(int soHDN)
         {
             SoHDN = soHDN;
+        }
+
+        public HoaDonNhapModel(int soHDN, int maNV, DateTime ngayNhap, int maNCC, decimal tongTien) : this(soHDN)
+        {
+            MaNV = maNV;
+            NgayNhap = ngayNhap;
+            MaNCC = maNCC;
+            TongTien = tongTien;
         }
 
         public int ThemHoaDonNhap()
@@ -65,7 +73,7 @@ namespace QLCHBX.Model
         {
             string sql = @"
                 UPDATE HoaDonNhap
-                SET MaNV = @MaNV, NgayNhap = @NgayNhap, MaNCC = @MaNCC, TongTien = @TongTien, TrangThai = @TrangThai
+                SET MaNV = @MaNV, NgayNhap = @NgayNhap, MaNCC = @MaNCC, TongTien = @TongTien
                 WHERE SoHDN = @SoHDN;
             ";
 
@@ -75,7 +83,7 @@ namespace QLCHBX.Model
                 new SqlParameter("@MaNV", MaNV),
                 new SqlParameter("@NgayNhap", NgayNhap),
                 new SqlParameter("@MaNCC", MaNCC),
-                new SqlParameter("@TongTien", tongTien)
+                new SqlParameter("@TongTien", TongTien)
             };
 
             ExecuteNonQuery(sql, parameters);

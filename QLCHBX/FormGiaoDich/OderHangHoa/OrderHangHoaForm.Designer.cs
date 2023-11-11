@@ -183,6 +183,7 @@
             this.cbbbNCCNew.Name = "cbbbNCCNew";
             this.cbbbNCCNew.Size = new System.Drawing.Size(250, 36);
             this.cbbbNCCNew.TabIndex = 8;
+            this.cbbbNCCNew.SelectedIndexChanged += new System.EventHandler(this.cbbbNCCNew_SelectedIndexChanged_1);
             // 
             // guna2HtmlLabel1
             // 

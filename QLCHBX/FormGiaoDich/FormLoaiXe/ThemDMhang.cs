@@ -32,7 +32,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             txtDonGiaBan.Text = "";
             txtSoLuongHangMua.Text = "1";
             DmhModel dmhModel = new DmhModel();
-            viewDmh.DataSource = dmhModel.LayDuLieuDmhTheoTenHangSX();
+            viewDmh.DataSource = dmhModel.LayDuLieuDmh();
         }
         private void btthem_Click(object sender, EventArgs e)
         {

@@ -15,6 +15,11 @@ namespace QLCHBX.Model
             SoHDN = soHDN;
         }
 
+        public ChiTietHoaDonNhapModel(int soHDN, int maHang) : this(soHDN)
+        {
+            MaHang = maHang;
+        }
+
         public int SoHDN { get; set; }
         public int MaHang { get; set; }
         public int SoLuong { get; set; }
@@ -25,10 +30,12 @@ namespace QLCHBX.Model
             DataTable dt = new DataTable();
 
             string sql = @"
-                SELECT MaHang, SoLuong, DonGia, GiamGia
-                FROM ChiTietHoaDonNhap
-                WHERE SoHDN = @SoHDN;
-            ";
+                SELECT CT.MaHang, DMH.TenHang, CT.SoLuong, CT.GiamGia, CT.DonGia, CT.ThanhTien
+                FROM ChiTietHoaDonNhap CT
+                INNER JOIN Dmh ON CT.MaHang = DMH.MaHang
+                WHERE CT.SoHDN = @SoHDN;
+                ";
+
 
             // Set the parameter for SoHDN
             SqlParameter[] parameters = new SqlParameter[]
@@ -65,28 +72,60 @@ namespace QLCHBX.Model
             ExecuteNonQuery(sql, parameters);
         }
 
-        public void XoaDonNhap()
+        public void XoaChiTietHoaDonNhap()
         {
-            // Define your SQL query to delete both HoaDonNhap and ChiTietHoaDonNhap
             string sqlDeleteChiTiet = @"
                 DELETE FROM ChiTietHoaDonNhap
                 WHERE SoHDN = @SoHDN;
             ";
-
-            string sqlDeleteHoaDon = @"
-                DELETE FROM HoaDonNhap
-                WHERE SoHDN = @SoHDN;
-            ";
-
-            // Set the parameter for SoHDN
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@SoHDN", SoHDN)
             };
-
-            // Execute the delete queries
             ExecuteNonQuery(sqlDeleteChiTiet, parameters);
-            ExecuteNonQuery(sqlDeleteHoaDon, parameters);
         }
+        public void XoaHang()
+        {
+            string sqlDeleteChiTiet = @"
+                DELETE FROM ChiTietHoaDonNhap
+                WHERE SoHDN = @SoHDN AND MaHang = @MaHang;
+            ";
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SoHDN", SoHDN),
+                new SqlParameter("@MaHang", MaHang)
+            };
+            ExecuteNonQuery(sqlDeleteChiTiet, parameters);
+        }
+        public void XoaHoaDonNhap()
+        {
+            string sqlDelete = @"
+                DELETE FROM HoaDonNhap
+                WHERE SoHDN = @SoHDN;
+            ";
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SoHDN", SoHDN)
+            };
+            ExecuteNonQuery(sqlDelete, parameters);
+        }
+        public bool KiemTraHangDaDuocNhapHayChua()
+        {
+            string sql = @"
+            SELECT COUNT(*)
+            FROM ChiTietHoaDonNhap
+            WHERE SoHDN = @SoHDN AND MaHang = @MaHang;
+            ";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SoHDN", SoHDN),
+                new SqlParameter("@MaHang", MaHang)
+            };
+
+            int rowCount = (int)ExecuteScalar(sql, parameters);
+            return rowCount > 0;
+        }
+
     }
 }
