@@ -202,6 +202,13 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                 lbMaNCC_New.Text = "";
             }
         }
+
+        private void btLichSu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LichSuNhapHangForm lichSuNhapHang = new LichSuNhapHangForm();
+            lichSuNhapHang.ShowDialog();
+        }
     }
 }
 

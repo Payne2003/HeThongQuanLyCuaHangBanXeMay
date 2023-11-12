@@ -109,7 +109,21 @@ namespace QLCHBX.Model
 
             ExecuteNonQuery(sql, parameters);
         }
+        public void HuyNhapHang()
+        {
+            string sql = @"
+                UPDATE HoaDonNhap
+                SET TrangThai = 0
+                WHERE SoHDN = @SoHDN;
+            ";
 
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SoHDN", SoHDN)
+            };
+
+            ExecuteNonQuery(sql, parameters);
+        }
         public DataTable LayDuLieuHoaDonNhapChuaNhap()
         {
             DataTable dt = new DataTable();

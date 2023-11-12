@@ -24,10 +24,21 @@ namespace QLCHBX.FormGiaoDich.ThanhToan
             ChiTietDonDatHangModel chiTietDonDatHangLoad = new ChiTietDonDatHangModel(int.Parse(lbSoDDH.Text));
             viewChitietDonDatHang.DataSource =  chiTietDonDatHangLoad.LayDuLieuCuaHoaDon();
         }
+        public void XacNhan()
+        {
+            if (!(btTienMat.Checked || btVNPay.Checked || btBank.Checked))
+            {
+                MessageBox.Show("Yêu cầu nhập phương thức thanh toán.");
+                return;
+            }
 
+
+
+                
+        }
         private void btXacNhanThanhToan_Click(object sender, EventArgs e)
         {
-
+            XacNhan();
         }
 
         private void XacNhanThanhToan_Load(object sender, EventArgs e)

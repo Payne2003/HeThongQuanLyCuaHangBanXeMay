@@ -64,11 +64,11 @@
             this.grbChiTietHoaDonNhap = new Guna.UI2.WinForms.Guna2GroupBox();
             this.viewChiTietHoaDonNhap = new System.Windows.Forms.DataGridView();
             this.grbDanhSachHoaDonNhap = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btLichSu = new Guna.UI2.WinForms.Guna2Button();
             this.viewHoaDonNhap = new System.Windows.Forms.DataGridView();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.btLichSu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -566,6 +566,26 @@
             this.grbDanhSachHoaDonNhap.TabIndex = 0;
             this.grbDanhSachHoaDonNhap.Text = "Danh sách hóa đơn nhập";
             // 
+            // btLichSu
+            // 
+            this.btLichSu.BackColor = System.Drawing.Color.Transparent;
+            this.btLichSu.BorderRadius = 2;
+            this.btLichSu.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btLichSu.BorderThickness = 1;
+            this.btLichSu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btLichSu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btLichSu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btLichSu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btLichSu.FillColor = System.Drawing.Color.Transparent;
+            this.btLichSu.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.btLichSu.ForeColor = System.Drawing.Color.Black;
+            this.btLichSu.Location = new System.Drawing.Point(597, 2);
+            this.btLichSu.Name = "btLichSu";
+            this.btLichSu.Size = new System.Drawing.Size(94, 34);
+            this.btLichSu.TabIndex = 1;
+            this.btLichSu.Text = "Lịch sử";
+            this.btLichSu.Click += new System.EventHandler(this.btLichSu_Click);
+            // 
             // viewHoaDonNhap
             // 
             this.viewHoaDonNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -593,25 +613,6 @@
             // 
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
-            // 
-            // btLichSu
-            // 
-            this.btLichSu.BackColor = System.Drawing.Color.Transparent;
-            this.btLichSu.BorderRadius = 2;
-            this.btLichSu.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.btLichSu.BorderThickness = 1;
-            this.btLichSu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btLichSu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btLichSu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btLichSu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btLichSu.FillColor = System.Drawing.Color.Transparent;
-            this.btLichSu.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
-            this.btLichSu.ForeColor = System.Drawing.Color.Black;
-            this.btLichSu.Location = new System.Drawing.Point(595, 3);
-            this.btLichSu.Name = "btLichSu";
-            this.btLichSu.Size = new System.Drawing.Size(94, 34);
-            this.btLichSu.TabIndex = 1;
-            this.btLichSu.Text = "Lịch sử";
             // 
             // OrderHangHoaForm
             // 

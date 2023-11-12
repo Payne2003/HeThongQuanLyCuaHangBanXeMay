@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCHBX.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,101 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
         public LichSuNhapHangForm()
         {
             InitializeComponent();
+            guna2ShadowForm1.SetShadowForm(this);
+        }
+        public void LoadDataGirdView()
+        {
+            HoaDonNhapModel hoaDonNhapModel_Load= new HoaDonNhapModel(int.Parse(txtSoHDN.Text));
+            viewChiTietHoaDonNhap.DataSource = hoaDonNhapModel_Load.LayDuLieuHoaDonNhapDaNhap();
+            btHuyNhapHang.Visible = false;
+            grThongtin.Visible = false;
+            LoadText();
+        }
+        public void LoadText()
+        {
+            txtSoHDN.Text = "";
+            txtMaNV.Text = "";
+            txtTenNV.Text = "";
+            txtTongTien.Text = "";
+        }
+
+        private void viewHoaDonNhap_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = viewHoaDonNhap.Rows[e.RowIndex];
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != "")
+                {
+                    btHuyNhapHang.Visible = true;
+                    grThongtin.Visible = true;
+                    txtSoHDN.Text = row.Cells[0].Value.ToString();
+                    txtMaNV.Text = row.Cells[1].Value.ToString();
+                    txtTenNV.Text = row.Cells[2].Value.ToString();
+                    txtNhaCungCap.Text = row.Cells[4].Value.ToString();
+                    dtNgayNhap.Text = row.Cells[5].Value.ToString();
+                    txtTongTien.Text = row.Cells[6].Value.ToString();
+                    ChiTietHoaDonNhapModel chiTietHoaDonNhapLoad = new ChiTietHoaDonNhapModel(int.Parse(row.Cells[0].Value.ToString()));
+                    viewChiTietHoaDonNhap.DataSource = chiTietHoaDonNhapLoad.LayChiTietHoaDonNhap();
+                    viewChiTietHoaDonNhap.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+        }
+
+        private void viewHoaDonNhap_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = viewHoaDonNhap.Rows[e.RowIndex];
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != "")
+                {
+                    string SoHDN = row.Cells[0].Value.ToString();
+                    if (!string.IsNullOrEmpty(SoHDN))
+                    {
+                        DialogResult result = MessageBox.Show("Xóa Khách hàng có mã: " + SoHDN + " ?", "Yêu cầu xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            ChiTietHoaDonNhapModel chiTietHoaDon_Xoa = new ChiTietHoaDonNhapModel(int.Parse(SoHDN));
+                            chiTietHoaDon_Xoa.XoaChiTietHoaDonNhap();
+                            chiTietHoaDon_Xoa.XoaHoaDonNhap();
+                            LoadDataGirdView();
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+            }
+        }
+        public void HuyNhapHang()
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn hủy nhập hàng " + txtSoHDN + " không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                HoaDonNhapModel hoaDonNhapModel = new HoaDonNhapModel(int.Parse(txtSoHDN.Text));
+                hoaDonNhapModel.HuyNhapHang();
+                LoadDataGirdView();
+            }
+        }
+        private void btHuyNhapHang_Click(object sender, EventArgs e)
+        {
+            HuyNhapHang();
         }
     }
 }
