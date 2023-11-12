@@ -162,7 +162,6 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                 DataGridViewRow row = viewDmh.Rows[e.RowIndex];
                 if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != "")
                 {
-                    int MaHang_New = int.Parse(row.Cells[0].Value.ToString());
                     ChiTietHoaDonNhapModel chiTietHoaDonNhap = new ChiTietHoaDonNhapModel(int.Parse(txtSoHDN.Text), int.Parse(row.Cells[0].Value.ToString()));
                     if (chiTietHoaDonNhap.KiemTraHangDaDuocNhapHayChua()) 
                     {

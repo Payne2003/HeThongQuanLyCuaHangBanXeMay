@@ -70,6 +70,23 @@ namespace QLCHBX.Model
             // Execute the SQL update statement.
             ExecuteNonQuery(sql, parameters);
         }
+        public bool KiemTraHangDaDuocNhapHayChua()
+        {
+            string sql = @"
+            SELECT COUNT(*)
+            FROM ChiTietDonDatHang
+            WHERE SoDDh = @SoDDH AND MaHang = @MaHang;
+            ";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SoDDH", SoDDH),
+                new SqlParameter("@MaHang", MaHang)
+            };
+
+            int rowCount = (int)ExecuteScalar(sql, parameters);
+            return rowCount > 0;
+        }
         public void XoaHang()
         {
             string sql = @"DELETE FROM ChiTietDonDatHang WHERE SoDDH = @SoDDH AND MaHang = @MaHang";

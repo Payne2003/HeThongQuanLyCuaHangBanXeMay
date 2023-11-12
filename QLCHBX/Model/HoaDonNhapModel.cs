@@ -51,7 +51,6 @@ namespace QLCHBX.Model
 
         public int ThemHoaDonNhap()
         {
-            int SoHDN = 0;
             string sql = @"
                 INSERT INTO HoaDonNhap (MaNV, NgayNhap, MaNCC)
                 VALUES (@MaNV, @NgayNhap, @MaNCC) SELECT SCOPE_IDENTITY();;
@@ -114,6 +113,21 @@ namespace QLCHBX.Model
             string sql = @"
                 UPDATE HoaDonNhap
                 SET TrangThai = 0
+                WHERE SoHDN = @SoHDN;
+            ";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@SoHDN", SoHDN)
+            };
+
+            ExecuteNonQuery(sql, parameters);
+        }
+        public void NhapHang()
+        {
+            string sql = @"
+                UPDATE HoaDonNhap
+                SET TrangThai = 1
                 WHERE SoHDN = @SoHDN;
             ";
 

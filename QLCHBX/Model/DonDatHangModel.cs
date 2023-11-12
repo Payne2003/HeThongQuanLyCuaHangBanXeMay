@@ -133,6 +133,20 @@ namespace QLCHBX.Model
 
             return ExecuteNonQuery(sql, sqlParameters);
         }
+        public void ThanhToan()
+        {
+            string sql = @"
+                            UPDATE DonDatHang
+                            SET TrangThai = 1
+                            WHERE SoDDH = @SoDDH";
+
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@SoDDH", SoDDH)
+            };
+
+            ExecuteNonQuery(sql, sqlParameters);
+        }
 
         public int ThemDonDatHang(int maNV, DateTime ngayNhap)
         {

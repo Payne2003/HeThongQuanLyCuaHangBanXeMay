@@ -46,6 +46,7 @@ namespace QLCHBX.FormGiaoDich
             }
             soluongHangMua = viewChiTietDonHang.RowCount - 1;
             lbGioHang.Text = "Giỏ hàng (" + soluongHangMua + ")";
+            grbThongTinDonHangTrongChiTiet.Visible = false;
             CapNhatMau();
         }
         public bool KiemTraTextsRong(params string[] texts)

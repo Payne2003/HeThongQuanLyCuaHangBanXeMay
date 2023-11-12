@@ -150,3 +150,4 @@ C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormHangHoa.ChiTiet.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormHangHoa.EditXe.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.ALLControl.HangHoa.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.csproj.ResolveComReference.cache

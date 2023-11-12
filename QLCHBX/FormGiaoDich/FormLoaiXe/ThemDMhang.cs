@@ -145,9 +145,19 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 DataGridViewRow row = viewDmh.Rows[e.RowIndex];
                 if (row.Cells[0].Value != null || row.Cells[0].Value.ToString() != "")
                 {
-                    btThemHangMua.Visible = true;
-                    txtMaHang.Text = row.Cells[0].Value.ToString();
-                    txtDonGiaBan.Text = row.Cells[6].Value.ToString();
+                    ChiTietDonDatHangModel chiTietDonDatHang = new ChiTietDonDatHangModel(int.Parse(txtSoDDH.Text), int.Parse(row.Cells[0].Value.ToString()));
+                    if (chiTietDonDatHang.KiemTraHangDaDuocNhapHayChua())
+                    {
+                        MessageBox.Show("Đã có Hàng :" + row.Cells[2].Value.ToString() + " !!!", "Xác Nhận", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        btThemHangMua.Visible = true;
+                        txtMaHang.Text = row.Cells[0].Value.ToString();
+                        txtDonGiaBan.Text = row.Cells[6].Value.ToString();
+                    }
+                    
                 }
                 else
                 {
@@ -187,8 +197,19 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 }
                 else
                 {
-                    decimal thanhTien = decimal.Parse(txtDonGiaBan.Text) * int.Parse(txtSoLuongHangMua.Text) * (1 - decimal.Parse(txtGiamGia.Text)/100);
-                    txtThanhTien.Text = thanhTien.ToString();
+                    DmhModel model = new DmhModel(int.Parse(txtMaHang.Text));
+                    int soLuongKho = model.LaySoLuongKho();
+                    if (int.Parse(txtSoLuongHangMua.Text) > soLuongKho)
+                    {
+                        MessageBox.Show("Hàng này chỉ còn " + soLuongKho + " thôi bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtSoLuongHangMua.Text = "0";
+                        return;
+                    }
+                    else
+                    {
+                        decimal thanhTien = decimal.Parse(txtDonGiaBan.Text) * int.Parse(txtSoLuongHangMua.Text) * (1 - decimal.Parse(txtGiamGia.Text) / 100);
+                        txtThanhTien.Text = thanhTien.ToString();
+                    }
                 }
             }
         }
@@ -215,8 +236,19 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 }
                 else
                 {
-                    decimal thanhTien = decimal.Parse(txtDonGiaBan.Text) * int.Parse(txtSoLuongHangMua.Text) * (1 - decimal.Parse(txtGiamGia.Text) / 100);
-                    txtThanhTien.Text = thanhTien.ToString();
+                    DmhModel model = new DmhModel(int.Parse(txtMaHang.Text));
+                    int soLuongKho = model.LaySoLuongKho();
+                    if (int.Parse(txtSoLuongHangMua.Text) > soLuongKho)
+                    {
+                        MessageBox.Show("Hàng này chỉ còn " + soLuongKho + " thôi bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtSoLuongHangMua.Text = "0";
+                        return;
+                    }
+                    else
+                    {
+                        decimal thanhTien = decimal.Parse(txtDonGiaBan.Text) * int.Parse(txtSoLuongHangMua.Text) * (1 - decimal.Parse(txtGiamGia.Text) / 100);
+                        txtThanhTien.Text = thanhTien.ToString();
+                    }
                 }
             }
         }

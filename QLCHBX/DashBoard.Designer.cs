@@ -48,8 +48,8 @@
             this.ctThoat = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnControl = new Guna.UI2.WinForms.Guna2Panel();
-            this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
             this.giaoDichCT1 = new QLCHBX.ALLControl.GiaoDichCT();
+            this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -79,7 +79,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.MintCream;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 40);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(200, 560);
+            this.guna2Panel1.Size = new System.Drawing.Size(200, 748);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel5
@@ -403,18 +403,8 @@
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnControl.Location = new System.Drawing.Point(200, 40);
             this.pnControl.Name = "pnControl";
-            this.pnControl.Size = new System.Drawing.Size(824, 560);
+            this.pnControl.Size = new System.Drawing.Size(824, 748);
             this.pnControl.TabIndex = 2;
-            // 
-            // hangHoa1
-            // 
-            this.hangHoa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hangHoa1.Font = new System.Drawing.Font("Segoe UI Semilight", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hangHoa1.Location = new System.Drawing.Point(0, 0);
-            this.hangHoa1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.hangHoa1.Name = "hangHoa1";
-            this.hangHoa1.Size = new System.Drawing.Size(824, 560);
-            this.hangHoa1.TabIndex = 1;
             // 
             // giaoDichCT1
             // 
@@ -424,8 +414,18 @@
             this.giaoDichCT1.Location = new System.Drawing.Point(0, 0);
             this.giaoDichCT1.Margin = new System.Windows.Forms.Padding(4);
             this.giaoDichCT1.Name = "giaoDichCT1";
-            this.giaoDichCT1.Size = new System.Drawing.Size(824, 560);
+            this.giaoDichCT1.Size = new System.Drawing.Size(824, 748);
             this.giaoDichCT1.TabIndex = 0;
+            // 
+            // hangHoa1
+            // 
+            this.hangHoa1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hangHoa1.Font = new System.Drawing.Font("Segoe UI Semilight", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hangHoa1.Location = new System.Drawing.Point(0, 0);
+            this.hangHoa1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hangHoa1.Name = "hangHoa1";
+            this.hangHoa1.Size = new System.Drawing.Size(824, 748);
+            this.hangHoa1.TabIndex = 1;
             // 
             // guna2DragControl1
             // 
@@ -438,7 +438,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.ClientSize = new System.Drawing.Size(1024, 788);
             this.Controls.Add(this.pnControl);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.header);
