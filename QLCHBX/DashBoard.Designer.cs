@@ -49,6 +49,7 @@
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnControl = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.khachHang1 = new QLCHBX.ALLControl.KhachHang();
             this.giaoDichCT1 = new QLCHBX.ALLControl.GiaoDichCT();
             this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
             this.guna2Panel1.SuspendLayout();
@@ -398,6 +399,7 @@
             // 
             // pnControl
             // 
+            this.pnControl.Controls.Add(this.khachHang1);
             this.pnControl.Controls.Add(this.giaoDichCT1);
             this.pnControl.Controls.Add(this.hangHoa1);
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -412,6 +414,18 @@
             this.guna2DragControl1.TargetControl = this.header;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // khachHang1
+            // 
+            this.khachHang1.BackColor = System.Drawing.Color.White;
+            this.khachHang1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.khachHang1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.khachHang1.ForeColor = System.Drawing.Color.Black;
+            this.khachHang1.Location = new System.Drawing.Point(0, 0);
+            this.khachHang1.Margin = new System.Windows.Forms.Padding(4);
+            this.khachHang1.Name = "khachHang1";
+            this.khachHang1.Size = new System.Drawing.Size(824, 748);
+            this.khachHang1.TabIndex = 3;
+            // 
             // giaoDichCT1
             // 
             this.giaoDichCT1.BackColor = System.Drawing.Color.White;
@@ -421,7 +435,7 @@
             this.giaoDichCT1.Margin = new System.Windows.Forms.Padding(4);
             this.giaoDichCT1.Name = "giaoDichCT1";
             this.giaoDichCT1.Size = new System.Drawing.Size(824, 748);
-            this.giaoDichCT1.TabIndex = 0;
+            this.giaoDichCT1.TabIndex = 2;
             // 
             // hangHoa1
             // 
@@ -481,7 +495,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbMaNV;
         private Guna.UI2.WinForms.Guna2Panel pnControl;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        public ALLControl.GiaoDichCT giaoDichCT1;
 		private ALLControl.HangHoa hangHoa1;
+        public ALLControl.GiaoDichCT giaoDichCT1;
+        private ALLControl.KhachHang khachHang1;
     }
 }

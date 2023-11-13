@@ -61,6 +61,7 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.grbThongTinDonHangTrongChiTiet = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.dtNgayNhap = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -89,7 +90,6 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.header.SuspendLayout();
             this.pnmoving.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbacham)).BeginInit();
@@ -107,8 +107,8 @@
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             this.grbThongTinDonHangTrongChiTiet.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2Panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ShadowForm1
@@ -568,10 +568,24 @@
             this.grbThongTinDonHangTrongChiTiet.Text = "Thông tin đơn hàng";
             this.grbThongTinDonHangTrongChiTiet.Visible = false;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(202, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 6;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // dtNgayNhap
             // 
             this.dtNgayNhap.Checked = true;
-            this.dtNgayNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
             this.dtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgayNhap.Location = new System.Drawing.Point(126, 191);
             this.dtNgayNhap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -579,7 +593,7 @@
             this.dtNgayNhap.Name = "dtNgayNhap";
             this.dtNgayNhap.Size = new System.Drawing.Size(110, 18);
             this.dtNgayNhap.TabIndex = 3;
-            this.dtNgayNhap.Value = new System.DateTime(2023, 11, 7, 0, 0, 0, 0);
+            this.dtNgayNhap.Value = new System.DateTime(2023, 11, 13, 22, 11, 10, 0);
             // 
             // btCapNhat
             // 
@@ -988,20 +1002,6 @@
             this.guna2DragControl1.TargetControl = this.lbmoving;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(202, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(38, 40);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 6;
-            this.guna2PictureBox2.TabStop = false;
-            // 
             // GiaoDich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -1035,8 +1035,8 @@
             this.guna2Panel7.ResumeLayout(false);
             this.grbThongTinDonHangTrongChiTiet.ResumeLayout(false);
             this.grbThongTinDonHangTrongChiTiet.PerformLayout();
-            this.guna2Panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2Panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

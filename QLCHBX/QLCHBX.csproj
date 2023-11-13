@@ -231,11 +231,11 @@
     <Compile Include="ALLControl\GiaoDichCT.Designer.cs">
       <DependentUpon>GiaoDichCT.cs</DependentUpon>
     </Compile>
-    <Compile Include="ALLControl\Khachhang.cs">
+    <Compile Include="ALLControl\KhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ALLControl\Khachhang.Designer.cs">
-      <DependentUpon>Khachhang.cs</DependentUpon>
+    <Compile Include="ALLControl\KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="ALLControl\Login.cs">
       <SubType>UserControl</SubType>
@@ -386,8 +386,8 @@
     <EmbeddedResource Include="ALLControl\GiaoDichCT.resx">
       <DependentUpon>GiaoDichCT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ALLControl\Khachhang.resx">
-      <DependentUpon>Khachhang.cs</DependentUpon>
+    <EmbeddedResource Include="ALLControl\KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ALLControl\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

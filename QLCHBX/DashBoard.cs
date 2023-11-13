@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCHBX.ALLControl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,13 @@ namespace QLCHBX
 {
     public partial class DashBoard : Form
     {
+     
         public DashBoard(int MaNV)
         { 
             InitializeComponent();
             lbMaNV.Text = MaNV.ToString();
             guna2ShadowForm1.SetShadowForm(this);
+            
         }
 
         private void btBaoCao_Click(object sender, EventArgs e)
@@ -60,16 +63,12 @@ namespace QLCHBX
 
         private void btKhachHang_Click(object sender, EventArgs e)
         {
+            khachHang1.BringToFront();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
             giaoDichCT1.txtMaNV.Text = lbMaNV.Text;
-        }
-
-        private void giaoDichCT1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

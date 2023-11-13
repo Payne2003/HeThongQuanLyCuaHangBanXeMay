@@ -43,7 +43,6 @@ namespace QLCHBX.Model
         {
             DataTable dt = new DataTable(); 
             string sql = "SELECT * FROM KhachHang;";
-
             dt = DocBang(sql);
             return dt;
         }
@@ -82,25 +81,21 @@ namespace QLCHBX.Model
             };
             return ExecuteNonQuery(sql, sqlParameters);
         }
-
         public DataTable TimKiemKhachHang(string key)
         {
             DataTable dataTable = new DataTable();
-            string sql = "SELECT * FROM KhachHang WHERE TenKhach LIKE @Key OR MaKhach = @Key OR DienThoai = @Key OR DiaChi LIKE @Key";
+
+            string sql = "SELECT * FROM KhachHang WHERE MaKhach = @Key OR DienThoai = @Key";
+
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
-        new SqlParameter("@Key", '%' + key + '%')
+        new SqlParameter("@Key", key)
             };
-            dataTable = DocBang(sql, sqlParameters);
 
-            if (dataTable.Rows.Count == 0)
-            {
-                MessageBox.Show("Không tìm thấy khách hàng, Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            dataTable = DocBang(sql, sqlParameters);
 
             return dataTable;
         }
-
 
     }
 }
