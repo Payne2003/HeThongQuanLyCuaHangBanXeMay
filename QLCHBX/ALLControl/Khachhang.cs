@@ -59,6 +59,11 @@ namespace QLCHBX.ALLControl
                         return;
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
 
             }

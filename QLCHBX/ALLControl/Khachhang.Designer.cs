@@ -33,7 +33,9 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtSsearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.btThemKhachHang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.grThongtinKhachHang = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -51,10 +53,9 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.viewKhachhang = new System.Windows.Forms.DataGridView();
             this.Sửa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.grThongtinKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -62,7 +63,6 @@
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewKhachhang)).BeginInit();
-            this.guna2Panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -90,6 +90,16 @@
             this.guna2Panel2.Size = new System.Drawing.Size(369, 221);
             this.guna2Panel2.TabIndex = 2;
             // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.Controls.Add(this.txtSsearch);
+            this.guna2Panel5.Controls.Add(this.btTimKiem);
+            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(369, 73);
+            this.guna2Panel5.TabIndex = 2;
+            // 
             // txtSsearch
             // 
             this.txtSsearch.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -112,6 +122,29 @@
             this.txtSsearch.Size = new System.Drawing.Size(238, 73);
             this.txtSsearch.TabIndex = 1;
             this.txtSsearch.TextChanged += new System.EventHandler(this.txtSsearch_TextChanged);
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btTimKiem.BorderThickness = 1;
+            this.btTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btTimKiem.FillColor = System.Drawing.Color.MintCream;
+            this.btTimKiem.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.btTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
+            this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btTimKiem.ImageSize = new System.Drawing.Size(40, 40);
+            this.btTimKiem.Location = new System.Drawing.Point(238, 0);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(131, 73);
+            this.btTimKiem.TabIndex = 3;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // btThemKhachHang
             // 
@@ -308,7 +341,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 221);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(824, 487);
+            this.guna2Panel3.Size = new System.Drawing.Size(824, 527);
             this.guna2Panel3.TabIndex = 0;
             // 
             // guna2GroupBox2
@@ -321,7 +354,7 @@
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox2.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(824, 487);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(824, 527);
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Danh sách khách hàng tri ân";
             // 
@@ -347,7 +380,7 @@
             this.viewKhachhang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewKhachhang.Location = new System.Drawing.Point(0, 40);
             this.viewKhachhang.Name = "viewKhachhang";
-            this.viewKhachhang.Size = new System.Drawing.Size(824, 447);
+            this.viewKhachhang.Size = new System.Drawing.Size(824, 487);
             this.viewKhachhang.TabIndex = 0;
             this.viewKhachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewKhachhang_CellClick);
             this.viewKhachhang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewKhachhang_CellDoubleClick);
@@ -361,39 +394,6 @@
             this.Sửa.ToolTipText = "Sửa";
             this.Sửa.Width = 50;
             // 
-            // guna2Panel5
-            // 
-            this.guna2Panel5.Controls.Add(this.txtSsearch);
-            this.guna2Panel5.Controls.Add(this.btTimKiem);
-            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(369, 73);
-            this.guna2Panel5.TabIndex = 2;
-            // 
-            // btTimKiem
-            // 
-            this.btTimKiem.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btTimKiem.BorderThickness = 1;
-            this.btTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btTimKiem.FillColor = System.Drawing.Color.MintCream;
-            this.btTimKiem.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.btTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
-            this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btTimKiem.ImageSize = new System.Drawing.Size(40, 40);
-            this.btTimKiem.Location = new System.Drawing.Point(238, 0);
-            this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.Size = new System.Drawing.Size(131, 73);
-            this.btTimKiem.TabIndex = 3;
-            this.btTimKiem.Text = "Tìm kiếm";
-            this.btTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
-            // 
             // Khachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -404,10 +404,11 @@
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Khachhang";
-            this.Size = new System.Drawing.Size(824, 708);
+            this.Size = new System.Drawing.Size(824, 748);
             this.Load += new System.EventHandler(this.Khachhang_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.grThongtinKhachHang.ResumeLayout(false);
             this.grThongtinKhachHang.PerformLayout();
@@ -416,13 +417,11 @@
             this.guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewKhachhang)).EndInit();
-            this.guna2Panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maKhachDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenKhachDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
@@ -449,5 +448,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
+        public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
