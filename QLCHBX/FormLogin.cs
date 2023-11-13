@@ -18,7 +18,14 @@ namespace QLCHBX
             guna2ShadowForm1.SetShadowForm(this);
         }
 
-    
+        private void ShowHelpDialog()
+        {
+            MessageBox.Show("Chào mừng bạn đến với ứng dụng FUSHION!\n\n" +
+                "1. Để đăng nhập, click vào \"Đã có tài khoản?\"\n" +
+                "2. Nếu quên mật khẩu, click vào \"Quên mật khẩu\"\n" +
+                "3. Để đăng ký tài khoản mới, click vào \"Tạo tài khoản mới\"\n" +
+                "4. Liên hệ chúng tôi nếu bạn cần trợ giúp.", "Hướng dẫn sử dụng");
+        }
 
         private void linkDangky_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -49,5 +56,44 @@ namespace QLCHBX
         {
 
         }
+
+        private void linkHELP_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ShowHelpDialog();
+        }
+        private void ChangeFontToEnglish()
+        {
+            // Thay đổi Font của các điều khiển trong form thành tiếng Anh
+            // Ví dụ: this.Font = new Font("Arial", 12);
+            // Thay đổi các chuỗi ngôn ngữ thành tiếng Anh
+            // Ví dụ: label1.Text = "Welcome to FUSHION App!";
+        }
+
+        private void ChangeFontToVietnamese()
+        {
+            // Thay đổi Font của các điều khiển trong form thành tiếng Việt
+            // Ví dụ: this.Font = new Font("Times New Roman", 14);
+            // Thay đổi các chuỗi ngôn ngữ thành tiếng Việt
+            // Ví dụ: label1.Text = "Chào mừng bạn đến với ứng dụng FUSHION!";
+        }
+
+        private void linkfontEnglish_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn đổi sang ngôn ngữ tiếng Anh không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                ChangeFontToEnglish();
+            }
+        }
+
+        private void linkfonttiengViet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn đổi sang ngôn ngữ tiếng Việt không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                ChangeFontToVietnamese();
+            }
+        }
+
     }
 }
