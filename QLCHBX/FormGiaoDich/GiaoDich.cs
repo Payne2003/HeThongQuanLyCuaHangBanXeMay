@@ -73,11 +73,11 @@ namespace QLCHBX.FormGiaoDich
 
         private void GiaoDich_Load(object sender, EventArgs e)
         {
-            LoadDataGridView();
+            
             time_1.Text = DateTime.Now.ToString("HH:mm");
             if (!KiemTraTextsRong(txtSoDDH.Text,txtMaNV.Text))
             {
-                
+                LoadDataGridView();
             }
             else
             {

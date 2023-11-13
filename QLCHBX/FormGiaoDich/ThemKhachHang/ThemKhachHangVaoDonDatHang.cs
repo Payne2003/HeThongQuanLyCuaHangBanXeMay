@@ -36,10 +36,17 @@ namespace QLCHBX.FormGiaoDich.ThemKhachHang
             {
                 donDatHang = new DonDatHangModel(int.Parse(txtSoDDH.Text));
                 khachHang = donDatHang.TimKiemKhachHang(txtSearch.Text);
-                txtMaKhach.Text = khachHang.MaKhach.ToString();
-                txtHoTen.Text = khachHang.TenKhach.ToString();
-                txtDiaChi.Text = khachHang.DiaChi.ToString();
-                txtSoDienThoai.Text = khachHang.DienThoai.ToString();
+                if (khachHang != null)
+                {
+                    txtMaKhach.Text = khachHang.MaKhach.ToString();
+                    txtHoTen.Text = khachHang.TenKhach.ToString();
+                    txtDiaChi.Text = khachHang.DiaChi.ToString();
+                    txtSoDienThoai.Text = khachHang.DienThoai.ToString();
+                }
+                else
+                {
+                    return;
+                }
             }
         }
         private void btTimKiem_Click(object sender, EventArgs e)

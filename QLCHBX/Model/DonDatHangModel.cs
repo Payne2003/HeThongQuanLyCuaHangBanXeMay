@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Windows.Forms;
 
 namespace QLCHBX.Model
 {
@@ -300,20 +301,31 @@ namespace QLCHBX.Model
             string sql = "SELECT * FROM KhachHang WHERE MaKhach = @MaKhach OR DienThoai = @DienThoai";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
-                new SqlParameter("@MaKhach", maKhachOrDienThoai),
-                new SqlParameter("@DienThoai", maKhachOrDienThoai)
+        new SqlParameter("@MaKhach", maKhachOrDienThoai),
+        new SqlParameter("@DienThoai", maKhachOrDienThoai)
             };
             DataTable dt = DocBang(sql, sqlParameters);
-            foreach (DataRow row in dt.Rows)
+
+            // Kiểm tra xem có dữ liệu được trả về không
+            if (dt.Rows.Count > 0)
             {
-                ketQua.MaKhach = Convert.ToInt32(row["MaKhach"]);
-                ketQua.TenKhach = row["TenKhach"].ToString();
-                ketQua.DiaChi = row["DiaChi"].ToString();
-                ketQua.DienThoai = row["DienThoai"].ToString();
+                foreach (DataRow row in dt.Rows)
+                {
+                    ketQua.MaKhach = Convert.ToInt32(row["MaKhach"]);
+                    ketQua.TenKhach = row["TenKhach"].ToString();
+                    ketQua.DiaChi = row["DiaChi"].ToString();
+                    ketQua.DienThoai = row["DienThoai"].ToString();
+                }
+            }
+            else
+            {
+                    ketQua = null;
+                    MessageBox.Show("Không tìm thấy thông tin khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             return ketQua;
         }
+
     }
 
 }

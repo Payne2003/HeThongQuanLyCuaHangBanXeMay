@@ -134,12 +134,13 @@ namespace QLCHBX.Model
         {
             string sql = "SELECT SUM(ThanhTien) AS TongTien FROM ChiTietDonDatHang WHERE SoDDH = @SoDDH;";
 
-            SqlParameter[] parameters = new SqlParameter[] { 
-                new SqlParameter("@SoDDH",SoDDH)
-            };
+            SqlParameter[] parameters = new SqlParameter[] {
+        new SqlParameter("@SoDDH", SoDDH)
+    };
 
             object tongTien = ExecuteScalar(sql, parameters);
-            if (tongTien!=null)
+
+            if (tongTien != null && tongTien != DBNull.Value)
             {
                 return Convert.ToDecimal(tongTien);
             }
@@ -148,6 +149,7 @@ namespace QLCHBX.Model
                 return 0;
             }
         }
-        
+
+
     }
 }
