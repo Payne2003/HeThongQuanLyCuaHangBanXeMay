@@ -45,6 +45,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             btSua.Visible = false;
             btCapNhat.Visible = false;
             grbThongTinHoaDonNhap.Visible = false;
+            btLichSu.Visible = true;
             grbThongTinDonMoi.Visible = true;
             btTaoHoaDonNhap.Visible = true;
             txtTongTien.Text = "";
@@ -59,6 +60,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             grbThongTinDonMoi.Visible = false;
             lbMaNCC_New.Visible = false;
             btTaoHoaDonNhap.Visible = false;
+            btLichSu.Visible = false;
             btSua.Visible = true;
             btCapNhat.Visible=true;
             btNhapHang.Visible= true;

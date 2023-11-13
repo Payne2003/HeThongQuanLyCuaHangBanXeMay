@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderHangHoaForm));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbmoving = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -69,6 +70,8 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -82,6 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewChiTietHoaDonNhap)).BeginInit();
             this.grbDanhSachHoaDonNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewHoaDonNhap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -99,12 +104,15 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.MintCream;
+            this.guna2PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.MintCream;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(73, 50);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
             // 
@@ -112,8 +120,9 @@
             // 
             this.lbmoving.AutoSize = false;
             this.lbmoving.BackColor = System.Drawing.Color.Transparent;
+            this.lbmoving.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmoving.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbmoving.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbmoving.Font = new System.Drawing.Font("Segoe UI Semilight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmoving.Location = new System.Drawing.Point(73, 0);
             this.lbmoving.Name = "lbmoving";
             this.lbmoving.Size = new System.Drawing.Size(888, 50);
@@ -239,6 +248,7 @@
             // 
             // grbThongTinHoaDonNhap
             // 
+            this.grbThongTinHoaDonNhap.Controls.Add(this.guna2PictureBox3);
             this.grbThongTinHoaDonNhap.Controls.Add(this.guna2HtmlLabel8);
             this.grbThongTinHoaDonNhap.Controls.Add(this.cbbMaNCC);
             this.grbThongTinHoaDonNhap.Controls.Add(this.lbMaNCC_CapNhat);
@@ -472,8 +482,10 @@
             this.btTaoHoaDonNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btTaoHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btTaoHoaDonNhap.FillColor = System.Drawing.Color.MintCream;
-            this.btTaoHoaDonNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTaoHoaDonNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F);
             this.btTaoHoaDonNhap.ForeColor = System.Drawing.Color.Black;
+            this.btTaoHoaDonNhap.Image = ((System.Drawing.Image)(resources.GetObject("btTaoHoaDonNhap.Image")));
+            this.btTaoHoaDonNhap.ImageSize = new System.Drawing.Size(60, 60);
             this.btTaoHoaDonNhap.Location = new System.Drawing.Point(0, 491);
             this.btTaoHoaDonNhap.Name = "btTaoHoaDonNhap";
             this.btTaoHoaDonNhap.Size = new System.Drawing.Size(329, 59);
@@ -493,6 +505,7 @@
             // 
             // guna2Panel6
             // 
+            this.guna2Panel6.Controls.Add(this.btLichSu);
             this.guna2Panel6.Controls.Add(this.btNhapHang);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel6.Location = new System.Drawing.Point(0, 494);
@@ -512,6 +525,8 @@
             this.btNhapHang.FillColor = System.Drawing.Color.MintCream;
             this.btNhapHang.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F);
             this.btNhapHang.ForeColor = System.Drawing.Color.Black;
+            this.btNhapHang.Image = ((System.Drawing.Image)(resources.GetObject("btNhapHang.Image")));
+            this.btNhapHang.ImageSize = new System.Drawing.Size(50, 50);
             this.btNhapHang.Location = new System.Drawing.Point(0, 0);
             this.btNhapHang.Name = "btNhapHang";
             this.btNhapHang.Size = new System.Drawing.Size(695, 56);
@@ -531,6 +546,7 @@
             // 
             // grbChiTietHoaDonNhap
             // 
+            this.grbChiTietHoaDonNhap.Controls.Add(this.guna2PictureBox2);
             this.grbChiTietHoaDonNhap.Controls.Add(this.viewChiTietHoaDonNhap);
             this.grbChiTietHoaDonNhap.CustomBorderColor = System.Drawing.Color.MintCream;
             this.grbChiTietHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -554,7 +570,6 @@
             // 
             // grbDanhSachHoaDonNhap
             // 
-            this.grbDanhSachHoaDonNhap.Controls.Add(this.btLichSu);
             this.grbDanhSachHoaDonNhap.Controls.Add(this.viewHoaDonNhap);
             this.grbDanhSachHoaDonNhap.CustomBorderColor = System.Drawing.Color.MintCream;
             this.grbDanhSachHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -568,20 +583,22 @@
             // 
             // btLichSu
             // 
-            this.btLichSu.BackColor = System.Drawing.Color.Transparent;
-            this.btLichSu.BorderRadius = 2;
-            this.btLichSu.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btLichSu.BackColor = System.Drawing.Color.MintCream;
+            this.btLichSu.BorderColor = System.Drawing.Color.Silver;
             this.btLichSu.BorderThickness = 1;
             this.btLichSu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btLichSu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btLichSu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btLichSu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btLichSu.FillColor = System.Drawing.Color.Transparent;
+            this.btLichSu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btLichSu.FillColor = System.Drawing.Color.MintCream;
             this.btLichSu.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btLichSu.ForeColor = System.Drawing.Color.Black;
-            this.btLichSu.Location = new System.Drawing.Point(597, 2);
+            this.btLichSu.Image = ((System.Drawing.Image)(resources.GetObject("btLichSu.Image")));
+            this.btLichSu.ImageSize = new System.Drawing.Size(50, 50);
+            this.btLichSu.Location = new System.Drawing.Point(0, 0);
             this.btLichSu.Name = "btLichSu";
-            this.btLichSu.Size = new System.Drawing.Size(94, 34);
+            this.btLichSu.Size = new System.Drawing.Size(695, 56);
             this.btLichSu.TabIndex = 1;
             this.btLichSu.Text = "Lịch sử";
             this.btLichSu.Click += new System.EventHandler(this.btLichSu_Click);
@@ -614,6 +631,34 @@
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(651, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 5;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(291, 0);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 6;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // OrderHangHoaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -643,6 +688,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewChiTietHoaDonNhap)).EndInit();
             this.grbDanhSachHoaDonNhap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.viewHoaDonNhap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -689,5 +736,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbMaNCC_CapNhat;
         private Guna.UI2.WinForms.Guna2Button btLichSu;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

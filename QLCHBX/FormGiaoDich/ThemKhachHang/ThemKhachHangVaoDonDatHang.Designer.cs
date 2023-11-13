@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemKhachHangVaoDonDatHang));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btAdd = new Guna.UI2.WinForms.Guna2Button();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
@@ -45,9 +46,11 @@
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaKhach = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.grThongtinKhachHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -73,6 +76,8 @@
             this.btAdd.FillColor = System.Drawing.Color.MintCream;
             this.btAdd.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.btAdd.ForeColor = System.Drawing.Color.Black;
+            this.btAdd.Image = ((System.Drawing.Image)(resources.GetObject("btAdd.Image")));
+            this.btAdd.ImageSize = new System.Drawing.Size(30, 30);
             this.btAdd.Location = new System.Drawing.Point(406, 23);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(101, 39);
@@ -91,6 +96,8 @@
             this.btTimKiem.FillColor = System.Drawing.Color.MintCream;
             this.btTimKiem.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.btTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
+            this.btTimKiem.ImageSize = new System.Drawing.Size(30, 30);
             this.btTimKiem.Location = new System.Drawing.Point(289, 23);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(101, 39);
@@ -129,7 +136,7 @@
             // 
             // grThongtinKhachHang
             // 
-            this.grThongtinKhachHang.Controls.Add(this.txtSoDDH);
+            this.grThongtinKhachHang.Controls.Add(this.guna2PictureBox2);
             this.grThongtinKhachHang.Controls.Add(this.guna2HtmlLabel4);
             this.grThongtinKhachHang.Controls.Add(this.guna2HtmlLabel3);
             this.grThongtinKhachHang.Controls.Add(this.guna2HtmlLabel2);
@@ -138,6 +145,7 @@
             this.grThongtinKhachHang.Controls.Add(this.txtDiaChi);
             this.grThongtinKhachHang.Controls.Add(this.txtHoTen);
             this.grThongtinKhachHang.Controls.Add(this.txtMaKhach);
+            this.grThongtinKhachHang.Controls.Add(this.txtSoDDH);
             this.grThongtinKhachHang.CustomBorderColor = System.Drawing.Color.MintCream;
             this.grThongtinKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grThongtinKhachHang.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,7 +167,7 @@
             this.txtSoDDH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoDDH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoDDH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoDDH.Location = new System.Drawing.Point(430, 0);
+            this.txtSoDDH.Location = new System.Drawing.Point(120, 291);
             this.txtSoDDH.Name = "txtSoDDH";
             this.txtSoDDH.PasswordChar = '\0';
             this.txtSoDDH.PlaceholderText = "";
@@ -292,6 +300,20 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(482, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 7;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // ThemKhachHangVaoDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -306,6 +328,7 @@
             this.guna2Panel2.ResumeLayout(false);
             this.grThongtinKhachHang.ResumeLayout(false);
             this.grThongtinKhachHang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,5 +351,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         public Guna.UI2.WinForms.Guna2TextBox txtSoDDH;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

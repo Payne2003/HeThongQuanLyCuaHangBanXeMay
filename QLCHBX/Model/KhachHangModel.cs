@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace QLCHBX.Model
 {
@@ -82,26 +83,24 @@ namespace QLCHBX.Model
             return ExecuteNonQuery(sql, sqlParameters);
         }
 
-        public KhachHangModel LayKhachHangTheoMaKhach(int maKhach)
+        public DataTable TimKiemKhachHang(string key)
         {
-            KhachHangModel khachHang = new KhachHangModel();
-            string sql = "SELECT * FROM KhachHang WHERE MaKhach = @MaKhach";
+            DataTable dataTable = new DataTable();
+            string sql = "SELECT * FROM KhachHang WHERE TenKhach LIKE @Key OR MaKhach = @Key OR DienThoai = @Key OR DiaChi LIKE @Key";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
-                new SqlParameter("@MaKhach", maKhach)
+        new SqlParameter("@Key", '%' + key + '%')
             };
-            DataTable dt = DocBang(sql, sqlParameters);
+            dataTable = DocBang(sql, sqlParameters);
 
-            if (dt.Rows.Count > 0)
+            if (dataTable.Rows.Count == 0)
             {
-                khachHang.MaKhach = maKhach;
-                khachHang.TenKhach = dt.Rows[0]["TenKhach"].ToString();
-                khachHang.DiaChi = dt.Rows[0]["DiaChi"].ToString();
-                khachHang.DienThoai = dt.Rows[0]["DienThoai"].ToString();
+                MessageBox.Show("Không tìm thấy khách hàng, Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return khachHang;
+            return dataTable;
         }
+
 
     }
 }

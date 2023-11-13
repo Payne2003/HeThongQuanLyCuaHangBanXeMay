@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhapHang));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.lbSoHDN = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.grbDanhSachMatHang = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -66,7 +67,6 @@
             this.phanhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.ptbThoatRa = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lbSoHDN = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btThemHangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
@@ -83,6 +83,7 @@
             this.txtSoLuongNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.grbThongTinDonHangNhap = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMaNCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
@@ -96,8 +97,10 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSoHDN = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.errThongTin = new System.Windows.Forms.ErrorProvider(this.components);
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.grbDanhSachMatHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewDmh)).BeginInit();
@@ -113,6 +116,9 @@
             this.guna2Panel4.SuspendLayout();
             this.grbThongTinDonHangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errThongTin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2DragControl1
@@ -120,6 +126,20 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.lbSoHDN;
             this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // lbSoHDN
+            // 
+            this.lbSoHDN.AutoSize = false;
+            this.lbSoHDN.BackColor = System.Drawing.Color.Transparent;
+            this.lbSoHDN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbSoHDN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbSoHDN.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoHDN.Location = new System.Drawing.Point(0, 0);
+            this.lbSoHDN.Name = "lbSoHDN";
+            this.lbSoHDN.Size = new System.Drawing.Size(862, 50);
+            this.lbSoHDN.TabIndex = 2;
+            this.lbSoHDN.Text = "?";
+            this.lbSoHDN.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel1
             // 
@@ -132,6 +152,7 @@
             // 
             // grbDanhSachMatHang
             // 
+            this.grbDanhSachMatHang.Controls.Add(this.guna2PictureBox3);
             this.grbDanhSachMatHang.Controls.Add(this.viewDmh);
             this.grbDanhSachMatHang.Controls.Add(this.menuStrip1);
             this.grbDanhSachMatHang.CustomBorderColor = System.Drawing.Color.MintCream;
@@ -187,13 +208,13 @@
             // sốToolStripMenuItem
             // 
             this.sốToolStripMenuItem.Name = "sốToolStripMenuItem";
-            this.sốToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sốToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem.Text = "Số";
             // 
             // gaToolStripMenuItem
             // 
             this.gaToolStripMenuItem.Name = "gaToolStripMenuItem";
-            this.gaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gaToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.gaToolStripMenuItem.Text = "Ga";
             // 
             // ttSYM
@@ -209,13 +230,13 @@
             // gaToolStripMenuItem1
             // 
             this.gaToolStripMenuItem1.Name = "gaToolStripMenuItem1";
-            this.gaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.gaToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
             this.gaToolStripMenuItem1.Text = "Ga";
             // 
             // sốToolStripMenuItem1
             // 
             this.sốToolStripMenuItem1.Name = "sốToolStripMenuItem1";
-            this.sốToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.sốToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem1.Text = "Số";
             // 
             // ttSuzuki
@@ -231,13 +252,13 @@
             // gaToolStripMenuItem2
             // 
             this.gaToolStripMenuItem2.Name = "gaToolStripMenuItem2";
-            this.gaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.gaToolStripMenuItem2.Size = new System.Drawing.Size(92, 22);
             this.gaToolStripMenuItem2.Text = "Ga";
             // 
             // sốToolStripMenuItem2
             // 
             this.sốToolStripMenuItem2.Name = "sốToolStripMenuItem2";
-            this.sốToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.sốToolStripMenuItem2.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem2.Text = "Số";
             // 
             // ttYamaha
@@ -253,13 +274,13 @@
             // gaToolStripMenuItem3
             // 
             this.gaToolStripMenuItem3.Name = "gaToolStripMenuItem3";
-            this.gaToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.gaToolStripMenuItem3.Size = new System.Drawing.Size(92, 22);
             this.gaToolStripMenuItem3.Text = "Ga";
             // 
             // sốToolStripMenuItem3
             // 
             this.sốToolStripMenuItem3.Name = "sốToolStripMenuItem3";
-            this.sốToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.sốToolStripMenuItem3.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem3.Text = "Số";
             // 
             // ttPiaggio
@@ -275,13 +296,13 @@
             // gaToolStripMenuItem4
             // 
             this.gaToolStripMenuItem4.Name = "gaToolStripMenuItem4";
-            this.gaToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.gaToolStripMenuItem4.Size = new System.Drawing.Size(92, 22);
             this.gaToolStripMenuItem4.Text = "Ga";
             // 
             // sốToolStripMenuItem4
             // 
             this.sốToolStripMenuItem4.Name = "sốToolStripMenuItem4";
-            this.sốToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.sốToolStripMenuItem4.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem4.Text = "Số";
             // 
             // ttDucati
@@ -297,13 +318,13 @@
             // gaToolStripMenuItem5
             // 
             this.gaToolStripMenuItem5.Name = "gaToolStripMenuItem5";
-            this.gaToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.gaToolStripMenuItem5.Size = new System.Drawing.Size(92, 22);
             this.gaToolStripMenuItem5.Text = "Ga";
             // 
             // sốToolStripMenuItem5
             // 
             this.sốToolStripMenuItem5.Name = "sốToolStripMenuItem5";
-            this.sốToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.sốToolStripMenuItem5.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem5.Text = "Số";
             // 
             // ttKTM
@@ -319,13 +340,13 @@
             // gaToolStripMenuItem6
             // 
             this.gaToolStripMenuItem6.Name = "gaToolStripMenuItem6";
-            this.gaToolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
+            this.gaToolStripMenuItem6.Size = new System.Drawing.Size(92, 22);
             this.gaToolStripMenuItem6.Text = "Ga";
             // 
             // sốToolStripMenuItem6
             // 
             this.sốToolStripMenuItem6.Name = "sốToolStripMenuItem6";
-            this.sốToolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
+            this.sốToolStripMenuItem6.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem6.Text = "Số";
             // 
             // ttKawasaki
@@ -341,13 +362,13 @@
             // gaToolStripMenuItem7
             // 
             this.gaToolStripMenuItem7.Name = "gaToolStripMenuItem7";
-            this.gaToolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
+            this.gaToolStripMenuItem7.Size = new System.Drawing.Size(92, 22);
             this.gaToolStripMenuItem7.Text = "Ga";
             // 
             // sốToolStripMenuItem7
             // 
             this.sốToolStripMenuItem7.Name = "sốToolStripMenuItem7";
-            this.sốToolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
+            this.sốToolStripMenuItem7.Size = new System.Drawing.Size(92, 22);
             this.sốToolStripMenuItem7.Text = "Số";
             // 
             // khácToolStripMenuItem
@@ -362,13 +383,13 @@
             // độngCơToolStripMenuItem
             // 
             this.độngCơToolStripMenuItem.Name = "độngCơToolStripMenuItem";
-            this.độngCơToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.độngCơToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.độngCơToolStripMenuItem.Text = "Động cơ";
             // 
             // phanhToolStripMenuItem
             // 
             this.phanhToolStripMenuItem.Name = "phanhToolStripMenuItem";
-            this.phanhToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.phanhToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.phanhToolStripMenuItem.Text = "Phanh";
             // 
             // guna2Panel2
@@ -398,20 +419,6 @@
             this.ptbThoatRa.TabStop = false;
             this.ptbThoatRa.Click += new System.EventHandler(this.ptbThoatRa_Click);
             // 
-            // lbSoHDN
-            // 
-            this.lbSoHDN.AutoSize = false;
-            this.lbSoHDN.BackColor = System.Drawing.Color.Transparent;
-            this.lbSoHDN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbSoHDN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbSoHDN.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoHDN.Location = new System.Drawing.Point(0, 0);
-            this.lbSoHDN.Name = "lbSoHDN";
-            this.lbSoHDN.Size = new System.Drawing.Size(862, 50);
-            this.lbSoHDN.TabIndex = 2;
-            this.lbSoHDN.Text = "?";
-            this.lbSoHDN.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btThemHangNhap
             // 
             this.btThemHangNhap.BorderColor = System.Drawing.Color.Silver;
@@ -424,6 +431,8 @@
             this.btThemHangNhap.FillColor = System.Drawing.Color.Transparent;
             this.btThemHangNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemHangNhap.ForeColor = System.Drawing.Color.Black;
+            this.btThemHangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btThemHangNhap.Image")));
+            this.btThemHangNhap.ImageSize = new System.Drawing.Size(40, 40);
             this.btThemHangNhap.Location = new System.Drawing.Point(862, 0);
             this.btThemHangNhap.Name = "btThemHangNhap";
             this.btThemHangNhap.Size = new System.Drawing.Size(162, 50);
@@ -519,6 +528,7 @@
             // 
             // grChiTietHoaDonNhap
             // 
+            this.grChiTietHoaDonNhap.Controls.Add(this.guna2PictureBox2);
             this.grChiTietHoaDonNhap.Controls.Add(this.viewChiTietHoaDonNhap);
             this.grChiTietHoaDonNhap.CustomBorderColor = System.Drawing.Color.MintCream;
             this.grChiTietHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Top;
@@ -625,6 +635,7 @@
             // 
             // grbThongTinDonHangNhap
             // 
+            this.grbThongTinDonHangNhap.Controls.Add(this.guna2PictureBox1);
             this.grbThongTinDonHangNhap.Controls.Add(this.txtThanhTien);
             this.grbThongTinDonHangNhap.Controls.Add(this.guna2HtmlLabel8);
             this.grbThongTinDonHangNhap.Controls.Add(this.txtMaNCC);
@@ -648,6 +659,27 @@
             this.grbThongTinDonHangNhap.Size = new System.Drawing.Size(678, 188);
             this.grbThongTinDonHangNhap.TabIndex = 0;
             this.grbThongTinDonHangNhap.Text = "Thông tin đơn hàng nhập";
+            // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThanhTien.DefaultText = "";
+            this.txtThanhTien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtThanhTien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtThanhTien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThanhTien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThanhTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThanhTien.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
+            this.txtThanhTien.ForeColor = System.Drawing.Color.Black;
+            this.txtThanhTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThanhTien.Location = new System.Drawing.Point(304, 75);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.PasswordChar = '\0';
+            this.txtThanhTien.PlaceholderText = "";
+            this.txtThanhTien.ReadOnly = true;
+            this.txtThanhTien.SelectedText = "";
+            this.txtThanhTien.Size = new System.Drawing.Size(181, 21);
+            this.txtThanhTien.TabIndex = 1;
             // 
             // guna2HtmlLabel8
             // 
@@ -849,30 +881,51 @@
             this.guna2HtmlLabel4.TabIndex = 0;
             this.guna2HtmlLabel4.Text = "Số HDN";
             // 
-            // txtThanhTien
-            // 
-            this.txtThanhTien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThanhTien.DefaultText = "";
-            this.txtThanhTien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtThanhTien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtThanhTien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThanhTien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThanhTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThanhTien.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
-            this.txtThanhTien.ForeColor = System.Drawing.Color.Black;
-            this.txtThanhTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThanhTien.Location = new System.Drawing.Point(304, 75);
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.PasswordChar = '\0';
-            this.txtThanhTien.PlaceholderText = "";
-            this.txtThanhTien.ReadOnly = true;
-            this.txtThanhTien.SelectedText = "";
-            this.txtThanhTien.Size = new System.Drawing.Size(181, 21);
-            this.txtThanhTien.TabIndex = 1;
-            // 
             // errThongTin
             // 
             this.errThongTin.ContainerControl = this;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(308, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 2;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(637, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(637, 0);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 3;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // FormNhapHang
             // 
@@ -909,6 +962,9 @@
             this.grbThongTinDonHangNhap.ResumeLayout(false);
             this.grbThongTinDonHangNhap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errThongTin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -983,5 +1039,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbMaNCC;
         private Guna.UI2.WinForms.Guna2TextBox txtThanhTien;
         private System.Windows.Forms.ErrorProvider errThongTin;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

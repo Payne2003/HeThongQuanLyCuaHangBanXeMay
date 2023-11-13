@@ -83,6 +83,7 @@
             // 
             this.lbmoving.AutoSize = false;
             this.lbmoving.BackColor = System.Drawing.Color.Transparent;
+            this.lbmoving.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmoving.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbmoving.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbmoving.Location = new System.Drawing.Point(0, 0);
@@ -96,6 +97,7 @@
             // ptmenu
             // 
             this.ptmenu.BackColor = System.Drawing.Color.MintCream;
+            this.ptmenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ptmenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.ptmenu.Image = ((System.Drawing.Image)(resources.GetObject("ptmenu.Image")));
             this.ptmenu.ImageRotate = 0F;
@@ -116,10 +118,10 @@
             this.btHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btHuy.FillColor = System.Drawing.Color.Red;
-            this.btHuy.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHuy.Font = new System.Drawing.Font("Segoe UI Semilight", 9F);
             this.btHuy.ForeColor = System.Drawing.Color.White;
             this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
-            this.btHuy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btHuy.ImageSize = new System.Drawing.Size(40, 40);
             this.btHuy.Location = new System.Drawing.Point(246, 277);
             this.btHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btHuy.Name = "btHuy";
@@ -139,6 +141,7 @@
             this.btSua.Font = new System.Drawing.Font("Segoe UI Semilight", 9F);
             this.btSua.ForeColor = System.Drawing.Color.Black;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
+            this.btSua.ImageSize = new System.Drawing.Size(40, 40);
             this.btSua.Location = new System.Drawing.Point(343, 277);
             this.btSua.Margin = new System.Windows.Forms.Padding(4);
             this.btSua.Name = "btSua";

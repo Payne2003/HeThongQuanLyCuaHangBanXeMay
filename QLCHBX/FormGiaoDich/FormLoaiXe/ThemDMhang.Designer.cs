@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemDMhang));
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btThemHangMua = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -82,12 +83,14 @@
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewDmh)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.grthongtindonhangmua.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ControlBox1
@@ -116,6 +119,8 @@
             this.btThemHangMua.FillColor = System.Drawing.Color.MintCream;
             this.btThemHangMua.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F);
             this.btThemHangMua.ForeColor = System.Drawing.Color.Black;
+            this.btThemHangMua.Image = ((System.Drawing.Image)(resources.GetObject("btThemHangMua.Image")));
+            this.btThemHangMua.ImageSize = new System.Drawing.Size(40, 40);
             this.btThemHangMua.Location = new System.Drawing.Point(632, 0);
             this.btThemHangMua.Name = "btThemHangMua";
             this.btThemHangMua.Size = new System.Drawing.Size(168, 50);
@@ -143,7 +148,7 @@
             this.lbTenHangSX.BackColor = System.Drawing.Color.MintCream;
             this.lbTenHangSX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbTenHangSX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbTenHangSX.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenHangSX.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenHangSX.Location = new System.Drawing.Point(76, 0);
             this.lbTenHangSX.Name = "lbTenHangSX";
             this.lbTenHangSX.Size = new System.Drawing.Size(556, 50);
@@ -413,6 +418,7 @@
             // grthongtindonhangmua
             // 
             this.grthongtindonhangmua.BorderColor = System.Drawing.Color.Gray;
+            this.grthongtindonhangmua.Controls.Add(this.guna2PictureBox2);
             this.grthongtindonhangmua.Controls.Add(this.bttru);
             this.grthongtindonhangmua.Controls.Add(this.btcong);
             this.grthongtindonhangmua.Controls.Add(this.guna2HtmlLabel6);
@@ -649,6 +655,7 @@
             // 
             // guna2ShadowForm1
             // 
+            this.guna2ShadowForm1.BorderRadius = 5;
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
             // 
@@ -662,6 +669,20 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.lbTenHangSX;
             this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(759, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 3;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // ThemDMhang
             // 
@@ -687,6 +708,7 @@
             this.guna2Panel3.ResumeLayout(false);
             this.grthongtindonhangmua.ResumeLayout(false);
             this.grthongtindonhangmua.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -746,5 +768,6 @@
         public Guna.UI2.WinForms.Guna2HtmlLabel lbTenHangSX;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

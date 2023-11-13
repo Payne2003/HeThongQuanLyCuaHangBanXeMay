@@ -23,6 +23,7 @@ namespace QLCHBX.ALLControl
         public void LoadDataGridView()
         {
             KhachHangModel khachhangLoad = new KhachHangModel();
+            btThemKhachHang.Visible = true;
             khachhangLoad.LayDuLieuKhachHang();
         }
  
@@ -32,7 +33,7 @@ namespace QLCHBX.ALLControl
         }
         private void viewKhachhang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == 4)
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = viewKhachhang.Rows[e.RowIndex]; // Thay thế dataGridView1 bằng tên của DataGridView thực tế của bạn
                 if (row.Cells[1].Value != null || row.Cells[1].Value.ToString() != "")
@@ -71,12 +72,15 @@ namespace QLCHBX.ALLControl
                 if (row.Cells[1].Value != null && row.Cells[1].Value.ToString() != "")
                 {
                     grThongtinKhachHang.Visible = true;
-                   
+                    txtMaKhach.Text = row.Cells[1].Value.ToString();
+                    txtTenKhach.Text = row.Cells[2].Value.ToString();
+                    txtDiaChi.Text = row.Cells[3].Value.ToString();
+                    txtDienThoai.Text = row.Cells[4].Value.ToString();
+                    btThemKhachHang.Visible = false;
                 }
                 else
                 {
                     MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     return;
 
                 }
@@ -99,9 +103,42 @@ namespace QLCHBX.ALLControl
                 }
                 else
                 {
+                    MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
 
                 }
+            }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string key = txtSsearch.Text;
+
+            KhachHangModel khachHang = new KhachHangModel();
+
+            if (string.IsNullOrEmpty(key))
+            {
+                MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm.");
+                return;
+            }
+
+            DataTable result = khachHang.TimKiemKhachHang(key);
+
+            if (result.Rows.Count > 0)
+            {
+                viewKhachhang.DataSource = result;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy khách hàng nào.");
+            }
+        }
+
+        private void txtSsearch_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSsearch.Text))
+            {
+                LoadDataGridView();
             }
         }
     }

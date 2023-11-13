@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GiaoDichCT));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btOderHangHoa = new Guna.UI2.WinForms.Guna2Button();
@@ -64,6 +65,8 @@
             this.lbmanv = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSoDDH = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbsddh = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
@@ -73,6 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewDonDatHang)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.grthongtindonhang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -101,8 +106,10 @@
             this.btOderHangHoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btOderHangHoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btOderHangHoa.FillColor = System.Drawing.Color.Transparent;
-            this.btOderHangHoa.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btOderHangHoa.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btOderHangHoa.ForeColor = System.Drawing.Color.Black;
+            this.btOderHangHoa.Image = ((System.Drawing.Image)(resources.GetObject("btOderHangHoa.Image")));
+            this.btOderHangHoa.ImageSize = new System.Drawing.Size(70, 70);
             this.btOderHangHoa.Location = new System.Drawing.Point(0, 0);
             this.btOderHangHoa.Name = "btOderHangHoa";
             this.btOderHangHoa.Size = new System.Drawing.Size(824, 88);
@@ -233,6 +240,7 @@
             // 
             // guna2GroupBox4
             // 
+            this.guna2GroupBox4.Controls.Add(this.guna2PictureBox1);
             this.guna2GroupBox4.Controls.Add(this.viewDonDatHang);
             this.guna2GroupBox4.CustomBorderColor = System.Drawing.Color.MintCream;
             this.guna2GroupBox4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -267,6 +275,7 @@
             // 
             // grthongtindonhang
             // 
+            this.grthongtindonhang.Controls.Add(this.guna2PictureBox2);
             this.grthongtindonhang.Controls.Add(this.btCapNhat);
             this.grthongtindonhang.Controls.Add(this.btTaoHoaDon);
             this.grthongtindonhang.Controls.Add(this.btThanhToan);
@@ -608,6 +617,34 @@
             this.lbsddh.TabIndex = 0;
             this.lbsddh.Text = "Số DDH";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(502, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(238, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(38, 40);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 1;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // GiaoDichCT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -631,6 +668,8 @@
             this.guna2Panel4.ResumeLayout(false);
             this.grthongtindonhang.ResumeLayout(false);
             this.grthongtindonhang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -671,5 +710,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbsddh;
         public Guna.UI2.WinForms.Guna2TextBox txtDatCoc;
         public Guna.UI2.WinForms.Guna2TextBox txtThue;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

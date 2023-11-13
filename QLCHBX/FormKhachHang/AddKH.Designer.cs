@@ -81,6 +81,7 @@
             // 
             this.lbmoving.AutoSize = false;
             this.lbmoving.BackColor = System.Drawing.Color.Transparent;
+            this.lbmoving.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmoving.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbmoving.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbmoving.Location = new System.Drawing.Point(0, 0);
@@ -94,6 +95,7 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.MintCream;
+            this.guna2PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
@@ -230,6 +232,7 @@
             this.btThem.Font = new System.Drawing.Font("Segoe UI Semilight", 9F);
             this.btThem.ForeColor = System.Drawing.Color.Black;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
+            this.btThem.ImageSize = new System.Drawing.Size(40, 40);
             this.btThem.Location = new System.Drawing.Point(343, 213);
             this.btThem.Margin = new System.Windows.Forms.Padding(4);
             this.btThem.Name = "btThem";
@@ -249,7 +252,7 @@
             this.btHuys.Font = new System.Drawing.Font("Segoe UI Semilight", 9F);
             this.btHuys.ForeColor = System.Drawing.Color.White;
             this.btHuys.Image = ((System.Drawing.Image)(resources.GetObject("btHuys.Image")));
-            this.btHuys.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btHuys.ImageSize = new System.Drawing.Size(40, 40);
             this.btHuys.Location = new System.Drawing.Point(222, 213);
             this.btHuys.Margin = new System.Windows.Forms.Padding(4);
             this.btHuys.Name = "btHuys";

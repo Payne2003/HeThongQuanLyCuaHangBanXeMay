@@ -48,9 +48,9 @@
             this.ctThoat = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnControl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.giaoDichCT1 = new QLCHBX.ALLControl.GiaoDichCT();
             this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -406,6 +406,12 @@
             this.pnControl.Size = new System.Drawing.Size(824, 748);
             this.pnControl.TabIndex = 2;
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.header;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // giaoDichCT1
             // 
             this.giaoDichCT1.BackColor = System.Drawing.Color.White;
@@ -426,12 +432,6 @@
             this.hangHoa1.Name = "hangHoa1";
             this.hangHoa1.Size = new System.Drawing.Size(824, 748);
             this.hangHoa1.TabIndex = 1;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.header;
-            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // DashBoard
             // 
@@ -483,5 +483,5 @@
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         public ALLControl.GiaoDichCT giaoDichCT1;
 		private ALLControl.HangHoa hangHoa1;
-	}
+    }
 }

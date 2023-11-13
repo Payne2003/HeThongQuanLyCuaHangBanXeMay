@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XacNhanThanhToan));
             this.pnmoving = new Guna.UI2.WinForms.Guna2Panel();
             this.lbSoDDH = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btXacNhanThanhToan = new Guna.UI2.WinForms.Guna2Button();
@@ -91,6 +92,8 @@
             this.btXacNhanThanhToan.FillColor = System.Drawing.Color.MintCream;
             this.btXacNhanThanhToan.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXacNhanThanhToan.ForeColor = System.Drawing.Color.Black;
+            this.btXacNhanThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btXacNhanThanhToan.Image")));
+            this.btXacNhanThanhToan.ImageSize = new System.Drawing.Size(30, 30);
             this.btXacNhanThanhToan.Location = new System.Drawing.Point(500, 0);
             this.btXacNhanThanhToan.Name = "btXacNhanThanhToan";
             this.btXacNhanThanhToan.Size = new System.Drawing.Size(250, 50);
@@ -103,6 +106,8 @@
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
+            this.guna2ControlBox1.HoverState.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
             this.guna2ControlBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
@@ -214,7 +219,7 @@
             this.btBank.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btBank.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btBank.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
-            this.btBank.ForeColor = System.Drawing.Color.White;
+            this.btBank.ForeColor = System.Drawing.Color.Black;
             this.btBank.Location = new System.Drawing.Point(12, 185);
             this.btBank.Name = "btBank";
             this.btBank.Size = new System.Drawing.Size(262, 47);
@@ -232,7 +237,7 @@
             this.btVNPay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btVNPay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btVNPay.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
-            this.btVNPay.ForeColor = System.Drawing.Color.White;
+            this.btVNPay.ForeColor = System.Drawing.Color.Black;
             this.btVNPay.Location = new System.Drawing.Point(12, 119);
             this.btVNPay.Name = "btVNPay";
             this.btVNPay.Size = new System.Drawing.Size(262, 47);
