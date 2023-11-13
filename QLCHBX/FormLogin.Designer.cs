@@ -51,10 +51,10 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.login1 = new QLCHBX.ALLControl.Login();
-            this.forgotPassword1 = new QLCHBX.ALLControl.ForgotPassword();
             this.signup1 = new QLCHBX.ALLControl.Signup();
+            this.forgotPassword1 = new QLCHBX.ALLControl.ForgotPassword();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnmoving.SuspendLayout();
@@ -279,12 +279,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(400, 281);
             this.guna2Panel1.TabIndex = 3;
             // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.pnmoving;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
             // login1
             // 
             this.login1.BackColor = System.Drawing.Color.White;
@@ -297,17 +291,6 @@
             this.login1.Size = new System.Drawing.Size(400, 281);
             this.login1.TabIndex = 0;
             // 
-            // forgotPassword1
-            // 
-            this.forgotPassword1.BackColor = System.Drawing.Color.White;
-            this.forgotPassword1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.forgotPassword1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotPassword1.Location = new System.Drawing.Point(0, 0);
-            this.forgotPassword1.Margin = new System.Windows.Forms.Padding(4);
-            this.forgotPassword1.Name = "forgotPassword1";
-            this.forgotPassword1.Size = new System.Drawing.Size(400, 281);
-            this.forgotPassword1.TabIndex = 1;
-            // 
             // signup1
             // 
             this.signup1.BackColor = System.Drawing.Color.White;
@@ -319,6 +302,23 @@
             this.signup1.Name = "signup1";
             this.signup1.Size = new System.Drawing.Size(400, 281);
             this.signup1.TabIndex = 2;
+            // 
+            // forgotPassword1
+            // 
+            this.forgotPassword1.BackColor = System.Drawing.Color.White;
+            this.forgotPassword1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.forgotPassword1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotPassword1.Location = new System.Drawing.Point(0, 0);
+            this.forgotPassword1.Margin = new System.Windows.Forms.Padding(4);
+            this.forgotPassword1.Name = "forgotPassword1";
+            this.forgotPassword1.Size = new System.Drawing.Size(400, 281);
+            this.forgotPassword1.TabIndex = 1;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.pnmoving;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // FormLogin
             // 

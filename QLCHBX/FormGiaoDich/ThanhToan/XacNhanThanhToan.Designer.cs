@@ -195,15 +195,16 @@
             this.grPhuongThucThanhToan.Name = "grPhuongThucThanhToan";
             this.grPhuongThucThanhToan.Size = new System.Drawing.Size(290, 400);
             this.grPhuongThucThanhToan.TabIndex = 0;
-            this.grPhuongThucThanhToan.Text = "Phương thức thanh toán";
+            this.grPhuongThucThanhToan.Text = "s";
             // 
             // lbTongTien
             // 
+            this.lbTongTien.AutoSize = false;
             this.lbTongTien.BackColor = System.Drawing.Color.Transparent;
             this.lbTongTien.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTongTien.Location = new System.Drawing.Point(142, 301);
+            this.lbTongTien.Location = new System.Drawing.Point(12, 297);
             this.lbTongTien.Name = "lbTongTien";
-            this.lbTongTien.Size = new System.Drawing.Size(14, 34);
+            this.lbTongTien.Size = new System.Drawing.Size(262, 47);
             this.lbTongTien.TabIndex = 1;
             this.lbTongTien.Text = "?";
             this.lbTongTien.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -285,7 +286,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewChitietDonDatHang)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.grPhuongThucThanhToan.ResumeLayout(false);
-            this.grPhuongThucThanhToan.PerformLayout();
             this.ResumeLayout(false);
 
         }
