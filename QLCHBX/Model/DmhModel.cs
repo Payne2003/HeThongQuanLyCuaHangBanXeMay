@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.X509.Qualified;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -94,7 +95,20 @@ namespace QLCHBX.Model
                 return -1;
             }
         }
+        public void CapNhatSoLuong(int SoLuongCapNhat)
+        {
+           
+            string sql = @"UPDATE Dmh
+                  SET SoLuong = @SoLuongCapNhat
+                  WHERE MaHang = @MaHang";
 
+            SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter("@MaHang", MaHang),
+                new SqlParameter("@SoLuong", SoLuongCapNhat)
+            };
+
+            ExecuteNonQuery(sql, parameters);
+        }
 
     }
 }

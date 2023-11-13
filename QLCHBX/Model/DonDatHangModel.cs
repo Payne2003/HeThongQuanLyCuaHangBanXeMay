@@ -56,7 +56,77 @@ namespace QLCHBX.Model
             // Kiểm tra nếu result không phải là null và MaKhach không phải là null
             return result != null && result != DBNull.Value;
         }
+        public KhachHangModel LayThongtinKhach()
+        {
+            KhachHangModel khachHang = new KhachHangModel();
 
+            string sql = @"
+        SELECT ISNULL(kh.MaKhach, -1) AS MaKhach, ISNULL(kh.TenKhach, 'Không rõ') AS TenKhach, 
+               ISNULL(kh.DiaChi, 'Không rõ') AS DiaChi, ISNULL(kh.DienThoai, 'Không rõ') AS DienThoai
+        FROM KhachHang kh
+        LEFT JOIN DonDatHang ddh ON kh.MaKhach = ddh.MaKhach
+        WHERE ddh.SoDDH = @SoDDH";
+
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+        new SqlParameter("@SoDDH", SoDDH)
+            };
+
+            DataTable dt = DocBang(sql, sqlParameters);
+
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                khachHang.MaKhach = Convert.ToInt32(row["MaKhach"]);
+                khachHang.TenKhach = row["TenKhach"].ToString();
+                khachHang.DiaChi = row["DiaChi"].ToString();
+                khachHang.DienThoai = row["DienThoai"].ToString();
+            }
+
+            return khachHang;
+        }
+
+        public int LayDatCoc()
+        {
+            int datCoc = 0;
+            string sql = "SELECT DatCoc FROM DonDatHang WHERE SoDDH = @SoDDH";  // Thay đổi 'TenBang' thành tên bảng thực tế của bạn
+
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+        new SqlParameter("@SoDDH", SoDDH)
+            };
+
+            object result = ExecuteScalar(sql, sqlParameters);
+
+            // Kiểm tra xem kết quả có hợp lệ không trước khi thực hiện chuyển đổi
+            if (result != null && result != DBNull.Value)
+            {
+                datCoc = Convert.ToInt32(result);
+            }
+
+            return datCoc;
+        }
+
+        public int LayThue()
+        {
+            int thue = 0;
+            string sql = "SELECT Thue FROM DonDatHang WHERE SoDDH = @SoDDH";  // Thay đổi 'TenBang' thành tên bảng thực tế của bạn
+
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+        new SqlParameter("@SoDDH", SoDDH)
+            };
+
+            object result = ExecuteScalar(sql, sqlParameters);
+
+            // Kiểm tra xem kết quả có hợp lệ không trước khi thực hiện chuyển đổi
+            if (result != null && result != DBNull.Value)
+            {
+                thue = Convert.ToInt32(result);
+            }
+
+            return thue;
+        }
 
 
         public DataTable LayDonDatHangChuaThanhToan()

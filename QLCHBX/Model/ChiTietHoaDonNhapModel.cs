@@ -60,7 +60,7 @@ namespace QLCHBX.Model
                 SELECT CT.MaHang, DMH.TenHang, CT.SoLuong, CT.GiamGia, CT.DonGia, CT.ThanhTien
                 FROM ChiTietHoaDonNhap CT
                 INNER JOIN Dmh ON CT.MaHang = DMH.MaHang
-                WHERE CT.SoHDN = @SoHDN AND ;
+                WHERE CT.SoHDN = @SoHDN;
                 ";
 
 

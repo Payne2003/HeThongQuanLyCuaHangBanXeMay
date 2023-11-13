@@ -49,6 +49,34 @@ namespace QLCHBX.Model
             TongTien = tongTien;
         }
 
+        public NhaCungCapModel LayThongTinNhaCungCap()
+        {
+            NhaCungCapModel nhaCungCap = new NhaCungCapModel();
+
+            string sql = @"
+        SELECT NCC.MaNCC,NCC.TenNCC,NCC.DiaChi, NCC.DienThoai
+        FROM NhaCungCap NCC
+        LEFT JOIN HoaDonNhap hdn ON NCC.MaNCC = hdn.MaNCC
+        WHERE hdn.SoHDN = @SoHDN";
+
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+        new SqlParameter("@SoHDN", SoHDN)
+            };
+
+            DataTable dt = DocBang(sql, sqlParameters);
+
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                nhaCungCap.MaNCC = Convert.ToInt32(row["MaNCC"]);
+                nhaCungCap.TenNCC = row["TenNCC"].ToString();
+                nhaCungCap.DiaChi = row["DiaChi"].ToString();
+                nhaCungCap.DienThoai = row["DienThoai"].ToString();
+            }
+
+            return nhaCungCap;
+        }
         public int ThemHoaDonNhap()
         {
             string sql = @"
