@@ -20,8 +20,8 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
         }
         public void LoadDataGirdView()
         {
-            HoaDonNhapModel hoaDonNhapModel_Load= new HoaDonNhapModel(int.Parse(txtSoHDN.Text));
-            viewChiTietHoaDonNhap.DataSource = hoaDonNhapModel_Load.LayDuLieuHoaDonNhapDaNhap();
+            HoaDonNhapModel hoaDonNhapModel_Load= new HoaDonNhapModel();
+            viewHoaDonNhap.DataSource = hoaDonNhapModel_Load.LayDuLieuHoaDonNhapDaNhap();
             btHuyNhapHang.Visible = false;
             grThongtin.Visible = false;
             LoadText();
@@ -71,7 +71,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                     string SoHDN = row.Cells[0].Value.ToString();
                     if (!string.IsNullOrEmpty(SoHDN))
                     {
-                        DialogResult result = MessageBox.Show("Xóa Khách hàng có mã: " + SoHDN + " ?", "Yêu cầu xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult result = MessageBox.Show("Xóa mã nhập hàng: " + SoHDN + " ?", "Yêu cầu xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (result == DialogResult.Yes)
                         {
@@ -100,7 +100,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
         }
         public void HuyNhapHang()
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn hủy nhập hàng " + txtSoHDN + " không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Bạn có muốn hủy nhập hàng " + txtSoHDN.Text + " không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 HoaDonNhapModel hoaDonNhapModel = new HoaDonNhapModel(int.Parse(txtSoHDN.Text));
@@ -111,6 +111,21 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
         private void btHuyNhapHang_Click(object sender, EventArgs e)
         {
             HuyNhapHang();
+            
+        }
+
+        private void LichSuNhapHangForm_Load(object sender, EventArgs e)
+        {
+            LoadDataGirdView();
+        }
+
+        private void ctHuy_Click(object sender, EventArgs e)
+        {
+            OrderHangHoaForm orderHangHoa = Application.OpenForms["OrderHangHoaForm"] as OrderHangHoaForm;
+            if (orderHangHoa != null)
+            {
+                orderHangHoa.LoadDataGridView();
+            }
         }
     }
 }

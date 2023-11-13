@@ -43,7 +43,9 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.grThongtin = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dtNgayNhap = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtNhaCungCap = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTongTien = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,8 +59,6 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtNhaCungCap = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -118,6 +118,7 @@
             this.ctHuy.Name = "ctHuy";
             this.ctHuy.Size = new System.Drawing.Size(71, 50);
             this.ctHuy.TabIndex = 0;
+            this.ctHuy.Click += new System.EventHandler(this.ctHuy_Click);
             // 
             // guna2Panel2
             // 
@@ -157,6 +158,7 @@
             this.viewChiTietHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewChiTietHoaDonNhap.Location = new System.Drawing.Point(0, 40);
             this.viewChiTietHoaDonNhap.Name = "viewChiTietHoaDonNhap";
+            this.viewChiTietHoaDonNhap.ReadOnly = true;
             this.viewChiTietHoaDonNhap.Size = new System.Drawing.Size(672, 234);
             this.viewChiTietHoaDonNhap.TabIndex = 0;
             // 
@@ -188,6 +190,7 @@
             this.viewHoaDonNhap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewHoaDonNhap.Location = new System.Drawing.Point(0, 40);
             this.viewHoaDonNhap.Name = "viewHoaDonNhap";
+            this.viewHoaDonNhap.ReadOnly = true;
             this.viewHoaDonNhap.Size = new System.Drawing.Size(672, 236);
             this.viewHoaDonNhap.TabIndex = 0;
             this.viewHoaDonNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewHoaDonNhap_CellClick);
@@ -239,6 +242,26 @@
             this.dtNgayNhap.TabIndex = 2;
             this.dtNgayNhap.Value = new System.DateTime(2023, 11, 5, 14, 58, 24, 353);
             // 
+            // txtNhaCungCap
+            // 
+            this.txtNhaCungCap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNhaCungCap.DefaultText = "";
+            this.txtNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNhaCungCap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNhaCungCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCungCap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCungCap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCungCap.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhaCungCap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCungCap.Location = new System.Drawing.Point(165, 137);
+            this.txtNhaCungCap.Name = "txtNhaCungCap";
+            this.txtNhaCungCap.PasswordChar = '\0';
+            this.txtNhaCungCap.PlaceholderText = "";
+            this.txtNhaCungCap.ReadOnly = true;
+            this.txtNhaCungCap.SelectedText = "";
+            this.txtNhaCungCap.Size = new System.Drawing.Size(119, 28);
+            this.txtNhaCungCap.TabIndex = 1;
+            // 
             // txtTenNV
             // 
             this.txtTenNV.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -258,6 +281,16 @@
             this.txtTenNV.SelectedText = "";
             this.txtTenNV.Size = new System.Drawing.Size(119, 28);
             this.txtTenNV.TabIndex = 1;
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(165, 113);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(69, 15);
+            this.guna2HtmlLabel6.TabIndex = 0;
+            this.guna2HtmlLabel6.Text = "Nhà cung cấp";
             // 
             // guna2HtmlLabel5
             // 
@@ -413,36 +446,6 @@
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
             // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(165, 113);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(69, 15);
-            this.guna2HtmlLabel6.TabIndex = 0;
-            this.guna2HtmlLabel6.Text = "Nhà cung cấp";
-            // 
-            // txtNhaCungCap
-            // 
-            this.txtNhaCungCap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNhaCungCap.DefaultText = "";
-            this.txtNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNhaCungCap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNhaCungCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCungCap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCungCap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCungCap.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhaCungCap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCungCap.Location = new System.Drawing.Point(165, 137);
-            this.txtNhaCungCap.Name = "txtNhaCungCap";
-            this.txtNhaCungCap.PasswordChar = '\0';
-            this.txtNhaCungCap.PlaceholderText = "";
-            this.txtNhaCungCap.ReadOnly = true;
-            this.txtNhaCungCap.SelectedText = "";
-            this.txtNhaCungCap.Size = new System.Drawing.Size(119, 28);
-            this.txtNhaCungCap.TabIndex = 1;
-            // 
             // LichSuNhapHangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -459,6 +462,7 @@
             this.Name = "LichSuNhapHangForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LichSuNhapHangForm";
+            this.Load += new System.EventHandler(this.LichSuNhapHangForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);

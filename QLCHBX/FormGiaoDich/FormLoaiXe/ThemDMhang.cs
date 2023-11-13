@@ -38,13 +38,13 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
         {
             if (KiemTraTextsRong(txtGiamGia.Text))
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin hàng!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                return;
+                txtGiamGia.Text = "0";
             }
             ChiTietDonDatHangModel chiTietDonDatHang_new = new ChiTietDonDatHangModel(int.Parse(txtSoDDH.Text),int.Parse(txtMaHang.Text),int.Parse(txtSoLuongHangMua.Text),decimal.Parse(txtGiamGia.Text));
             if (chiTietDonDatHang_new.KiemTraHangDaNhap())
             {
                 MessageBox.Show("Hàng "+txtMaHang.Text+" bạn đã chọn bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LoadDataGridView();
                 return;
             }
             else
