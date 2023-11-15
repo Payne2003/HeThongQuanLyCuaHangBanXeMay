@@ -143,7 +143,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             if (e.RowIndex >= 0 )
             {
                 DataGridViewRow row = viewDmh.Rows[e.RowIndex];
-                if (row.Cells[0].Value != null || row.Cells[0].Value.ToString() != "")
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != "")
                 {
                     ChiTietDonDatHangModel chiTietDonDatHang = new ChiTietDonDatHangModel(int.Parse(txtSoDDH.Text), int.Parse(row.Cells[0].Value.ToString()));
                     if (chiTietDonDatHang.KiemTraHangDaDuocNhapHayChua())

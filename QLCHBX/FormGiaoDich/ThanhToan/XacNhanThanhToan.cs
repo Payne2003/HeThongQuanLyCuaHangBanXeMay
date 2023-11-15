@@ -263,8 +263,6 @@ namespace QLCHBX.FormGiaoDich.ThanhToan
                 MessageBox.Show("Tệp đã được lưu tại: " + filePath, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-
         public void XacNhan()
         {
             if (!(btTienMat.Checked || btVNPay.Checked || btBank.Checked))

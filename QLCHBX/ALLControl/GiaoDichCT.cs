@@ -230,5 +230,9 @@ namespace QLCHBX.ALLControl
             }
         }
 
+        private void ptLoad_Click(object sender, EventArgs e)
+        {
+            LoadDataGridView();
+        }
     }
 }

@@ -98,12 +98,33 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                 }
             }
         }
+        public void CapNhatSauKhiHuy()
+        {
+
+            int soLuongBanDau = 0;
+            int soLuongSauKhiHuyNhap = 0;
+            int soLuongHuyNhap = 0;
+            int MahangNhap;
+            DmhModel dmhModel;
+
+            for (int i = 0; i < viewChiTietHoaDonNhap.RowCount - 1; i++)
+            {
+                DataGridViewRow row = viewChiTietHoaDonNhap.Rows[i];
+                MahangNhap = int.Parse(row.Cells[0].Value.ToString());
+                dmhModel = new DmhModel(MahangNhap);
+                soLuongBanDau = dmhModel.LaySoLuongKho();
+                soLuongHuyNhap = int.Parse(row.Cells[2].Value.ToString());
+                soLuongSauKhiHuyNhap = soLuongBanDau - soLuongHuyNhap;
+                dmhModel.CapNhatSoLuong(soLuongSauKhiHuyNhap);
+            }
+        }
         public void HuyNhapHang()
         {
             DialogResult result = MessageBox.Show("Bạn có muốn hủy nhập hàng " + txtSoHDN.Text + " không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 HoaDonNhapModel hoaDonNhapModel = new HoaDonNhapModel(int.Parse(txtSoHDN.Text));
+                CapNhatSauKhiHuy();
                 hoaDonNhapModel.HuyNhapHang();
                 LoadDataGirdView();
             }
@@ -126,6 +147,11 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             {
                 orderHangHoa.LoadDataGridView();
             }
+        }
+
+        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -104,7 +104,7 @@ namespace QLCHBX.Model
 
             SqlParameter[] parameters = new SqlParameter[] {
                 new SqlParameter("@MaHang", MaHang),
-                new SqlParameter("@SoLuong", SoLuongCapNhat)
+                new SqlParameter("@SoLuongCapNhat", SoLuongCapNhat)
             };
 
             ExecuteNonQuery(sql, parameters);
