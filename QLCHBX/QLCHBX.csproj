@@ -260,6 +260,10 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBaoCao\BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCao\BaoCao.Designer.cs" />
     <Compile Include="FormGiaoDich\FormLoaiXe\ThemDMhang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +354,22 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNhanVien\AddNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhanVien\AddNV.Designer.cs">
+      <DependentUpon>AddNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhanVien\EditNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhanVien\EditNV.Designer.cs">
+      <DependentUpon>EditNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNV\EditNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNV\EditNV.Designer.cs" />
     <Compile Include="HanghoaControl\Dongco.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -387,7 +407,11 @@
     <Compile Include="Model\HoaDonNhapModel.cs" />
     <Compile Include="Model\KhachHangModel.cs" />
     <Compile Include="Model\NhaCungCapModel.cs" />
+    <Compile Include="Model\NhanVienModel.cs" />
     <Compile Include="Model\TaiKhoanModel.cs" />
+    <Compile Include="NhanVienConTrol\NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ProcessDatabase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -415,6 +439,7 @@
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCao\BaoCao.resx" />
     <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\ThemDMhang.resx">
       <DependentUpon>ThemDMhang.cs</DependentUpon>
     </EmbeddedResource>
@@ -460,6 +485,13 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNhanVien\AddNV.resx">
+      <DependentUpon>AddNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhanVien\EditNV.resx">
+      <DependentUpon>EditNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNV\EditNV.resx" />
     <EmbeddedResource Include="HanghoaControl\Dongco.resx">
       <DependentUpon>Dongco.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCHBX.FormNV;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace QLCHBX
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoadForm());
+            Application.Run(new EditNV());
         }
     }
 }
