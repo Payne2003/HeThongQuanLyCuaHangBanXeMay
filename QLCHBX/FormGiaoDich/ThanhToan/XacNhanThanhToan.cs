@@ -14,6 +14,7 @@ namespace QLCHBX.FormGiaoDich.ThanhToan
 {
     public partial class XacNhanThanhToan : Form
     {
+        int con = 0;
         public XacNhanThanhToan()
         {
             InitializeComponent();
