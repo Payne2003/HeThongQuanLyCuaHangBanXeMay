@@ -17,7 +17,7 @@ namespace QLCHBX
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EditNV());
+            Application.Run(new FormLogin());
         }
     }
 }

@@ -53,7 +53,7 @@ namespace QLCHBX
 
         private void btDoiTac_Click(object sender, EventArgs e)
         {
-            
+            nhacungcap1.BringToFront();
         }
 
         private void btNhanVien_Click(object sender, EventArgs e)
