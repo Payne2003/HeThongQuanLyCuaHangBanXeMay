@@ -264,13 +264,39 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
 
         private void ttDongCo_Click(object sender, EventArgs e)
         {
+            DmhModel dmhModel = new DmhModel();
+            DataTable data = dmhModel.LayDuLieuDongCo();
 
+            if (data != null && data.Rows.Count > 0)
+            {
+                viewDmh.DataSource = data;
+            }
+            else
+            {
+                // Hiển thị thông báo khi không có dữ liệu
+                MessageBox.Show("Không có dữ liệu về động cơ.");
+                // Hoặc có thể xử lý khác tùy theo yêu cầu của bạn
+            }
         }
 
         private void ttPhanh_Click(object sender, EventArgs e)
         {
+            DmhModel dmhModel = new DmhModel();
+            DataTable data = dmhModel.LayDuLieuPhanh();
 
+            if (data != null && data.Rows.Count > 0)
+            {
+                viewDmh.DataSource = data;
+            }
+            else
+            {
+                // Hiển thị thông báo khi không có dữ liệu
+                MessageBox.Show("Không có dữ liệu về phanh.");
+                // Hoặc có thể xử lý khác tùy theo yêu cầu của bạn
+            }
         }
+
+
     }
 }
 

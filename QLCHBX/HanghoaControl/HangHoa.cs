@@ -115,23 +115,6 @@ namespace QLCHBX.ALLControl
             xeso1.SetDataGridViewDataSource(dt);
             d = 8;
         }
-
-        private void ptthem_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void ptxoa_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void dongco1_Click(object sender, EventArgs e)
-        {
-
-        }
-
 		private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
 		{
 
