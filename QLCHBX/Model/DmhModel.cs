@@ -62,9 +62,11 @@ namespace QLCHBX.Model
         public DataTable LayDuLieuDongCo()
         {
             DataTable dt = new DataTable();
-            string sql = @"SELECT MaHang, TenHang, MaDongCo, SoLuong, DonGiaNhap, DonGiaBan, ThoiGianBaoHanh
-                FROM Dmh
-                WHERE MaDongCo IS NOT NULL;
+            string sql = @"SELECT MaHang, TenHang, MaDongCo,MaPhanh,SoLuong, DonGiaNhap, DonGiaBan, ThoiGianBaoHanh
+FROM Dmh
+WHERE MaDongCo IS NOT NULL AND MaPhanh IS NULL;
+
+
                 ";
             dt = DocBang(sql);
             return dt;
@@ -72,9 +74,10 @@ namespace QLCHBX.Model
         public DataTable LayDuLieuPhanh()
         {
             DataTable dt = new DataTable();
-            string sql = @"SELECT MaHang, TenHang, MaPhanh, SoLuong, DonGiaNhap, DonGiaBan, ThoiGianBaoHanh
-                FROM Dmh
-                WHERE MaPhanh IS NOT NULL;
+            string sql = @"SELECT MaHang, TenHang, MaDongCo,MaPhanh, SoLuong, DonGiaNhap, DonGiaBan, ThoiGianBaoHanh
+FROM Dmh
+WHERE MaPhanh IS NOT NULL AND MaDongCo IS NULL;
+
                 ";
             dt = DocBang(sql);
             return dt;
