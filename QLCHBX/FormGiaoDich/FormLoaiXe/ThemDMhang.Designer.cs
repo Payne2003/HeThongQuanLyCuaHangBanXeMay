@@ -39,32 +39,16 @@
             this.viewDmh = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ttHonDa = new System.Windows.Forms.ToolStripMenuItem();
-            this.sốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ttSYM = new System.Windows.Forms.ToolStripMenuItem();
-            this.gaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sốToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ttSuzyki = new System.Windows.Forms.ToolStripMenuItem();
-            this.gaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sốToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.ttYamaHa = new System.Windows.Forms.ToolStripMenuItem();
-            this.gaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sốToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.ttPiagogio = new System.Windows.Forms.ToolStripMenuItem();
-            this.gaToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sốToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.ttDucaTi = new System.Windows.Forms.ToolStripMenuItem();
-            this.gaToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sốToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.ttKTM = new System.Windows.Forms.ToolStripMenuItem();
-            this.gaToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sốToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.ttKawasaki = new System.Windows.Forms.ToolStripMenuItem();
-            this.gaToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sốToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.khácToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.độngCơToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phanhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttDongCo = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttPhanh = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.grthongtindonhangmua = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -213,200 +197,82 @@
             // 
             // ttHonDa
             // 
-            this.ttHonDa.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sốToolStripMenuItem,
-            this.gaToolStripMenuItem});
             this.ttHonDa.Name = "ttHonDa";
             this.ttHonDa.Size = new System.Drawing.Size(81, 29);
             this.ttHonDa.Text = "HonDa";
             this.ttHonDa.Click += new System.EventHandler(this.ttHonDa_Click);
             // 
-            // sốToolStripMenuItem
-            // 
-            this.sốToolStripMenuItem.Name = "sốToolStripMenuItem";
-            this.sốToolStripMenuItem.Size = new System.Drawing.Size(107, 30);
-            this.sốToolStripMenuItem.Text = "Số";
-            // 
-            // gaToolStripMenuItem
-            // 
-            this.gaToolStripMenuItem.Name = "gaToolStripMenuItem";
-            this.gaToolStripMenuItem.Size = new System.Drawing.Size(107, 30);
-            this.gaToolStripMenuItem.Text = "Ga";
-            // 
             // ttSYM
             // 
-            this.ttSYM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gaToolStripMenuItem1,
-            this.sốToolStripMenuItem1});
             this.ttSYM.Name = "ttSYM";
             this.ttSYM.Size = new System.Drawing.Size(60, 29);
             this.ttSYM.Text = "SYM";
             this.ttSYM.Click += new System.EventHandler(this.ttSYM_Click);
             // 
-            // gaToolStripMenuItem1
-            // 
-            this.gaToolStripMenuItem1.Name = "gaToolStripMenuItem1";
-            this.gaToolStripMenuItem1.Size = new System.Drawing.Size(107, 30);
-            this.gaToolStripMenuItem1.Text = "Ga";
-            // 
-            // sốToolStripMenuItem1
-            // 
-            this.sốToolStripMenuItem1.Name = "sốToolStripMenuItem1";
-            this.sốToolStripMenuItem1.Size = new System.Drawing.Size(107, 30);
-            this.sốToolStripMenuItem1.Text = "Số";
-            // 
             // ttSuzyki
             // 
-            this.ttSuzyki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gaToolStripMenuItem2,
-            this.sốToolStripMenuItem2});
             this.ttSuzyki.Name = "ttSuzyki";
             this.ttSuzyki.Size = new System.Drawing.Size(76, 29);
             this.ttSuzyki.Text = "Suzuki";
             this.ttSuzyki.Click += new System.EventHandler(this.ttSuzyki_Click);
             // 
-            // gaToolStripMenuItem2
-            // 
-            this.gaToolStripMenuItem2.Name = "gaToolStripMenuItem2";
-            this.gaToolStripMenuItem2.Size = new System.Drawing.Size(107, 30);
-            this.gaToolStripMenuItem2.Text = "Ga";
-            // 
-            // sốToolStripMenuItem2
-            // 
-            this.sốToolStripMenuItem2.Name = "sốToolStripMenuItem2";
-            this.sốToolStripMenuItem2.Size = new System.Drawing.Size(107, 30);
-            this.sốToolStripMenuItem2.Text = "Số";
-            // 
             // ttYamaHa
             // 
-            this.ttYamaHa.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gaToolStripMenuItem3,
-            this.sốToolStripMenuItem3});
             this.ttYamaHa.Name = "ttYamaHa";
             this.ttYamaHa.Size = new System.Drawing.Size(88, 29);
             this.ttYamaHa.Text = "Yamaha";
             this.ttYamaHa.Click += new System.EventHandler(this.ttYamaHa_Click);
             // 
-            // gaToolStripMenuItem3
-            // 
-            this.gaToolStripMenuItem3.Name = "gaToolStripMenuItem3";
-            this.gaToolStripMenuItem3.Size = new System.Drawing.Size(107, 30);
-            this.gaToolStripMenuItem3.Text = "Ga";
-            // 
-            // sốToolStripMenuItem3
-            // 
-            this.sốToolStripMenuItem3.Name = "sốToolStripMenuItem3";
-            this.sốToolStripMenuItem3.Size = new System.Drawing.Size(107, 30);
-            this.sốToolStripMenuItem3.Text = "Số";
-            // 
             // ttPiagogio
             // 
-            this.ttPiagogio.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gaToolStripMenuItem4,
-            this.sốToolStripMenuItem4});
             this.ttPiagogio.Name = "ttPiagogio";
             this.ttPiagogio.Size = new System.Drawing.Size(85, 29);
             this.ttPiagogio.Text = "Piaggio";
             this.ttPiagogio.Click += new System.EventHandler(this.ttPiagogio_Click);
             // 
-            // gaToolStripMenuItem4
-            // 
-            this.gaToolStripMenuItem4.Name = "gaToolStripMenuItem4";
-            this.gaToolStripMenuItem4.Size = new System.Drawing.Size(107, 30);
-            this.gaToolStripMenuItem4.Text = "Ga";
-            // 
-            // sốToolStripMenuItem4
-            // 
-            this.sốToolStripMenuItem4.Name = "sốToolStripMenuItem4";
-            this.sốToolStripMenuItem4.Size = new System.Drawing.Size(107, 30);
-            this.sốToolStripMenuItem4.Text = "Số";
-            // 
             // ttDucaTi
             // 
-            this.ttDucaTi.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gaToolStripMenuItem5,
-            this.sốToolStripMenuItem5});
             this.ttDucaTi.Name = "ttDucaTi";
             this.ttDucaTi.Size = new System.Drawing.Size(76, 29);
             this.ttDucaTi.Text = "Ducati";
             this.ttDucaTi.Click += new System.EventHandler(this.ttDucaTi_Click);
             // 
-            // gaToolStripMenuItem5
-            // 
-            this.gaToolStripMenuItem5.Name = "gaToolStripMenuItem5";
-            this.gaToolStripMenuItem5.Size = new System.Drawing.Size(107, 30);
-            this.gaToolStripMenuItem5.Text = "Ga";
-            // 
-            // sốToolStripMenuItem5
-            // 
-            this.sốToolStripMenuItem5.Name = "sốToolStripMenuItem5";
-            this.sốToolStripMenuItem5.Size = new System.Drawing.Size(107, 30);
-            this.sốToolStripMenuItem5.Text = "Số";
-            // 
             // ttKTM
             // 
-            this.ttKTM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gaToolStripMenuItem6,
-            this.sốToolStripMenuItem6});
             this.ttKTM.Name = "ttKTM";
             this.ttKTM.Size = new System.Drawing.Size(61, 29);
             this.ttKTM.Text = "KTM";
             this.ttKTM.Click += new System.EventHandler(this.ttKTM_Click);
             // 
-            // gaToolStripMenuItem6
-            // 
-            this.gaToolStripMenuItem6.Name = "gaToolStripMenuItem6";
-            this.gaToolStripMenuItem6.Size = new System.Drawing.Size(107, 30);
-            this.gaToolStripMenuItem6.Text = "Ga";
-            // 
-            // sốToolStripMenuItem6
-            // 
-            this.sốToolStripMenuItem6.Name = "sốToolStripMenuItem6";
-            this.sốToolStripMenuItem6.Size = new System.Drawing.Size(107, 30);
-            this.sốToolStripMenuItem6.Text = "Số";
-            // 
             // ttKawasaki
             // 
-            this.ttKawasaki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gaToolStripMenuItem7,
-            this.sốToolStripMenuItem7});
             this.ttKawasaki.Name = "ttKawasaki";
             this.ttKawasaki.Size = new System.Drawing.Size(99, 29);
             this.ttKawasaki.Text = "Kawasaki";
             this.ttKawasaki.Click += new System.EventHandler(this.ttKawasaki_Click);
             // 
-            // gaToolStripMenuItem7
-            // 
-            this.gaToolStripMenuItem7.Name = "gaToolStripMenuItem7";
-            this.gaToolStripMenuItem7.Size = new System.Drawing.Size(107, 30);
-            this.gaToolStripMenuItem7.Text = "Ga";
-            // 
-            // sốToolStripMenuItem7
-            // 
-            this.sốToolStripMenuItem7.Name = "sốToolStripMenuItem7";
-            this.sốToolStripMenuItem7.Size = new System.Drawing.Size(107, 30);
-            this.sốToolStripMenuItem7.Text = "Số";
-            // 
             // khácToolStripMenuItem
             // 
             this.khácToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.độngCơToolStripMenuItem,
-            this.phanhToolStripMenuItem});
+            this.ttDongCo,
+            this.ttPhanh});
             this.khácToolStripMenuItem.Name = "khácToolStripMenuItem";
             this.khácToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
             this.khácToolStripMenuItem.Text = "Khác";
             // 
-            // độngCơToolStripMenuItem
+            // ttDongCo
             // 
-            this.độngCơToolStripMenuItem.Name = "độngCơToolStripMenuItem";
-            this.độngCơToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
-            this.độngCơToolStripMenuItem.Text = "Động cơ";
+            this.ttDongCo.Name = "ttDongCo";
+            this.ttDongCo.Size = new System.Drawing.Size(180, 30);
+            this.ttDongCo.Text = "Động cơ";
+            this.ttDongCo.Click += new System.EventHandler(this.ttDongCo_Click);
             // 
-            // phanhToolStripMenuItem
+            // ttPhanh
             // 
-            this.phanhToolStripMenuItem.Name = "phanhToolStripMenuItem";
-            this.phanhToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
-            this.phanhToolStripMenuItem.Text = "Phanh";
+            this.ttPhanh.Name = "ttPhanh";
+            this.ttPhanh.Size = new System.Drawing.Size(180, 30);
+            this.ttPhanh.Text = "Phanh";
+            this.ttPhanh.Click += new System.EventHandler(this.ttPhanh_Click);
             // 
             // guna2Panel3
             // 
@@ -729,27 +595,11 @@
         private System.Windows.Forms.ToolStripMenuItem ttYamaHa;
         private System.Windows.Forms.ToolStripMenuItem ttPiagogio;
         private System.Windows.Forms.ToolStripMenuItem ttDucaTi;
-        private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem ttKTM;
-        private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem ttKawasaki;
-        private System.Windows.Forms.ToolStripMenuItem gaToolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem sốToolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem khácToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem độngCơToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phanhToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttDongCo;
+        private System.Windows.Forms.ToolStripMenuItem ttPhanh;
         private System.Windows.Forms.DataGridView viewDmh;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2GroupBox grthongtindonhangmua;

@@ -15,10 +15,13 @@ namespace QLCHBX.FormHangHoa
 {
     public partial class EditXe : Form
     {
+        ProcessDatabase dtBase = new ProcessDatabase();
+        ChucNang function = new ChucNang();
         SqlConnection connection;
         string connectionString = @"Data Source=DuyLa;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
+        private int h = 1;
 
         public string MaHang { get; set; }
         public string TenHang {  get; set; }
@@ -39,111 +42,38 @@ namespace QLCHBX.FormHangHoa
         public EditXe()
         {
             InitializeComponent();
-            LoadCmbMaDC();
-            LoadCmbMaTL();
-            LoadCmbMaHSX();
-            LoadCmbMaMau();
-            LoadCmbMaPhanh();
-            LoadCmbMaNSX();
-            LoadCmbMaTT();
-          
-        }
-        private void LoadCmbMaTL()
-        {
-            string query = "SELECT MaTheLoai FROM TheLoai";
-            table = new DataTable();
-            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connectionString))
-            {
-                adapter.Fill(table);
-            }
-            cmbMaTL.DisplayMember = "MaTheLoai";
-            cmbMaTL.DataSource = table;
-        }
+            DataTable dtDC = dtBase.DocBang("select * from DongCo");
+            function.FillComboBox(cmbMaDC, dtDC, "TenDongCo", "MaDongCo");
 
-        private void LoadCmbMaHSX()
-        {
-            string query = "SELECT MaHangSX FROM Hangsanxuat";
-            table = new DataTable();
-            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connectionString))
-            {
-                adapter.Fill(table);
-            }
-            cmbMaHSX.DisplayMember = "MaHangSX";
-            cmbMaHSX.DataSource = table;
-        }
-        private void LoadCmbMaMau()
-        {
-            string query = "SELECT MaMau FROM Mausac";
-            table = new DataTable();
-            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connectionString))
-            {
-                adapter.Fill(table);
-            }
-            cmbMaMau.DisplayMember = "MaMau";
-            cmbMaMau.DataSource = table;
-        }
-        private void LoadCmbMaPhanh()
-        {
-            string query = "SELECT MaPhanh FROM Phanhxe";
-            table = new DataTable();
-            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connectionString))
-            {
-                adapter.Fill(table);
-            }
-            cmbMaP.DisplayMember = "MaPhanh";
-            cmbMaP.DataSource = table;
-        }
-        private void LoadCmbMaDC()
-        {
-            string query = "SELECT MaDongCo FROM DongCo";
-            table = new DataTable();
-            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connectionString))
-            {
-                adapter.Fill(table);
-            }
-            cmbMaDC.DisplayMember = "MaDongCo";
-            cmbMaDC.DataSource = table;
-        }
-        private void LoadCmbMaNSX()
-        {
-            string query = "SELECT MaNuocSX FROM Nuocsanxuat";
-            table = new DataTable();
-            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connectionString))
-            {
-                adapter.Fill(table);
-            }
-            cmbMaNSX.DisplayMember = "MaNuocSX";
-            cmbMaNSX.DataSource = table;
+            DataTable dtP = dtBase.DocBang("select * from Phanhxe");
+            function.FillComboBox(cmbMaP, dtP, "TenPhanh", "MaPhanh");
 
-        }
-        private void LoadCmbMaTT()
-        {
-            string query = "SELECT MaTinhTrang FROM TinhTrang";
-            table = new DataTable();
-            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connectionString))
-            {
-                adapter.Fill(table);
-            }
-            cmbMaTT.DisplayMember = "MaTinhTrang";
-            cmbMaTT.DataSource = table;
-        }
+            DataTable dtHSX = dtBase.DocBang("select * from HangSanXuat");
+            function.FillComboBox(cmbMaHSX, dtHSX, "TenHangSX", "MaHangSX");
+
+            DataTable dtTL = dtBase.DocBang("select * from TheLoai");
+            function.FillComboBox(cmbMaTL, dtTL, "TenTheLoai", "MaTheLoai");
+
+            DataTable dtNSX = dtBase.DocBang("select * from NuocSanXuat");
+            function.FillComboBox(cmbMaNSX, dtNSX, "TenNuocSX", "MaNuocSX");
+
+            DataTable dtTT = dtBase.DocBang("select * from TinhTrang");
+            function.FillComboBox(cmbMaTT, dtTT, "TenTinhTrang", "MaTinhTrang");
+
+            DataTable dtMau = dtBase.DocBang("select * from Mausac");
+            function.FillComboBox(cmbMaMau, dtMau, "TenMau", "MaMau");
+
+        }       
         private void EditXe_Load(object sender, EventArgs e)
         {
             txtMaH.Text = MaHang;
             txtTenH.Text = TenHang;
-            cmbMaTL.Text = MaTheLoai;
-            cmbMaTT.Text = MaTinhTrang;
-            cmbMaDC.Text = MaDongCo;
-            cmbMaHSX.Text = MaHangSX;
-            cmbMaP.Text = MaPhanh;
-            cmbMaMau.Text = MaMau;
-            cmbMaNSX.Text = MaNuocSX;
+            
             txtNSX.Text = NamSanXuat;
             txtSL.Text = SoLuong;
             txtTime.Text = ThoiGian;
             txtDGN.Text = DonGiaNhap;
-            txtDGB.Text = DonGiaBan;
-            txtDTBX.Text = DungTichBX;
+            txtDGB.Text = DonGiaBan;           
             
             if (img != null && img.Length > 0)
             {
@@ -165,6 +95,12 @@ namespace QLCHBX.FormHangHoa
             }
             // LoadAnh();
         }
+        private bool kiemtradl()
+        {
+            if (txtTenH.Text.Trim() == string.Empty || txtNSX.Text.Trim() == string.Empty || txtSL.Text.Trim() == string.Empty || txtDGN.Text.Trim() == string.Empty || txtdtbx.Text.Trim() == string.Empty)
+                return false;
+            return true;
+        }
 
         private void btLuu_Click(object sender, EventArgs e)
         {
@@ -172,12 +108,11 @@ namespace QLCHBX.FormHangHoa
             string tenh = txtTenH.Text.Trim();
            
             string nsx = txtNSX.Text.Trim();
-            
-           
-           
-            string dgb = txtDGB.Text.Trim();
-           
 
+            string sl = txtSL.Text.Trim();       
+            string dgb = txtDGB.Text.Trim();
+            string dgn = txtDGN.Text.Trim();
+            string dtbx = txtdtbx.Text.Trim();
             bool isNewImageSelected = false;
             byte[] imageBytes;
             Image previousImage = null; // Đối tượng Image của ảnh cũ
@@ -206,27 +141,40 @@ namespace QLCHBX.FormHangHoa
                 // Sử dụng mảng byte của ảnh cũ
                 imageBytes = img;
             }
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            
+            if (kiemtradl() == false)
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin vào chỗ trống.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (h == 1)
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
 
                         // Tạo câu truy vấn
-                        string query = "UPDATE Dmh SET TenHang=@TenHang, NamSX=@NamSX, Anh=@Anh,  DonGiaBan=@DonGiaBan WHERE MaHang=@MaHang";
+                        string query = "UPDATE Dmh SET TenHang=@TenHang, MaTheLoai=@MaTheLoai, MaHangSX=@MaHangSX, MaMau=@MaMau, MaPhanh=@MaPhanh, MaDongCo=@MaDongCo, MaNuocSX=@MaNuocSX, MaTinhTrang=@MaTinhTrang, NamSX=@NamSX, Anh=@Anh, DonGiaNhap=@DonGiaNhap,  DonGiaBan=@DonGiaBan, SoLuong=@SoLuong, ThoiGianBaoHanh=@ThoiGianBaoHanh, DungTichBinhXang=@DungTichBinhXang WHERE MaHang=@MaHang";
 
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
                             command.Parameters.AddWithValue("@MaHang", mah);
                             command.Parameters.AddWithValue("@TenHang", tenh);
-                           
+                            command.Parameters.AddWithValue("@MaTheLoai", cmbMaTL.SelectedValue);
+                            command.Parameters.AddWithValue("@MaHangSX", cmbMaHSX.SelectedValue);
+                            command.Parameters.AddWithValue("@MaMau", cmbMaMau.SelectedValue);
                             command.Parameters.AddWithValue("@NamSX", nsx);
-                          
-                           
-                          
+                            command.Parameters.AddWithValue("@MaPhanh", cmbMaP.SelectedValue);
+                            command.Parameters.AddWithValue("@MaDongCo", cmbMaDC.SelectedValue);
+                            command.Parameters.AddWithValue("@MaNuocSX", cmbMaNSX.SelectedValue);
+                            command.Parameters.AddWithValue("@MaTinhTrang", cmbMaTT.SelectedValue);
                             command.Parameters.AddWithValue("@Anh", imageBytes);
-                           
+                            command.Parameters.AddWithValue("@SoLuong", sl);
                             command.Parameters.AddWithValue("@DonGiaBan", dgb);
-                            
-
+                            command.Parameters.AddWithValue("@DonGiaNhap", dgn);
+                            command.Parameters.AddWithValue("@DungTichBinhXang", dtbx);
+                            command.Parameters.AddWithValue("@ThoiGianBaoHanh", txtTime.Text);
 
                             int count = command.ExecuteNonQuery();
 
@@ -242,8 +190,50 @@ namespace QLCHBX.FormHangHoa
 
                         }
                     }
-                
-            
+                }
+                if (h == 2)
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        // Tạo câu truy vấn
+                        string query = "UPDATE Dmh SET TenHang=@TenHang, MaTheLoai=@MaTheLoai, MaHangSX=@MaHangSX, MaNuocSX=@MaNuocSX, MaTinhTrang=@MaTinhTrang, NamSX=@NamSX, Anh=@Anh, DonGiaNhap=@DonGiaNhap,  DonGiaBan=@DonGiaBan, SoLuong=@SoLuong, ThoiGianBaoHanh=@ThoiGianBaoHanh WHERE MaHang=@MaHang";
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@MaHang", mah);
+                            command.Parameters.AddWithValue("@TenHang", tenh);
+                            command.Parameters.AddWithValue("@MaTheLoai", cmbMaTL.SelectedValue);
+                            command.Parameters.AddWithValue("@MaHangSX", cmbMaHSX.SelectedValue);
+
+                            command.Parameters.AddWithValue("@NamSX", nsx);
+
+                            command.Parameters.AddWithValue("@MaNuocSX", cmbMaNSX.SelectedValue);
+                            command.Parameters.AddWithValue("@MaTinhTrang", cmbMaTT.SelectedValue);
+                            command.Parameters.AddWithValue("@Anh", imageBytes);
+                            command.Parameters.AddWithValue("@SoLuong", sl);
+                            command.Parameters.AddWithValue("@DonGiaBan", dgb);
+                            command.Parameters.AddWithValue("@DonGiaNhap", txtDGN.Text);
+
+                            command.Parameters.AddWithValue("@ThoiGianBaoHanh", txtTime.Text);
+
+                            int count = command.ExecuteNonQuery();
+
+                            if (count > 0)
+                            {
+                                MessageBox.Show("Dữ liệu đã được cập nhật thành công.");
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Lỗi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                        }
+                    }
+                }
+            }
         }
         private bool ImageEquals(Image image1, Image image2)
         {
@@ -282,6 +272,36 @@ namespace QLCHBX.FormHangHoa
         private void ptb1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void xeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            h = 1;
+            HienChiTiet(true);
+        }
+        private void HienChiTiet(Boolean hien)
+        {
+
+            cmbMaP.Visible = hien;
+            lbp.Visible = hien;
+            cmbMaDC.Visible = hien;
+            lbdc.Visible = hien;
+            cmbMaMau.Visible = hien;
+            lbmau.Visible = hien;
+            txtdtbx.Visible = hien;
+            lbdtbx.Visible = hien;
+        }
+
+        private void độngCơToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            h = 2;
+            HienChiTiet(false);
+        }
+
+        private void phanhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            h = 2;
+            HienChiTiet(false);
         }
     }
 }

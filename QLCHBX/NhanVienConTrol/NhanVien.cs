@@ -25,4 +25,5 @@ namespace QLCHBX.ALLControl
 		{
 			LoadDataGridView();
 		}
-						}
+	}
+}

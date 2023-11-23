@@ -261,6 +261,16 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 giaoDich.LoadDataGridView();
             }
         }
+
+        private void ttDongCo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ttPhanh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

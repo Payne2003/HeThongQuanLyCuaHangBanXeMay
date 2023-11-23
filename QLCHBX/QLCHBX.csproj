@@ -254,6 +254,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Chitietdondathangset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ChucNang.cs" />
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,12 +312,6 @@
     </Compile>
     <Compile Include="FormGiaoDich\ThemKhachHang\ThemKhachHangVaoDonDatHang.Designer.cs">
       <DependentUpon>ThemKhachHangVaoDonDatHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormHangHoa\AddPhutung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHangHoa\AddPhutung.Designer.cs">
-      <DependentUpon>AddPhutung.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHangHoa\AddXe.cs">
       <SubType>Form</SubType>
@@ -381,6 +376,12 @@
     </Compile>
     <Compile Include="HanghoaControl\HangHoa.Designer.cs">
       <DependentUpon>HangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HanghoaControl\Nhacungcap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HanghoaControl\Nhacungcap.Designer.cs">
+      <DependentUpon>Nhacungcap.cs</DependentUpon>
     </Compile>
     <Compile Include="HanghoaControl\Xeso.cs">
       <SubType>UserControl</SubType>
@@ -464,9 +465,6 @@
     <EmbeddedResource Include="FormGiaoDich\ThemKhachHang\ThemKhachHangVaoDonDatHang.resx">
       <DependentUpon>ThemKhachHangVaoDonDatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHangHoa\AddPhutung.resx">
-      <DependentUpon>AddPhutung.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormHangHoa\AddXe.resx">
       <DependentUpon>AddXe.cs</DependentUpon>
     </EmbeddedResource>
@@ -497,6 +495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HanghoaControl\HangHoa.resx">
       <DependentUpon>HangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HanghoaControl\Nhacungcap.resx">
+      <DependentUpon>Nhacungcap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HanghoaControl\Xeso.resx">
       <DependentUpon>Xeso.cs</DependentUpon>

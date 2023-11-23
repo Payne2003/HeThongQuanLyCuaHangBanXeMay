@@ -39,7 +39,7 @@ namespace QLCHBX.ALLControl
         private void xeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             xeso1.BringToFront();
-            DataTable dt = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh From Dmh");
+            DataTable dt = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh,SoLuong From Dmh");
             xeso1.SetDataGridViewDataSource(dt);
             d = 8;
         }
@@ -52,7 +52,6 @@ namespace QLCHBX.ALLControl
             d = 1;
             
         }
-
         private void phanhToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DataTable dt = dtBase.DocBang("SELECT * FROM PhanhXe");
@@ -67,60 +66,52 @@ namespace QLCHBX.ALLControl
             d = 1;
 
         }
-
         private void mausacToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable dt = dtBase.DocBang("SELECT * FROM MauSac");
             dongco1.SetDataGridViewDataSource(dt);
             d = 3;
         }
-
         private void theloaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable dt = dtBase.DocBang("SELECT * FROM TheLoai");
             dongco1.SetDataGridViewDataSource(dt);
             d = 4;
         }
-
         private void tinhtrangToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable dt = dtBase.DocBang("SELECT * FROM TinhTrang");
             dongco1.SetDataGridViewDataSource(dt);
             d = 5;
         }
-
         private void hsxToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable dt = dtBase.DocBang("SELECT * FROM Hangsanxuat");
             dongco1.SetDataGridViewDataSource(dt);
             d = 6;
         }
-
         private void nsxToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable dt = dtBase.DocBang("SELECT * FROM Nuocsanxuat");
             dongco1.SetDataGridViewDataSource(dt);
             d = 7;
         }
-
         private void gaToolStripMenuItem1_Click(object sender, EventArgs e)
         {         
-            DataTable dt = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh From Dmh where MaTheLoai='" + 1 + "'");
+            DataTable dt = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh,SoLuong From Dmh where MaTheLoai='" + 1 + "'");
             xeso1.SetDataGridViewDataSource(dt);
             d = 8;
         }
-
         private void soToolStripMenuItem_Click(object sender, EventArgs e)
         {        
-            DataTable dt = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh  From Dmh where MaTheLoai='" + 2 + "'");
+            DataTable dt = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh,SoLuong  From Dmh where MaTheLoai='" + 2 + "'");
             xeso1.SetDataGridViewDataSource(dt);
             d = 8;
         }
-
         private void conToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            DataTable dt = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh  From Dmh where MaTheLoai='" + 3 + "'");
+            DataTable dt = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh,SoLuong  From Dmh where MaTheLoai='" + 3 + "'");
             xeso1.SetDataGridViewDataSource(dt);
             d = 8;
         }
