@@ -37,7 +37,7 @@ namespace QLCHBX.FormHangHoa
         private void ChiTiet_Load(object sender, EventArgs e)
         {
             lbmah.Text = "Mã Hàng : " + MaHang;
-            lbtenh.Text = "Tên xe ; " + TenHang;
+            lbtenh.Text = "Tên Hàng ; " + TenHang;
             lbmatl.Text = "Tên Thể Loại : " + TenTheLoai;
             lbmatt.Text = "Tình Trạng : " + TenTinhTrang;
             lbmadc.Text = "Động cơ : " + TenDongCo;
