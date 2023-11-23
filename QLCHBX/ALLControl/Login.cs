@@ -24,12 +24,7 @@ namespace QLCHBX.ALLControl
             InitializeComponent();
             txtpassword.UseSystemPasswordChar = true;
         }
-      
-
-        
      
-
-
         private void btlogin_Click(object sender, EventArgs e)
         {
             if (txtuser.Text.Trim() == string.Empty || txtpassword.Text.Trim() == string.Empty)
