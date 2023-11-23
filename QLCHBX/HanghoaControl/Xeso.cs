@@ -143,7 +143,11 @@ namespace QLCHBX.HanghoaControl
                             string dgn = reader["DonGiaNhap"].ToString();
                             string dgb = reader["DonGiaBan"].ToString();
                             string time = reader["ThoiGianBaoHanh"].ToString();
-                            Byte[] imgPath = (Byte[])reader["Anh"];
+                            byte[] imgPath = null;
+                            if (reader["Anh"] != DBNull.Value)
+                            {
+                                imgPath = (byte[])reader["Anh"];
+                            }                           
                             reader.Close();                            
                             if (string.IsNullOrEmpty(map))
                             {

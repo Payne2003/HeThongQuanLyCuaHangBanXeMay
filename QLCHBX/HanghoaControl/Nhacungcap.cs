@@ -106,7 +106,15 @@ namespace QLCHBX.HanghoaControl
         {
             if (txtMa.Text == "")
             {
-                if (!IsValidPhoneNumber(txtsdt.Text))
+                if(txtTen.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập tên nhà cung cấp.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (txtdc.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập địa chỉ nhà cung cấp.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (!IsValidPhoneNumber(txtsdt.Text))
                 {
                     MessageBox.Show("Số điện thoại không hợp lệ. Vui lòng nhập 10 số.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -144,6 +152,10 @@ namespace QLCHBX.HanghoaControl
         private void ptLoad_Click(object sender, EventArgs e)
         {
             Load();
+            txtMa.Text = "";
+            txtTen.Text = "";
+            txtdc.Text = "";
+            txtsdt.Text = "";
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

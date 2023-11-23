@@ -30,10 +30,6 @@ namespace QLCHBX.ALLControl
         private void HangHoa_Load(object sender, EventArgs e)
         {
                     
-        }
-        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }           
 
         private void xeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -115,9 +111,5 @@ namespace QLCHBX.ALLControl
             xeso1.SetDataGridViewDataSource(dt);
             d = 8;
         }
-		private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-		{
-
-		}
 	}
 }

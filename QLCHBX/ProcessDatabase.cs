@@ -18,6 +18,7 @@ namespace QLCHBX
         public ProcessDatabase()
         {
             constring = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+
             con = new SqlConnection(constring);
         }
         public void KetNoi()
