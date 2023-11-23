@@ -32,7 +32,7 @@ namespace QLCHBX.FormBaoCao
 			txtLoiNhuan.Text = loinhuan;
 		}
 
-        private void InitializeComponent()
+       /* private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
@@ -42,6 +42,6 @@ namespace QLCHBX.FormBaoCao
             this.Name = "BaoCao";
             this.ResumeLayout(false);
 
-        }
+        }*/
     }
 }
