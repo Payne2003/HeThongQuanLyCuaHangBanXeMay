@@ -16,35 +16,21 @@ namespace QLCHBX.HanghoaControl
 		ProcessDatabase dtBase = new ProcessDatabase();
         public void Load()
         {
-            btnLuu.Enabled = false;
+            btnLuu.Visible = false;
+            txtMa.Text = "";
+            txtTen.Text = "";
+            txtdc.Text = "";
+            txtsdt.Text = "";
+            DataTable dt = dtBase.DocBang("Select * From NhaCungCap");
+            dgv.DataSource = dt;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             pn1.Visible = false;
         }
         public Nhacungcap()
 		{
 			InitializeComponent();
-            DataTable dt = dtBase.DocBang("Select * From NhaCungCap");
-            dgv.DataSource = dt;
             Load();
         }
-
-		private void Nhacungcap_Load(object sender, EventArgs e)
-		{
-            
-        }
-
-		private void btnXoa_Click(object sender, EventArgs e)
-		{
-			DataGridViewRow selectedRow = dgv.SelectedRows[0];
-
-			string maNCC = selectedRow.Cells["MaNCC"].Value.ToString();
-			if (MessageBox.Show("Bạn có muốn xóa nhà cung cấp có mã là:" + maNCC + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-			{
-				dtBase.CapNhatDuLieu("delete NhaCungCap where MaNCC='" + maNCC + "'");
-				MessageBox.Show("Xóa thành công","Thông báo");
-				dgv.DataSource = dtBase.DocBang("Select * From NhaCungCap");
-			}
-		}
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -139,7 +125,7 @@ namespace QLCHBX.HanghoaControl
                     {
                         dtBase.CapNhatDuLieu("update NhaCungCap set TenNCC = N'" + txtTen.Text + "', DiaChi = N'" + txtdc.Text + "', DienThoai = N'" + txtsdt.Text + "' where MaNCC = '" + txtMa.Text + "'");
                         MessageBox.Show("Bạn đã sửa thành công");
-                        dgv.DataSource = dtBase.DocBang("SELECT * FROM NhaCungCap");
+                        Load();
                     }
                 }
             }
@@ -164,6 +150,11 @@ namespace QLCHBX.HanghoaControl
             {
                 dgv.DataSource = dtBase.DocBang("SELECT * FROM NhaCungCap");
             }
+        }
+
+        private void Nhacungcap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
