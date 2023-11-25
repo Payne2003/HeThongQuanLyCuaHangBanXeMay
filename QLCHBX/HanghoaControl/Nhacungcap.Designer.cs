@@ -409,7 +409,6 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Nhacungcap";
             this.Size = new System.Drawing.Size(549, 486);
-            this.Load += new System.EventHandler(this.Nhacungcap_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
