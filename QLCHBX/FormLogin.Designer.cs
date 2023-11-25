@@ -51,10 +51,10 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.login1 = new QLCHBX.ALLControl.Login();
             this.signup1 = new QLCHBX.ALLControl.Signup();
             this.forgotPassword1 = new QLCHBX.ALLControl.ForgotPassword();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnmoving.SuspendLayout();
@@ -68,9 +68,10 @@
             // 
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Location = new System.Drawing.Point(0, 62);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 360);
+            this.panel1.Size = new System.Drawing.Size(600, 553);
             this.panel1.TabIndex = 0;
             // 
             // guna2PictureBox1
@@ -79,8 +80,9 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(400, 360);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(600, 553);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -92,8 +94,9 @@
             this.pnmoving.Controls.Add(this.ctThoat);
             this.pnmoving.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnmoving.Location = new System.Drawing.Point(0, 0);
+            this.pnmoving.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnmoving.Name = "pnmoving";
-            this.pnmoving.Size = new System.Drawing.Size(800, 40);
+            this.pnmoving.Size = new System.Drawing.Size(1200, 62);
             this.pnmoving.TabIndex = 1;
             // 
             // ctminimize
@@ -104,9 +107,10 @@
             this.ctminimize.HoverState.FillColor = System.Drawing.Color.White;
             this.ctminimize.HoverState.IconColor = System.Drawing.Color.Blue;
             this.ctminimize.IconColor = System.Drawing.Color.Black;
-            this.ctminimize.Location = new System.Drawing.Point(720, 0);
+            this.ctminimize.Location = new System.Drawing.Point(1080, 0);
+            this.ctminimize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctminimize.Name = "ctminimize";
-            this.ctminimize.Size = new System.Drawing.Size(40, 40);
+            this.ctminimize.Size = new System.Drawing.Size(60, 62);
             this.ctminimize.TabIndex = 2;
             this.ctminimize.Click += new System.EventHandler(this.ctminimize_Click);
             // 
@@ -117,9 +121,10 @@
             this.ctThoat.HoverState.FillColor = System.Drawing.Color.Red;
             this.ctThoat.HoverState.IconColor = System.Drawing.Color.Blue;
             this.ctThoat.IconColor = System.Drawing.Color.Black;
-            this.ctThoat.Location = new System.Drawing.Point(760, 0);
+            this.ctThoat.Location = new System.Drawing.Point(1140, 0);
+            this.ctThoat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctThoat.Name = "ctThoat";
-            this.ctThoat.Size = new System.Drawing.Size(40, 40);
+            this.ctThoat.Size = new System.Drawing.Size(60, 62);
             this.ctThoat.TabIndex = 0;
             this.ctThoat.Click += new System.EventHandler(this.ctThoat_Click);
             // 
@@ -131,26 +136,29 @@
             this.pnControl.Controls.Add(this.label2);
             this.pnControl.Controls.Add(this.linkHELP);
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnControl.Location = new System.Drawing.Point(400, 350);
+            this.pnControl.Location = new System.Drawing.Point(600, 538);
+            this.pnControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnControl.Name = "pnControl";
-            this.pnControl.Size = new System.Drawing.Size(400, 50);
+            this.pnControl.Size = new System.Drawing.Size(600, 77);
             this.pnControl.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(327, 19);
+            this.label1.Location = new System.Drawing.Point(490, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(12, 13);
+            this.label1.Size = new System.Drawing.Size(13, 20);
             this.label1.TabIndex = 57;
             this.label1.Text = "/";
             // 
             // linkfontEnglish
             // 
             this.linkfontEnglish.AutoSize = true;
-            this.linkfontEnglish.Location = new System.Drawing.Point(345, 19);
+            this.linkfontEnglish.Location = new System.Drawing.Point(518, 29);
+            this.linkfontEnglish.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkfontEnglish.Name = "linkfontEnglish";
-            this.linkfontEnglish.Size = new System.Drawing.Size(41, 13);
+            this.linkfontEnglish.Size = new System.Drawing.Size(61, 20);
             this.linkfontEnglish.TabIndex = 56;
             this.linkfontEnglish.TabStop = true;
             this.linkfontEnglish.Text = "English";
@@ -159,9 +167,10 @@
             // linkfonttiengViet
             // 
             this.linkfonttiengViet.AutoSize = true;
-            this.linkfonttiengViet.Location = new System.Drawing.Point(268, 19);
+            this.linkfonttiengViet.Location = new System.Drawing.Point(402, 29);
+            this.linkfonttiengViet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkfonttiengViet.Name = "linkfonttiengViet";
-            this.linkfonttiengViet.Size = new System.Drawing.Size(54, 13);
+            this.linkfonttiengViet.Size = new System.Drawing.Size(76, 20);
             this.linkfonttiengViet.TabIndex = 55;
             this.linkfonttiengViet.TabStop = true;
             this.linkfonttiengViet.Text = "Tiếng việt";
@@ -170,18 +179,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 19);
+            this.label2.Location = new System.Drawing.Point(96, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 13);
+            this.label2.Size = new System.Drawing.Size(291, 20);
             this.label2.TabIndex = 54;
             this.label2.Text = "Phần mềm được tạo bởi nhóm 14 - 2023";
             // 
             // linkHELP
             // 
             this.linkHELP.AutoSize = true;
-            this.linkHELP.Location = new System.Drawing.Point(14, 19);
+            this.linkHELP.Location = new System.Drawing.Point(21, 29);
+            this.linkHELP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkHELP.Name = "linkHELP";
-            this.linkHELP.Size = new System.Drawing.Size(27, 13);
+            this.linkHELP.Size = new System.Drawing.Size(39, 20);
             this.linkHELP.TabIndex = 53;
             this.linkHELP.TabStop = true;
             this.linkHELP.Text = "help";
@@ -201,9 +212,10 @@
             // 
             this.linkLogin.AutoSize = true;
             this.linkLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.linkLogin.Location = new System.Drawing.Point(0, 16);
+            this.linkLogin.Location = new System.Drawing.Point(0, 25);
+            this.linkLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLogin.Name = "linkLogin";
-            this.linkLogin.Size = new System.Drawing.Size(89, 13);
+            this.linkLogin.Size = new System.Drawing.Size(129, 20);
             this.linkLogin.TabIndex = 1;
             this.linkLogin.TabStop = true;
             this.linkLogin.Text = "Đã có tài khoản?";
@@ -213,9 +225,10 @@
             // 
             this.linkquenmk.AutoSize = true;
             this.linkquenmk.Dock = System.Windows.Forms.DockStyle.Right;
-            this.linkquenmk.Location = new System.Drawing.Point(227, 13);
+            this.linkquenmk.Location = new System.Drawing.Point(342, 20);
+            this.linkquenmk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkquenmk.Name = "linkquenmk";
-            this.linkquenmk.Size = new System.Drawing.Size(80, 13);
+            this.linkquenmk.Size = new System.Drawing.Size(118, 20);
             this.linkquenmk.TabIndex = 2;
             this.linkquenmk.TabStop = true;
             this.linkquenmk.Text = "Quên mật khẩu";
@@ -226,8 +239,9 @@
             this.linkDangky.AutoSize = true;
             this.linkDangky.Dock = System.Windows.Forms.DockStyle.Top;
             this.linkDangky.Location = new System.Drawing.Point(0, 0);
+            this.linkDangky.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkDangky.Name = "linkDangky";
-            this.linkDangky.Size = new System.Drawing.Size(92, 13);
+            this.linkDangky.Size = new System.Drawing.Size(134, 20);
             this.linkDangky.TabIndex = 3;
             this.linkDangky.TabStop = true;
             this.linkDangky.Text = "Tạo tài khoản mới";
@@ -239,9 +253,10 @@
             this.panel3.Controls.Add(this.guna2Panel3);
             this.panel3.Controls.Add(this.guna2Panel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(400, 321);
+            this.panel3.Location = new System.Drawing.Point(600, 493);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(400, 29);
+            this.panel3.Size = new System.Drawing.Size(600, 45);
             this.panel3.TabIndex = 0;
             // 
             // guna2Panel4
@@ -250,25 +265,28 @@
             this.guna2Panel4.Controls.Add(this.linkLogin);
             this.guna2Panel4.Controls.Add(this.linkDangky);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel4.Location = new System.Drawing.Point(41, 0);
+            this.guna2Panel4.Location = new System.Drawing.Point(62, 0);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(307, 29);
+            this.guna2Panel4.Size = new System.Drawing.Size(460, 45);
             this.guna2Panel4.TabIndex = 6;
             // 
             // guna2Panel3
             // 
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel3.Location = new System.Drawing.Point(348, 0);
+            this.guna2Panel3.Location = new System.Drawing.Point(522, 0);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(52, 29);
+            this.guna2Panel3.Size = new System.Drawing.Size(78, 45);
             this.guna2Panel3.TabIndex = 5;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(41, 29);
+            this.guna2Panel2.Size = new System.Drawing.Size(62, 45);
             this.guna2Panel2.TabIndex = 4;
             // 
             // guna2Panel1
@@ -277,16 +295,11 @@
             this.guna2Panel1.Controls.Add(this.signup1);
             this.guna2Panel1.Controls.Add(this.forgotPassword1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(400, 40);
+            this.guna2Panel1.Location = new System.Drawing.Point(600, 62);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(400, 281);
+            this.guna2Panel1.Size = new System.Drawing.Size(600, 431);
             this.guna2Panel1.TabIndex = 3;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.pnmoving;
-            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // login1
             // 
@@ -295,9 +308,9 @@
             this.login1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login1.Location = new System.Drawing.Point(0, 0);
             this.login1.manhanvien = null;
-            this.login1.Margin = new System.Windows.Forms.Padding(4);
+            this.login1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(400, 281);
+            this.login1.Size = new System.Drawing.Size(600, 431);
             this.login1.TabIndex = 0;
             // 
             // signup1
@@ -307,9 +320,9 @@
             this.signup1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup1.ForeColor = System.Drawing.Color.Black;
             this.signup1.Location = new System.Drawing.Point(0, 0);
-            this.signup1.Margin = new System.Windows.Forms.Padding(4);
+            this.signup1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.signup1.Name = "signup1";
-            this.signup1.Size = new System.Drawing.Size(400, 281);
+            this.signup1.Size = new System.Drawing.Size(600, 431);
             this.signup1.TabIndex = 2;
             // 
             // forgotPassword1
@@ -318,23 +331,30 @@
             this.forgotPassword1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.forgotPassword1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forgotPassword1.Location = new System.Drawing.Point(0, 0);
-            this.forgotPassword1.Margin = new System.Windows.Forms.Padding(4);
+            this.forgotPassword1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.forgotPassword1.Name = "forgotPassword1";
-            this.forgotPassword1.Size = new System.Drawing.Size(400, 281);
+            this.forgotPassword1.Size = new System.Drawing.Size(600, 431);
             this.forgotPassword1.TabIndex = 1;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.pnmoving;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 400);
+            this.ClientSize = new System.Drawing.Size(1200, 615);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnControl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnmoving);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";

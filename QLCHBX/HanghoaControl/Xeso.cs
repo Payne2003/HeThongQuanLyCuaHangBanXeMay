@@ -21,7 +21,7 @@ namespace QLCHBX.HanghoaControl
     public partial class Xeso : UserControl
     {
         ProcessDatabase dtBase = new ProcessDatabase();
-        string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        string connectionString = "Data Source=DuyLa;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
       
         public Xeso()
         {
@@ -280,10 +280,16 @@ namespace QLCHBX.HanghoaControl
             string maHang = selectedRow.Cells["MaHang"].Value.ToString();
             string tenHang = selectedRow.Cells["TenHang"].Value.ToString();
             string namSX = selectedRow.Cells["NamSX"].Value.ToString();
-            Byte[] imgPath = (Byte[])selectedRow.Cells["Anh"].Value;
+          //  Byte[] imgPath = (Byte[])selectedRow.Cells["Anh"].Value;
             string sl = selectedRow.Cells["SoLuong"].Value.ToString();
             string DGB = selectedRow.Cells["DonGiaBan"].Value.ToString();
             string Time = selectedRow.Cells["ThoiGianBaoHanh"].Value.ToString();
+            byte[] imgPath = null;
+            object anhValue = selectedRow.Cells["Anh"].Value;
+            if (anhValue != null && anhValue != DBNull.Value)
+            {
+                imgPath = (byte[])anhValue;
+            }
 
             EditXe edit = new EditXe();
             edit.MaHang = maHang;

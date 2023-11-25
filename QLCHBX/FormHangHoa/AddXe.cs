@@ -181,6 +181,10 @@ namespace QLCHBX.FormHangHoa
 
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn ảnh.","Thông báo");
+                }
             }
         }
 

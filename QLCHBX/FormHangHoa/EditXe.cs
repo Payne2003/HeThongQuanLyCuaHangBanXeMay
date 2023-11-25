@@ -91,7 +91,7 @@ namespace QLCHBX.FormHangHoa
             }
             else
             {
-                MessageBox.Show("Mảng byte hình ảnh không hợp lệ.");
+               // MessageBox.Show("Mảng byte hình ảnh không hợp lệ.");
             }
             // LoadAnh();
         }
@@ -155,7 +155,7 @@ namespace QLCHBX.FormHangHoa
                         connection.Open();
 
                         // Tạo câu truy vấn
-                        string query = "UPDATE Dmh SET TenHang=@TenHang, MaTheLoai=@MaTheLoai, MaHangSX=@MaHangSX, MaMau=@MaMau, MaPhanh=@MaPhanh, MaDongCo=@MaDongCo, MaNuocSX=@MaNuocSX, MaTinhTrang=@MaTinhTrang, NamSX=@NamSX, Anh=@Anh, DonGiaNhap=@DonGiaNhap,  DonGiaBan=@DonGiaBan, SoLuong=@SoLuong, ThoiGianBaoHanh=@ThoiGianBaoHanh, DungTichBinhXang=@DungTichBinhXang WHERE MaHang=@MaHang";
+                        string query = "UPDATE Dmh SET TenHang=@TenHang, MaTheLoai=@MaTheLoai, MaHangSX=@MaHangSX, MaMau=@MaMau, MaPhanh=@MaPhanh, MaDongCo=@MaDongCo, MaNuocSX=@MaNuocSX, MaTinhTrang=@MaTinhTrang, NamSX=@NamSX, Anh=CONVERT(varbinary(max), @Anh), DonGiaNhap=@DonGiaNhap,  DonGiaBan=@DonGiaBan, SoLuong=@SoLuong, ThoiGianBaoHanh=@ThoiGianBaoHanh, DungTichBinhXang=@DungTichBinhXang WHERE MaHang=@MaHang";
 
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
@@ -169,7 +169,14 @@ namespace QLCHBX.FormHangHoa
                             command.Parameters.AddWithValue("@MaDongCo", cmbMaDC.SelectedValue);
                             command.Parameters.AddWithValue("@MaNuocSX", cmbMaNSX.SelectedValue);
                             command.Parameters.AddWithValue("@MaTinhTrang", cmbMaTT.SelectedValue);
-                            command.Parameters.AddWithValue("@Anh", imageBytes);
+                            if (imageBytes != null)
+                            {
+                                command.Parameters.AddWithValue("@Anh", imageBytes);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@Anh", DBNull.Value);
+                            }
                             command.Parameters.AddWithValue("@SoLuong", sl);
                             command.Parameters.AddWithValue("@DonGiaBan", dgb);
                             command.Parameters.AddWithValue("@DonGiaNhap", dgn);

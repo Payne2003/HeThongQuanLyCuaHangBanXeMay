@@ -48,11 +48,11 @@
             this.ctThoat = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnControl = new Guna.UI2.WinForms.Guna2Panel();
+            this.nhacungcap1 = new QLCHBX.HanghoaControl.Nhacungcap();
             this.khachHang1 = new QLCHBX.ALLControl.KhachHang();
             this.giaoDichCT1 = new QLCHBX.ALLControl.GiaoDichCT();
             this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.nhacungcap1 = new QLCHBX.HanghoaControl.Nhacungcap();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -410,6 +410,15 @@
             this.pnControl.Size = new System.Drawing.Size(824, 748);
             this.pnControl.TabIndex = 2;
             // 
+            // nhacungcap1
+            // 
+            this.nhacungcap1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nhacungcap1.Location = new System.Drawing.Point(0, 0);
+            this.nhacungcap1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nhacungcap1.Name = "nhacungcap1";
+            this.nhacungcap1.Size = new System.Drawing.Size(824, 748);
+            this.nhacungcap1.TabIndex = 4;
+            // 
             // khachHang1
             // 
             this.khachHang1.BackColor = System.Drawing.Color.White;
@@ -448,15 +457,6 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.header;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // nhacungcap1
-            // 
-            this.nhacungcap1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nhacungcap1.Location = new System.Drawing.Point(0, 0);
-            this.nhacungcap1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.nhacungcap1.Name = "nhacungcap1";
-            this.nhacungcap1.Size = new System.Drawing.Size(824, 748);
-            this.nhacungcap1.TabIndex = 4;
             // 
             // DashBoard
             // 
