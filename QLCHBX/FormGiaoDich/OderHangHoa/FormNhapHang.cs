@@ -324,7 +324,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
 
         private void txtGiamGia_TextChanged(object sender, EventArgs e)
         {
-            if (KiemTraTextsRong(txtGiamGia.Text, txtSoLuongNhap.Text))
+            if (KiemTraTextsRong(txtGiamGia.Text, txtSoLuongNhap.Text,txtDonGia.Text))
             {
                 return;
             }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QLCHBX.HanghoaControl
 {
-	public partial class Nhacungcap : UserControl
-	{
-		ProcessDatabase dtBase = new ProcessDatabase();
+    public partial class Nhacungcap : UserControl
+    {
+        ProcessDatabase dtBase = new ProcessDatabase();
         public void Load()
         {
             btnLuu.Enabled = false;
@@ -21,30 +21,30 @@ namespace QLCHBX.HanghoaControl
             pn1.Visible = false;
         }
         public Nhacungcap()
-		{
-			InitializeComponent();
+        {
+            InitializeComponent();
             DataTable dt = dtBase.DocBang("Select * From NhaCungCap");
             dgv.DataSource = dt;
             Load();
         }
 
-		private void Nhacungcap_Load(object sender, EventArgs e)
-		{
-            
+        private void Nhacungcap_Load(object sender, EventArgs e)
+        {
+
         }
 
-		private void btnXoa_Click(object sender, EventArgs e)
-		{
-			DataGridViewRow selectedRow = dgv.SelectedRows[0];
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dgv.SelectedRows[0];
 
-			string maNCC = selectedRow.Cells["MaNCC"].Value.ToString();
-			if (MessageBox.Show("Bạn có muốn xóa nhà cung cấp có mã là:" + maNCC + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-			{
-				dtBase.CapNhatDuLieu("delete NhaCungCap where MaNCC='" + maNCC + "'");
-				MessageBox.Show("Xóa thành công","Thông báo");
-				dgv.DataSource = dtBase.DocBang("Select * From NhaCungCap");
-			}
-		}
+            string maNCC = selectedRow.Cells["MaNCC"].Value.ToString();
+            if (MessageBox.Show("Bạn có muốn xóa nhà cung cấp có mã là:" + maNCC + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                dtBase.CapNhatDuLieu("delete NhaCungCap where MaNCC='" + maNCC + "'");
+                MessageBox.Show("Xóa thành công", "Thông báo");
+                dgv.DataSource = dtBase.DocBang("Select * From NhaCungCap");
+            }
+        }
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -74,7 +74,7 @@ namespace QLCHBX.HanghoaControl
             string key = txtSearch.Text;
             if (string.IsNullOrEmpty(key))
             {
-                MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm.");              
+                MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm.");
             }
             else
             {
@@ -99,14 +99,14 @@ namespace QLCHBX.HanghoaControl
         private void ptThem_Click(object sender, EventArgs e)
         {
             pn1.Visible = true;
-            txtMa.Text = "";          
+            txtMa.Text = "";
             btnLuu.Enabled = true;
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (txtMa.Text == "")
             {
-                if(txtTen.Text == "")
+                if (txtTen.Text == "")
                 {
                     MessageBox.Show("Vui lòng nhập tên nhà cung cấp.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

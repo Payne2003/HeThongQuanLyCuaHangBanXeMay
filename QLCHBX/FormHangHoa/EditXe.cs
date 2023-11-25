@@ -18,7 +18,7 @@ namespace QLCHBX.FormHangHoa
         ProcessDatabase dtBase = new ProcessDatabase();
         ChucNang function = new ChucNang();
         SqlConnection connection;
-        string connectionString = @"Data Source=DuyLa;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        string connectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         private int h = 1;
@@ -68,7 +68,6 @@ namespace QLCHBX.FormHangHoa
         {
             txtMaH.Text = MaHang;
             txtTenH.Text = TenHang;
-            
             txtNSX.Text = NamSanXuat;
             txtSL.Text = SoLuong;
             txtTime.Text = ThoiGian;
@@ -91,9 +90,8 @@ namespace QLCHBX.FormHangHoa
             }
             else
             {
-               // MessageBox.Show("Mảng byte hình ảnh không hợp lệ.");
+
             }
-            // LoadAnh();
         }
         private bool kiemtradl()
         {
@@ -104,15 +102,13 @@ namespace QLCHBX.FormHangHoa
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-            string mah = txtMaH.Text.Trim();
+            int mah = int.Parse(txtMaH.Text);
             string tenh = txtTenH.Text.Trim();
-           
             string nsx = txtNSX.Text.Trim();
-
-            string sl = txtSL.Text.Trim();       
-            string dgb = txtDGB.Text.Trim();
-            string dgn = txtDGN.Text.Trim();
-            string dtbx = txtdtbx.Text.Trim();
+            int sl = int.Parse(txtSL.Text);
+            decimal dgb = decimal.Parse(txtDGB.Text);
+            decimal dgn = decimal.Parse(txtDGN.Text);
+            int dtbx = int.Parse(txtdtbx.Text);
             bool isNewImageSelected = false;
             byte[] imageBytes;
             Image previousImage = null; // Đối tượng Image của ảnh cũ
@@ -213,9 +209,7 @@ namespace QLCHBX.FormHangHoa
                             command.Parameters.AddWithValue("@TenHang", tenh);
                             command.Parameters.AddWithValue("@MaTheLoai", cmbMaTL.SelectedValue);
                             command.Parameters.AddWithValue("@MaHangSX", cmbMaHSX.SelectedValue);
-
                             command.Parameters.AddWithValue("@NamSX", nsx);
-
                             command.Parameters.AddWithValue("@MaNuocSX", cmbMaNSX.SelectedValue);
                             command.Parameters.AddWithValue("@MaTinhTrang", cmbMaTT.SelectedValue);
                             command.Parameters.AddWithValue("@Anh", imageBytes);
