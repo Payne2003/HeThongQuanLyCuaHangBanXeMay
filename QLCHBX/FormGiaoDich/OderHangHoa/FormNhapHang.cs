@@ -324,7 +324,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
 
         private void txtGiamGia_TextChanged(object sender, EventArgs e)
         {
-            if (KiemTraTextsRong(txtGiamGia.Text, txtSoLuongNhap.Text))
+            if (KiemTraTextsRong(txtGiamGia.Text, txtSoLuongNhap.Text,txtDonGia.Text))
             {
                 return;
             }
@@ -338,7 +338,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                 }
                 else
                 {
-                    decimal thanhTien = decimal.Parse(txtSoLuongNhap.Text) * int.Parse(txtSoLuongNhap.Text) * (1 - decimal.Parse(txtGiamGia.Text) / 100);
+                    decimal thanhTien = decimal.Parse(txtDonGia.Text) * int.Parse(txtSoLuongNhap.Text) * (1 - decimal.Parse(txtGiamGia.Text) / 100);
                     txtThanhTien.Text = thanhTien.ToString();
                 }
             }
