@@ -140,6 +140,7 @@ namespace QLCHBX.HanghoaControl
                         dtBase.CapNhatDuLieu("update NhaCungCap set TenNCC = N'" + txtTen.Text + "', DiaChi = N'" + txtdc.Text + "', DienThoai = N'" + txtsdt.Text + "' where MaNCC = '" + txtMa.Text + "'");
                         MessageBox.Show("Bạn đã sửa thành công");
                         dgv.DataSource = dtBase.DocBang("SELECT * FROM NhaCungCap");
+                        ptLoad_Click(sender, e);
                     }
                 }
             }
