@@ -37,23 +37,6 @@ namespace QLCHBX.HanghoaControl
             dgv.Columns[0].Width = 40;
             pn1.Visible = false;
         }
-        private void btnthoat_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow selectedRow = dgv.SelectedRows[0];
-
-            string maHang = selectedRow.Cells["MaHang"].Value.ToString();
-            if (MessageBox.Show("Bạn có muốn xóa xe có mã là:" + maHang + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                dtBase.CapNhatDuLieu("delete Dmh where MaHang='" + maHang + "'");
-				MessageBox.Show("Xóa thành công", "Thông báo");
-				dgv.DataSource = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh,SoLuong From Dmh");              
-            }
-        }
         public void SetDataGridViewDataSource(DataTable dt)
         {
             dgv.DataSource = dt;
@@ -280,7 +263,7 @@ namespace QLCHBX.HanghoaControl
             string maHang = selectedRow.Cells["MaHang"].Value.ToString();
             string tenHang = selectedRow.Cells["TenHang"].Value.ToString();
             string namSX = selectedRow.Cells["NamSX"].Value.ToString();
-          //  Byte[] imgPath = (Byte[])selectedRow.Cells["Anh"].Value;
+          //Byte[] imgPath = (Byte[])selectedRow.Cells["Anh"].Value;
             string sl = selectedRow.Cells["SoLuong"].Value.ToString();
             string DGB = selectedRow.Cells["DonGiaBan"].Value.ToString();
             string Time = selectedRow.Cells["ThoiGianBaoHanh"].Value.ToString();
