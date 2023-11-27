@@ -88,7 +88,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 {  
                     DmhModel dmhModel = new DmhModel(MaHang);
                     dmhModel.CapNhatAnh(imageBytes);
-                    MessageBox.Show("Dữ liệu đã được cập nhật thành công.");s
+                    MessageBox.Show("Dữ liệu đã được cập nhật thành công.");
                     LoadData();
                 }
                 

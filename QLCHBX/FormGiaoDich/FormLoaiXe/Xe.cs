@@ -31,7 +31,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             cbHangXe.DataSource = dtHangSX;
             cbHangXe.DisplayMember = "TenHangSX";
             cbHangXe.ValueMember = "MaHangSX";
-            cbHangXe.Text = "";
+            ptHang.Image=null;
         }
 
         private void btThemSP_Click(object sender, EventArgs e)
@@ -99,17 +99,24 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
 
         private void btCapnhat_Click(object sender, EventArgs e)
         {
-            
-            DialogResult result = MessageBox.Show("Bạn có muốn cập nhật ảnh của hãng "+cbHangXe.Text+" không?", "Xác nhận cập nhật ảnh",
-                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            if (ptHang.Image == null)
             {
-                string ID = ((DataRowView)cbHangXe.SelectedItem)["MaHangSX"].ToString();
-                string tenHang = cbHangXe.Text;
-                HangSanXuatModel hangSanXuatModel = new HangSanXuatModel(int.Parse(ID),tenHang,fileAnh);
-                hangSanXuatModel.CapNhatHangSX();
-                LoadData();
+                return;
             }
+            else
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn cập nhật ảnh của hãng "+cbHangXe.Text+" không?", "Xác nhận cập nhật ảnh",
+                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string ID = ((DataRowView)cbHangXe.SelectedItem)["MaHangSX"].ToString();
+                    string tenHang = cbHangXe.Text;
+                    HangSanXuatModel hangSanXuatModel = new HangSanXuatModel(int.Parse(ID),tenHang,fileAnh);
+                    hangSanXuatModel.CapNhatHangSX();
+                    LoadData();
+                }
+            }
+           
         }
 
 
