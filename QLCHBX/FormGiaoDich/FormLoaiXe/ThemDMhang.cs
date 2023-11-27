@@ -13,6 +13,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
 {
     public partial class ThemDMhang : Form
     {
+        public string TenHangSX { get; set; }
         public ThemDMhang()
         { 
             InitializeComponent();
@@ -67,7 +68,14 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
 
         private void ThemDMhang_Load(object sender, EventArgs e)
         {
-            LoadDataGridView();
+            if (KiemTraTextsRong(TenHangSX))
+            {
+                LoadDataGridView();
+            }
+            else
+            {
+                LoadDataGridView(TenHangSX);
+            }
         }
 
         private void ttSYM_Click(object sender, EventArgs e)

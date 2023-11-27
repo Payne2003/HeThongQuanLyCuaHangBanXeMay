@@ -19,7 +19,7 @@ namespace QLCHBX.FormHangHoa
         ProcessDatabase dtBase = new ProcessDatabase();
         ChucNang function = new ChucNang();
         SqlConnection connection;
-        string connectionString = @"Data Source=DuyLa;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        string connectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         private int h = 1;
@@ -149,8 +149,8 @@ namespace QLCHBX.FormHangHoa
                         using (SqlConnection connection = new SqlConnection(connectionString))
                         {
                             connection.Open();
-                            string query = "INSERT INTO Dmh (TenHang, MaTheLoai, MaHangSX,  NamSX, MaNuocSX, MaTinhTrang, Anh, SoLuong, DonGiaBan) " +
-                                "VALUES (@TenHang, @MaTheLoai, @MaHangSX, @NamSX, @MaNuocSX, @MaTinhTrang, @Anh, @SoLuong, @DonGiaBan)";
+                            string query = "INSERT INTO Dmh (TenHang, MaTheLoai,MaDongCo, MaHangSX,  NamSX, MaNuocSX, MaTinhTrang, Anh, SoLuong, DonGiaBan) " +
+                                "VALUES (@TenHang, @MaTheLoai,@MaDongCo, @MaHangSX, @NamSX, @MaNuocSX, @MaTinhTrang, @Anh, @SoLuong, @DonGiaBan)";
 
                             using (SqlCommand command = new SqlCommand(query, connection))
                             {
@@ -163,6 +163,7 @@ namespace QLCHBX.FormHangHoa
                                 command.Parameters.AddWithValue("@Anh", imageBytes);
                                 command.Parameters.AddWithValue("@SoLuong", sl);                               
                                 command.Parameters.AddWithValue("@DonGiaBan", dgb);
+                                command.Parameters.AddWithValue("@MaDongCo", cmbMaDC.SelectedValue);
 
                                 int count = command.ExecuteNonQuery();
 
@@ -180,11 +181,50 @@ namespace QLCHBX.FormHangHoa
                         }
 
                     }
+                    if (h == 3)
+                    {
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            connection.Open();
+                            string query = "INSERT INTO Dmh (TenHang, MaTheLoai,MaPhanh, MaHangSX,  NamSX, MaNuocSX, MaTinhTrang, Anh, SoLuong, DonGiaBan) " +
+                                "VALUES (@TenHang, @MaTheLoai,@MaPhanh, @MaHangSX, @NamSX, @MaNuocSX, @MaTinhTrang, @Anh, @SoLuong, @DonGiaBan)";
+
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@TenHang", tenh);
+                                command.Parameters.AddWithValue("@MaTheLoai", cmbMaTL.SelectedValue);
+                                command.Parameters.AddWithValue("@MaHangSX", cmbMaHSX.SelectedValue);
+                                command.Parameters.AddWithValue("@NamSX", nsx);
+                                command.Parameters.AddWithValue("@MaNuocSX", cmbMaNSX.SelectedValue);
+                                command.Parameters.AddWithValue("@MaTinhTrang", cmbMaTT.SelectedValue);
+                                command.Parameters.AddWithValue("@Anh", imageBytes);
+                                command.Parameters.AddWithValue("@SoLuong", sl);
+                                command.Parameters.AddWithValue("@DonGiaBan", dgb);
+                                command.Parameters.AddWithValue("@MaPhanh", cmbMaP.SelectedValue);
+
+                                int count = command.ExecuteNonQuery();
+
+                                if (count > 0)
+                                {
+                                    MessageBox.Show("Thêm hàng thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Thêm thất bại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                            }
+                        }
+
+                    }
+
                 }
                 else
                 {
                     MessageBox.Show("Vui lòng chọn ảnh.","Thông báo");
                 }
+
             }
         }
 
@@ -225,20 +265,19 @@ namespace QLCHBX.FormHangHoa
 		{
             h = 2;
             HienChiTiet(false);
-		}
+            cmbMaP.Visible = false;
+            lbp.Visible = false;
+        }
 
 		private void phanhToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-            h = 2;
+            h = 3;
 			HienChiTiet(false);
-		}
+            cmbMaDC.Visible = false;
+            lbdc.Visible = false;
+        }
 		private void HienChiTiet(Boolean hien)
 		{
-			
-			cmbMaP.Visible = hien;
-			lbp.Visible = hien;
-			cmbMaDC.Visible = hien;
-			lbdc.Visible = hien;
 			cmbMaMau.Visible = hien;
 			lbmau.Visible = hien;
             txtdtbx.Visible = hien;

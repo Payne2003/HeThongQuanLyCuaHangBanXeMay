@@ -93,22 +93,21 @@ namespace QLCHBX.FormHangHoa
 
             }
         }
-        private bool kiemtradl()
+        private bool kiemtradl1()
         {
-            if (txtTenH.Text.Trim() == string.Empty || txtNSX.Text.Trim() == string.Empty || txtSL.Text.Trim() == string.Empty || txtDGN.Text.Trim() == string.Empty || txtdtbx.Text.Trim() == string.Empty)
+            if (txtTenH.Text.Trim() == string.Empty || txtNSX.Text.Trim() == string.Empty || txtSL.Text.Trim() == string.Empty || txtDGN.Text.Trim() == string.Empty || txtdtbx.Text.Trim() == string.Empty || txtDGB.Text.Trim() == string.Empty)
+                return false;
+            return true;
+        }
+        private bool kiemtradl2()
+        {
+            if (txtTenH.Text.Trim() == string.Empty || txtNSX.Text.Trim() == string.Empty || txtSL.Text.Trim() == string.Empty || txtDGN.Text.Trim() == string.Empty || txtDGB.Text.Trim() == string.Empty)
                 return false;
             return true;
         }
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-            int mah = int.Parse(txtMaH.Text);
-            string tenh = txtTenH.Text.Trim();
-            string nsx = txtNSX.Text.Trim();
-            int sl = int.Parse(txtSL.Text);
-            decimal dgb = decimal.Parse(txtDGB.Text);
-            decimal dgn = decimal.Parse(txtDGN.Text);
-            int dtbx = int.Parse(txtdtbx.Text);
             bool isNewImageSelected = false;
             byte[] imageBytes;
             Image previousImage = null; // Đối tượng Image của ảnh cũ
@@ -137,15 +136,20 @@ namespace QLCHBX.FormHangHoa
                 // Sử dụng mảng byte của ảnh cũ
                 imageBytes = img;
             }
-            
-            if (kiemtradl() == false)
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin vào chỗ trống.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                if (h == 1)
+            if (h == 1)
                 {
+                    if (kiemtradl1() == false)
+                    {
+                        MessageBox.Show("Vui lòng điền đầy đủ thông tin vào chỗ trống.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                int mah = int.Parse(txtMaH.Text);
+                string tenh = txtTenH.Text.Trim();
+                string nsx = txtNSX.Text.Trim();
+                int sl = int.Parse(txtSL.Text);
+                decimal dgb = decimal.Parse(txtDGB.Text);
+                decimal dgn = decimal.Parse(txtDGN.Text);
+                decimal dtbx = decimal.Parse(txtdtbx.Text);
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
@@ -196,7 +200,18 @@ namespace QLCHBX.FormHangHoa
                 }
                 if (h == 2)
                 {
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    if (kiemtradl2() == false)
+                    {
+                        MessageBox.Show("Vui lòng điền đầy đủ thông tin vào chỗ trống.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                int mah = int.Parse(txtMaH.Text);
+                string tenh = txtTenH.Text.Trim();
+                string nsx = txtNSX.Text.Trim();
+                int sl = int.Parse(txtSL.Text);
+                decimal dgb = decimal.Parse(txtDGB.Text);
+                decimal dgn = decimal.Parse(txtDGN.Text);
+                using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
 
@@ -216,7 +231,6 @@ namespace QLCHBX.FormHangHoa
                             command.Parameters.AddWithValue("@SoLuong", sl);
                             command.Parameters.AddWithValue("@DonGiaBan", dgb);
                             command.Parameters.AddWithValue("@DonGiaNhap", txtDGN.Text);
-
                             command.Parameters.AddWithValue("@ThoiGianBaoHanh", txtTime.Text);
 
                             int count = command.ExecuteNonQuery();
@@ -230,8 +244,6 @@ namespace QLCHBX.FormHangHoa
                             {
                                 MessageBox.Show("Lỗi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-
-                        }
                     }
                 }
             }
@@ -282,7 +294,6 @@ namespace QLCHBX.FormHangHoa
         }
         private void HienChiTiet(Boolean hien)
         {
-
             cmbMaP.Visible = hien;
             lbp.Visible = hien;
             cmbMaDC.Visible = hien;

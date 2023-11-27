@@ -306,3 +306,6 @@ C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormNhanVien.EditNV.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormNV.EditNV.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.HanghoaControl.Nhacungcap.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.ThemHangSX.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.DongCoCT.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.PhanhCT.resources

@@ -265,11 +265,29 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBaoCao\BaoCao.Designer.cs" />
+    <Compile Include="FormGiaoDich\FormLoaiXe\DongCoCT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\DongCoCT.Designer.cs">
+      <DependentUpon>DongCoCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\PhanhCT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\PhanhCT.Designer.cs">
+      <DependentUpon>PhanhCT.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGiaoDich\FormLoaiXe\ThemDMhang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormGiaoDich\FormLoaiXe\ThemDMhang.Designer.cs">
       <DependentUpon>ThemDMhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\ThemHangSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\FormLoaiXe\ThemHangSX.Designer.cs">
+      <DependentUpon>ThemHangSX.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGiaoDich\FormLoaiXe\Xe.cs">
       <SubType>UserControl</SubType>
@@ -405,10 +423,13 @@
     <Compile Include="Model\ChiTietHoaDonNhapModel.cs" />
     <Compile Include="Model\DmhModel.cs" />
     <Compile Include="Model\DonDatHangModel.cs" />
+    <Compile Include="Model\DongCoModel.cs" />
+    <Compile Include="Model\HangSanXuatModel.cs" />
     <Compile Include="Model\HoaDonNhapModel.cs" />
     <Compile Include="Model\KhachHangModel.cs" />
     <Compile Include="Model\NhaCungCapModel.cs" />
     <Compile Include="Model\NhanVienModel.cs" />
+    <Compile Include="Model\PhanhModel.cs" />
     <Compile Include="Model\TaiKhoanModel.cs" />
     <Compile Include="NhanVienConTrol\NhanVien.cs">
       <SubType>UserControl</SubType>
@@ -441,8 +462,17 @@
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBaoCao\BaoCao.resx" />
+    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\DongCoCT.resx">
+      <DependentUpon>DongCoCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\PhanhCT.resx">
+      <DependentUpon>PhanhCT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\ThemDMhang.resx">
       <DependentUpon>ThemDMhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\ThemHangSX.resx">
+      <DependentUpon>ThemHangSX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\Xe.resx">
       <DependentUpon>Xe.cs</DependentUpon>
