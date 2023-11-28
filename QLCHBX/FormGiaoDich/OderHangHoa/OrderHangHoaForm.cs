@@ -190,7 +190,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             HoaDonNhapModel model = new HoaDonNhapModel(int.Parse(txtSoHDN.Text));
             model.NhapHang();
             CapNhatSauKhiThanhToan();
-            MessageBox.Show("Thanh toán thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Nhập hàng thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadDataGridView();
         }
 
@@ -437,6 +437,16 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                 MessageBox.Show("Tệp đã được lưu tại: " + filePath, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void ptTinhToan_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Yêu Cầu xem tổng chi của Cửa Hàng FuShion", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                XemTongChi xemTongChi = new XemTongChi();
+                xemTongChi.Show();
+            }
         }
     }
 }

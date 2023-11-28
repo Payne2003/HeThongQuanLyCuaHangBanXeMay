@@ -207,6 +207,7 @@
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -301,6 +302,12 @@
     <Compile Include="FormGiaoDich\GiaoDich.Designer.cs">
       <DependentUpon>GiaoDich.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGiaoDich\LichSuGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\LichSuGia.Designer.cs">
+      <DependentUpon>LichSuGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGiaoDich\OderHangHoa\FormNhapHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +325,12 @@
     </Compile>
     <Compile Include="FormGiaoDich\OderHangHoa\OrderHangHoaForm.Designer.cs">
       <DependentUpon>OrderHangHoaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoDich\OderHangHoa\XemTongChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich\OderHangHoa\XemTongChi.Designer.cs">
+      <DependentUpon>XemTongChi.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGiaoDich\ThanhToan\XacNhanThanhToan.cs">
       <SubType>Form</SubType>
@@ -480,6 +493,9 @@
     <EmbeddedResource Include="FormGiaoDich\GiaoDich.resx">
       <DependentUpon>GiaoDich.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\LichSuGia.resx">
+      <DependentUpon>LichSuGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\OderHangHoa\FormNhapHang.resx">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -488,6 +504,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\OderHangHoa\OrderHangHoaForm.resx">
       <DependentUpon>OrderHangHoaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich\OderHangHoa\XemTongChi.resx">
+      <DependentUpon>XemTongChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\ThanhToan\XacNhanThanhToan.resx">
       <DependentUpon>XacNhanThanhToan.cs</DependentUpon>

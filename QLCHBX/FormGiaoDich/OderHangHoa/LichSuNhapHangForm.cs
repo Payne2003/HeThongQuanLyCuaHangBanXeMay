@@ -13,6 +13,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
 {
     public partial class LichSuNhapHangForm : Form
     {
+        int MaHang;
         public LichSuNhapHangForm()
         {
             InitializeComponent();
@@ -24,6 +25,8 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
             viewHoaDonNhap.DataSource = hoaDonNhapModel_Load.LayDuLieuHoaDonNhapDaNhap();
             btHuyNhapHang.Visible = false;
             grThongtin.Visible = false;
+            btLichsugiaNhap.Visible = false;
+            lbLichSu.Visible = false;
             LoadText();
         }
         public void LoadText()
@@ -43,6 +46,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                 {
                     btHuyNhapHang.Visible = true;
                     grThongtin.Visible = true;
+                    lbLichSu.Visible = true;
                     txtSoHDN.Text = row.Cells[0].Value.ToString();
                     txtMaNV.Text = row.Cells[1].Value.ToString();
                     txtTenNV.Text = row.Cells[2].Value.ToString();
@@ -148,10 +152,31 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                 orderHangHoa.LoadDataGridView();
             }
         }
-
-        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
+        private void viewChiTietHoaDonNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = viewChiTietHoaDonNhap.Rows[e.RowIndex];
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != "")
+                {
+                    MaHang = int.Parse(row.Cells[0].Value.ToString());
+                    btLichsugiaNhap.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu ở Ô: " + e.RowIndex + ", Vui lòng thử lại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
 
+                }
+            }
+        }
+
+        private void btLichsugiaNhap_Click(object sender, EventArgs e)
+        {
+            LichSuGia lichSuGia = new LichSuGia();
+            lichSuGia.lbMaHang.Text = MaHang.ToString();
+            lichSuGia.ShowDialog();
         }
     }
 }

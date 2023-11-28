@@ -153,6 +153,21 @@ WHERE MaPhanh IS NOT NULL AND MaDongCo IS NULL AND MaPhanh = @MaPhanh;
             dt = DocBang(sql);
             return dt;
         }
+
+        public DataTable LayDuLieuLichSuGia()
+        {
+            DataTable dt = new DataTable();
+
+            string sql = "SELECT * FROM ViewLichSuGiaNhap WHERE MaHang = @MaHang;";
+            SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter("@MaHang", MaHang)
+            };
+
+            dt = DocBang(sql,parameters);
+
+            return dt;
+
+        }
         public int LaySoLuongKho()
         {
             string sql = "SELECT SoLuong FROM Dmh WHERE MaHang = @MaHang;";
@@ -186,7 +201,25 @@ WHERE MaPhanh IS NOT NULL AND MaDongCo IS NULL AND MaPhanh = @MaPhanh;
 
             ExecuteNonQuery(sql, parameters);
         }
+        public string LayTenHang()
+        {
+            string sql = "SELECT TenHang FROM Dmh WHERE MaHang = @MaHang;";
+            SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter("@MaHang", MaHang)
+            };
 
+            DataTable result = DocBang(sql, parameters);
+
+            if (result.Rows.Count > 0)
+            {
+
+                return Convert.ToString(result.Rows[0]["TenHang"]);
+            }
+            else
+            {
+                return "";
+            }
+        }
         public void CapNhatAnh(byte[] Anh)
         {
             string sql = @"UPDATE Dmh
