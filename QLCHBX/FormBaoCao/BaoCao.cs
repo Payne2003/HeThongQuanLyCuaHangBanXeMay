@@ -32,16 +32,5 @@ namespace QLCHBX.FormBaoCao
 			txtLoiNhuan.Text = loinhuan;
 		}
 
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // BaoCao
-            // 
-            this.ClientSize = new System.Drawing.Size(308, 285);
-            this.Name = "BaoCao";
-            this.ResumeLayout(false);
-
-        }
     }
 }
