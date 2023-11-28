@@ -233,6 +233,7 @@
             this.btThemSP.Size = new System.Drawing.Size(174, 46);
             this.btThemSP.TabIndex = 2;
             this.btThemSP.Text = "Mua sản phẩm";
+            this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
             // 
             // cbPhanh
             // 

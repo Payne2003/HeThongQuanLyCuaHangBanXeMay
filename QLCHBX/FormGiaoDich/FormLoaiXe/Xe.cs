@@ -39,17 +39,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             ThemDMhang themDMhang = new ThemDMhang();
             themDMhang.lbMaHoaDon.Text = txtSoDDH.Text;
             themDMhang.txtSoDDH.Text = txtSoDDH.Text;
-            if (cbHangXe.Text == "")
-            {
-                themDMhang.ShowDialog(this);
-            }
-            else
-            {
-                string tenHang = cbHangXe.Text;
-                themDMhang.TenHangSX = tenHang;
-                themDMhang.ShowDialog(this);
-            }
-
+            themDMhang.ShowDialog(this);
         }
 
         private void cbHangXe_SelectedIndexChanged(object sender, EventArgs e)

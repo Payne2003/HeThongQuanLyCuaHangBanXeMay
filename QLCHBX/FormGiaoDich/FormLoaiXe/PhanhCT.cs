@@ -190,5 +190,13 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
         {
             LoadData();
         }
+
+        private void btThemSP_Click(object sender, EventArgs e)
+        {
+            ThemDMhang themDMhang = new ThemDMhang();
+            themDMhang.lbMaHoaDon.Text = txtSoDDH.Text;
+            themDMhang.txtSoDDH.Text = txtSoDDH.Text;
+            themDMhang.ShowDialog(this);
+        }
     }
 }
