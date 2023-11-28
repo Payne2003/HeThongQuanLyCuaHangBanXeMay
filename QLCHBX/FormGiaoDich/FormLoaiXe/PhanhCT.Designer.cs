@@ -207,7 +207,7 @@
             this.txtSoDDH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoDDH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoDDH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoDDH.Location = new System.Drawing.Point(609, 120);
+            this.txtSoDDH.Location = new System.Drawing.Point(315, 516);
             this.txtSoDDH.Name = "txtSoDDH";
             this.txtSoDDH.PasswordChar = '\0';
             this.txtSoDDH.PlaceholderText = "";

@@ -189,7 +189,7 @@
             // 
             this.viewDmhHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.viewDmhHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.viewDmhHang.Location = new System.Drawing.Point(19, 379);
+            this.viewDmhHang.Location = new System.Drawing.Point(19, 389);
             this.viewDmhHang.Name = "viewDmhHang";
             this.viewDmhHang.ReadOnly = true;
             this.viewDmhHang.Size = new System.Drawing.Size(480, 236);
@@ -207,7 +207,7 @@
             this.txtSoDDH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoDDH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoDDH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoDDH.Location = new System.Drawing.Point(609, 120);
+            this.txtSoDDH.Location = new System.Drawing.Point(281, 581);
             this.txtSoDDH.Name = "txtSoDDH";
             this.txtSoDDH.PasswordChar = '\0';
             this.txtSoDDH.PlaceholderText = "";

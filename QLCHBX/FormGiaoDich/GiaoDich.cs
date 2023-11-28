@@ -383,11 +383,13 @@ namespace QLCHBX.FormGiaoDich
         {
             if (cbDanhMuc.Text ==  "Động cơ")
             {
+                dongCoCT1.txtSoDDH.Text = txtSoDDH.Text;
                 dongCoCT1.BringToFront();
             }
 
             if(cbDanhMuc.Text == "Phanh")
             {
+                phanhCT1.txtSoDDH.Text = txtSoDDH.Text;
                 phanhCT1.BringToFront();
             }
         }
