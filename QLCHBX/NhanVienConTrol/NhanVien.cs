@@ -187,6 +187,14 @@ namespace QLCHBX.NhanVienConTrol
 		private void btnSua_Click(object sender, EventArgs e)
 		{
 			EditNV editNV = new EditNV();
+			editNV.txtMaNV.Text = txtMaNV.Text;
+			editNV.txtTenNV.Text = txtTenNV.Text;
+			editNV.txtDienThoai.Text = txtDienThoai.Text;
+			editNV.txtDiaChi.Text = txtDiaChi.Text;
+			editNV.cbbCV.SelectedIndex = cbbCV.SelectedIndex;
+			editNV.dtpNS.Value = dtpNS.Value;
+			editNV.rbNam.Checked = rbNam.Checked;
+			editNV.rbNu.Checked = rbNu.Checked;
 			editNV.ShowDialog();
 		}
 	}
