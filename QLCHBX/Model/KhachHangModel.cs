@@ -49,15 +49,37 @@ namespace QLCHBX.Model
 
         public bool ThemKhachHang()
         {
-            string sql = "INSERT INTO KhachHang (TenKhach, DiaChi, DienThoai) VALUES (@TenKhach, @DiaChi, @DienThoai)";
-            SqlParameter[] sqlParameters = new SqlParameter[]
+            // Kiểm tra xem số điện thoại có tồn tại trong cơ sở dữ liệu hay không
+            string checkPhoneQuery = "SELECT COUNT(*) FROM KhachHang WHERE DienThoai = @DienThoai";
+            SqlParameter[] checkPhoneParameters = new SqlParameter[]
             {
-                new SqlParameter("@TenKhach", TenKhach),
-                new SqlParameter("@DiaChi", DiaChi),
-                new SqlParameter("@DienThoai", DienThoai)
+        new SqlParameter("@DienThoai", DienThoai)
             };
-            return ExecuteNonQuery(sql, sqlParameters);
+
+            // Lấy số lượng số điện thoại trùng lặp từ cơ sở dữ liệu
+            object existingPhoneCountObj = ExecuteScalar(checkPhoneQuery, checkPhoneParameters);
+
+            // Kiểm tra nếu số lượng số điện thoại trùng lặp lớn hơn 0, tức là số điện thoại đã tồn tại
+            if (existingPhoneCountObj != null && Convert.ToInt32(existingPhoneCountObj) > 0)
+            {
+                Console.WriteLine("Số điện thoại đã tồn tại trong cơ sở dữ liệu.");
+                return false;
+            }
+
+            // Nếu số điện thoại không trùng lặp, thực hiện thêm khách hàng mới vào cơ sở dữ liệu
+            string insertQuery = "INSERT INTO KhachHang (TenKhach, DiaChi, DienThoai) VALUES (@TenKhach, @DiaChi, @DienThoai)";
+            SqlParameter[] insertParameters = new SqlParameter[]
+            {
+        new SqlParameter("@TenKhach", TenKhach),
+        new SqlParameter("@DiaChi", DiaChi),
+        new SqlParameter("@DienThoai", DienThoai)
+            };
+
+            // Thực hiện truy vấn thêm khách hàng
+            return ExecuteNonQuery(insertQuery, insertParameters);
         }
+
+
 
         public bool XoaKhachHang()
         {
@@ -71,16 +93,38 @@ namespace QLCHBX.Model
 
         public bool CapNhatKhachHang()
         {
-            string sql = "UPDATE KhachHang SET TenKhach = @TenKhach, DiaChi = @DiaChi, DienThoai = @DienThoai WHERE MaKhach = @MaKhach";
-            SqlParameter[] sqlParameters = new SqlParameter[]
+            // Kiểm tra xem số điện thoại có tồn tại trong cơ sở dữ liệu cho khách hàng khác hay không
+            string checkPhoneQuery = "SELECT COUNT(*) FROM KhachHang WHERE DienThoai = @DienThoai AND MaKhach != @MaKhach";
+            SqlParameter[] checkPhoneParameters = new SqlParameter[]
             {
-                new SqlParameter("@MaKhach", MaKhach),
-                new SqlParameter("@TenKhach", TenKhach),
-                new SqlParameter("@DiaChi", DiaChi),
-                new SqlParameter("@DienThoai", DienThoai)
+        new SqlParameter("@DienThoai", DienThoai),
+        new SqlParameter("@MaKhach", MaKhach)
             };
-            return ExecuteNonQuery(sql, sqlParameters);
+
+            // Lấy số lượng số điện thoại trùng lặp từ cơ sở dữ liệu
+            object existingPhoneCountObj = ExecuteScalar(checkPhoneQuery, checkPhoneParameters);
+
+            // Kiểm tra nếu số lượng số điện thoại trùng lặp lớn hơn 0, tức là số điện thoại đã tồn tại cho khách hàng khác
+            if (existingPhoneCountObj != null && Convert.ToInt32(existingPhoneCountObj) > 0)
+            {
+                Console.WriteLine("Số điện thoại đã tồn tại cho khách hàng khác trong cơ sở dữ liệu.");
+                return false;
+            }
+
+            // Nếu số điện thoại không trùng lặp cho khách hàng khác, thực hiện cập nhật thông tin khách hàng
+            string updateQuery = "UPDATE KhachHang SET TenKhach = @TenKhach, DiaChi = @DiaChi, DienThoai = @DienThoai WHERE MaKhach = @MaKhach";
+            SqlParameter[] updateParameters = new SqlParameter[]
+            {
+        new SqlParameter("@MaKhach", MaKhach),
+        new SqlParameter("@TenKhach", TenKhach),
+        new SqlParameter("@DiaChi", DiaChi),
+        new SqlParameter("@DienThoai", DienThoai)
+            };
+
+            // Thực hiện truy vấn cập nhật thông tin khách hàng
+            return ExecuteNonQuery(updateQuery, updateParameters);
         }
+
         public DataTable TimKiemKhachHang(string key)
         {
             DataTable dataTable = new DataTable();

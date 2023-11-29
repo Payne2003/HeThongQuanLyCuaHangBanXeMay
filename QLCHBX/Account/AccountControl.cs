@@ -14,7 +14,7 @@ namespace QLCHBX.Account
     public partial class AccountControl : UserControl
     {
         private static AccountControl instance;
-        SqlConnection conn;
+        SqlConnection conn = new SqlConnection();
         SqlCommand cmd;
         SqlDataAdapter adapter;
         DataSet ds;
@@ -28,6 +28,7 @@ namespace QLCHBX.Account
         }
         public AccountControl()
         {
+            conn.ConnectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
             InitializeComponent();
         }
         private void LoadDuLieu(string sql)
@@ -182,8 +183,22 @@ namespace QLCHBX.Account
             LoadDuLieu("SELECT * FROM TaiKhoan WHERE Username = N'" + txtTimKiem.Text + "'");
             conn.Close();
         }
+        private void dgvUser_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtUserName.Text = dgvUser[0, e.RowIndex].Value.ToString();
+                txtPassWord.Text = dgvUser[1, e.RowIndex].Value.ToString();
+                txtMaNV.Text = dgvUser[2, e.RowIndex].Value.ToString();
 
-        private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {

@@ -48,11 +48,14 @@
             this.ctThoat = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnControl = new Guna.UI2.WinForms.Guna2Panel();
+            this.nhanVien1 = new QLCHBX.NhanVienConTrol.NhanVien();
+            this.baoCao1 = new QLCHBX.BaoCaoControl.BaoCao();
+            this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
             this.nhacungcap1 = new QLCHBX.HanghoaControl.Nhacungcap();
             this.khachHang1 = new QLCHBX.ALLControl.KhachHang();
             this.giaoDichCT1 = new QLCHBX.ALLControl.GiaoDichCT();
-            this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.account1 = new QLCHBX.Account.Account();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -106,6 +109,7 @@
             this.lbMaNV.TabIndex = 1;
             this.lbMaNV.Text = "Tài Khoản";
             this.lbMaNV.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbMaNV.Click += new System.EventHandler(this.lbMaNV_Click);
             // 
             // btKhachHang
             // 
@@ -400,24 +404,59 @@
             // 
             // pnControl
             // 
+            this.pnControl.Controls.Add(this.account1);
+            this.pnControl.Controls.Add(this.nhanVien1);
+            this.pnControl.Controls.Add(this.baoCao1);
+            this.pnControl.Controls.Add(this.hangHoa1);
             this.pnControl.Controls.Add(this.nhacungcap1);
             this.pnControl.Controls.Add(this.khachHang1);
             this.pnControl.Controls.Add(this.giaoDichCT1);
-            this.pnControl.Controls.Add(this.hangHoa1);
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnControl.Location = new System.Drawing.Point(200, 40);
             this.pnControl.Name = "pnControl";
             this.pnControl.Size = new System.Drawing.Size(824, 748);
             this.pnControl.TabIndex = 2;
             // 
+            // nhanVien1
+            // 
+            this.nhanVien1.BackColor = System.Drawing.Color.White;
+            this.nhanVien1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nhanVien1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhanVien1.ForeColor = System.Drawing.Color.Black;
+            this.nhanVien1.Location = new System.Drawing.Point(0, 0);
+            this.nhanVien1.Margin = new System.Windows.Forms.Padding(4);
+            this.nhanVien1.Name = "nhanVien1";
+            this.nhanVien1.Size = new System.Drawing.Size(824, 748);
+            this.nhanVien1.TabIndex = 4;
+            // 
+            // baoCao1
+            // 
+            this.baoCao1.BackColor = System.Drawing.Color.MintCream;
+            this.baoCao1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baoCao1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baoCao1.Location = new System.Drawing.Point(0, 0);
+            this.baoCao1.Margin = new System.Windows.Forms.Padding(4);
+            this.baoCao1.Name = "baoCao1";
+            this.baoCao1.Size = new System.Drawing.Size(824, 748);
+            this.baoCao1.TabIndex = 1;
+            // 
+            // hangHoa1
+            // 
+            this.hangHoa1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hangHoa1.Font = new System.Drawing.Font("Segoe UI Semilight", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hangHoa1.Location = new System.Drawing.Point(0, 0);
+            this.hangHoa1.Name = "hangHoa1";
+            this.hangHoa1.Size = new System.Drawing.Size(824, 748);
+            this.hangHoa1.TabIndex = 3;
+            // 
             // nhacungcap1
             // 
             this.nhacungcap1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nhacungcap1.Location = new System.Drawing.Point(0, 0);
-            this.nhacungcap1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nhacungcap1.Margin = new System.Windows.Forms.Padding(2);
             this.nhacungcap1.Name = "nhacungcap1";
             this.nhacungcap1.Size = new System.Drawing.Size(824, 748);
-            this.nhacungcap1.TabIndex = 4;
+            this.nhacungcap1.TabIndex = 2;
             // 
             // khachHang1
             // 
@@ -429,7 +468,7 @@
             this.khachHang1.Margin = new System.Windows.Forms.Padding(4);
             this.khachHang1.Name = "khachHang1";
             this.khachHang1.Size = new System.Drawing.Size(824, 748);
-            this.khachHang1.TabIndex = 3;
+            this.khachHang1.TabIndex = 1;
             // 
             // giaoDichCT1
             // 
@@ -440,17 +479,7 @@
             this.giaoDichCT1.Margin = new System.Windows.Forms.Padding(4);
             this.giaoDichCT1.Name = "giaoDichCT1";
             this.giaoDichCT1.Size = new System.Drawing.Size(824, 748);
-            this.giaoDichCT1.TabIndex = 2;
-            // 
-            // hangHoa1
-            // 
-            this.hangHoa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hangHoa1.Font = new System.Drawing.Font("Segoe UI Semilight", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hangHoa1.Location = new System.Drawing.Point(0, 0);
-            this.hangHoa1.Margin = new System.Windows.Forms.Padding(2);
-            this.hangHoa1.Name = "hangHoa1";
-            this.hangHoa1.Size = new System.Drawing.Size(824, 748);
-            this.hangHoa1.TabIndex = 1;
+            this.giaoDichCT1.TabIndex = 0;
             // 
             // guna2DragControl1
             // 
@@ -458,9 +487,18 @@
             this.guna2DragControl1.TargetControl = this.header;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // account1
+            // 
+            this.account1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.account1.Location = new System.Drawing.Point(0, 0);
+            this.account1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.account1.Name = "account1";
+            this.account1.Size = new System.Drawing.Size(824, 748);
+            this.account1.TabIndex = 5;
+            // 
             // DashBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 788);
@@ -506,9 +544,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbMaNV;
         private Guna.UI2.WinForms.Guna2Panel pnControl;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-		private ALLControl.HangHoa hangHoa1;
-        public ALLControl.GiaoDichCT giaoDichCT1;
-        private ALLControl.KhachHang khachHang1;
+        private NhanVienConTrol.NhanVien nhanVien1;
+        private BaoCaoControl.BaoCao baoCao1;
+        private ALLControl.HangHoa hangHoa1;
         private HanghoaControl.Nhacungcap nhacungcap1;
+        public ALLControl.KhachHang khachHang1;
+        public ALLControl.GiaoDichCT giaoDichCT1;
+        private Account.Account account1;
     }
 }

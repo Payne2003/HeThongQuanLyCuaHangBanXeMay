@@ -42,8 +42,6 @@
             this.btThoatRa = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pncontrol = new Guna.UI2.WinForms.Guna2Panel();
-            this.xe2 = new QLCHBX.FormGiaoDich.FormLoaiXe.Xe();
-            this.themKhachHangVaoDonDatHang1 = new QLCHBX.FormGiaoDich.ThemKhachHang.ThemKhachHangVaoDonDatHang();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbTongtien = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -90,6 +88,9 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.xe1 = new QLCHBX.FormGiaoDich.FormLoaiXe.Xe();
+            this.dongCoCT1 = new QLCHBX.FormGiaoDich.FormLoaiXe.DongCoCT();
+            this.phanhCT1 = new QLCHBX.FormGiaoDich.FormLoaiXe.PhanhCT();
             this.header.SuspendLayout();
             this.pnmoving.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbacham)).BeginInit();
@@ -247,34 +248,14 @@
             // 
             this.pncontrol.AutoScroll = true;
             this.pncontrol.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pncontrol.Controls.Add(this.xe2);
-            this.pncontrol.Controls.Add(this.themKhachHangVaoDonDatHang1);
+            this.pncontrol.Controls.Add(this.phanhCT1);
+            this.pncontrol.Controls.Add(this.dongCoCT1);
+            this.pncontrol.Controls.Add(this.xe1);
             this.pncontrol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pncontrol.Location = new System.Drawing.Point(208, 0);
             this.pncontrol.Name = "pncontrol";
             this.pncontrol.Size = new System.Drawing.Size(520, 748);
             this.pncontrol.TabIndex = 2;
-            // 
-            // xe2
-            // 
-            this.xe2.BackColor = System.Drawing.Color.White;
-            this.xe2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xe2.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xe2.Location = new System.Drawing.Point(0, 0);
-            this.xe2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.xe2.Name = "xe2";
-            this.xe2.Size = new System.Drawing.Size(520, 748);
-            this.xe2.TabIndex = 0;
-            // 
-            // themKhachHangVaoDonDatHang1
-            // 
-            this.themKhachHangVaoDonDatHang1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.themKhachHangVaoDonDatHang1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.themKhachHangVaoDonDatHang1.Location = new System.Drawing.Point(0, 0);
-            this.themKhachHangVaoDonDatHang1.Margin = new System.Windows.Forms.Padding(4);
-            this.themKhachHangVaoDonDatHang1.Name = "themKhachHangVaoDonDatHang1";
-            this.themKhachHangVaoDonDatHang1.Size = new System.Drawing.Size(520, 748);
-            this.themKhachHangVaoDonDatHang1.TabIndex = 1;
             // 
             // guna2Panel4
             // 
@@ -994,6 +975,34 @@
             this.guna2DragControl1.TargetControl = this.lbmoving;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // xe1
+            // 
+            this.xe1.BackColor = System.Drawing.Color.White;
+            this.xe1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xe1.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xe1.Location = new System.Drawing.Point(0, 0);
+            this.xe1.Name = "xe1";
+            this.xe1.Size = new System.Drawing.Size(520, 748);
+            this.xe1.TabIndex = 0;
+            // 
+            // dongCoCT1
+            // 
+            this.dongCoCT1.BackColor = System.Drawing.Color.White;
+            this.dongCoCT1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dongCoCT1.Location = new System.Drawing.Point(0, 0);
+            this.dongCoCT1.Name = "dongCoCT1";
+            this.dongCoCT1.Size = new System.Drawing.Size(520, 748);
+            this.dongCoCT1.TabIndex = 1;
+            // 
+            // phanhCT1
+            // 
+            this.phanhCT1.BackColor = System.Drawing.Color.White;
+            this.phanhCT1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.phanhCT1.Location = new System.Drawing.Point(0, 0);
+            this.phanhCT1.Name = "phanhCT1";
+            this.phanhCT1.Size = new System.Drawing.Size(520, 748);
+            this.phanhCT1.TabIndex = 2;
+            // 
             // GiaoDich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1064,7 +1073,6 @@
         private Guna.UI2.WinForms.Guna2Button btXe;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbTongtien;
         private System.Windows.Forms.DataGridView viewChiTietDonHang;
-        private FormLoaiXe.Xe xe1;
         private Guna.UI2.WinForms.Guna2GroupBox grbThongTinDonHangTrongChiTiet;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtSoDDH;
@@ -1093,7 +1101,9 @@
         public Guna.UI2.WinForms.Guna2TextBox txtDatCoc;
         public Guna.UI2.WinForms.Guna2TextBox txtThue;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        public FormLoaiXe.Xe xe2;
         private Guna.UI2.WinForms.Guna2ComboBox cbDanhMuc;
+        public FormLoaiXe.DongCoCT dongCoCT1;
+        public FormLoaiXe.Xe xe1;
+        public FormLoaiXe.PhanhCT phanhCT1;
     }
 }

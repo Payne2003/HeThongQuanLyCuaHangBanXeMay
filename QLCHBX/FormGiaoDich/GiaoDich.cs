@@ -87,7 +87,7 @@ namespace QLCHBX.FormGiaoDich
                 int SoDDH = donDatHang_new.ThemDonDatHang(int.Parse(txtMaNV.Text),NgayMua);
                 txtSoDDH.Text = SoDDH.ToString();
             }
-            xe2.txtSoDDH.Text = txtSoDDH.Text;
+            xe1.txtSoDDH.Text = txtSoDDH.Text;
             themKhachHangVaoDonDatHang1.txtSoDDH.Text = txtSoDDH.Text;
         }
 
@@ -232,7 +232,7 @@ namespace QLCHBX.FormGiaoDich
 
         private void btXe_Click(object sender, EventArgs e)
         {
-            xe2.BringToFront();
+            xe1.BringToFront();
         }
 
         private void GiaoDich_FormClosed(object sender, FormClosedEventArgs e)

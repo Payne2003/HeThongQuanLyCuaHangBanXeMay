@@ -220,6 +220,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Account\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AccountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Account\AccountControl.Designer.cs">
+      <DependentUpon>AccountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\HistoryDeliver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Account\HistoryDeliver.Designer.cs">
+      <DependentUpon>HistoryDeliver.cs</DependentUpon>
+    </Compile>
     <Compile Include="ALLControl\ForgotPassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -255,11 +273,6 @@
     </Compile>
     <Compile Include="BaoCaoControl\BaoCao.Designer.cs">
       <DependentUpon>BaoCao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Chitietdondathangset.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Chitietdondathangset.xsd</DependentUpon>
     </Compile>
     <Compile Include="ChucNang.cs" />
     <Compile Include="DashBoard.cs">
@@ -457,6 +470,15 @@
     <Compile Include="ThongBao\MessageBoxForm.Designer.cs">
       <DependentUpon>MessageBoxForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Account\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\AccountControl.resx">
+      <DependentUpon>AccountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\HistoryDeliver.resx">
+      <DependentUpon>HistoryDeliver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ALLControl\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -569,19 +591,11 @@
     <EmbeddedResource Include="ThongBao\MessageBoxForm.resx">
       <DependentUpon>MessageBoxForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="bin\Debug\QLCHBX.exe.config" />
     <None Include="bin\Debug\thong_tin_khach_hang.pdf" />
-    <None Include="Chitietdondathangset.xsc">
-      <DependentUpon>Chitietdondathangset.xsd</DependentUpon>
-    </None>
-    <None Include="Chitietdondathangset.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Chitietdondathangset.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Chitietdondathangset.xss">
-      <DependentUpon>Chitietdondathangset.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

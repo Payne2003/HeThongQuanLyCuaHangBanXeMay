@@ -72,7 +72,7 @@
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(26, 50);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(107, 34);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(72, 23);
             this.guna2HtmlLabel2.TabIndex = 3;
             this.guna2HtmlLabel2.Text = "Mã Hàng";
             // 
@@ -255,7 +255,7 @@
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(237, 43);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(108, 25);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(71, 15);
             this.guna2HtmlLabel1.TabIndex = 8;
             this.guna2HtmlLabel1.Text = "Hãng sản xuất";
             // 
@@ -288,7 +288,7 @@
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(10, 43);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(30, 25);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(21, 15);
             this.guna2HtmlLabel6.TabIndex = 8;
             this.guna2HtmlLabel6.Text = "Tên";
             // 
@@ -374,7 +374,7 @@
             this.ChiTiet.Text = "";
             this.ChiTiet.ToolTipText = "Chi tiết";
             this.ChiTiet.UseColumnTextForButtonValue = true;
-            this.ChiTiet.Width = 93;
+            this.ChiTiet.Width = 65;
             // 
             // Anh
             // 
@@ -386,7 +386,7 @@
             this.Anh.ReadOnly = true;
             this.Anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Anh.Width = 91;
+            this.Anh.Width = 63;
             // 
             // MaHang
             // 
@@ -395,11 +395,11 @@
             this.MaHang.MinimumWidth = 8;
             this.MaHang.Name = "MaHang";
             this.MaHang.ReadOnly = true;
-            this.MaHang.Width = 146;
+            this.MaHang.Width = 98;
             // 
             // Xeso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);

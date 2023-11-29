@@ -49,8 +49,6 @@
             this.grthongtindonhang = new Guna.UI2.WinForms.Guna2GroupBox();
             this.ptLoad = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btCapNhat = new Guna.UI2.WinForms.Guna2Button();
-            this.btTaoHoaDon = new Guna.UI2.WinForms.Guna2Button();
-            this.btThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.dtNgayNhap = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtTongTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDatCoc = new Guna.UI2.WinForms.Guna2TextBox();
@@ -68,6 +66,8 @@
             this.txtSoDDH = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbsddh = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btTaoHoaDon = new Guna.UI2.WinForms.Guna2Button();
+            this.btThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
@@ -355,48 +355,6 @@
             this.btCapNhat.Text = "Cập nhật";
             this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click);
             // 
-            // btTaoHoaDon
-            // 
-            this.btTaoHoaDon.BorderColor = System.Drawing.Color.Gray;
-            this.btTaoHoaDon.BorderThickness = 1;
-            this.btTaoHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btTaoHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btTaoHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btTaoHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btTaoHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btTaoHoaDon.FillColor = System.Drawing.Color.MintCream;
-            this.btTaoHoaDon.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F);
-            this.btTaoHoaDon.ForeColor = System.Drawing.Color.Black;
-            this.btTaoHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btTaoHoaDon.Image")));
-            this.btTaoHoaDon.ImageSize = new System.Drawing.Size(50, 50);
-            this.btTaoHoaDon.Location = new System.Drawing.Point(0, 0);
-            this.btTaoHoaDon.Name = "btTaoHoaDon";
-            this.btTaoHoaDon.Size = new System.Drawing.Size(281, 70);
-            this.btTaoHoaDon.TabIndex = 4;
-            this.btTaoHoaDon.Text = "Tạo hóa đơn";
-            this.btTaoHoaDon.Click += new System.EventHandler(this.btTaoHoaDon_Click);
-            // 
-            // btThanhToan
-            // 
-            this.btThanhToan.BorderColor = System.Drawing.Color.Gray;
-            this.btThanhToan.BorderThickness = 1;
-            this.btThanhToan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btThanhToan.FillColor = System.Drawing.Color.MintCream;
-            this.btThanhToan.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F);
-            this.btThanhToan.ForeColor = System.Drawing.Color.Black;
-            this.btThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btThanhToan.Image")));
-            this.btThanhToan.ImageSize = new System.Drawing.Size(50, 50);
-            this.btThanhToan.Location = new System.Drawing.Point(0, 0);
-            this.btThanhToan.Name = "btThanhToan";
-            this.btThanhToan.Size = new System.Drawing.Size(281, 70);
-            this.btThanhToan.TabIndex = 4;
-            this.btThanhToan.Text = "Thanh toán";
-            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
-            // 
             // dtNgayNhap
             // 
             this.dtNgayNhap.Checked = true;
@@ -663,6 +621,48 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(281, 70);
             this.guna2Panel2.TabIndex = 5;
+            // 
+            // btTaoHoaDon
+            // 
+            this.btTaoHoaDon.BorderColor = System.Drawing.Color.Gray;
+            this.btTaoHoaDon.BorderThickness = 1;
+            this.btTaoHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btTaoHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btTaoHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btTaoHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btTaoHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btTaoHoaDon.FillColor = System.Drawing.Color.MintCream;
+            this.btTaoHoaDon.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F);
+            this.btTaoHoaDon.ForeColor = System.Drawing.Color.Black;
+            this.btTaoHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btTaoHoaDon.Image")));
+            this.btTaoHoaDon.ImageSize = new System.Drawing.Size(50, 50);
+            this.btTaoHoaDon.Location = new System.Drawing.Point(0, 0);
+            this.btTaoHoaDon.Name = "btTaoHoaDon";
+            this.btTaoHoaDon.Size = new System.Drawing.Size(281, 70);
+            this.btTaoHoaDon.TabIndex = 4;
+            this.btTaoHoaDon.Text = "Tạo hóa đơn";
+            this.btTaoHoaDon.Click += new System.EventHandler(this.btTaoHoaDon_Click);
+            // 
+            // btThanhToan
+            // 
+            this.btThanhToan.BorderColor = System.Drawing.Color.Gray;
+            this.btThanhToan.BorderThickness = 1;
+            this.btThanhToan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btThanhToan.FillColor = System.Drawing.Color.MintCream;
+            this.btThanhToan.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F);
+            this.btThanhToan.ForeColor = System.Drawing.Color.Black;
+            this.btThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btThanhToan.Image")));
+            this.btThanhToan.ImageSize = new System.Drawing.Size(50, 50);
+            this.btThanhToan.Location = new System.Drawing.Point(0, 0);
+            this.btThanhToan.Name = "btThanhToan";
+            this.btThanhToan.Size = new System.Drawing.Size(281, 70);
+            this.btThanhToan.TabIndex = 4;
+            this.btThanhToan.Text = "Thanh toán";
+            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
             // 
             // GiaoDichCT
             // 

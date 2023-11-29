@@ -24,7 +24,7 @@ namespace QLCHBX
 
         private void btBaoCao_Click(object sender, EventArgs e)
         {
-
+            baoCao1.BringToFront();
         }
 
  
@@ -47,8 +47,9 @@ namespace QLCHBX
 
         private void btGiaoDich_Click(object sender, EventArgs e)
         {
-            giaoDichCT1.BringToFront();
 
+            giaoDichCT1.BringToFront();
+            giaoDichCT1.txtMaNV.Text = lbMaNV.Text;
         }
 
         private void btDoiTac_Click(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace QLCHBX
 
         private void btNhanVien_Click(object sender, EventArgs e)
         {
-           
+            nhanVien1.BringToFront();
         }
 
         private void btKhachHang_Click(object sender, EventArgs e)
@@ -69,6 +70,11 @@ namespace QLCHBX
         private void DashBoard_Load(object sender, EventArgs e)
         {
             giaoDichCT1.txtMaNV.Text = lbMaNV.Text;
+        }
+
+        private void lbMaNV_Click(object sender, EventArgs e)
+        {
+            account1.BringToFront();
         }
     }
 }

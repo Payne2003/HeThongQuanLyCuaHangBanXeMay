@@ -78,7 +78,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                 GiaoDich giaoDich = Application.OpenForms["GiaoDich"] as GiaoDich;
                 if (giaoDich != null)
                 {
-                    giaoDich.xe2.LoadData();
+                    giaoDich.xe1.LoadData();
                 }
             }
             // Nếu người dùng chọn "No", không làm gì cả và tiếp tục thực hiện các thao tác khác

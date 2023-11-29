@@ -43,8 +43,8 @@
             this.tinhtrangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hsxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nsxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dongco1 = new QLCHBX.HanghoaControl.Dongco();
             this.xeso1 = new QLCHBX.HanghoaControl.Xeso();
+            this.dongco1 = new QLCHBX.HanghoaControl.Dongco();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,21 +82,21 @@
             // soToolStripMenuItem
             // 
             this.soToolStripMenuItem.Name = "soToolStripMenuItem";
-            this.soToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.soToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
             this.soToolStripMenuItem.Text = "Số";
             this.soToolStripMenuItem.Click += new System.EventHandler(this.soToolStripMenuItem_Click);
             // 
             // gaToolStripMenuItem1
             // 
             this.gaToolStripMenuItem1.Name = "gaToolStripMenuItem1";
-            this.gaToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.gaToolStripMenuItem1.Size = new System.Drawing.Size(108, 26);
             this.gaToolStripMenuItem1.Text = "Ga";
             this.gaToolStripMenuItem1.Click += new System.EventHandler(this.gaToolStripMenuItem1_Click);
             // 
             // conToolStripMenuItem
             // 
             this.conToolStripMenuItem.Name = "conToolStripMenuItem";
-            this.conToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.conToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
             this.conToolStripMenuItem.Text = "Côn";
             this.conToolStripMenuItem.Click += new System.EventHandler(this.conToolStripMenuItem_Click);
             // 
@@ -164,6 +164,15 @@
             this.nsxToolStripMenuItem.Text = "Nước sản xuất";
             this.nsxToolStripMenuItem.Click += new System.EventHandler(this.nsxToolStripMenuItem_Click);
             // 
+            // xeso1
+            // 
+            this.xeso1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xeso1.Font = new System.Drawing.Font("Segoe UI Semilight", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xeso1.Location = new System.Drawing.Point(0, 41);
+            this.xeso1.Name = "xeso1";
+            this.xeso1.Size = new System.Drawing.Size(824, 707);
+            this.xeso1.TabIndex = 15;
+            // 
             // dongco1
             // 
             this.dongco1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -174,22 +183,13 @@
             this.dongco1.Size = new System.Drawing.Size(824, 748);
             this.dongco1.TabIndex = 16;
             // 
-            // xeso1
-            // 
-            this.xeso1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xeso1.Font = new System.Drawing.Font("Segoe UI Semilight", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xeso1.Location = new System.Drawing.Point(0, 0);
-            this.xeso1.Name = "xeso1";
-            this.xeso1.Size = new System.Drawing.Size(824, 748);
-            this.xeso1.TabIndex = 15;
-            // 
             // HangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.xeso1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dongco1);
-            this.Controls.Add(this.xeso1);
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "HangHoa";
             this.Size = new System.Drawing.Size(824, 748);
@@ -217,7 +217,7 @@
         private System.Windows.Forms.ToolStripMenuItem nsxToolStripMenuItem;
         
         private System.Windows.Forms.ToolStripMenuItem conToolStripMenuItem;
-		private HanghoaControl.Dongco dongco1;
-		private HanghoaControl.Xeso xeso1;
+        private HanghoaControl.Xeso xeso1;
+        private HanghoaControl.Dongco dongco1;
     }
 }
