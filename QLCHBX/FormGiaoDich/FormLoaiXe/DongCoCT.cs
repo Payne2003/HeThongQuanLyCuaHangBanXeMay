@@ -82,16 +82,16 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
                     // Sử dụng mảng byte của ảnh cũ
                     imageBytes = img;
                 }
-                DialogResult result = MessageBox.Show("Bạn có muốn sửa ảnh của Mã Hàng "+MaHang+" không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Bạn có muốn sửa ảnh của Mã Hàng " + MaHang + " không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
-                {  
+                {
                     DmhModel dmhModel = new DmhModel(MaHang);
                     dmhModel.CapNhatAnh(imageBytes);
                     MessageBox.Show("Dữ liệu đã được cập nhật thành công.");
                     LoadData();
                 }
-                
+
             }
         }
 

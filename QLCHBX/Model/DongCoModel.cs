@@ -12,7 +12,7 @@ namespace QLCHBX.Model
         public DongCoModel() { }
 
         public int MaDongCo { get; set; }
-        public string TenDongCo { get; set;}
+        public string TenDongCo { get; set; }
         public DataTable LayDuLieuDongCo()
         {
             string sql = "SELECT MaDongCo, TenDongCo FROM Dongco;";

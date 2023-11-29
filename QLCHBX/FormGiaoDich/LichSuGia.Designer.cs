@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LichSuGia));
             this.viewLichSuGia = new System.Windows.Forms.DataGridView();
             this.lbSanPham = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbMaHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -39,11 +38,11 @@
             this.lbDonGiaNhap = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbDonGiaBan = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ptHang = new System.Windows.Forms.PictureBox();
             this.btThoat = new Guna.UI2.WinForms.Guna2Button();
             this.dtNgayNhap = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.ptHang = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.viewLichSuGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptHang)).BeginInit();
             this.SuspendLayout();
@@ -129,14 +128,6 @@
             this.lbDonGiaBan.TabIndex = 1;
             this.lbDonGiaBan.Text = "GiaBan";
             // 
-            // ptHang
-            // 
-            this.ptHang.Location = new System.Drawing.Point(419, 188);
-            this.ptHang.Name = "ptHang";
-            this.ptHang.Size = new System.Drawing.Size(166, 137);
-            this.ptHang.TabIndex = 2;
-            this.ptHang.TabStop = false;
-            // 
             // btThoat
             // 
             this.btThoat.BorderColor = System.Drawing.Color.Gray;
@@ -149,7 +140,6 @@
             this.btThoat.FillColor = System.Drawing.Color.MintCream;
             this.btThoat.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btThoat.ForeColor = System.Drawing.Color.Black;
-            this.btThoat.Image = ((System.Drawing.Image)(resources.GetObject("btThoat.Image")));
             this.btThoat.ImageSize = new System.Drawing.Size(40, 40);
             this.btThoat.Location = new System.Drawing.Point(419, 348);
             this.btThoat.Name = "btThoat";
@@ -178,6 +168,14 @@
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.LightGray;
+            // 
+            // ptHang
+            // 
+            this.ptHang.Location = new System.Drawing.Point(419, 188);
+            this.ptHang.Name = "ptHang";
+            this.ptHang.Size = new System.Drawing.Size(166, 137);
+            this.ptHang.TabIndex = 2;
+            this.ptHang.TabStop = false;
             // 
             // LichSuGia
             // 

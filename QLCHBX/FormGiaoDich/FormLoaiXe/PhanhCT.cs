@@ -139,29 +139,6 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             }
         }
 
-        private void cbDongCo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbPhanh.SelectedItem != null)
-            {
-                if (cbPhanh.SelectedItem is DataRowView)
-                {
-                    string ID = ((DataRowView)cbPhanh.SelectedItem)["MaPhanh"].ToString();
-                    string tenHang = cbPhanh.Text;
-                    lbHang.Text = tenHang;
-                    DmhModel dmhModel = new DmhModel();
-                    viewDmhHang.DataSource = dmhModel.LayDuLieuPhanhTheoMaPhanh(ID);
-                }
-                else
-                {
-                    return;
-                }
-            }
-            else
-            {
-                return;
-            }
-        }
-
         private void btHuy_Click(object sender, EventArgs e)
         {
             LoadData();
@@ -186,17 +163,40 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             return true;
         }
 
-        private void PhanhCT_Load(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-
         private void btThemSP_Click(object sender, EventArgs e)
         {
             ThemDMhang themDMhang = new ThemDMhang();
             themDMhang.lbMaHoaDon.Text = txtSoDDH.Text;
             themDMhang.txtSoDDH.Text = txtSoDDH.Text;
             themDMhang.ShowDialog(this);
+        }
+
+        private void cbPhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbPhanh.SelectedItem != null)
+            {
+                if (cbPhanh.SelectedItem is DataRowView)
+                {
+                    string ID = ((DataRowView)cbPhanh.SelectedItem)["MaPhanh"].ToString();
+                    string tenHang = cbPhanh.Text;
+                    lbHang.Text = tenHang;
+                    DmhModel dmhModel = new DmhModel();
+                    viewDmhHang.DataSource = dmhModel.LayDuLieuPhanhTheoMaPhanh(ID);
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void PhanhCT_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

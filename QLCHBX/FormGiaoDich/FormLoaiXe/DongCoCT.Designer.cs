@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DongCoCT));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.ptHang = new System.Windows.Forms.PictureBox();
             this.btHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btCapnhat = new Guna.UI2.WinForms.Guna2Button();
             this.btChonanh = new Guna.UI2.WinForms.Guna2Button();
@@ -45,9 +43,10 @@
             this.cbDongCo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtBanChay = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.ptHang = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewDmhHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHang)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -75,15 +74,6 @@
             this.guna2GroupBox1.TabIndex = 4;
             this.guna2GroupBox1.Text = "Động cơ";
             // 
-            // ptHang
-            // 
-            this.ptHang.Location = new System.Drawing.Point(19, 158);
-            this.ptHang.Name = "ptHang";
-            this.ptHang.Size = new System.Drawing.Size(263, 194);
-            this.ptHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptHang.TabIndex = 8;
-            this.ptHang.TabStop = false;
-            // 
             // btHuy
             // 
             this.btHuy.BorderColor = System.Drawing.Color.Silver;
@@ -96,7 +86,6 @@
             this.btHuy.FillColor = System.Drawing.Color.MintCream;
             this.btHuy.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btHuy.ForeColor = System.Drawing.Color.Black;
-            this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
             this.btHuy.ImageSize = new System.Drawing.Size(40, 40);
             this.btHuy.Location = new System.Drawing.Point(299, 215);
             this.btHuy.Name = "btHuy";
@@ -117,7 +106,6 @@
             this.btCapnhat.FillColor = System.Drawing.Color.MintCream;
             this.btCapnhat.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btCapnhat.ForeColor = System.Drawing.Color.Black;
-            this.btCapnhat.Image = ((System.Drawing.Image)(resources.GetObject("btCapnhat.Image")));
             this.btCapnhat.ImageSize = new System.Drawing.Size(40, 40);
             this.btCapnhat.Location = new System.Drawing.Point(299, 272);
             this.btCapnhat.Name = "btCapnhat";
@@ -278,6 +266,15 @@
             this.guna2Elipse1.BorderRadius = 0;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // ptHang
+            // 
+            this.ptHang.Location = new System.Drawing.Point(19, 158);
+            this.ptHang.Name = "ptHang";
+            this.ptHang.Size = new System.Drawing.Size(263, 194);
+            this.ptHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptHang.TabIndex = 8;
+            this.ptHang.TabStop = false;
+            // 
             // DongCoCT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,8 +286,8 @@
             this.Load += new System.EventHandler(this.DongCoCT_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewDmhHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHang)).EndInit();
             this.ResumeLayout(false);
 
         }

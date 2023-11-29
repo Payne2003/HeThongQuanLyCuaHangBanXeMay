@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhanhCT));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.ptHang = new System.Windows.Forms.PictureBox();
             this.btHuy = new Guna.UI2.WinForms.Guna2Button();
@@ -96,7 +95,6 @@
             this.btHuy.FillColor = System.Drawing.Color.MintCream;
             this.btHuy.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btHuy.ForeColor = System.Drawing.Color.Black;
-            this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
             this.btHuy.ImageSize = new System.Drawing.Size(40, 40);
             this.btHuy.Location = new System.Drawing.Point(299, 215);
             this.btHuy.Name = "btHuy";
@@ -117,7 +115,6 @@
             this.btCapnhat.FillColor = System.Drawing.Color.MintCream;
             this.btCapnhat.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btCapnhat.ForeColor = System.Drawing.Color.Black;
-            this.btCapnhat.Image = ((System.Drawing.Image)(resources.GetObject("btCapnhat.Image")));
             this.btCapnhat.ImageSize = new System.Drawing.Size(40, 40);
             this.btCapnhat.Location = new System.Drawing.Point(299, 272);
             this.btCapnhat.Name = "btCapnhat";
@@ -250,7 +247,7 @@
             this.cbPhanh.Name = "cbPhanh";
             this.cbPhanh.Size = new System.Drawing.Size(218, 36);
             this.cbPhanh.TabIndex = 0;
-            this.cbPhanh.SelectedIndexChanged += new System.EventHandler(this.cbDongCo_SelectedIndexChanged);
+            this.cbPhanh.SelectedIndexChanged += new System.EventHandler(this.cbPhanh_SelectedIndexChanged);
             // 
             // txtBanChay
             // 

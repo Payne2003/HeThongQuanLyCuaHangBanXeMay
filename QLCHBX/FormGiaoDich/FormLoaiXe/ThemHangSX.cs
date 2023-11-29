@@ -64,14 +64,14 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             }
 
             // Hiển thị hộp thoại xác nhận trước khi lưu
-            DialogResult result = MessageBox.Show("Bạn có muốn lưu thông tin Hãng "+txtTenHangSX.Text+" ?", "Xác nhận lưu",
+            DialogResult result = MessageBox.Show("Bạn có muốn lưu thông tin Hãng " + txtTenHangSX.Text + " ?", "Xác nhận lưu",
                                                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             // Kiểm tra kết quả từ hộp thoại xác nhận
             if (result == DialogResult.Yes)
             {
                 // Nếu người dùng chọn "Yes", tiến hành lưu dữ liệu
-                HangSanXuatModel hangSanXuatModel = new HangSanXuatModel(txtTenHangSX.Text,fileAnh);
+                HangSanXuatModel hangSanXuatModel = new HangSanXuatModel(txtTenHangSX.Text, fileAnh);
                 // Thực hiện các thao tác lưu dữ liệu
                 hangSanXuatModel.ThemHangMoi();
                 this.Close();

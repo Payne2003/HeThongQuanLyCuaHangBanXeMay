@@ -72,7 +72,7 @@ namespace QLCHBX.FormGiaoDich
                 }
             }
         }
-        
+
         private void LichSuGia_Load(object sender, EventArgs e)
         {
             LoadData();

@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemHangSX));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbmoving = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ptAnh = new System.Windows.Forms.PictureBox();
+            this.btLuu = new Guna.UI2.WinForms.Guna2Button();
+            this.btThoat = new Guna.UI2.WinForms.Guna2Button();
+            this.btChonAnh = new Guna.UI2.WinForms.Guna2Button();
             this.btHuy = new Guna.UI2.WinForms.Guna2Button();
             this.txtTenHangSX = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btChonAnh = new Guna.UI2.WinForms.Guna2Button();
-            this.btThoat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.btLuu = new Guna.UI2.WinForms.Guna2Button();
-            this.ptAnh = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptAnh)).BeginInit();
@@ -85,6 +84,73 @@
             this.guna2Panel2.Size = new System.Drawing.Size(394, 237);
             this.guna2Panel2.TabIndex = 1;
             // 
+            // ptAnh
+            // 
+            this.ptAnh.Location = new System.Drawing.Point(12, 71);
+            this.ptAnh.Name = "ptAnh";
+            this.ptAnh.Size = new System.Drawing.Size(235, 143);
+            this.ptAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptAnh.TabIndex = 5;
+            this.ptAnh.TabStop = false;
+            // 
+            // btLuu
+            // 
+            this.btLuu.BorderColor = System.Drawing.Color.Silver;
+            this.btLuu.BorderRadius = 1;
+            this.btLuu.BorderThickness = 1;
+            this.btLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btLuu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btLuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btLuu.FillColor = System.Drawing.Color.MintCream;
+            this.btLuu.Font = new System.Drawing.Font("Segoe UI Semilight", 9F);
+            this.btLuu.ForeColor = System.Drawing.Color.Black;
+            this.btLuu.ImageSize = new System.Drawing.Size(30, 30);
+            this.btLuu.Location = new System.Drawing.Point(253, 170);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(129, 27);
+            this.btLuu.TabIndex = 4;
+            this.btLuu.Text = "Lưu";
+            // 
+            // btThoat
+            // 
+            this.btThoat.BorderColor = System.Drawing.Color.Silver;
+            this.btThoat.BorderRadius = 1;
+            this.btThoat.BorderThickness = 1;
+            this.btThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btThoat.FillColor = System.Drawing.Color.MintCream;
+            this.btThoat.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThoat.ForeColor = System.Drawing.Color.Black;
+            this.btThoat.ImageSize = new System.Drawing.Size(30, 30);
+            this.btThoat.Location = new System.Drawing.Point(253, 137);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(129, 27);
+            this.btThoat.TabIndex = 3;
+            this.btThoat.Text = "Thoát";
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
+            // 
+            // btChonAnh
+            // 
+            this.btChonAnh.BorderColor = System.Drawing.Color.Silver;
+            this.btChonAnh.BorderRadius = 1;
+            this.btChonAnh.BorderThickness = 1;
+            this.btChonAnh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btChonAnh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btChonAnh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btChonAnh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btChonAnh.FillColor = System.Drawing.Color.MintCream;
+            this.btChonAnh.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btChonAnh.ForeColor = System.Drawing.Color.Black;
+            this.btChonAnh.Location = new System.Drawing.Point(253, 71);
+            this.btChonAnh.Name = "btChonAnh";
+            this.btChonAnh.Size = new System.Drawing.Size(129, 27);
+            this.btChonAnh.TabIndex = 3;
+            this.btChonAnh.Text = "Chọn ảnh";
+            this.btChonAnh.Click += new System.EventHandler(this.btChonAnh_Click);
+            // 
             // btHuy
             // 
             this.btHuy.BorderColor = System.Drawing.Color.Silver;
@@ -97,7 +163,6 @@
             this.btHuy.FillColor = System.Drawing.Color.MintCream;
             this.btHuy.Font = new System.Drawing.Font("Segoe UI Semilight", 9F);
             this.btHuy.ForeColor = System.Drawing.Color.Black;
-            this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
             this.btHuy.ImageSize = new System.Drawing.Size(30, 30);
             this.btHuy.Location = new System.Drawing.Point(253, 104);
             this.btHuy.Name = "btHuy";
@@ -139,46 +204,6 @@
             this.guna2Elipse1.BorderRadius = 0;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // btChonAnh
-            // 
-            this.btChonAnh.BorderColor = System.Drawing.Color.Silver;
-            this.btChonAnh.BorderRadius = 1;
-            this.btChonAnh.BorderThickness = 1;
-            this.btChonAnh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btChonAnh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btChonAnh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btChonAnh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btChonAnh.FillColor = System.Drawing.Color.MintCream;
-            this.btChonAnh.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btChonAnh.ForeColor = System.Drawing.Color.Black;
-            this.btChonAnh.Location = new System.Drawing.Point(253, 71);
-            this.btChonAnh.Name = "btChonAnh";
-            this.btChonAnh.Size = new System.Drawing.Size(129, 27);
-            this.btChonAnh.TabIndex = 3;
-            this.btChonAnh.Text = "Chọn ảnh";
-            this.btChonAnh.Click += new System.EventHandler(this.btChonAnh_Click);
-            // 
-            // btThoat
-            // 
-            this.btThoat.BorderColor = System.Drawing.Color.Silver;
-            this.btThoat.BorderRadius = 1;
-            this.btThoat.BorderThickness = 1;
-            this.btThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btThoat.FillColor = System.Drawing.Color.MintCream;
-            this.btThoat.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoat.ForeColor = System.Drawing.Color.Black;
-            this.btThoat.Image = ((System.Drawing.Image)(resources.GetObject("btThoat.Image")));
-            this.btThoat.ImageSize = new System.Drawing.Size(30, 30);
-            this.btThoat.Location = new System.Drawing.Point(253, 137);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(129, 27);
-            this.btThoat.TabIndex = 3;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
@@ -189,36 +214,6 @@
             // 
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DarkGray;
             this.guna2ShadowForm1.TargetForm = this;
-            // 
-            // btLuu
-            // 
-            this.btLuu.BorderColor = System.Drawing.Color.Silver;
-            this.btLuu.BorderRadius = 1;
-            this.btLuu.BorderThickness = 1;
-            this.btLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btLuu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btLuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btLuu.FillColor = System.Drawing.Color.MintCream;
-            this.btLuu.Font = new System.Drawing.Font("Segoe UI Semilight", 9F);
-            this.btLuu.ForeColor = System.Drawing.Color.Black;
-            this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
-            this.btLuu.ImageSize = new System.Drawing.Size(30, 30);
-            this.btLuu.Location = new System.Drawing.Point(253, 170);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(129, 27);
-            this.btLuu.TabIndex = 4;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
-            // 
-            // ptAnh
-            // 
-            this.ptAnh.Location = new System.Drawing.Point(12, 71);
-            this.ptAnh.Name = "ptAnh";
-            this.ptAnh.Size = new System.Drawing.Size(235, 143);
-            this.ptAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptAnh.TabIndex = 5;
-            this.ptAnh.TabStop = false;
             // 
             // ThemHangSX
             // 
