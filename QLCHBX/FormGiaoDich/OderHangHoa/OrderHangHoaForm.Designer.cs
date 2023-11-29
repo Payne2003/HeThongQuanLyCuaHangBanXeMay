@@ -68,11 +68,11 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.viewChiTietHoaDonNhap = new System.Windows.Forms.DataGridView();
             this.grbDanhSachHoaDonNhap = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.ptTinhToan = new Guna.UI2.WinForms.Guna2PictureBox();
             this.viewHoaDonNhap = new System.Windows.Forms.DataGridView();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.ptTinhToan = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -87,8 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewChiTietHoaDonNhap)).BeginInit();
             this.grbDanhSachHoaDonNhap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewHoaDonNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptTinhToan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewHoaDonNhap)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -353,9 +353,11 @@
             this.btSua.FillColor = System.Drawing.Color.MintCream;
             this.btSua.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btSua.ForeColor = System.Drawing.Color.Black;
+            this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
+            this.btSua.ImageSize = new System.Drawing.Size(30, 30);
             this.btSua.Location = new System.Drawing.Point(17, 314);
             this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(89, 33);
+            this.btSua.Size = new System.Drawing.Size(99, 33);
             this.btSua.TabIndex = 0;
             this.btSua.Text = "Sửa";
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
@@ -371,9 +373,11 @@
             this.btCapNhat.FillColor = System.Drawing.Color.MintCream;
             this.btCapNhat.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btCapNhat.ForeColor = System.Drawing.Color.Black;
-            this.btCapNhat.Location = new System.Drawing.Point(228, 316);
+            this.btCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btCapNhat.Image")));
+            this.btCapNhat.ImageSize = new System.Drawing.Size(30, 30);
+            this.btCapNhat.Location = new System.Drawing.Point(218, 315);
             this.btCapNhat.Name = "btCapNhat";
-            this.btCapNhat.Size = new System.Drawing.Size(89, 33);
+            this.btCapNhat.Size = new System.Drawing.Size(99, 33);
             this.btCapNhat.TabIndex = 0;
             this.btCapNhat.Text = "Cập nhật";
             this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click);
@@ -637,6 +641,21 @@
             this.grbDanhSachHoaDonNhap.TabIndex = 0;
             this.grbDanhSachHoaDonNhap.Text = "Danh sách hóa đơn nhập";
             // 
+            // ptTinhToan
+            // 
+            this.ptTinhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptTinhToan.BackColor = System.Drawing.Color.Transparent;
+            this.ptTinhToan.FillColor = System.Drawing.Color.Transparent;
+            this.ptTinhToan.Image = ((System.Drawing.Image)(resources.GetObject("ptTinhToan.Image")));
+            this.ptTinhToan.ImageRotate = 0F;
+            this.ptTinhToan.Location = new System.Drawing.Point(654, 0);
+            this.ptTinhToan.Name = "ptTinhToan";
+            this.ptTinhToan.Size = new System.Drawing.Size(38, 40);
+            this.ptTinhToan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptTinhToan.TabIndex = 7;
+            this.ptTinhToan.TabStop = false;
+            this.ptTinhToan.Click += new System.EventHandler(this.ptTinhToan_Click);
+            // 
             // viewHoaDonNhap
             // 
             this.viewHoaDonNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -664,21 +683,6 @@
             // 
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
-            // 
-            // ptTinhToan
-            // 
-            this.ptTinhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptTinhToan.BackColor = System.Drawing.Color.Transparent;
-            this.ptTinhToan.FillColor = System.Drawing.Color.Transparent;
-            this.ptTinhToan.Image = ((System.Drawing.Image)(resources.GetObject("ptTinhToan.Image")));
-            this.ptTinhToan.ImageRotate = 0F;
-            this.ptTinhToan.Location = new System.Drawing.Point(654, 0);
-            this.ptTinhToan.Name = "ptTinhToan";
-            this.ptTinhToan.Size = new System.Drawing.Size(38, 40);
-            this.ptTinhToan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptTinhToan.TabIndex = 7;
-            this.ptTinhToan.TabStop = false;
-            this.ptTinhToan.Click += new System.EventHandler(this.ptTinhToan_Click);
             // 
             // OrderHangHoaForm
             // 
@@ -710,8 +714,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewChiTietHoaDonNhap)).EndInit();
             this.grbDanhSachHoaDonNhap.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.viewHoaDonNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptTinhToan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewHoaDonNhap)).EndInit();
             this.ResumeLayout(false);
 
         }

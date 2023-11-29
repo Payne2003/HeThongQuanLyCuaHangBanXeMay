@@ -264,34 +264,34 @@ namespace QLCHBX.FormGiaoDich.ThanhToan
                 MessageBox.Show("Tệp đã được lưu tại: " + filePath, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        public void XacNhan()
-        {
-            if (!(btTienMat.Checked || btVNPay.Checked || btBank.Checked))
+            public void XacNhan()
             {
-                MessageBox.Show("Yêu cầu nhập phương thức thanh toán.");
-                return;
-            }
-            CreateExcelFile();
-            DangThanhToan();
+                if (!(btTienMat.Checked || btVNPay.Checked || btBank.Checked))
+                {
+                    MessageBox.Show("Yêu cầu nhập phương thức thanh toán.");
+                    return;
+                }
+                CreateExcelFile();
+                DangThanhToan();
 
-        }
-        public void DangThanhToan()
-        {
-            DonDatHangModel model = new DonDatHangModel(int.Parse(lbSoDDH.Text));
-            model.ThanhToan();
-            CapNhatSauKhiThanhToan();
-            MessageBox.Show("Thanh toán thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-            GiaoDich giaoDich = Application.OpenForms["GiaoDich"] as GiaoDich;
-            if (giaoDich != null)
-            {
-                giaoDich.Close();
             }
-        }
-        private void btXacNhanThanhToan_Click(object sender, EventArgs e)
-        {
-            XacNhan();
-        }
+            public void DangThanhToan()
+            {
+                DonDatHangModel model = new DonDatHangModel(int.Parse(lbSoDDH.Text));
+                model.ThanhToan();
+                CapNhatSauKhiThanhToan();
+                MessageBox.Show("Thanh toán thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                GiaoDich giaoDich = Application.OpenForms["GiaoDich"] as GiaoDich;
+                if (giaoDich != null)
+                {
+                    giaoDich.Close();
+                }
+            }
+            private void btXacNhanThanhToan_Click(object sender, EventArgs e)
+            {
+                XacNhan();
+            }
         private void XacNhanThanhToan_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
