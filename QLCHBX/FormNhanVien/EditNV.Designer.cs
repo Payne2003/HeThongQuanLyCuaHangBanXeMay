@@ -361,7 +361,7 @@
 			this.dtpNS.Checked = true;
 			this.dtpNS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.dtpNS.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+			this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.dtpNS.Location = new System.Drawing.Point(155, 232);
 			this.dtpNS.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
 			this.dtpNS.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
