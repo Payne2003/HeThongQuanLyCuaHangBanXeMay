@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DongCoCT));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.ptHang = new System.Windows.Forms.PictureBox();
             this.btHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btCapnhat = new Guna.UI2.WinForms.Guna2Button();
             this.btChonanh = new Guna.UI2.WinForms.Guna2Button();
@@ -43,10 +45,9 @@
             this.cbDongCo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtBanChay = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.ptHang = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewDmhHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDmhHang)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -70,9 +71,18 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(520, 748);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(520, 710);
             this.guna2GroupBox1.TabIndex = 4;
             this.guna2GroupBox1.Text = "Động cơ";
+            // 
+            // ptHang
+            // 
+            this.ptHang.Location = new System.Drawing.Point(19, 158);
+            this.ptHang.Name = "ptHang";
+            this.ptHang.Size = new System.Drawing.Size(263, 194);
+            this.ptHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptHang.TabIndex = 8;
+            this.ptHang.TabStop = false;
             // 
             // btHuy
             // 
@@ -86,6 +96,7 @@
             this.btHuy.FillColor = System.Drawing.Color.MintCream;
             this.btHuy.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btHuy.ForeColor = System.Drawing.Color.Black;
+            this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
             this.btHuy.ImageSize = new System.Drawing.Size(40, 40);
             this.btHuy.Location = new System.Drawing.Point(299, 215);
             this.btHuy.Name = "btHuy";
@@ -106,6 +117,7 @@
             this.btCapnhat.FillColor = System.Drawing.Color.MintCream;
             this.btCapnhat.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btCapnhat.ForeColor = System.Drawing.Color.Black;
+            this.btCapnhat.Image = ((System.Drawing.Image)(resources.GetObject("btCapnhat.Image")));
             this.btCapnhat.ImageSize = new System.Drawing.Size(40, 40);
             this.btCapnhat.Location = new System.Drawing.Point(299, 272);
             this.btCapnhat.Name = "btCapnhat";
@@ -147,7 +159,7 @@
             // 
             this.lbHang.BackColor = System.Drawing.Color.Transparent;
             this.lbHang.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHang.Location = new System.Drawing.Point(70, 137);
+            this.lbHang.Location = new System.Drawing.Point(19, 137);
             this.lbHang.Name = "lbHang";
             this.lbHang.Size = new System.Drawing.Size(153, 15);
             this.lbHang.TabIndex = 6;
@@ -177,10 +189,10 @@
             // 
             this.viewDmhHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.viewDmhHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.viewDmhHang.Location = new System.Drawing.Point(19, 389);
+            this.viewDmhHang.Location = new System.Drawing.Point(19, 379);
             this.viewDmhHang.Name = "viewDmhHang";
             this.viewDmhHang.ReadOnly = true;
-            this.viewDmhHang.Size = new System.Drawing.Size(480, 236);
+            this.viewDmhHang.Size = new System.Drawing.Size(480, 215);
             this.viewDmhHang.TabIndex = 4;
             this.viewDmhHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewDmhHang_CellClick);
             // 
@@ -195,7 +207,7 @@
             this.txtSoDDH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoDDH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoDDH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoDDH.Location = new System.Drawing.Point(281, 581);
+            this.txtSoDDH.Location = new System.Drawing.Point(222, 617);
             this.txtSoDDH.Name = "txtSoDDH";
             this.txtSoDDH.PasswordChar = '\0';
             this.txtSoDDH.PlaceholderText = "";
@@ -216,9 +228,11 @@
             this.btThemSP.FillColor = System.Drawing.Color.MintCream;
             this.btThemSP.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F);
             this.btThemSP.ForeColor = System.Drawing.Color.Black;
-            this.btThemSP.Location = new System.Drawing.Point(325, 662);
+            this.btThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btThemSP.Image")));
+            this.btThemSP.ImageSize = new System.Drawing.Size(40, 40);
+            this.btThemSP.Location = new System.Drawing.Point(299, 615);
             this.btThemSP.Name = "btThemSP";
-            this.btThemSP.Size = new System.Drawing.Size(174, 46);
+            this.btThemSP.Size = new System.Drawing.Size(200, 46);
             this.btThemSP.TabIndex = 2;
             this.btThemSP.Text = "Mua sản phẩm";
             this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
@@ -266,15 +280,6 @@
             this.guna2Elipse1.BorderRadius = 0;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // ptHang
-            // 
-            this.ptHang.Location = new System.Drawing.Point(19, 158);
-            this.ptHang.Name = "ptHang";
-            this.ptHang.Size = new System.Drawing.Size(263, 194);
-            this.ptHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptHang.TabIndex = 8;
-            this.ptHang.TabStop = false;
-            // 
             // DongCoCT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,12 +287,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "DongCoCT";
-            this.Size = new System.Drawing.Size(520, 748);
+            this.Size = new System.Drawing.Size(520, 710);
             this.Load += new System.EventHandler(this.DongCoCT_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewDmhHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDmhHang)).EndInit();
             this.ResumeLayout(false);
 
         }

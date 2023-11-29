@@ -26,6 +26,7 @@ namespace QLCHBX.ALLControl
             viewKhachhang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             viewKhachhang.Columns[0].Width = 40;
             grThongtinKhachHang.Visible = false;
+            lbLoad.Visible = false; 
         }
 
 
@@ -36,6 +37,7 @@ namespace QLCHBX.ALLControl
                 DataGridViewRow row = viewKhachhang.Rows[e.RowIndex];
                 if (row.Cells[1].Value != null && row.Cells[1].Value.ToString() != "")
                 {
+                    lbLoad.Visible = true;
                     grThongtinKhachHang.Visible = true;
                     txtMaKhach.Text = row.Cells[1].Value.ToString();
                     txtTenKhach.Text = row.Cells[2].Value.ToString();

@@ -84,7 +84,7 @@
             this.btThemSP.FillColor = System.Drawing.Color.MintCream;
             this.btThemSP.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F);
             this.btThemSP.ForeColor = System.Drawing.Color.Black;
-            this.btThemSP.Location = new System.Drawing.Point(325, 678);
+            this.btThemSP.Location = new System.Drawing.Point(325, 621);
             this.btThemSP.Name = "btThemSP";
             this.btThemSP.Size = new System.Drawing.Size(174, 46);
             this.btThemSP.TabIndex = 2;
@@ -163,7 +163,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(520, 748);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(520, 710);
             this.guna2GroupBox1.TabIndex = 3;
             this.guna2GroupBox1.Text = "Xe";
             // 
@@ -283,7 +283,7 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Xe";
-            this.Size = new System.Drawing.Size(520, 748);
+            this.Size = new System.Drawing.Size(520, 710);
             this.Load += new System.EventHandler(this.Xe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.viewDmhHang)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);

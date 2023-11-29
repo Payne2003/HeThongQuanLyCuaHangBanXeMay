@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhanhCT));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.ptHang = new System.Windows.Forms.PictureBox();
             this.btHuy = new Guna.UI2.WinForms.Guna2Button();
@@ -70,13 +71,13 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(520, 748);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(520, 710);
             this.guna2GroupBox1.TabIndex = 5;
             this.guna2GroupBox1.Text = "Phanh";
             // 
             // ptHang
             // 
-            this.ptHang.Location = new System.Drawing.Point(19, 158);
+            this.ptHang.Location = new System.Drawing.Point(19, 147);
             this.ptHang.Name = "ptHang";
             this.ptHang.Size = new System.Drawing.Size(263, 194);
             this.ptHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,8 +96,9 @@
             this.btHuy.FillColor = System.Drawing.Color.MintCream;
             this.btHuy.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btHuy.ForeColor = System.Drawing.Color.Black;
+            this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
             this.btHuy.ImageSize = new System.Drawing.Size(40, 40);
-            this.btHuy.Location = new System.Drawing.Point(299, 215);
+            this.btHuy.Location = new System.Drawing.Point(299, 190);
             this.btHuy.Name = "btHuy";
             this.btHuy.Size = new System.Drawing.Size(144, 37);
             this.btHuy.TabIndex = 7;
@@ -115,8 +117,9 @@
             this.btCapnhat.FillColor = System.Drawing.Color.MintCream;
             this.btCapnhat.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btCapnhat.ForeColor = System.Drawing.Color.Black;
+            this.btCapnhat.Image = ((System.Drawing.Image)(resources.GetObject("btCapnhat.Image")));
             this.btCapnhat.ImageSize = new System.Drawing.Size(40, 40);
-            this.btCapnhat.Location = new System.Drawing.Point(299, 272);
+            this.btCapnhat.Location = new System.Drawing.Point(299, 233);
             this.btCapnhat.Name = "btCapnhat";
             this.btCapnhat.Size = new System.Drawing.Size(144, 37);
             this.btCapnhat.TabIndex = 7;
@@ -135,7 +138,7 @@
             this.btChonanh.FillColor = System.Drawing.Color.MintCream;
             this.btChonanh.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.btChonanh.ForeColor = System.Drawing.Color.Black;
-            this.btChonanh.Location = new System.Drawing.Point(299, 158);
+            this.btChonanh.Location = new System.Drawing.Point(299, 147);
             this.btChonanh.Name = "btChonanh";
             this.btChonanh.Size = new System.Drawing.Size(144, 37);
             this.btChonanh.TabIndex = 7;
@@ -156,7 +159,7 @@
             // 
             this.lbHang.BackColor = System.Drawing.Color.Transparent;
             this.lbHang.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHang.Location = new System.Drawing.Point(19, 137);
+            this.lbHang.Location = new System.Drawing.Point(19, 126);
             this.lbHang.Name = "lbHang";
             this.lbHang.Size = new System.Drawing.Size(145, 15);
             this.lbHang.TabIndex = 6;
@@ -166,7 +169,7 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(281, 62);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(281, 51);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(103, 15);
             this.guna2HtmlLabel3.TabIndex = 6;
@@ -176,7 +179,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(19, 62);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(19, 51);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(33, 15);
             this.guna2HtmlLabel1.TabIndex = 6;
@@ -225,9 +228,11 @@
             this.btThemSP.FillColor = System.Drawing.Color.MintCream;
             this.btThemSP.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F);
             this.btThemSP.ForeColor = System.Drawing.Color.Black;
-            this.btThemSP.Location = new System.Drawing.Point(325, 678);
+            this.btThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btThemSP.Image")));
+            this.btThemSP.ImageSize = new System.Drawing.Size(40, 40);
+            this.btThemSP.Location = new System.Drawing.Point(281, 621);
             this.btThemSP.Name = "btThemSP";
-            this.btThemSP.Size = new System.Drawing.Size(174, 46);
+            this.btThemSP.Size = new System.Drawing.Size(218, 46);
             this.btThemSP.TabIndex = 2;
             this.btThemSP.Text = "Mua sản phẩm";
             this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
@@ -243,7 +248,7 @@
             this.cbPhanh.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
             this.cbPhanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbPhanh.ItemHeight = 30;
-            this.cbPhanh.Location = new System.Drawing.Point(19, 83);
+            this.cbPhanh.Location = new System.Drawing.Point(19, 72);
             this.cbPhanh.Name = "cbPhanh";
             this.cbPhanh.Size = new System.Drawing.Size(218, 36);
             this.cbPhanh.TabIndex = 0;
@@ -261,7 +266,7 @@
             this.txtBanChay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBanChay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBanChay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBanChay.Location = new System.Drawing.Point(281, 83);
+            this.txtBanChay.Location = new System.Drawing.Point(281, 72);
             this.txtBanChay.Name = "txtBanChay";
             this.txtBanChay.PasswordChar = '\0';
             this.txtBanChay.PlaceholderText = "";
@@ -282,7 +287,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "PhanhCT";
-            this.Size = new System.Drawing.Size(520, 748);
+            this.Size = new System.Drawing.Size(520, 710);
             this.Load += new System.EventHandler(this.PhanhCT_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();

@@ -32,6 +32,7 @@ namespace QLCHBX.FormGiaoDich.FormLoaiXe
             cbHangXe.DisplayMember = "TenHangSX";
             cbHangXe.ValueMember = "MaHangSX";
             ptHang.Image=null;
+            
         }
 
         private void btThemSP_Click(object sender, EventArgs e)

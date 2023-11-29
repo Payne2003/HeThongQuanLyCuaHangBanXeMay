@@ -41,6 +41,13 @@
             this.btHuys = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbmoving = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ptmenu = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptmenu)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ShadowForm1
@@ -200,11 +207,69 @@
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.lbmoving;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 5;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.guna2Panel2);
+            this.guna2Panel1.Controls.Add(this.ptmenu);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Color = System.Drawing.SystemColors.Desktop;
+            this.guna2Panel1.ShadowDecoration.Enabled = true;
+            this.guna2Panel1.Size = new System.Drawing.Size(474, 43);
+            this.guna2Panel1.TabIndex = 15;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.MintCream;
+            this.guna2Panel2.Controls.Add(this.lbmoving);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2.Location = new System.Drawing.Point(41, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(433, 43);
+            this.guna2Panel2.TabIndex = 14;
+            // 
+            // lbmoving
+            // 
+            this.lbmoving.AutoSize = false;
+            this.lbmoving.BackColor = System.Drawing.Color.Transparent;
+            this.lbmoving.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbmoving.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbmoving.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbmoving.Location = new System.Drawing.Point(0, 0);
+            this.lbmoving.Margin = new System.Windows.Forms.Padding(4);
+            this.lbmoving.Name = "lbmoving";
+            this.lbmoving.Size = new System.Drawing.Size(433, 43);
+            this.lbmoving.TabIndex = 0;
+            this.lbmoving.Text = "Khách hàng";
+            this.lbmoving.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ptmenu
+            // 
+            this.ptmenu.BackColor = System.Drawing.Color.MintCream;
+            this.ptmenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ptmenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ptmenu.Image = ((System.Drawing.Image)(resources.GetObject("ptmenu.Image")));
+            this.ptmenu.ImageRotate = 0F;
+            this.ptmenu.Location = new System.Drawing.Point(0, 0);
+            this.ptmenu.Margin = new System.Windows.Forms.Padding(4);
+            this.ptmenu.Name = "ptmenu";
+            this.ptmenu.Size = new System.Drawing.Size(41, 43);
+            this.ptmenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptmenu.TabIndex = 2;
+            this.ptmenu.TabStop = false;
             // 
             // AddKH
             // 
@@ -212,6 +277,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(474, 274);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btHuys);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.guna2HtmlLabel8);
@@ -227,6 +293,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddKH";
             this.Load += new System.EventHandler(this.AddKH_Load);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptmenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,5 +312,9 @@
         private Guna.UI2.WinForms.Guna2Button btThem;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbmoving;
+        private Guna.UI2.WinForms.Guna2PictureBox ptmenu;
     }
 }

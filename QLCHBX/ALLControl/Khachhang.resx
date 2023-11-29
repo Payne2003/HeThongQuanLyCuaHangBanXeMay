@@ -184,6 +184,9 @@
   <metadata name="Sua.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Sua.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btThemKhachHang.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -266,7 +269,7 @@
   <data name="btTimKiem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAGTBJREFUeF7tXQdUVMmanvc279v3zr6w4ezuO7svzTiYyCAg6jjkTBMkSc45BxFQ
+        DAAACwwBP0AiyAAAGTBJREFUeF7tXQdUVMmanvc279v3zr6w4ezuO7svzTiYyCAg6jjkTBMkSc45BxFQ
         lIygiBHMoiIGxIQJVKJ5zDiGGaVBpTEz45i+rSpuM91NoQg4Om/6O+c73X373grff6v+/6+6NB8poYQS
         SiihhBJKKKGEEkoooYQSSiihhBJKKCHg9P0b/9pyTzyx6Z7YrUUijmruFic2S8SRLZIOhyZJp3bTzZv/
         JJyqxLtCs6RThwg/r6VbfLGluwOvpUT8gpzX2izpmNkiufU/QhFKDBcAft7c3e5MhD3DFX4QJCPnGRk5
@@ -377,9 +380,6 @@
         YII=
 </value>
   </data>
-  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -443,7 +443,7 @@
         qFChQoXH4Lnn/g865FRhS6qh4QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Sua.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

@@ -44,10 +44,11 @@ namespace QLCHBX.FormGiaoDich
                 decimal TongTien = tongtien_ChuaThue + (decimal.Parse(txtThue.Text) / 100) * tongtien_ChuaThue;
                 lbTongtien.Text = TongTien.ToString();
             }
+            CapNhatMau();
             soluongHangMua = viewChiTietDonHang.RowCount - 1;
             lbGioHang.Text = "Giỏ hàng (" + soluongHangMua + ")";
             grbThongTinDonHangTrongChiTiet.Visible = false;
-            CapNhatMau();
+            
         }
         public bool KiemTraTextsRong(params string[] texts)
         {
@@ -96,6 +97,7 @@ namespace QLCHBX.FormGiaoDich
             DonDatHangModel donDatHangModel = new DonDatHangModel(int.Parse(txtSoDDH.Text));
             if (donDatHangModel.KiemTraCoTonTaiHangNaoTrongDonHangKhong())
             {
+                SaveDataDonDatHang();
                 this.Close();
                 return;
             }
@@ -110,27 +112,19 @@ namespace QLCHBX.FormGiaoDich
             int SoDDH = int.Parse(txtSoDDH.Text);
             DateTime NgayNhap = DateTime.Parse(dtNgayNhap.Text);
             DonDatHangModel donDatHang_CapNhat = new DonDatHangModel(SoDDH);
-            ChiTietDonDatHangModel chiTietDon = new ChiTietDonDatHangModel(int.Parse(txtSoDDH.Text));
-            if (KiemTraTextsRong(txtThue.Text) || KiemTraTextsRong(txtDatCoc.Text))
+            ChiTietDonDatHangModel chiTietDon = new ChiTietDonDatHangModel(SoDDH);
+            if (KiemTraTextsRong(txtThue.Text))
             {
-               
-                if (KiemTraTextsRong(txtThue.Text))
-                {
-                    txtThue.Text = "0";
-                }
-                if(KiemTraTextsRong(txtDatCoc.Text))
-                {
-                    txtDatCoc.Text = "0";
-                }
-                tongtien_ChuaThue = chiTietDon.LayTongTienChuaThue();
-                donDatHang_CapNhat.CapNhatDonDatHang(NgayNhap.Date, decimal.Parse(txtThue.Text), decimal.Parse(txtDatCoc.Text), tongtien_ChuaThue);
+                txtThue.Text = "0";
             }
-            else
+            if (KiemTraTextsRong(txtDatCoc.Text))
             {
-                decimal TongTien = tongtien_ChuaThue + (decimal.Parse(txtThue.Text) / 100) * tongtien_ChuaThue;
-                donDatHang_CapNhat.CapNhatDonDatHang(NgayNhap.Date, decimal.Parse(txtThue.Text), decimal.Parse(txtDatCoc.Text), TongTien);
-
+                txtDatCoc.Text = "0";
             }
+            tongtien_ChuaThue = chiTietDon.LayTongTienChuaThue();
+            decimal TongTien = tongtien_ChuaThue + (decimal.Parse(txtThue.Text) / 100) * tongtien_ChuaThue;
+            donDatHang_CapNhat.CapNhatDonDatHang(NgayNhap.Date, decimal.Parse(txtThue.Text), decimal.Parse(txtDatCoc.Text), TongTien);            
+            CapNhatMau();
         }
 
         private void viewChiTietDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -316,6 +310,8 @@ namespace QLCHBX.FormGiaoDich
         private void btCapNhat_Click(object sender, EventArgs e)
         {
             SaveHang();
+            CapNhatMau();
+            LoadDataGridView();
         }
         public void SaveHang()
         {
@@ -337,6 +333,7 @@ namespace QLCHBX.FormGiaoDich
                 LoadDataGridView();
                 MessageBox.Show("Cập nhật thành công!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            SaveDataDonDatHang();
         }
 
         private void btThanhToan_Click(object sender, EventArgs e)
@@ -383,11 +380,12 @@ namespace QLCHBX.FormGiaoDich
         {
             if (cbDanhMuc.Text ==  "Động cơ")
             {
-                
+                dongCoCT1.BringToFront();
             }
 
             if(cbDanhMuc.Text == "Phanh")
             {
+                phanhCT1.BringToFront();
             }
         }
     }
