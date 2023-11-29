@@ -207,7 +207,6 @@
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
     </Reference>
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -250,6 +249,12 @@
     <Compile Include="ALLControl\Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCaoControl\BaoCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaoCaoControl\BaoCao.Designer.cs">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chitietdondathangset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -262,33 +267,11 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBaoCao\BaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBaoCao\BaoCao.Designer.cs" />
-    <Compile Include="FormGiaoDich\FormLoaiXe\DongCoCT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormGiaoDich\FormLoaiXe\DongCoCT.Designer.cs">
-      <DependentUpon>DongCoCT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGiaoDich\FormLoaiXe\PhanhCT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormGiaoDich\FormLoaiXe\PhanhCT.Designer.cs">
-      <DependentUpon>PhanhCT.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormGiaoDich\FormLoaiXe\ThemDMhang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormGiaoDich\FormLoaiXe\ThemDMhang.Designer.cs">
       <DependentUpon>ThemDMhang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGiaoDich\FormLoaiXe\ThemHangSX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGiaoDich\FormLoaiXe\ThemHangSX.Designer.cs">
-      <DependentUpon>ThemHangSX.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGiaoDich\FormLoaiXe\Xe.cs">
       <SubType>UserControl</SubType>
@@ -301,12 +284,6 @@
     </Compile>
     <Compile Include="FormGiaoDich\GiaoDich.Designer.cs">
       <DependentUpon>GiaoDich.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGiaoDich\LichSuGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGiaoDich\LichSuGia.Designer.cs">
-      <DependentUpon>LichSuGia.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGiaoDich\OderHangHoa\FormNhapHang.cs">
       <SubType>Form</SubType>
@@ -325,12 +302,6 @@
     </Compile>
     <Compile Include="FormGiaoDich\OderHangHoa\OrderHangHoaForm.Designer.cs">
       <DependentUpon>OrderHangHoaForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGiaoDich\OderHangHoa\XemTongChi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGiaoDich\OderHangHoa\XemTongChi.Designer.cs">
-      <DependentUpon>XemTongChi.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGiaoDich\ThanhToan\XacNhanThanhToan.cs">
       <SubType>Form</SubType>
@@ -392,10 +363,6 @@
     <Compile Include="FormNhanVien\EditNV.Designer.cs">
       <DependentUpon>EditNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNV\EditNV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNV\EditNV.Designer.cs" />
     <Compile Include="HanghoaControl\Dongco.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -436,16 +403,16 @@
     <Compile Include="Model\ChiTietHoaDonNhapModel.cs" />
     <Compile Include="Model\DmhModel.cs" />
     <Compile Include="Model\DonDatHangModel.cs" />
-    <Compile Include="Model\DongCoModel.cs" />
-    <Compile Include="Model\HangSanXuatModel.cs" />
     <Compile Include="Model\HoaDonNhapModel.cs" />
     <Compile Include="Model\KhachHangModel.cs" />
     <Compile Include="Model\NhaCungCapModel.cs" />
     <Compile Include="Model\NhanVienModel.cs" />
-    <Compile Include="Model\PhanhModel.cs" />
     <Compile Include="Model\TaiKhoanModel.cs" />
-    <Compile Include="NhanVienConTrol\NhanVien.cs">
+    <Compile Include="NhanVienConTrol\Nhanvien.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVienConTrol\Nhanvien.Designer.cs">
+      <DependentUpon>Nhanvien.cs</DependentUpon>
     </Compile>
     <Compile Include="ProcessDatabase.cs" />
     <Compile Include="Program.cs" />
@@ -471,30 +438,20 @@
     <EmbeddedResource Include="ALLControl\Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoControl\BaoCao.resx">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBaoCao\BaoCao.resx" />
-    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\DongCoCT.resx">
-      <DependentUpon>DongCoCT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\PhanhCT.resx">
-      <DependentUpon>PhanhCT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\ThemDMhang.resx">
       <DependentUpon>ThemDMhang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\ThemHangSX.resx">
-      <DependentUpon>ThemHangSX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\FormLoaiXe\Xe.resx">
       <DependentUpon>Xe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\GiaoDich.resx">
       <DependentUpon>GiaoDich.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaoDich\LichSuGia.resx">
-      <DependentUpon>LichSuGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\OderHangHoa\FormNhapHang.resx">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
@@ -504,9 +461,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\OderHangHoa\OrderHangHoaForm.resx">
       <DependentUpon>OrderHangHoaForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaoDich\OderHangHoa\XemTongChi.resx">
-      <DependentUpon>XemTongChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoDich\ThanhToan\XacNhanThanhToan.resx">
       <DependentUpon>XacNhanThanhToan.cs</DependentUpon>
@@ -538,7 +492,6 @@
     <EmbeddedResource Include="FormNhanVien\EditNV.resx">
       <DependentUpon>EditNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNV\EditNV.resx" />
     <EmbeddedResource Include="HanghoaControl\Dongco.resx">
       <DependentUpon>Dongco.cs</DependentUpon>
     </EmbeddedResource>
@@ -556,6 +509,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoadForm.resx">
       <DependentUpon>LoadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienConTrol\Nhanvien.resx">
+      <DependentUpon>Nhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -598,7 +554,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\itextsharp.xml" />
@@ -635,6 +590,7 @@
     <Content Include="bin\Debug\System.ServiceProcess.ServiceController.xml" />
     <Content Include="bin\Debug\System.Text.Encoding.CodePages.xml" />
     <Content Include="bin\Debug\System.Threading.AccessControl.xml" />
+    <None Include="Resources\icons8-bill-100.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
