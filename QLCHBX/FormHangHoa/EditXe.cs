@@ -18,7 +18,7 @@ namespace QLCHBX.FormHangHoa
         ProcessDatabase dtBase = new ProcessDatabase();
         ChucNang function = new ChucNang();
         SqlConnection connection;
-        string connectionString = @"Data Source=DESKTOP-L935296;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        string connectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         private int h = 1;

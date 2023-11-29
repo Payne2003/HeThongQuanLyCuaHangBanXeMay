@@ -66,7 +66,7 @@ namespace QLCHBX.Account
         private void HistoryDeliver_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=DESKTOP-L935296;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
             LoadDuLieu_Nhap("SELECT COUNT(SOHDN) AS SoDonNhapTrongNgay, NgayNhap FROM HoaDonNhap GROUP BY NgayNhap");
             LoadDuLieu_Dat("SELECT COUNT(SoDDH) AS SoDonMuaTrongNgay ,NgayMua FROM DonDatHang GROUP BY NgayMua");
         }

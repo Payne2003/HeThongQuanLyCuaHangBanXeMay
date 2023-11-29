@@ -28,7 +28,7 @@ namespace QLCHBX.Account
         }
         public AccountControl()
         {
-            conn.ConnectionString = @"Data Source=DESKTOP-L935296;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
             InitializeComponent();
         }
         private void LoadDuLieu(string sql)
@@ -230,7 +230,7 @@ namespace QLCHBX.Account
         private void AccountControl_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=DESKTOP-L935296;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
             LoadDuLieu("SELECT * FROM TaiKhoan");
         }
     }
