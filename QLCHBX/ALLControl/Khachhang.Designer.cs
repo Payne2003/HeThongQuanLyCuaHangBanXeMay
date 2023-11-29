@@ -34,6 +34,8 @@
             this.viewKhachhang = new System.Windows.Forms.DataGridView();
             this.Sua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lbLoad = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btThemKhachHang = new Guna.UI2.WinForms.Guna2Button();
             this.txtSsearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,8 +54,6 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lbLoad = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ptLoad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewKhachhang)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
@@ -117,6 +117,29 @@
             this.guna2GroupBox2.Size = new System.Drawing.Size(824, 596);
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Danh sách khách hàng tri ân";
+            // 
+            // lbLoad
+            // 
+            this.lbLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbLoad.BackColor = System.Drawing.Color.Transparent;
+            this.lbLoad.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoad.Location = new System.Drawing.Point(753, 13);
+            this.lbLoad.Name = "lbLoad";
+            this.lbLoad.Size = new System.Drawing.Size(26, 15);
+            this.lbLoad.TabIndex = 8;
+            this.lbLoad.Text = "Load";
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Red;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(225, 13);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(135, 15);
+            this.guna2HtmlLabel5.TabIndex = 8;
+            this.guna2HtmlLabel5.Text = "Ấn 2 lần để xóa khách hàng";
+            this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel3
             // 
@@ -389,28 +412,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 0;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // lbLoad
-            // 
-            this.lbLoad.BackColor = System.Drawing.Color.Transparent;
-            this.lbLoad.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoad.Location = new System.Drawing.Point(753, 13);
-            this.lbLoad.Name = "lbLoad";
-            this.lbLoad.Size = new System.Drawing.Size(26, 15);
-            this.lbLoad.TabIndex = 8;
-            this.lbLoad.Text = "Load";
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(225, 13);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(135, 15);
-            this.guna2HtmlLabel5.TabIndex = 8;
-            this.guna2HtmlLabel5.Text = "Ấn 2 lần để xóa khách hàng";
-            this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // KhachHang
             // 

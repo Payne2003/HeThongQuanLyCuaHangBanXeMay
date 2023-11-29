@@ -192,7 +192,7 @@
             this.viewDmhHang.Location = new System.Drawing.Point(19, 379);
             this.viewDmhHang.Name = "viewDmhHang";
             this.viewDmhHang.ReadOnly = true;
-            this.viewDmhHang.Size = new System.Drawing.Size(480, 215);
+            this.viewDmhHang.Size = new System.Drawing.Size(480, 231);
             this.viewDmhHang.TabIndex = 4;
             this.viewDmhHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewDmhHang_CellClick);
             // 
@@ -207,7 +207,7 @@
             this.txtSoDDH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoDDH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoDDH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoDDH.Location = new System.Drawing.Point(222, 617);
+            this.txtSoDDH.Location = new System.Drawing.Point(222, 629);
             this.txtSoDDH.Name = "txtSoDDH";
             this.txtSoDDH.PasswordChar = '\0';
             this.txtSoDDH.PlaceholderText = "";
@@ -230,9 +230,9 @@
             this.btThemSP.ForeColor = System.Drawing.Color.Black;
             this.btThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btThemSP.Image")));
             this.btThemSP.ImageSize = new System.Drawing.Size(40, 40);
-            this.btThemSP.Location = new System.Drawing.Point(299, 615);
+            this.btThemSP.Location = new System.Drawing.Point(281, 627);
             this.btThemSP.Name = "btThemSP";
-            this.btThemSP.Size = new System.Drawing.Size(200, 46);
+            this.btThemSP.Size = new System.Drawing.Size(218, 46);
             this.btThemSP.TabIndex = 2;
             this.btThemSP.Text = "Mua sản phẩm";
             this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);

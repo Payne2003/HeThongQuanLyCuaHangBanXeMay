@@ -71,14 +71,9 @@ namespace QLCHBX
         {
             giaoDichCT1.txtMaNV.Text = lbMaNV.Text;
         }
-
-        private void lbMaNV_Click(object sender, EventArgs e)
-        {
-            //account1.BringToFront();
-        }
         private void btTaiKhoan_Click(object sender, EventArgs e)
         {
-
+            account1.BringToFront();
         }
     }
 }

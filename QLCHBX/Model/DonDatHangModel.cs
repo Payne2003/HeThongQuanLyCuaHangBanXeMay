@@ -282,6 +282,72 @@ namespace QLCHBX.Model
             DataTable dt = DocBang(sql, sqlParameters);
             return dt;
         }
+        public int LayTongDonChuaThanhToan()
+        {
+            string sql = @"
+        SELECT COUNT(SoDDH) AS TongDonChuaNhap
+        FROM DonDatHang
+        WHERE TrangThai = 0";
+
+            object result = ExecuteScalar(sql);
+
+            if (result != null && result != DBNull.Value)
+            {
+                return Convert.ToInt32(result);
+            }
+            else
+            {
+                // Nếu không có dữ liệu hoặc có lỗi trong quá trình truy vấn
+                throw new InvalidOperationException("Không thể lấy được.");
+            }
+        }
+        public int TongDonDaThanhToan()
+        {
+            string sql = @"
+        SELECT COUNT(SoDDH) AS TongDonDaNhap
+        FROM DonDatHang
+        WHERE TrangThai = 1";
+
+            object result = ExecuteScalar(sql);
+
+            if (result != null && result != DBNull.Value)
+            {
+                return Convert.ToInt32(result);
+            }
+            else
+            {
+                // Nếu không có dữ liệu hoặc có lỗi trong quá trình truy vấn
+                throw new InvalidOperationException("Không thể lấy được.");
+            }
+        }
+        public decimal LayDoanhThu(DateTime ngayBatDau, DateTime ngayKetThuc)
+        {
+            decimal doanhThu = 0;
+            ngayBatDau = ngayBatDau.Date;
+            ngayKetThuc = ngayKetThuc.Date;
+            DataTable dt = new DataTable();
+            string sql = @"
+        SELECT * FROM LayDoanhThu(@NgayBatDau, @NgayKetThuc)";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+        new SqlParameter("@NgayBatDau", ngayBatDau),
+        new SqlParameter("@NgayKetThuc", ngayKetThuc)
+            };
+
+            dt = DocBang(sql, sqlParameters);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                if (!row.IsNull("DoanhThu") && decimal.TryParse(row["DoanhThu"].ToString(), out decimal doanhThuValue))
+                {
+                    doanhThu += doanhThuValue;
+                }
+            }
+
+            return doanhThu;
+        }
+
+
 
         public bool KiemTraCoTonTaiHangNaoTrongDonHangKhong()
         {

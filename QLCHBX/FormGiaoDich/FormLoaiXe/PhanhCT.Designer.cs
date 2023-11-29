@@ -230,7 +230,7 @@
             this.btThemSP.ForeColor = System.Drawing.Color.Black;
             this.btThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btThemSP.Image")));
             this.btThemSP.ImageSize = new System.Drawing.Size(40, 40);
-            this.btThemSP.Location = new System.Drawing.Point(281, 621);
+            this.btThemSP.Location = new System.Drawing.Point(281, 635);
             this.btThemSP.Name = "btThemSP";
             this.btThemSP.Size = new System.Drawing.Size(218, 46);
             this.btThemSP.TabIndex = 2;

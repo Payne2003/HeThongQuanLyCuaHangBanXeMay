@@ -84,9 +84,11 @@
             this.btThemSP.FillColor = System.Drawing.Color.MintCream;
             this.btThemSP.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F);
             this.btThemSP.ForeColor = System.Drawing.Color.Black;
-            this.btThemSP.Location = new System.Drawing.Point(325, 621);
+            this.btThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btThemSP.Image")));
+            this.btThemSP.ImageSize = new System.Drawing.Size(40, 40);
+            this.btThemSP.Location = new System.Drawing.Point(281, 637);
             this.btThemSP.Name = "btThemSP";
-            this.btThemSP.Size = new System.Drawing.Size(174, 46);
+            this.btThemSP.Size = new System.Drawing.Size(218, 46);
             this.btThemSP.TabIndex = 2;
             this.btThemSP.Text = "Mua sản phẩm";
             this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);

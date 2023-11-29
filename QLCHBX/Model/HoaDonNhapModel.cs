@@ -10,7 +10,7 @@ namespace QLCHBX.Model
 {
     public class HoaDonNhapModel : ProcessDatabase
     {
-        
+
 
         public int SoHDN { get; set; }
         public int MaNV { get; set; }
@@ -196,6 +196,72 @@ namespace QLCHBX.Model
 
             return dt;
         }
+        public int LayTongHoaDonNhapChuaNhap()
+        {
+            string sql = @"
+        SELECT COUNT(SoHDN) AS TongDonChuaNhap
+        FROM HoaDonNhap
+        WHERE TrangThai = 0";
+
+            object result = ExecuteScalar(sql);
+
+            if (result != null && result != DBNull.Value)
+            {
+                return Convert.ToInt32(result);
+            }
+            else
+            {
+                // Nếu không có dữ liệu hoặc có lỗi trong quá trình truy vấn
+                throw new InvalidOperationException("Không thể lấy được.");
+            }
+        }
+        public int TongDonDaNhap()
+        {
+            string sql = @"
+        SELECT COUNT(SoHDN) AS TongDonDaNhap
+        FROM HoaDonNhap
+        WHERE TrangThai = 1;";
+
+            object result = ExecuteScalar(sql);
+
+            if (result != null && result != DBNull.Value)
+            {
+                return Convert.ToInt32(result);
+            }
+            else
+            {
+                // Nếu không có dữ liệu hoặc có lỗi trong quá trình truy vấn
+                throw new InvalidOperationException("Không thể lấy được.");
+            }
+        }
+
+        public decimal LayTongChi(DateTime ngayBatDau, DateTime ngayKetThuc)
+        {
+            decimal tongChi = 0;
+            ngayBatDau = ngayBatDau.Date;
+            ngayKetThuc = ngayKetThuc.Date;
+            DataTable dt = new DataTable();
+            string sql = @"
+        SELECT * FROM LayTongChi(@NgayBatDau, @NgayKetThuc)";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+        new SqlParameter("@NgayBatDau", ngayBatDau),
+        new SqlParameter("@NgayKetThuc", ngayKetThuc)
+            };
+
+            dt = DocBang(sql, sqlParameters);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                if (!row.IsNull("TongChi") && decimal.TryParse(row["TongChi"].ToString(), out decimal tongChiValue))
+                {
+                    tongChi += tongChiValue;
+                }
+            }
+
+            return tongChi;
+        }
+
 
         public DataTable LayThongTinChi()
         {
@@ -204,6 +270,21 @@ namespace QLCHBX.Model
             string sql = "SELECT * FROM ViewTongChiHang";
 
             dt = DocBang(sql);
+
+            return dt;
+        }
+
+        public DataTable LayThongTinChi(DateTime ngayBatDau, DateTime ngayKetThuc)
+        {
+            DataTable dt = new DataTable();
+
+            string sql = "SELECT *\r\nFROM ViewTongChiHang\r\nWHERE NgayNhap >= @NgayBatDau AND NgayNhap <=  @NgayKetThuc;";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+           {
+        new SqlParameter("@NgayBatDau", ngayBatDau),
+        new SqlParameter("@NgayKetThuc", ngayKetThuc)
+           };
+            dt = DocBang(sql,sqlParameters);
 
             return dt;
         }

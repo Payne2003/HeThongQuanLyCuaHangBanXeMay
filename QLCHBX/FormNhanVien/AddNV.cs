@@ -59,7 +59,7 @@ namespace QLCHBX.FormNhanVien
 			}
 			else
 			{
-				MessageBox.Show("Thêm nhân viên thất bại. Số điện thoại đã tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Thêm nhân viên thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
 		}

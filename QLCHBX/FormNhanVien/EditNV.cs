@@ -75,7 +75,7 @@ namespace QLCHBX.FormNhanVien
 			}
 
 			NhanVienModel nhanVien = new NhanVienModel(int.Parse(maNV), txtTenNV.Text, gioitinh, ngaysinh, MaCV, txtDiaChi.Text, txtDienThoai.Text);
-			bool success = nhanVien.ThemNV();
+			bool success = nhanVien.CapNhatNV();
 
 			if (success)
 			{
@@ -83,7 +83,7 @@ namespace QLCHBX.FormNhanVien
 			}
 			else
 			{
-				MessageBox.Show("Thêm nhân viên thất bại. Số điện thoại đã tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Thêm nhân viên thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

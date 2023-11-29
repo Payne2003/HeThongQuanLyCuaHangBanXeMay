@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btTaiKhoan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbMaNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btKhachHang = new Guna.UI2.WinForms.Guna2Button();
@@ -48,14 +49,14 @@
             this.ctThoat = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnControl = new Guna.UI2.WinForms.Guna2Panel();
-            this.nhanVien1 = new QLCHBX.NhanVienConTrol.NhanVien();
             this.baoCao1 = new QLCHBX.BaoCaoControl.BaoCao();
             this.hangHoa1 = new QLCHBX.ALLControl.HangHoa();
             this.nhacungcap1 = new QLCHBX.HanghoaControl.Nhacungcap();
             this.khachHang1 = new QLCHBX.ALLControl.KhachHang();
             this.giaoDichCT1 = new QLCHBX.ALLControl.GiaoDichCT();
+            this.account1 = new QLCHBX.Account.Account();
+            this.nhanVien1 = new QLCHBX.NhanVienConTrol.NhanVien();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btTaiKhoan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -88,6 +89,41 @@
             this.guna2Panel1.Size = new System.Drawing.Size(200, 748);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // btTaiKhoan
+            // 
+            this.btTaiKhoan.AutoRoundedCorners = true;
+            this.btTaiKhoan.BackColor = System.Drawing.Color.Transparent;
+            this.btTaiKhoan.BorderColor = System.Drawing.Color.DarkGray;
+            this.btTaiKhoan.BorderRadius = 21;
+            this.btTaiKhoan.BorderThickness = 1;
+            this.btTaiKhoan.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btTaiKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTaiKhoan.CustomizableEdges.BottomRight = false;
+            this.btTaiKhoan.CustomizableEdges.TopRight = false;
+            this.btTaiKhoan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btTaiKhoan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btTaiKhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btTaiKhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btTaiKhoan.FillColor = System.Drawing.Color.Transparent;
+            this.btTaiKhoan.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTaiKhoan.ForeColor = System.Drawing.Color.Black;
+            this.btTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btTaiKhoan.Image")));
+            this.btTaiKhoan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btTaiKhoan.ImageOffset = new System.Drawing.Point(-8, 0);
+            this.btTaiKhoan.ImageSize = new System.Drawing.Size(40, 40);
+            this.btTaiKhoan.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.btTaiKhoan.IndicateFocus = true;
+            this.btTaiKhoan.Location = new System.Drawing.Point(12, 674);
+            this.btTaiKhoan.Name = "btTaiKhoan";
+            this.btTaiKhoan.ShadowDecoration.BorderRadius = 21;
+            this.btTaiKhoan.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btTaiKhoan.ShadowDecoration.Enabled = true;
+            this.btTaiKhoan.Size = new System.Drawing.Size(188, 45);
+            this.btTaiKhoan.TabIndex = 3;
+            this.btTaiKhoan.Text = "Tài Khoản";
+            this.btTaiKhoan.Click += new System.EventHandler(this.btTaiKhoan_Click);
+            // 
             // guna2Panel5
             // 
             this.guna2Panel5.Controls.Add(this.lbMaNV);
@@ -110,7 +146,6 @@
             this.lbMaNV.TabIndex = 1;
             this.lbMaNV.Text = "Tài Khoản";
             this.lbMaNV.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbMaNV.Click += new System.EventHandler(this.lbMaNV_Click);
             // 
             // btKhachHang
             // 
@@ -405,29 +440,18 @@
             // 
             // pnControl
             // 
-            this.pnControl.Controls.Add(this.nhanVien1);
             this.pnControl.Controls.Add(this.baoCao1);
             this.pnControl.Controls.Add(this.hangHoa1);
             this.pnControl.Controls.Add(this.nhacungcap1);
             this.pnControl.Controls.Add(this.khachHang1);
             this.pnControl.Controls.Add(this.giaoDichCT1);
+            this.pnControl.Controls.Add(this.account1);
+            this.pnControl.Controls.Add(this.nhanVien1);
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnControl.Location = new System.Drawing.Point(200, 40);
             this.pnControl.Name = "pnControl";
             this.pnControl.Size = new System.Drawing.Size(824, 748);
             this.pnControl.TabIndex = 2;
-            // 
-            // nhanVien1
-            // 
-            this.nhanVien1.BackColor = System.Drawing.Color.White;
-            this.nhanVien1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nhanVien1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhanVien1.ForeColor = System.Drawing.Color.Black;
-            this.nhanVien1.Location = new System.Drawing.Point(0, 0);
-            this.nhanVien1.Margin = new System.Windows.Forms.Padding(4);
-            this.nhanVien1.Name = "nhanVien1";
-            this.nhanVien1.Size = new System.Drawing.Size(824, 748);
-            this.nhanVien1.TabIndex = 4;
             // 
             // baoCao1
             // 
@@ -481,46 +505,32 @@
             this.giaoDichCT1.Size = new System.Drawing.Size(824, 748);
             this.giaoDichCT1.TabIndex = 0;
             // 
+            // account1
+            // 
+            this.account1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.account1.Location = new System.Drawing.Point(0, 0);
+            this.account1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.account1.Name = "account1";
+            this.account1.Size = new System.Drawing.Size(824, 748);
+            this.account1.TabIndex = 5;
+            // 
+            // nhanVien1
+            // 
+            this.nhanVien1.BackColor = System.Drawing.Color.White;
+            this.nhanVien1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nhanVien1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhanVien1.ForeColor = System.Drawing.Color.Black;
+            this.nhanVien1.Location = new System.Drawing.Point(0, 0);
+            this.nhanVien1.Margin = new System.Windows.Forms.Padding(4);
+            this.nhanVien1.Name = "nhanVien1";
+            this.nhanVien1.Size = new System.Drawing.Size(824, 748);
+            this.nhanVien1.TabIndex = 4;
+            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.header;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // btTaiKhoan
-            // 
-            this.btTaiKhoan.AutoRoundedCorners = true;
-            this.btTaiKhoan.BackColor = System.Drawing.Color.Transparent;
-            this.btTaiKhoan.BorderColor = System.Drawing.Color.DarkGray;
-            this.btTaiKhoan.BorderRadius = 21;
-            this.btTaiKhoan.BorderThickness = 1;
-            this.btTaiKhoan.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btTaiKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btTaiKhoan.CustomizableEdges.BottomRight = false;
-            this.btTaiKhoan.CustomizableEdges.TopRight = false;
-            this.btTaiKhoan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btTaiKhoan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btTaiKhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btTaiKhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btTaiKhoan.FillColor = System.Drawing.Color.Transparent;
-            this.btTaiKhoan.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTaiKhoan.ForeColor = System.Drawing.Color.Black;
-            this.btTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btTaiKhoan.Image")));
-            this.btTaiKhoan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btTaiKhoan.ImageOffset = new System.Drawing.Point(-8, 0);
-            this.btTaiKhoan.ImageSize = new System.Drawing.Size(40, 40);
-            this.btTaiKhoan.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.btTaiKhoan.IndicateFocus = true;
-            this.btTaiKhoan.Location = new System.Drawing.Point(12, 674);
-            this.btTaiKhoan.Name = "btTaiKhoan";
-            this.btTaiKhoan.ShadowDecoration.BorderRadius = 21;
-            this.btTaiKhoan.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btTaiKhoan.ShadowDecoration.Enabled = true;
-            this.btTaiKhoan.Size = new System.Drawing.Size(188, 45);
-            this.btTaiKhoan.TabIndex = 3;
-            this.btTaiKhoan.Text = "Tài Khoản";
-            this.btTaiKhoan.Click += new System.EventHandler(this.btTaiKhoan_Click);
             // 
             // DashBoard
             // 
@@ -559,7 +569,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btBaoCao;
         private Guna.UI2.WinForms.Guna2Button btKhachHang;
         private Guna.UI2.WinForms.Guna2Button btNhanVien;
         private Guna.UI2.WinForms.Guna2Button btDoiTac;
@@ -577,5 +586,7 @@
         public ALLControl.KhachHang khachHang1;
         public ALLControl.GiaoDichCT giaoDichCT1;
         private Guna.UI2.WinForms.Guna2Button btTaiKhoan;
+        private Account.Account account1;
+        public Guna.UI2.WinForms.Guna2Button btBaoCao;
     }
 }

@@ -118,6 +118,25 @@ namespace QLCHBX
                 DongKetNoi();
             }
         }
+        public object ExecuteScalar(string sql)
+        {
+            try
+            {
+                KetNoi();
+                SqlCommand sqlCommand = new SqlCommand(sql, con);
+                object result = sqlCommand.ExecuteScalar();
+                return result;
+            }
+            catch (SqlException)
+            {
+                // Handle exceptions (e.g., log the error)
+                return null;
+            }
+            finally
+            {
+                DongKetNoi();
+            }
+        }
 
 
     }
