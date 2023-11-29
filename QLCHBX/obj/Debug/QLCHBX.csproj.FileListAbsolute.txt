@@ -133,7 +133,6 @@ C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.OderHangHoa.OrderHangHoaForm.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.ThanhToan.XacNhanThanhToan.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.ThemKhachHang.ThemKhachHangVaoDonDatHang.resources
-C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormHangHoa.AddPhutung.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormHangHoa.AddXe.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormHangHoa.ChiTiet.resources
 C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormHangHoa.EditXe.resources
@@ -302,3 +301,13 @@ D:\Github\LTTQ\HeThongQuanLyCuaHangBanXeMay\QLCHBX\bin\Debug\System.Text.Encodin
 D:\Github\LTTQ\HeThongQuanLyCuaHangBanXeMay\QLCHBX\bin\Debug\System.Threading.AccessControl.xml
 D:\Github\LTTQ\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.csproj.Fody.CopyLocal.cache
 D:\Github\LTTQ\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.csproj.CopyComplete
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormBaoCao.BaoCao.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormNhanVien.AddNV.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormNhanVien.EditNV.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormNV.EditNV.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.HanghoaControl.Nhacungcap.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.ThemHangSX.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.DongCoCT.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.FormLoaiXe.PhanhCT.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.LichSuGia.resources
+C:\Users\Admin\source\repos\HeThongQuanLyCuaHangBanXeMay\QLCHBX\obj\Debug\QLCHBX.FormGiaoDich.OderHangHoa.XemTongChi.resources

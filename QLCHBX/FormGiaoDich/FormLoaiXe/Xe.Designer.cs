@@ -30,108 +30,87 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Xe));
-            this.pthonda = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ptSYM = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtSoDDH = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ptPiaggio = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ptducati = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ptSuzuki = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ptYamaha = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ptktm = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ptKawasaki = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pthonda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptSYM)).BeginInit();
-            this.guna2Panel8.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
-            this.guna2Panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptPiaggio)).BeginInit();
-            this.guna2Panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptducati)).BeginInit();
-            this.guna2Panel12.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptSuzuki)).BeginInit();
-            this.guna2Panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptYamaha)).BeginInit();
-            this.guna2Panel10.SuspendLayout();
-            this.guna2Panel5.SuspendLayout();
-            this.guna2Panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptktm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptKawasaki)).BeginInit();
-            this.guna2Panel14.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.cbHangXe = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btThemSP = new Guna.UI2.WinForms.Guna2Button();
+            this.txtBanChay = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSoDDH = new Guna.UI2.WinForms.Guna2TextBox();
+            this.viewDmhHang = new System.Windows.Forms.DataGridView();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.ptHang = new System.Windows.Forms.PictureBox();
+            this.btThemNSX = new Guna.UI2.WinForms.Guna2Button();
+            this.btCapnhat = new Guna.UI2.WinForms.Guna2Button();
+            this.btChonanh = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDmhHang)).BeginInit();
+            this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHang)).BeginInit();
             this.SuspendLayout();
             // 
-            // pthonda
+            // guna2Elipse1
             // 
-            this.pthonda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pthonda.Image = ((System.Drawing.Image)(resources.GetObject("pthonda.Image")));
-            this.pthonda.ImageRotate = 0F;
-            this.pthonda.Location = new System.Drawing.Point(0, 0);
-            this.pthonda.Name = "pthonda";
-            this.pthonda.Size = new System.Drawing.Size(312, 140);
-            this.pthonda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pthonda.TabIndex = 0;
-            this.pthonda.TabStop = false;
-            this.pthonda.Click += new System.EventHandler(this.pthonda_Click);
+            this.guna2Elipse1.BorderRadius = 0;
+            this.guna2Elipse1.TargetControl = this;
             // 
-            // ptSYM
+            // cbHangXe
             // 
-            this.ptSYM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptSYM.Image = ((System.Drawing.Image)(resources.GetObject("ptSYM.Image")));
-            this.ptSYM.ImageRotate = 0F;
-            this.ptSYM.Location = new System.Drawing.Point(0, 0);
-            this.ptSYM.Name = "ptSYM";
-            this.ptSYM.Size = new System.Drawing.Size(312, 140);
-            this.ptSYM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptSYM.TabIndex = 0;
-            this.ptSYM.TabStop = false;
-            this.ptSYM.Click += new System.EventHandler(this.ptSYM_Click);
+            this.cbHangXe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbHangXe.BackColor = System.Drawing.Color.Transparent;
+            this.cbHangXe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbHangXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHangXe.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbHangXe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbHangXe.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F);
+            this.cbHangXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbHangXe.ItemHeight = 30;
+            this.cbHangXe.Location = new System.Drawing.Point(19, 83);
+            this.cbHangXe.Name = "cbHangXe";
+            this.cbHangXe.Size = new System.Drawing.Size(218, 36);
+            this.cbHangXe.TabIndex = 0;
+            this.cbHangXe.SelectedIndexChanged += new System.EventHandler(this.cbHangXe_SelectedIndexChanged);
             // 
-            // guna2Panel8
+            // btThemSP
             // 
-            this.guna2Panel8.Controls.Add(this.ptSYM);
-            this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel8.Location = new System.Drawing.Point(0, 140);
-            this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(312, 140);
-            this.guna2Panel8.TabIndex = 1;
+            this.btThemSP.BorderColor = System.Drawing.Color.Silver;
+            this.btThemSP.BorderRadius = 1;
+            this.btThemSP.BorderThickness = 1;
+            this.btThemSP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btThemSP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btThemSP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btThemSP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btThemSP.FillColor = System.Drawing.Color.MintCream;
+            this.btThemSP.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F);
+            this.btThemSP.ForeColor = System.Drawing.Color.Black;
+            this.btThemSP.Location = new System.Drawing.Point(325, 678);
+            this.btThemSP.Name = "btThemSP";
+            this.btThemSP.Size = new System.Drawing.Size(174, 46);
+            this.btThemSP.TabIndex = 2;
+            this.btThemSP.Text = "Mua sản phẩm";
+            this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
             // 
-            // guna2Panel3
+            // txtBanChay
             // 
-            this.guna2Panel3.Controls.Add(this.guna2Panel8);
-            this.guna2Panel3.Controls.Add(this.guna2Panel7);
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(312, 280);
-            this.guna2Panel3.TabIndex = 0;
-            // 
-            // guna2Panel7
-            // 
-            this.guna2Panel7.Controls.Add(this.pthonda);
-            this.guna2Panel7.Controls.Add(this.txtSoDDH);
-            this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel7.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(312, 140);
-            this.guna2Panel7.TabIndex = 0;
+            this.txtBanChay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBanChay.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBanChay.DefaultText = "";
+            this.txtBanChay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBanChay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBanChay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBanChay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBanChay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBanChay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBanChay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBanChay.Location = new System.Drawing.Point(281, 83);
+            this.txtBanChay.Name = "txtBanChay";
+            this.txtBanChay.PasswordChar = '\0';
+            this.txtBanChay.PlaceholderText = "";
+            this.txtBanChay.ReadOnly = true;
+            this.txtBanChay.SelectedText = "";
+            this.txtBanChay.Size = new System.Drawing.Size(218, 36);
+            this.txtBanChay.TabIndex = 2;
             // 
             // txtSoDDH
             // 
@@ -144,7 +123,7 @@
             this.txtSoDDH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoDDH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoDDH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoDDH.Location = new System.Drawing.Point(0, 0);
+            this.txtSoDDH.Location = new System.Drawing.Point(609, 120);
             this.txtSoDDH.Name = "txtSoDDH";
             this.txtSoDDH.PasswordChar = '\0';
             this.txtSoDDH.PlaceholderText = "";
@@ -153,251 +132,182 @@
             this.txtSoDDH.TabIndex = 1;
             this.txtSoDDH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ptPiaggio
+            // viewDmhHang
             // 
-            this.ptPiaggio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptPiaggio.Image = ((System.Drawing.Image)(resources.GetObject("ptPiaggio.Image")));
-            this.ptPiaggio.ImageRotate = 0F;
-            this.ptPiaggio.Location = new System.Drawing.Point(0, 0);
-            this.ptPiaggio.Name = "ptPiaggio";
-            this.ptPiaggio.Size = new System.Drawing.Size(312, 140);
-            this.ptPiaggio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptPiaggio.TabIndex = 0;
-            this.ptPiaggio.TabStop = false;
-            this.ptPiaggio.Click += new System.EventHandler(this.ptPiaggio_Click);
+            this.viewDmhHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.viewDmhHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewDmhHang.Location = new System.Drawing.Point(19, 379);
+            this.viewDmhHang.Name = "viewDmhHang";
+            this.viewDmhHang.ReadOnly = true;
+            this.viewDmhHang.Size = new System.Drawing.Size(480, 236);
+            this.viewDmhHang.TabIndex = 4;
             // 
-            // guna2Panel11
+            // guna2GroupBox1
             // 
-            this.guna2Panel11.Controls.Add(this.ptPiaggio);
-            this.guna2Panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel11.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel11.Name = "guna2Panel11";
-            this.guna2Panel11.Size = new System.Drawing.Size(312, 140);
-            this.guna2Panel11.TabIndex = 0;
+            this.guna2GroupBox1.Controls.Add(this.ptHang);
+            this.guna2GroupBox1.Controls.Add(this.btThemNSX);
+            this.guna2GroupBox1.Controls.Add(this.btCapnhat);
+            this.guna2GroupBox1.Controls.Add(this.btChonanh);
+            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel4);
+            this.guna2GroupBox1.Controls.Add(this.lbHang);
+            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2GroupBox1.Controls.Add(this.viewDmhHang);
+            this.guna2GroupBox1.Controls.Add(this.txtSoDDH);
+            this.guna2GroupBox1.Controls.Add(this.btThemSP);
+            this.guna2GroupBox1.Controls.Add(this.cbHangXe);
+            this.guna2GroupBox1.Controls.Add(this.txtBanChay);
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.MintCream;
+            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(520, 748);
+            this.guna2GroupBox1.TabIndex = 3;
+            this.guna2GroupBox1.Text = "Xe";
             // 
-            // ptducati
+            // ptHang
             // 
-            this.ptducati.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptducati.Image = ((System.Drawing.Image)(resources.GetObject("ptducati.Image")));
-            this.ptducati.ImageRotate = 0F;
-            this.ptducati.Location = new System.Drawing.Point(0, 0);
-            this.ptducati.Name = "ptducati";
-            this.ptducati.Size = new System.Drawing.Size(312, 140);
-            this.ptducati.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptducati.TabIndex = 0;
-            this.ptducati.TabStop = false;
-            this.ptducati.Click += new System.EventHandler(this.ptducati_Click);
+            this.ptHang.Location = new System.Drawing.Point(19, 158);
+            this.ptHang.Name = "ptHang";
+            this.ptHang.Size = new System.Drawing.Size(263, 194);
+            this.ptHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptHang.TabIndex = 8;
+            this.ptHang.TabStop = false;
             // 
-            // guna2Panel12
+            // btThemNSX
             // 
-            this.guna2Panel12.Controls.Add(this.ptducati);
-            this.guna2Panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel12.Location = new System.Drawing.Point(0, 140);
-            this.guna2Panel12.Name = "guna2Panel12";
-            this.guna2Panel12.Size = new System.Drawing.Size(312, 140);
-            this.guna2Panel12.TabIndex = 1;
+            this.btThemNSX.BorderColor = System.Drawing.Color.Silver;
+            this.btThemNSX.BorderRadius = 1;
+            this.btThemNSX.BorderThickness = 1;
+            this.btThemNSX.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btThemNSX.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btThemNSX.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btThemNSX.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btThemNSX.FillColor = System.Drawing.Color.MintCream;
+            this.btThemNSX.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.btThemNSX.ForeColor = System.Drawing.Color.Black;
+            this.btThemNSX.Image = ((System.Drawing.Image)(resources.GetObject("btThemNSX.Image")));
+            this.btThemNSX.ImageSize = new System.Drawing.Size(40, 40);
+            this.btThemNSX.Location = new System.Drawing.Point(299, 215);
+            this.btThemNSX.Name = "btThemNSX";
+            this.btThemNSX.Size = new System.Drawing.Size(144, 37);
+            this.btThemNSX.TabIndex = 7;
+            this.btThemNSX.Text = "Thêm NSX";
+            this.btThemNSX.Click += new System.EventHandler(this.btThemNSX_Click);
             // 
-            // guna2Panel4
+            // btCapnhat
             // 
-            this.guna2Panel4.Controls.Add(this.guna2Panel12);
-            this.guna2Panel4.Controls.Add(this.guna2Panel11);
-            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 280);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(312, 280);
-            this.guna2Panel4.TabIndex = 1;
+            this.btCapnhat.BorderColor = System.Drawing.Color.Silver;
+            this.btCapnhat.BorderRadius = 1;
+            this.btCapnhat.BorderThickness = 1;
+            this.btCapnhat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btCapnhat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btCapnhat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btCapnhat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btCapnhat.FillColor = System.Drawing.Color.MintCream;
+            this.btCapnhat.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.btCapnhat.ForeColor = System.Drawing.Color.Black;
+            this.btCapnhat.Image = ((System.Drawing.Image)(resources.GetObject("btCapnhat.Image")));
+            this.btCapnhat.ImageSize = new System.Drawing.Size(40, 40);
+            this.btCapnhat.Location = new System.Drawing.Point(299, 272);
+            this.btCapnhat.Name = "btCapnhat";
+            this.btCapnhat.Size = new System.Drawing.Size(144, 37);
+            this.btCapnhat.TabIndex = 7;
+            this.btCapnhat.Text = "Cập nhật";
+            this.btCapnhat.Click += new System.EventHandler(this.btCapnhat_Click);
             // 
-            // guna2Panel2
+            // btChonanh
             // 
-            this.guna2Panel2.Controls.Add(this.guna2Panel4);
-            this.guna2Panel2.Controls.Add(this.guna2Panel3);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(312, 560);
-            this.guna2Panel2.TabIndex = 3;
+            this.btChonanh.BorderColor = System.Drawing.Color.Silver;
+            this.btChonanh.BorderRadius = 1;
+            this.btChonanh.BorderThickness = 1;
+            this.btChonanh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btChonanh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btChonanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btChonanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btChonanh.FillColor = System.Drawing.Color.MintCream;
+            this.btChonanh.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.btChonanh.ForeColor = System.Drawing.Color.Black;
+            this.btChonanh.Location = new System.Drawing.Point(299, 158);
+            this.btChonanh.Name = "btChonanh";
+            this.btChonanh.Size = new System.Drawing.Size(144, 37);
+            this.btChonanh.TabIndex = 7;
+            this.btChonanh.Text = "Chọn ảnh";
+            this.btChonanh.Click += new System.EventHandler(this.btChonanh_Click);
             // 
-            // ptSuzuki
+            // guna2HtmlLabel4
             // 
-            this.ptSuzuki.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptSuzuki.Image = ((System.Drawing.Image)(resources.GetObject("ptSuzuki.Image")));
-            this.ptSuzuki.ImageRotate = 0F;
-            this.ptSuzuki.Location = new System.Drawing.Point(0, 0);
-            this.ptSuzuki.Name = "ptSuzuki";
-            this.ptSuzuki.Size = new System.Drawing.Size(312, 140);
-            this.ptSuzuki.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptSuzuki.TabIndex = 0;
-            this.ptSuzuki.TabStop = false;
-            this.ptSuzuki.Click += new System.EventHandler(this.ptSuzuki_Click);
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(19, 358);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(175, 15);
+            this.guna2HtmlLabel4.TabIndex = 6;
+            this.guna2HtmlLabel4.Text = "Danh sách các mặt hàng trong hãng";
             // 
-            // guna2Panel9
+            // lbHang
             // 
-            this.guna2Panel9.Controls.Add(this.ptSuzuki);
-            this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel9.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(312, 140);
-            this.guna2Panel9.TabIndex = 0;
+            this.lbHang.BackColor = System.Drawing.Color.Transparent;
+            this.lbHang.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHang.Location = new System.Drawing.Point(19, 137);
+            this.lbHang.Name = "lbHang";
+            this.lbHang.Size = new System.Drawing.Size(139, 15);
+            this.lbHang.TabIndex = 6;
+            this.lbHang.Text = "Chọn hãng theo mong muốn";
             // 
-            // ptYamaha
+            // guna2HtmlLabel3
             // 
-            this.ptYamaha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptYamaha.Image = ((System.Drawing.Image)(resources.GetObject("ptYamaha.Image")));
-            this.ptYamaha.ImageRotate = 0F;
-            this.ptYamaha.Location = new System.Drawing.Point(0, 0);
-            this.ptYamaha.Name = "ptYamaha";
-            this.ptYamaha.Size = new System.Drawing.Size(312, 140);
-            this.ptYamaha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptYamaha.TabIndex = 0;
-            this.ptYamaha.TabStop = false;
-            this.ptYamaha.Click += new System.EventHandler(this.ptYamaha_Click);
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(281, 62);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(99, 15);
+            this.guna2HtmlLabel3.TabIndex = 6;
+            this.guna2HtmlLabel3.Text = "Hãng bán chạy nhất";
             // 
-            // guna2Panel10
+            // guna2HtmlLabel1
             // 
-            this.guna2Panel10.Controls.Add(this.ptYamaha);
-            this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel10.Location = new System.Drawing.Point(0, 140);
-            this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(312, 140);
-            this.guna2Panel10.TabIndex = 1;
-            // 
-            // guna2Panel5
-            // 
-            this.guna2Panel5.Controls.Add(this.guna2Panel10);
-            this.guna2Panel5.Controls.Add(this.guna2Panel9);
-            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(312, 280);
-            this.guna2Panel5.TabIndex = 0;
-            // 
-            // guna2Panel13
-            // 
-            this.guna2Panel13.Controls.Add(this.ptktm);
-            this.guna2Panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel13.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel13.Name = "guna2Panel13";
-            this.guna2Panel13.Size = new System.Drawing.Size(312, 140);
-            this.guna2Panel13.TabIndex = 0;
-            // 
-            // ptktm
-            // 
-            this.ptktm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptktm.Image = ((System.Drawing.Image)(resources.GetObject("ptktm.Image")));
-            this.ptktm.ImageRotate = 0F;
-            this.ptktm.Location = new System.Drawing.Point(0, 0);
-            this.ptktm.Name = "ptktm";
-            this.ptktm.Size = new System.Drawing.Size(312, 140);
-            this.ptktm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptktm.TabIndex = 0;
-            this.ptktm.TabStop = false;
-            this.ptktm.Click += new System.EventHandler(this.ptktm_Click);
-            // 
-            // ptKawasaki
-            // 
-            this.ptKawasaki.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptKawasaki.Image = ((System.Drawing.Image)(resources.GetObject("ptKawasaki.Image")));
-            this.ptKawasaki.ImageRotate = 0F;
-            this.ptKawasaki.Location = new System.Drawing.Point(0, 0);
-            this.ptKawasaki.Name = "ptKawasaki";
-            this.ptKawasaki.Size = new System.Drawing.Size(312, 140);
-            this.ptKawasaki.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptKawasaki.TabIndex = 0;
-            this.ptKawasaki.TabStop = false;
-            this.ptKawasaki.Click += new System.EventHandler(this.ptKawasaki_Click);
-            // 
-            // guna2Panel14
-            // 
-            this.guna2Panel14.Controls.Add(this.ptKawasaki);
-            this.guna2Panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel14.Location = new System.Drawing.Point(0, 140);
-            this.guna2Panel14.Name = "guna2Panel14";
-            this.guna2Panel14.Size = new System.Drawing.Size(312, 140);
-            this.guna2Panel14.TabIndex = 1;
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.Controls.Add(this.guna2Panel14);
-            this.guna2Panel6.Controls.Add(this.guna2Panel13);
-            this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel6.Location = new System.Drawing.Point(0, 280);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(312, 280);
-            this.guna2Panel6.TabIndex = 1;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.guna2Panel6);
-            this.guna2Panel1.Controls.Add(this.guna2Panel5);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel1.Location = new System.Drawing.Point(312, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(312, 560);
-            this.guna2Panel1.TabIndex = 2;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 0;
-            this.guna2Elipse1.TargetControl = this;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(19, 62);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(71, 15);
+            this.guna2HtmlLabel1.TabIndex = 6;
+            this.guna2HtmlLabel1.Text = "Hãng sản xuất";
             // 
             // Xe
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2GroupBox1);
+            this.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Xe";
-            this.Size = new System.Drawing.Size(624, 560);
-            ((System.ComponentModel.ISupportInitialize)(this.pthonda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptSYM)).EndInit();
-            this.guna2Panel8.ResumeLayout(false);
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptPiaggio)).EndInit();
-            this.guna2Panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptducati)).EndInit();
-            this.guna2Panel12.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptSuzuki)).EndInit();
-            this.guna2Panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptYamaha)).EndInit();
-            this.guna2Panel10.ResumeLayout(false);
-            this.guna2Panel5.ResumeLayout(false);
-            this.guna2Panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptktm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptKawasaki)).EndInit();
-            this.guna2Panel14.ResumeLayout(false);
-            this.guna2Panel6.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(520, 748);
+            this.Load += new System.EventHandler(this.Xe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.viewDmhHang)).EndInit();
+            this.guna2GroupBox1.ResumeLayout(false);
+            this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHang)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2PictureBox pthonda;
-        private Guna.UI2.WinForms.Guna2PictureBox ptSYM;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2PictureBox ptPiaggio;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
-        private Guna.UI2.WinForms.Guna2PictureBox ptducati;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2PictureBox ptSuzuki;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private Guna.UI2.WinForms.Guna2PictureBox ptYamaha;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
-        private Guna.UI2.WinForms.Guna2PictureBox ptktm;
-        private Guna.UI2.WinForms.Guna2PictureBox ptKawasaki;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private System.Windows.Forms.DataGridView viewDmhHang;
         public Guna.UI2.WinForms.Guna2TextBox txtSoDDH;
+        private Guna.UI2.WinForms.Guna2Button btThemSP;
+        private Guna.UI2.WinForms.Guna2ComboBox cbHangXe;
+        private Guna.UI2.WinForms.Guna2TextBox txtBanChay;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbHang;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2Button btChonanh;
+        private Guna.UI2.WinForms.Guna2Button btThemNSX;
+        private Guna.UI2.WinForms.Guna2Button btCapnhat;
+        private System.Windows.Forms.PictureBox ptHang;
     }
 }

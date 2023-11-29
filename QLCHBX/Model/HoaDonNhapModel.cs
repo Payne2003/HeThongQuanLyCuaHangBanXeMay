@@ -197,7 +197,15 @@ namespace QLCHBX.Model
             return dt;
         }
 
+        public DataTable LayThongTinChi()
+        {
+            DataTable dt = new DataTable();
 
+            string sql = "SELECT * FROM ViewTongChiHang";
 
+            dt = DocBang(sql);
+
+            return dt;
+        }
     }
 }

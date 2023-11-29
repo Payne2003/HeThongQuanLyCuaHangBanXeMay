@@ -59,10 +59,13 @@
             this.txtSoHDN = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbLichSu = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btLichsugiaNhap = new Guna.UI2.WinForms.Guna2Button();
             this.btHuyNhapHang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptHangHoa)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -189,6 +192,7 @@
             this.viewChiTietHoaDonNhap.ReadOnly = true;
             this.viewChiTietHoaDonNhap.Size = new System.Drawing.Size(672, 234);
             this.viewChiTietHoaDonNhap.TabIndex = 0;
+            this.viewChiTietHoaDonNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewChiTietHoaDonNhap_CellClick);
             // 
             // guna2Panel3
             // 
@@ -296,7 +300,7 @@
             this.dtNgayNhap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtNgayNhap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgayNhap.Name = "dtNgayNhap";
-            this.dtNgayNhap.Size = new System.Drawing.Size(119, 28);
+            this.dtNgayNhap.Size = new System.Drawing.Size(116, 28);
             this.dtNgayNhap.TabIndex = 2;
             this.dtNgayNhap.Value = new System.DateTime(2023, 11, 5, 14, 58, 24, 353);
             // 
@@ -317,7 +321,7 @@
             this.txtNhaCungCap.PlaceholderText = "";
             this.txtNhaCungCap.ReadOnly = true;
             this.txtNhaCungCap.SelectedText = "";
-            this.txtNhaCungCap.Size = new System.Drawing.Size(119, 28);
+            this.txtNhaCungCap.Size = new System.Drawing.Size(175, 28);
             this.txtNhaCungCap.TabIndex = 1;
             // 
             // txtTenNV
@@ -462,12 +466,44 @@
             // 
             // guna2Panel6
             // 
+            this.guna2Panel6.Controls.Add(this.lbLichSu);
+            this.guna2Panel6.Controls.Add(this.btLichsugiaNhap);
             this.guna2Panel6.Controls.Add(this.btHuyNhapHang);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel6.Location = new System.Drawing.Point(672, 374);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(352, 226);
             this.guna2Panel6.TabIndex = 0;
+            // 
+            // lbLichSu
+            // 
+            this.lbLichSu.BackColor = System.Drawing.Color.Transparent;
+            this.lbLichSu.Location = new System.Drawing.Point(12, 6);
+            this.lbLichSu.Name = "lbLichSu";
+            this.lbLichSu.Size = new System.Drawing.Size(154, 15);
+            this.lbLichSu.TabIndex = 2;
+            this.lbLichSu.Text = "Chọn hàng xem lịch sử giá nhập";
+            // 
+            // btLichsugiaNhap
+            // 
+            this.btLichsugiaNhap.BorderColor = System.Drawing.Color.DarkGray;
+            this.btLichsugiaNhap.BorderRadius = 1;
+            this.btLichsugiaNhap.BorderThickness = 1;
+            this.btLichsugiaNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btLichsugiaNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btLichsugiaNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btLichsugiaNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btLichsugiaNhap.FillColor = System.Drawing.Color.MintCream;
+            this.btLichsugiaNhap.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.btLichsugiaNhap.ForeColor = System.Drawing.Color.Black;
+            this.btLichsugiaNhap.Image = ((System.Drawing.Image)(resources.GetObject("btLichsugiaNhap.Image")));
+            this.btLichsugiaNhap.ImageSize = new System.Drawing.Size(40, 40);
+            this.btLichsugiaNhap.Location = new System.Drawing.Point(12, 31);
+            this.btLichsugiaNhap.Name = "btLichsugiaNhap";
+            this.btLichsugiaNhap.Size = new System.Drawing.Size(208, 44);
+            this.btLichsugiaNhap.TabIndex = 1;
+            this.btLichsugiaNhap.Text = "Lịch sử giá nhập";
+            this.btLichsugiaNhap.Click += new System.EventHandler(this.btLichsugiaNhap_Click);
             // 
             // btHuyNhapHang
             // 
@@ -539,6 +575,7 @@
             this.grThongtin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel6.ResumeLayout(false);
+            this.guna2Panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -578,5 +615,8 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbLichSu;
+        private Guna.UI2.WinForms.Guna2Button btLichsugiaNhap;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

@@ -21,7 +21,7 @@ namespace QLCHBX.HanghoaControl
     public partial class Xeso : UserControl
     {
         ProcessDatabase dtBase = new ProcessDatabase();
-        string connectionString = "Data Source=DuyLa;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+        string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
       
         public Xeso()
         {
@@ -36,23 +36,6 @@ namespace QLCHBX.HanghoaControl
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.Columns[0].Width = 40;
             pn1.Visible = false;
-        }
-        private void btnthoat_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow selectedRow = dgv.SelectedRows[0];
-
-            string maHang = selectedRow.Cells["MaHang"].Value.ToString();
-            if (MessageBox.Show("Bạn có muốn xóa xe có mã là:" + maHang + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                dtBase.CapNhatDuLieu("delete Dmh where MaHang='" + maHang + "'");
-				MessageBox.Show("Xóa thành công", "Thông báo");
-				dgv.DataSource = dtBase.DocBang("Select MaHang,Anh,TenHang,NamSX,DonGiaBan,ThoiGianBaoHanh,SoLuong From Dmh");              
-            }
         }
         public void SetDataGridViewDataSource(DataTable dt)
         {
@@ -143,7 +126,11 @@ namespace QLCHBX.HanghoaControl
                             string dgn = reader["DonGiaNhap"].ToString();
                             string dgb = reader["DonGiaBan"].ToString();
                             string time = reader["ThoiGianBaoHanh"].ToString();
-                            Byte[] imgPath = (Byte[])reader["Anh"];
+                            byte[] imgPath = null;
+                            if (reader["Anh"] != DBNull.Value)
+                            {
+                                imgPath = (byte[])reader["Anh"];
+                            }                           
                             reader.Close();                            
                             if (string.IsNullOrEmpty(map))
                             {
@@ -276,10 +263,16 @@ namespace QLCHBX.HanghoaControl
             string maHang = selectedRow.Cells["MaHang"].Value.ToString();
             string tenHang = selectedRow.Cells["TenHang"].Value.ToString();
             string namSX = selectedRow.Cells["NamSX"].Value.ToString();
-            Byte[] imgPath = (Byte[])selectedRow.Cells["Anh"].Value;
+          //Byte[] imgPath = (Byte[])selectedRow.Cells["Anh"].Value;
             string sl = selectedRow.Cells["SoLuong"].Value.ToString();
             string DGB = selectedRow.Cells["DonGiaBan"].Value.ToString();
             string Time = selectedRow.Cells["ThoiGianBaoHanh"].Value.ToString();
+            byte[] imgPath = null;
+            object anhValue = selectedRow.Cells["Anh"].Value;
+            if (anhValue != null && anhValue != DBNull.Value)
+            {
+                imgPath = (byte[])anhValue;
+            }
 
             EditXe edit = new EditXe();
             edit.MaHang = maHang;

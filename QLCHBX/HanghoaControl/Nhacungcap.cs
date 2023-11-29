@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QLCHBX.HanghoaControl
 {
-	public partial class Nhacungcap : UserControl
-	{
-		ProcessDatabase dtBase = new ProcessDatabase();
+    public partial class Nhacungcap : UserControl
+    {
+        ProcessDatabase dtBase = new ProcessDatabase();
         public void Load()
         {
             btnLuu.Enabled = false;
@@ -21,30 +21,30 @@ namespace QLCHBX.HanghoaControl
             pn1.Visible = false;
         }
         public Nhacungcap()
-		{
-			InitializeComponent();
+        {
+            InitializeComponent();
             DataTable dt = dtBase.DocBang("Select * From NhaCungCap");
             dgv.DataSource = dt;
             Load();
         }
 
-		private void Nhacungcap_Load(object sender, EventArgs e)
-		{
-            
+        private void Nhacungcap_Load(object sender, EventArgs e)
+        {
+
         }
 
-		private void btnXoa_Click(object sender, EventArgs e)
-		{
-			DataGridViewRow selectedRow = dgv.SelectedRows[0];
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dgv.SelectedRows[0];
 
-			string maNCC = selectedRow.Cells["MaNCC"].Value.ToString();
-			if (MessageBox.Show("Bạn có muốn xóa nhà cung cấp có mã là:" + maNCC + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-			{
-				dtBase.CapNhatDuLieu("delete NhaCungCap where MaNCC='" + maNCC + "'");
-				MessageBox.Show("Xóa thành công","Thông báo");
-				dgv.DataSource = dtBase.DocBang("Select * From NhaCungCap");
-			}
-		}
+            string maNCC = selectedRow.Cells["MaNCC"].Value.ToString();
+            if (MessageBox.Show("Bạn có muốn xóa nhà cung cấp có mã là:" + maNCC + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                dtBase.CapNhatDuLieu("delete NhaCungCap where MaNCC='" + maNCC + "'");
+                MessageBox.Show("Xóa thành công", "Thông báo");
+                dgv.DataSource = dtBase.DocBang("Select * From NhaCungCap");
+            }
+        }
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -74,7 +74,7 @@ namespace QLCHBX.HanghoaControl
             string key = txtSearch.Text;
             if (string.IsNullOrEmpty(key))
             {
-                MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm.");              
+                MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm.");
             }
             else
             {
@@ -99,14 +99,22 @@ namespace QLCHBX.HanghoaControl
         private void ptThem_Click(object sender, EventArgs e)
         {
             pn1.Visible = true;
-            txtMa.Text = "";          
+            txtMa.Text = "";
             btnLuu.Enabled = true;
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (txtMa.Text == "")
             {
-                if (!IsValidPhoneNumber(txtsdt.Text))
+                if (txtTen.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập tên nhà cung cấp.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (txtdc.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập địa chỉ nhà cung cấp.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (!IsValidPhoneNumber(txtsdt.Text))
                 {
                     MessageBox.Show("Số điện thoại không hợp lệ. Vui lòng nhập 10 số.", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -132,6 +140,7 @@ namespace QLCHBX.HanghoaControl
                         dtBase.CapNhatDuLieu("update NhaCungCap set TenNCC = N'" + txtTen.Text + "', DiaChi = N'" + txtdc.Text + "', DienThoai = N'" + txtsdt.Text + "' where MaNCC = '" + txtMa.Text + "'");
                         MessageBox.Show("Bạn đã sửa thành công");
                         dgv.DataSource = dtBase.DocBang("SELECT * FROM NhaCungCap");
+                        ptLoad_Click(sender, e);
                     }
                 }
             }
@@ -144,6 +153,10 @@ namespace QLCHBX.HanghoaControl
         private void ptLoad_Click(object sender, EventArgs e)
         {
             Load();
+            txtMa.Text = "";
+            txtTen.Text = "";
+            txtdc.Text = "";
+            txtsdt.Text = "";
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

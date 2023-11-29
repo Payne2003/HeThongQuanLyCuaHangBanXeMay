@@ -67,7 +67,7 @@ namespace QLCHBX.FormHangHoa
             }
             else
             {
-                MessageBox.Show("Mảng byte hình ảnh không hợp lệ.");
+                //MessageBox.Show("Mảng byte hình ảnh không hợp lệ.");
             }
         }
 

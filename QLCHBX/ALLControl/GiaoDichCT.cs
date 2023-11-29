@@ -35,11 +35,7 @@ namespace QLCHBX.ALLControl
             txtDatCoc.Text = "";
             txtTongTien.Text = "";
             dtNgayNhap.Value = dt.Date;
-        }
-        public bool KiemTraTextsRong(params string[] texts)
-        {
-            return texts.Any(string.IsNullOrWhiteSpace);
-        }
+        } 
         public void SaveDataGridView()
         {
             int SoDDH = int.Parse(txtSoDDH.Text);
@@ -133,7 +129,7 @@ namespace QLCHBX.ALLControl
 
         private void btCapNhat_Click(object sender, EventArgs e)
         {
-            if (KiemTraTextsRong(txtThue.Text, txtDatCoc.Text))
+            if (string.IsNullOrEmpty(txtThue.Text) || string.IsNullOrEmpty(txtDatCoc.Text))
             {
                 LoadDataGridView();
                 return;
@@ -141,50 +137,58 @@ namespace QLCHBX.ALLControl
             else
             {
                 SaveDataGridView();
-                LoadDataGridView();
             }
 
+            LoadDataGridView();
         }
 
         private void txtThue_TextChanged(object sender, EventArgs e)
         {
-            if (KiemTraTextsRong(txtDatCoc.Text,txtThue.Text))
+            
+            if (string.IsNullOrEmpty(txtThue.Text) || !decimal.TryParse(txtThue.Text, out decimal thueValue))
             {
+                MessageBox.Show("Vui lòng nhập một giá trị số hợp lệ cho thuế!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else 
+
+            if (thueValue > 100)
             {
-                if (decimal.Parse(txtThue.Text) > 100)
-                {
-                    MessageBox.Show("Thuế chỉ từ 0 - 100% thôi bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadDataGridView();
-                }
-                else
-                {
-                    txtTongTien.Text = (tongTienBanDau + tongTienBanDau * decimal.Parse(txtThue.Text) / 100).ToString();
-                }
+                MessageBox.Show("Thuế chỉ từ 0 - 100%!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtThue.Text = "";
+                return;
             }
+
+            if (string.IsNullOrEmpty(txtDatCoc.Text) || !decimal.TryParse(txtDatCoc.Text, out decimal datCocValue))
+            {
+                MessageBox.Show("Vui lòng nhập một giá trị số hợp lệ cho tiền đặt cọc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Tính toán tổng tiền dựa trên thông tin thuế và tiền đặt cọc
+            decimal tongTien = tongTienBanDau + tongTienBanDau * thueValue / 100;
+            txtTongTien.Text = tongTien.ToString();
         }
+            
+        
+
 
         private void txtDatCoc_TextChanged(object sender, EventArgs e)
         {
-            if (KiemTraTextsRong(txtDatCoc.Text, txtThue.Text))
+            if (!decimal.TryParse(txtDatCoc.Text, out decimal datCocValue) || datCocValue < 0)
             {
+                MessageBox.Show("Vui lòng nhập một giá trị số không âm cho tiền đặt cọc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else
-            {
-                if (decimal.Parse(txtDatCoc.Text) < 0)
-                {
-                    MessageBox.Show("Nhập chuẩn vào bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadDataGridView();
-                }
 
-                else
-                {
-                    txtTongTien.Text = (tongTienBanDau + tongTienBanDau * decimal.Parse(txtThue.Text) / 100).ToString();
-                }
+            if (string.IsNullOrEmpty(txtThue.Text) || !decimal.TryParse(txtThue.Text, out decimal thueValue))
+            {
+                MessageBox.Show("Vui lòng nhập một giá trị số hợp lệ cho thuế!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+
+            // Tính toán và cập nhật tổng tiền
+            decimal tongTien = tongTienBanDau + tongTienBanDau * thueValue / 100;
+            txtTongTien.Text = tongTien.ToString();
         }
 
         private void txtDatCoc_KeyPress(object sender, KeyPressEventArgs e)

@@ -324,7 +324,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
 
         private void txtGiamGia_TextChanged(object sender, EventArgs e)
         {
-            if (KiemTraTextsRong(txtGiamGia.Text, txtSoLuongNhap.Text))
+            if (KiemTraTextsRong(txtGiamGia.Text, txtSoLuongNhap.Text,txtDonGia.Text))
             {
                 return;
             }
@@ -338,7 +338,7 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
                 }
                 else
                 {
-                    decimal thanhTien = decimal.Parse(txtSoLuongNhap.Text) * int.Parse(txtSoLuongNhap.Text) * (1 - decimal.Parse(txtGiamGia.Text) / 100);
+                    decimal thanhTien = decimal.Parse(txtDonGia.Text) * int.Parse(txtSoLuongNhap.Text) * (1 - decimal.Parse(txtGiamGia.Text) / 100);
                     txtThanhTien.Text = thanhTien.ToString();
                 }
             }
@@ -410,12 +410,37 @@ namespace QLCHBX.FormGiaoDich.OderHangHoa
 
         private void ttDongCo_Click(object sender, EventArgs e)
         {
+            DmhModel dmhModel = new DmhModel();
+            DataTable data = dmhModel.LayDuLieuDongCo();
 
+            if (data != null && data.Rows.Count > 0)
+            {
+                viewDmh.DataSource = data;
+            }
+            else
+            {
+                // Hiển thị thông báo khi không có dữ liệu
+                MessageBox.Show("Không có dữ liệu về động cơ.");
+                // Hoặc có thể xử lý khác tùy theo yêu cầu của bạn
+            }
         }
 
         private void ttPhanh_Click(object sender, EventArgs e)
         {
+            DmhModel dmhModel = new DmhModel();
+            DataTable data = dmhModel.LayDuLieuPhanh();
 
+            if (data != null && data.Rows.Count > 0)
+            {
+                viewDmh.DataSource = data;
+            }
+            else
+            {
+                // Hiển thị thông báo khi không có dữ liệu
+                MessageBox.Show("Không có dữ liệu về phanh.");
+                // Hoặc có thể xử lý khác tùy theo yêu cầu của bạn
+            }
         }
+
     }
 }

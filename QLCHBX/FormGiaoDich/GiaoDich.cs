@@ -279,34 +279,38 @@ namespace QLCHBX.FormGiaoDich
         private void txtSoLuongMua_TextChanged(object sender, EventArgs e)
         {
 
-            if (KiemTraTextsRong(txtGiamGia.Text,txtSoLuongMua.Text) || KiemTraTextsRong(txtSoLuongMua.Text))
+            if (KiemTraTextsRong(txtGiamGia.Text, txtSoLuongMua.Text))
             {
                 return;
             }
             else
             {
-                if (decimal.Parse(txtGiamGia.Text) > 100 || decimal.Parse(txtGiamGia.Text) < 0)
+                if (!int.TryParse(txtSoLuongMua.Text, out int soluongMua) || soluongMua < 0)
+                {
+                    MessageBox.Show("Số lượng mua không hợp lệ! Vui lòng nhập số lượng dương.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSoLuongMua.Text = "";
+                    return;
+                }
+                if (!decimal.TryParse(txtGiamGia.Text, out decimal giamGia) || giamGia > 100 || giamGia < 0)
                 {
                     MessageBox.Show("Giảm giá chỉ từ 0 - 100% thôi bạn ơi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtGiamGia.Text = "";
+                    txtGiamGia.Text = "0";
                     return;
+                }
+                decimal donGiaBan = decimal.Parse(txtDonGia.Text);
+                decimal GiamGia = giamGia / 100;
+
+                if (soluongMua > int.Parse(txtSoLuongHangTrongKho.Text))
+                {
+                    MessageBox.Show("Hàng trong kho không đủ!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSoLuongMua.Text = "0";
                 }
                 else
                 {
-                    int soluongMua = int.Parse(txtSoLuongMua.Text);
-                    decimal donGiaBan = decimal.Parse(txtDonGia.Text);
-                    decimal GiamGia = decimal.Parse(txtGiamGia.Text) / 100;
-                    if (soluongMua > int.Parse(txtSoLuongHangTrongKho.Text))
-                    {
-                        MessageBox.Show("Hàng trong kho không đủ!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtSoLuongMua.Text = "0";
-                    }
-                    else
-                    {
-                        txtThanhTien.Text = (donGiaBan * soluongMua * (1 - GiamGia)).ToString();
-                    }
+                    txtThanhTien.Text = (donGiaBan * soluongMua * (1 - GiamGia)).ToString();
                 }
             }
+
         }
 
         private void btCapNhat_Click(object sender, EventArgs e)
@@ -315,22 +319,26 @@ namespace QLCHBX.FormGiaoDich
         }
         public void SaveHang()
         {
-            if (KiemTraTextsRong(txtSoLuongMua.Text,txtGiamGia.Text))
+            if (string.IsNullOrEmpty(txtSoLuongMua.Text) || string.IsNullOrEmpty(txtGiamGia.Text))
             {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin (Số lượng mua và Giảm giá).", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
             {
+                // Tiếp tục xử lý khi đã nhập đủ thông tin
                 int SoDDH = int.Parse(txtSoDDH.Text);
                 int MaHang = int.Parse(txtMaHang.Text);
                 int SoLuongMua = int.Parse(txtSoLuongMua.Text);
                 decimal GiamGia = decimal.Parse(txtGiamGia.Text);
-                ChiTietDonDatHangModel chiTietDonDatHang_CapNhat = new ChiTietDonDatHangModel(SoDDH,MaHang,SoLuongMua,GiamGia);
+
+                ChiTietDonDatHangModel chiTietDonDatHang_CapNhat = new ChiTietDonDatHangModel(SoDDH, MaHang, SoLuongMua, GiamGia);
                 chiTietDonDatHang_CapNhat.CapNhatChiTietDonDatHang();
                 LoadDataGridView();
                 MessageBox.Show("Cập nhật thành công!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
         private void btThanhToan_Click(object sender, EventArgs e)
         {
             XacNhanThanhToan xacNhanThanhToan = new XacNhanThanhToan();
@@ -368,6 +376,21 @@ namespace QLCHBX.FormGiaoDich
                     return;
 
                 }
+            }
+        }
+
+        private void cbDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbDanhMuc.Text ==  "Động cơ")
+            {
+                dongCoCT1.txtSoDDH.Text = txtSoDDH.Text;
+                dongCoCT1.BringToFront();
+            }
+
+            if(cbDanhMuc.Text == "Phanh")
+            {
+                phanhCT1.txtSoDDH.Text = txtSoDDH.Text;
+                phanhCT1.BringToFront();
             }
         }
     }

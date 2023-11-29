@@ -185,9 +185,9 @@
             // ptb1
             // 
             this.ptb1.ImageRotate = 0F;
-            this.ptb1.Location = new System.Drawing.Point(473, 58);
+            this.ptb1.Location = new System.Drawing.Point(381, 40);
             this.ptb1.Name = "ptb1";
-            this.ptb1.Size = new System.Drawing.Size(300, 200);
+            this.ptb1.Size = new System.Drawing.Size(392, 330);
             this.ptb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptb1.TabIndex = 1;
             this.ptb1.TabStop = false;

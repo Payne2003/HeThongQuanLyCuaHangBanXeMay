@@ -33,7 +33,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btThemHangMua = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbTenHangSX = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbMaHoaDon = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.viewDmh = new System.Windows.Forms.DataGridView();
@@ -117,7 +117,7 @@
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.DimGray;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.lbTenHangSX);
+            this.guna2Panel1.Controls.Add(this.lbMaHoaDon);
             this.guna2Panel1.Controls.Add(this.btThemHangMua);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -127,20 +127,20 @@
             this.guna2Panel1.Size = new System.Drawing.Size(800, 50);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // lbTenHangSX
+            // lbMaHoaDon
             // 
-            this.lbTenHangSX.AutoSize = false;
-            this.lbTenHangSX.BackColor = System.Drawing.Color.MintCream;
-            this.lbTenHangSX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lbTenHangSX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbTenHangSX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbTenHangSX.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenHangSX.Location = new System.Drawing.Point(76, 0);
-            this.lbTenHangSX.Name = "lbTenHangSX";
-            this.lbTenHangSX.Size = new System.Drawing.Size(556, 50);
-            this.lbTenHangSX.TabIndex = 2;
-            this.lbTenHangSX.Text = "?";
-            this.lbTenHangSX.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbMaHoaDon.AutoSize = false;
+            this.lbMaHoaDon.BackColor = System.Drawing.Color.MintCream;
+            this.lbMaHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lbMaHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbMaHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbMaHoaDon.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaHoaDon.Location = new System.Drawing.Point(76, 0);
+            this.lbMaHoaDon.Name = "lbMaHoaDon";
+            this.lbMaHoaDon.Size = new System.Drawing.Size(556, 50);
+            this.lbMaHoaDon.TabIndex = 2;
+            this.lbMaHoaDon.Text = "?";
+            this.lbMaHoaDon.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel2
             // 
@@ -263,14 +263,14 @@
             // ttDongCo
             // 
             this.ttDongCo.Name = "ttDongCo";
-            this.ttDongCo.Size = new System.Drawing.Size(180, 30);
+            this.ttDongCo.Size = new System.Drawing.Size(154, 30);
             this.ttDongCo.Text = "Động cơ";
             this.ttDongCo.Click += new System.EventHandler(this.ttDongCo_Click);
             // 
             // ttPhanh
             // 
             this.ttPhanh.Name = "ttPhanh";
-            this.ttPhanh.Size = new System.Drawing.Size(180, 30);
+            this.ttPhanh.Size = new System.Drawing.Size(154, 30);
             this.ttPhanh.Text = "Phanh";
             this.ttPhanh.Click += new System.EventHandler(this.ttPhanh_Click);
             // 
@@ -549,7 +549,7 @@
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.lbTenHangSX;
+            this.guna2DragControl1.TargetControl = this.lbMaHoaDon;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // ThemDMhang
@@ -617,7 +617,7 @@
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         public Guna.UI2.WinForms.Guna2TextBox txtSoDDH;
         public Guna.UI2.WinForms.Guna2TextBox txtMaHang;
-        public Guna.UI2.WinForms.Guna2HtmlLabel lbTenHangSX;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lbMaHoaDon;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;

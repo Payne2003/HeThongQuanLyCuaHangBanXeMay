@@ -19,7 +19,7 @@ namespace QLCHBX.HanghoaControl
     {
         ProcessDatabase dtBase = new ProcessDatabase();
         private HangHoa hangHoaForm;
-		string connectionString = "Data Source=DuyLa;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+		string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
 		public HangHoa HangHoaForm
         {
             get { return hangHoaForm; }
@@ -164,46 +164,53 @@ namespace QLCHBX.HanghoaControl
             int d = hangHoaForm.d;
             string ten = txtTen.Text;
             string Ma = txtMa.Text;
-            if (d == 1)
+            if (ten == "")
             {
-                dtBase.CapNhatDuLieu("insert into DongCo values(N'" + ten + "')");
-                MessageBox.Show("Bạn đã thêm mới thành công");
-                dgv.DataSource = dtBase.DocBang("SELECT * FROM DongCo");
+                MessageBox.Show("Vui lòng nhập tên");
             }
-            if (d == 2)
+            else
             {
-                dtBase.CapNhatDuLieu("insert into PhanhXe values(N'" + ten + "')");
-                MessageBox.Show("Bạn đã thêm mới thành công");
-                dgv.DataSource = dtBase.DocBang("SELECT * FROM PhanhXe");
-            }
-            if (d == 3)
-            {
-                dtBase.CapNhatDuLieu("insert into MauSac values(N'" + ten + "')");
-                MessageBox.Show("Bạn đã thêm mới thành công");
-                dgv.DataSource = dtBase.DocBang("SELECT * FROM MauSac");
-            }
-            if (d == 4)
-            {
-                dtBase.CapNhatDuLieu("insert into TheLoai values(N'" + ten + "')");
-                MessageBox.Show("Bạn đã thêm mới thành công");
-                dgv.DataSource = dtBase.DocBang("SELECT * FROM TheLoai");
-            }
-            if (d == 5)
-            {
-                dtBase.CapNhatDuLieu("insert into TinhTrang values(N'" + ten + "')");
-                MessageBox.Show("Bạn đã thêm mới thành công");
-                dgv.DataSource = dtBase.DocBang("SELECT * FROM TinhTrang");
-            }
-            if (d == 6)
-            {
-                dtBase.CapNhatDuLieu("insert into Hangsanxuat values(N'" + ten + "')");
-                MessageBox.Show("Bạn đã thêm mới thành công");
-            }
-            if (d == 7)
-            {
-                dtBase.CapNhatDuLieu("insert into Nuocsanxuat values(N'" + ten + "')");
-                MessageBox.Show("Bạn đã thêm mới thành công");
-                dgv.DataSource = dtBase.DocBang("SELECT * FROM Nuocsanxuat");
+                if (d == 1)
+                {
+                    dtBase.CapNhatDuLieu("insert into DongCo values(N'" + ten + "')");
+                    MessageBox.Show("Bạn đã thêm mới thành công");
+                    dgv.DataSource = dtBase.DocBang("SELECT * FROM DongCo");
+                }
+                if (d == 2)
+                {
+                    dtBase.CapNhatDuLieu("insert into PhanhXe values(N'" + ten + "')");
+                    MessageBox.Show("Bạn đã thêm mới thành công");
+                    dgv.DataSource = dtBase.DocBang("SELECT * FROM PhanhXe");
+                }
+                if (d == 3)
+                {
+                    dtBase.CapNhatDuLieu("insert into MauSac values(N'" + ten + "')");
+                    MessageBox.Show("Bạn đã thêm mới thành công");
+                    dgv.DataSource = dtBase.DocBang("SELECT * FROM MauSac");
+                }
+                if (d == 4)
+                {
+                    dtBase.CapNhatDuLieu("insert into TheLoai values(N'" + ten + "')");
+                    MessageBox.Show("Bạn đã thêm mới thành công");
+                    dgv.DataSource = dtBase.DocBang("SELECT * FROM TheLoai");
+                }
+                if (d == 5)
+                {
+                    dtBase.CapNhatDuLieu("insert into TinhTrang values(N'" + ten + "')");
+                    MessageBox.Show("Bạn đã thêm mới thành công");
+                    dgv.DataSource = dtBase.DocBang("SELECT * FROM TinhTrang");
+                }
+                if (d == 6)
+                {
+                    dtBase.CapNhatDuLieu("insert into Hangsanxuat values(N'" + ten + "')");
+                    MessageBox.Show("Bạn đã thêm mới thành công");
+                }
+                if (d == 7)
+                {
+                    dtBase.CapNhatDuLieu("insert into Nuocsanxuat values(N'" + ten + "')");
+                    MessageBox.Show("Bạn đã thêm mới thành công");
+                    dgv.DataSource = dtBase.DocBang("SELECT * FROM Nuocsanxuat");
+                }
             }
         }
 
