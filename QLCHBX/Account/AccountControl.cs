@@ -28,7 +28,7 @@ namespace QLCHBX.Account
         }
         public AccountControl()
         {
-            conn.ConnectionString = @"Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=DESKTOP-L935296;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
             InitializeComponent();
         }
         private void LoadDuLieu(string sql)
@@ -40,6 +40,7 @@ namespace QLCHBX.Account
         }
         private void btnMoi_Click(object sender, EventArgs e)
         {
+            txtUserName.ReadOnly = false;
             txtMaNV.Text = "";
             txtUserName.Text = "";
             txtPassWord.Text = "";
@@ -102,12 +103,24 @@ namespace QLCHBX.Account
             {
                 errAccount.Clear();
             }
-            sql = "SELECT COUNT(*) FROM TaiKhoan WHERE Username = N'" + txtUserName + "'";
+            sql = "SELECT COUNT(*) FROM TaiKhoan WHERE Username = N'" + txtUserName.Text + "'";
             cmd = new SqlCommand(sql, conn);
             int val = (int)cmd.ExecuteScalar();
             if (val > 0)
             {
                 errAccount.SetError(txtUserName, "UserName không được trùng");
+                return;
+            }
+            else
+            {
+                errAccount.Clear();
+            }
+            sql = "SELECT COUNT(*) FROM NhanVien WHERE MaNV = '" + txtMaNV.Text + "'";
+            cmd = new SqlCommand(sql, conn);
+            int sum = (int)cmd.ExecuteScalar();
+            if(sum == 0)
+            {
+                errAccount.SetError(txtMaNV, "Không có nhân viên có mã là " + txtMaNV.Text + " tồn tại");
                 return;
             }
             else
@@ -156,9 +169,9 @@ namespace QLCHBX.Account
             {
                 errAccount.Clear();
             }
-
+            int index = dgvUser.CurrentRow.Index;
             sql = "UPDATE TaiKhoan SET ";
-            sql += "Password = N'" + txtPassWord.Text + "'," + "MaNV = '" + txtMaNV.Text + "'" + " WHERE Username = N'" + txtUserName.Text + "'";
+            sql += "Password = N'" + txtPassWord.Text + "', MaNV = '" + txtMaNV.Text + "' WHERE Username = '" + txtUserName.Text + "'";
             cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
             sql = "SELECT * FROM TaiKhoan";
@@ -202,6 +215,7 @@ namespace QLCHBX.Account
         {
             try
             {
+                txtUserName.ReadOnly = true;
                 txtUserName.Text = dgvUser[0, e.RowIndex].Value.ToString();
                 txtPassWord.Text = dgvUser[1, e.RowIndex].Value.ToString();
                 txtMaNV.Text = dgvUser[2, e.RowIndex].Value.ToString();
@@ -211,6 +225,13 @@ namespace QLCHBX.Account
             {
 
             }
+        }
+
+        private void AccountControl_Load(object sender, EventArgs e)
+        {
+            conn = new SqlConnection();
+            conn.ConnectionString = @"Data Source=DESKTOP-L935296;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+            LoadDuLieu("SELECT * FROM TaiKhoan");
         }
     }
 }

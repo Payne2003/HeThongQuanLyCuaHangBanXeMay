@@ -19,7 +19,7 @@ namespace QLCHBX.HanghoaControl
     {
         ProcessDatabase dtBase = new ProcessDatabase();
         private HangHoa hangHoaForm;
-		string connectionString = "Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
+		string connectionString = "Data Source=DESKTOP-L935296;Initial Catalog=Motorcycle_shop_manager;Integrated Security=True";
 		public HangHoa HangHoaForm
         {
             get { return hangHoaForm; }

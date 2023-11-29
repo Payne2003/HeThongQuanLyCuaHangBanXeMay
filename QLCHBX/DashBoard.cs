@@ -76,5 +76,10 @@ namespace QLCHBX
         {
             account1.BringToFront();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            account1.BringToFront();
+        }
     }
 }

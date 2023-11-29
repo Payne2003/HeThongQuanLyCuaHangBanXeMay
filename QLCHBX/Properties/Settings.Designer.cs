@@ -26,7 +26,7 @@ namespace QLCHBX.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Payne;Initial Catalog=Motorcycle_shop_manager;Integrated Security=Tru" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-L935296;Initial Catalog=Motorcycle_shop_manager;Integrated Security=Tru" +
             "e")]
         public string Motorcycle_shop_managerConnectionString {
             get {
