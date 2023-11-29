@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,189 @@ namespace QLCHBX.Account
 {
     public partial class AccountControl : UserControl
     {
+        private static AccountControl instance;
+        SqlConnection conn;
+        SqlCommand cmd;
+        SqlDataAdapter adapter;
+        DataSet ds;
+        public static AccountControl Instance
+        {
+            get
+            {
+                if (instance == null) instance = new AccountControl();
+                return instance;
+            }
+        }
         public AccountControl()
         {
             InitializeComponent();
+        }
+        private void LoadDuLieu(string sql)
+        {
+            ds = new DataSet();
+            adapter = new SqlDataAdapter(sql, conn);
+            adapter.Fill(ds);
+            dgvUser.DataSource = ds.Tables[0];
+        }
+        private void btnMoi_Click(object sender, EventArgs e)
+        {
+            txtMaNV.Text = "";
+            txtUserName.Text = "";
+            txtPassWord.Text = "";
+            txtTimKiem.Text = "";
+            LoadDuLieu("SELECT * FROM TaiKhoan");
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            else
+            {
+                if (MessageBox.Show("Bạn có muốn xóa User " + txtUserName.Text + " không ?", "Xóa sản phẩm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int currentIndex = dgvUser.CurrentCell.RowIndex;
+                    string userName = Convert.ToString(dgvUser.Rows[currentIndex].Cells[0].Value.ToString());
+                    string sql = "DELETE FROM TaiKhoan WHERE Username = '" + userName + "'";
+                    cmd = new SqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    sql = "SELECT * FROM TaiKhoan";
+                    LoadDuLieu(sql);
+                }
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string sql = "";
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            if (txtUserName.Text.Trim() == "")
+            {
+                errAccount.SetError(txtUserName, "UserName không được để trống");
+                return;
+            }
+            else
+            {
+                errAccount.Clear();
+            }
+            if (txtPassWord.Text.Trim() == "")
+            {
+                errAccount.SetError(txtPassWord, "Password không được để trống");
+                return;
+            }
+            else
+            {
+                errAccount.Clear();
+            }
+            if (txtMaNV.Text.Trim() == "")
+            {
+                errAccount.SetError(txtMaNV, "Mã Nhân viên không được trống");
+                return;
+            }
+            else
+            {
+                errAccount.Clear();
+            }
+            sql = "SELECT COUNT(*) FROM TaiKhoan WHERE Username = N'" + txtUserName + "'";
+            cmd = new SqlCommand(sql, conn);
+            int val = (int)cmd.ExecuteScalar();
+            if (val > 0)
+            {
+                errAccount.SetError(txtUserName, "UserName không được trùng");
+                return;
+            }
+            else
+            {
+                errAccount.Clear();
+            }
+            sql = "INSERT INTO TaiKhoan(Username,Password,MaNV)VALUES(";
+            sql += "N'" + txtUserName.Text + "',N'" + txtPassWord.Text + "','" + txtMaNV.Text + "')";
+            cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            sql = "SELECT * FROM TaiKhoan";
+            LoadDuLieu(sql);
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string sql = "";
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            if (txtUserName.Text.Trim() == "")
+            {
+                errAccount.SetError(txtUserName, "UserName không được để trống");
+                return;
+            }
+            else
+            {
+                errAccount.Clear();
+            }
+            if (txtPassWord.Text.Trim() == "")
+            {
+                errAccount.SetError(txtPassWord, "Password không được để trống");
+                return;
+            }
+            else
+            {
+                errAccount.Clear();
+            }
+            if (txtMaNV.Text.Trim() == "")
+            {
+                errAccount.SetError(txtMaNV, "Mã Nhân viên không được trống");
+                return;
+            }
+            else
+            {
+                errAccount.Clear();
+            }
+
+            sql = "UPDATE TaiKhoan SET ";
+            sql += "Password = N'" + txtPassWord.Text + "'," + "MaNV = '" + txtMaNV.Text + "'" + " WHERE Username = N'" + txtUserName.Text + "'";
+            cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            sql = "SELECT * FROM TaiKhoan";
+            LoadDuLieu(sql);
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+            string sql = "";
+            sql = "SELECT COUNT(*) FROM TaiKhoan WHERE Username = N'" + txtTimKiem.Text + "'";
+            cmd = new SqlCommand(sql, conn);
+            int val = (int)cmd.ExecuteScalar();
+            if (val == 0)
+            {
+                MessageBox.Show("Không tìm thấy tài khoản có tên " + txtTimKiem.Text + "!", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            LoadDuLieu("SELECT * FROM TaiKhoan WHERE Username = N'" + txtTimKiem.Text + "'");
+            conn.Close();
+        }
+
+        private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtUserName.Text = dgvUser[0, e.RowIndex].Value.ToString();
+                txtPassWord.Text = dgvUser[1, e.RowIndex].Value.ToString();
+                txtMaNV.Text = dgvUser[2, e.RowIndex].Value.ToString();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

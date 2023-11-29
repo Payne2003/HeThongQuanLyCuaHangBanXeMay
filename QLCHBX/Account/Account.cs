@@ -10,11 +10,37 @@ using System.Windows.Forms;
 
 namespace QLCHBX.Account
 {
-    public partial class Account : UserControl
+    public partial class taiKhoan : UserControl
     {
-        public Account()
+        public taiKhoan()
         {
             InitializeComponent();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            if (!guna2Panel2.Controls.Contains(AccountControl.Instance))
+            {
+                guna2Panel2.Controls.Add(AccountControl.Instance);
+                AccountControl.Instance.BringToFront();
+            }
+            else
+            {
+                AccountControl.Instance.BringToFront();
+            }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            if (!guna2Panel2.Controls.Contains(HistoryDeliver.Instance))
+            {
+                guna2Panel2.Controls.Add(HistoryDeliver.Instance);
+                HistoryDeliver.Instance.BringToFront();
+            }
+            else
+            {
+                HistoryDeliver.Instance.BringToFront();
+            }
         }
     }
 }
