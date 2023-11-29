@@ -323,8 +323,8 @@
             // 
             // guna2GroupBox2
             // 
-            this.guna2GroupBox2.Controls.Add(this.ptThem);
             this.guna2GroupBox2.Controls.Add(this.dgv);
+            this.guna2GroupBox2.Controls.Add(this.ptThem);
             this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.MintCream;
             this.guna2GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

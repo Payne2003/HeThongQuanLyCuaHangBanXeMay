@@ -74,12 +74,11 @@ namespace QLCHBX
 
         private void lbMaNV_Click(object sender, EventArgs e)
         {
-            account1.BringToFront();
+            //account1.BringToFront();
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btTaiKhoan_Click(object sender, EventArgs e)
         {
-            account1.BringToFront();
+
         }
     }
 }
