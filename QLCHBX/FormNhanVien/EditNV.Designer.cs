@@ -480,9 +480,6 @@
 		private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
 		private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
 		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-		private Guna.UI2.WinForms.Guna2TextBox txtDienThoai;
-		private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
-		private Guna.UI2.WinForms.Guna2TextBox txtTenNV;
 		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
 		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
 		private Guna.UI2.WinForms.Guna2Button btHuys;
@@ -493,15 +490,18 @@
 		private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
 		private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
 		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-		private Guna.UI2.WinForms.Guna2CustomRadioButton rbNam;
 		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-		private Guna.UI2.WinForms.Guna2DateTimePicker dtpNS;
 		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
 		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-		private Guna.UI2.WinForms.Guna2CustomRadioButton rbNu;
-		private Guna.UI2.WinForms.Guna2ComboBox cbbCV;
 		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-		private Guna.UI2.WinForms.Guna2TextBox txtMaNV;
 		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+		public Guna.UI2.WinForms.Guna2TextBox txtDienThoai;
+		public Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
+		public Guna.UI2.WinForms.Guna2TextBox txtTenNV;
+		public Guna.UI2.WinForms.Guna2CustomRadioButton rbNam;
+		public Guna.UI2.WinForms.Guna2DateTimePicker dtpNS;
+		public Guna.UI2.WinForms.Guna2CustomRadioButton rbNu;
+		public Guna.UI2.WinForms.Guna2ComboBox cbbCV;
+		public Guna.UI2.WinForms.Guna2TextBox txtMaNV;
 	}
 }

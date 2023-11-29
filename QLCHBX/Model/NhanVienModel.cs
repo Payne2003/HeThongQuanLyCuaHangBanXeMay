@@ -121,6 +121,17 @@ namespace QLCHBX.Model
 
 			return nhanVien;
 		}
+		public DataTable TimKiemNV(string key)
+		{
+			DataTable dataTable = new DataTable();
+			string sql = "SELECT * FROM NhanVien WHERE MaNV = @Key OR DienThoai = @Key";
+			SqlParameter[] sqlParameters = new SqlParameter[]
+			{
+		new SqlParameter("@Key", key)
+			};
+			dataTable = DocBang(sql, sqlParameters);
+			return dataTable;
+		}
 
 	}
 }
