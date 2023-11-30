@@ -88,6 +88,7 @@
             this.viewKhachhang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewKhachhang.Location = new System.Drawing.Point(0, 40);
             this.viewKhachhang.Name = "viewKhachhang";
+            this.viewKhachhang.ReadOnly = true;
             this.viewKhachhang.Size = new System.Drawing.Size(824, 556);
             this.viewKhachhang.TabIndex = 0;
             this.viewKhachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewKhachhang_CellClick);
@@ -98,6 +99,7 @@
             this.Sua.HeaderText = "Sửa";
             this.Sua.MinimumWidth = 10;
             this.Sua.Name = "Sua";
+            this.Sua.ReadOnly = true;
             this.Sua.Text = "Sửa";
             this.Sua.ToolTipText = "Sửa";
             this.Sua.Width = 10;

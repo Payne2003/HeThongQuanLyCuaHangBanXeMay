@@ -45,6 +45,7 @@ namespace QLCHBX.ALLControl
                     {
                         ShowCustomMessageBox("Đăng nhập thành công");
                         DashBoard dashBoard = new DashBoard(int.Parse(maNhanVien));
+                        dashBoard.btKhachHang.BorderColor = Color.Silver;
                         dashBoard.ShowDialog();
                     }
                     else

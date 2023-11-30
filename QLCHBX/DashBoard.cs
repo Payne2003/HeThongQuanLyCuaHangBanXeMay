@@ -17,6 +17,7 @@ namespace QLCHBX
         public DashBoard(int MaNV)
         { 
             InitializeComponent();
+            btKhachHang.BorderColor = Color.Silver;
             lbMaNV.Text = MaNV.ToString();
             guna2ShadowForm1.SetShadowForm(this);
             

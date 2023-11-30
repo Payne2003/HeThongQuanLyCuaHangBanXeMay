@@ -155,6 +155,7 @@
             this.btKhachHang.BorderRadius = 21;
             this.btKhachHang.BorderThickness = 1;
             this.btKhachHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btKhachHang.CheckedState.BorderColor = System.Drawing.Color.Silver;
             this.btKhachHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhachHang.CustomizableEdges.BottomRight = false;
@@ -569,7 +570,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btKhachHang;
         private Guna.UI2.WinForms.Guna2Button btNhanVien;
         private Guna.UI2.WinForms.Guna2Button btDoiTac;
         private Guna.UI2.WinForms.Guna2Button btGiaoDich;
@@ -588,5 +588,6 @@
         private Guna.UI2.WinForms.Guna2Button btTaiKhoan;
         private Account.Account account1;
         public Guna.UI2.WinForms.Guna2Button btBaoCao;
+        public Guna.UI2.WinForms.Guna2Button btKhachHang;
     }
 }

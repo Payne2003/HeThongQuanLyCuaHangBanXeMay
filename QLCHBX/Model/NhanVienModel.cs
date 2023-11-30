@@ -89,10 +89,7 @@ namespace QLCHBX.Model
             SqlParameter[] sqlParameters = new SqlParameter[]
         {
                 new SqlParameter("@TenNV", TenNV),
-                new SqlParameter("@Gioitinh", Gioitinh),
-                new SqlParameter("@NgaySinh", NgaySinh),
                 new SqlParameter("@MaCV", MaCV),
-                new SqlParameter("@Diachi", Diachi),
                 new SqlParameter("@DienThoai", DienThoai)
         };
             return ExecuteNonQuery(sql, sqlParameters);

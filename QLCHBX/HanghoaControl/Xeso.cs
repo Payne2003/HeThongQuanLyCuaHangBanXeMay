@@ -36,7 +36,11 @@ namespace QLCHBX.HanghoaControl
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.Columns[0].Width = 40;
             pn1.Visible = false;
+
+            // Thiết lập độ cao của hàng trong DataGridView
+            dgv.RowTemplate.Height = 60;
         }
+
         public void SetDataGridViewDataSource(DataTable dt)
         {
             dgv.DataSource = dt;
